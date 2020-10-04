@@ -6,7 +6,7 @@ In SPWN, there are currently two _control flow_ statements avaliable: if stateme
 
 SPWN has a quite standard syntax for if-statements:
 
-```
+```go
 if condition {
     // code
 }
@@ -30,7 +30,7 @@ if condition {
 
 You can make a for loop in spwn like this:
 
-```
+```go
 for i in iterator {
     // code
 }
@@ -40,7 +40,7 @@ for i in iterator {
 
 `iterator` is a list of elements to iterate over. If you want to iterate over a range of numbers, you can use the _range operator_:
 
-```
+```go
 for i in 0..10 {
     // code
 }

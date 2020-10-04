@@ -80,7 +80,7 @@ let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
 
 In SPWN, there are also values that that are useful specifically when making Geometry dash levels:
 
-```
+```go
 group = 10g // group 10
 color = 10c // color 10
 item  = 10i // item-ID 10
@@ -89,7 +89,7 @@ block = 10b // collision block-ID 10
 
 These values are called `ID`s, and are extremely essensial. Any time you want to get some actual output in your levels, you will use these. Sometimes you want to point to a specific `ID`, for example if you have already made a player-character in the editor and you want to move it around. However, in most cases, you won't really care exactly what `ID` you're using, as you will only be referencing it inside your code. When this is the case, you can use the `?` notation:
 
-```
+```go
 group = ?g // some group
 color = ?c // some color
 item  = ?i // some item-ID
