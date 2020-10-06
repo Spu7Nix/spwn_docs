@@ -54,8 +54,43 @@ The _arrow statement_ prevents the context from changing by whatever comes after
 // This trigger happens at the same time as the last one, since they are in the same group
 2g.move(0, 10, 0.5)
 
-// After this macro, the context's group gets changed to group 12, since it's not in an arrow statement
+/*
+After this macro, the context's group gets changed to group 12,
+since it's not in an arrow statement
+*/
 
 ```
 
-# Context Splitting
+> **Note:** Calling a function with `function!` never alters the state. You can think of it as always being in an arrow statement.
+
+# Usecases
+
+## Triggering in Parallel
+
+This is the usecase you're already familiar with. There is also a way to run multiple triggers in parallel with the rest of the program, by creating a macro and immediatly calling it:
+
+```
+// macro definition: (){ /*code*/ }
+// macro calling: macro()
+// combined: (){ /*code*/ }()
+
+-> (){
+    10g.move(0, 50, 0.5, EASE_IN_OUT)
+    10g.move(0, -50, 0.5, EASE_IN_OUT)
+}()
+
+for i in ..2 {
+    11g.move(0, 50, 0.3, EASE_IN_OUT)
+    11g.move(0, -50, 0.3, EASE_IN_OUT)
+}
+```
+
+This will move group 10 up and down in 1 second, while at the same time moving group 11 up and down twice in 1.2 seconds.
+
+> **Note:** Creating a function and immediatly calling it (` { /* code */ }!`) will have the exact same effect as the method we used, but creating a function consumes one extra group, so you should prefer creating a macro instead.
+
+## Optimizing
+
+One of the more advanced features of SPWN is _context splitting_. Basically, some macros change the context to more than one context, making it so all the rest of the statements affected will use n times the group IDs as it would otherwise (where n is the amount of contexts). Context splitting is extremely useful, but it is also dangerous. If you don't keep your context splitting under control, you might end up over the group limit. Luckly, the arrow statement is here to help! Since the arrow statement negates any new contexts produced, it also doesn't change the amount of contexts.
+
+Context splitting is used a lot when dealing with the `counter` type, which you can read about in the next chapter!
