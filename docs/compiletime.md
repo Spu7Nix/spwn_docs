@@ -9,7 +9,7 @@ This is because Geometry Dash triggers don't have the features nessecary to run 
 For example, in most languages _loops_ are a runtime action, or in other words, if you use a loop in your source code, there is also some kind of loop in the machine code that the compiler generates. In SPWN, the loop is a compile-time action.
 In practice, this means that this:
 
-```
+```spwn
 for i in ..5 {
     10g.move(10, 10, 0.5)
 }
@@ -17,7 +17,7 @@ for i in ..5 {
 
 Compiles to the exact same thing as this:
 
-```
+```spwn
 10g.move(10, 10, 0.5)
 10g.move(10, 10, 0.5)
 10g.move(10, 10, 0.5)

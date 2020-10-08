@@ -7,13 +7,13 @@ In practice, this means that a macro has more features, like taking arguments an
 
 Let's say we have a _function_ called `do thing`. To call it, we can say:
 
-```go
+```spwn
 do_thing!
 ```
 
 If we have a _macro_ called `do_other_thing` (that takes no arguments), we can call it like this:
 
-```go
+```spwn
 do_other_thing()
 ```
 
@@ -23,7 +23,7 @@ In SPWN, both functions and macros are types of `values`, which means to define 
 
 Defining a macro:
 
-```go
+```spwn
 /*
 ([arguments]) {[code]}
 */
@@ -35,7 +35,7 @@ my_macro = (argument1, argument2) {
 
 Defining a function:
 
-```go
+```spwn
 /*
 {[code]}
 */

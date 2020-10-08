@@ -8,13 +8,13 @@
 
 The easiest way to create a counter is to use the `counter` macro. You can create it out of a number, a boolean or an item ID.
 
-```
+```spwn
 highscore = counter(100)
 ```
 
 You can also create them like this, if you like that better:
 
-```
+```spwn
 highscore1 = @counter::new(100)
 
 ```
@@ -23,7 +23,7 @@ highscore1 = @counter::new(100)
 
 The `counter` type has most operators implemented on it, which means you can use it like any other number!
 
-```
+```spwn
 score = counter(0)
 
 score += 10
@@ -35,11 +35,13 @@ score = 0
 
 > **Note:** The multiply `*=`, divide `/=` and assign `=` operators are not in Geometry Dash by default, and are therefore quite group-expensive. You should prefer using add `+=` and subtract `-=` when possible.
 
+> **Note:** You can add, multiply, divide and assign `counter`s to other `counter`s, however, this is even more group expensive.
+
 # Testing the Value of a `counter`
 
 Again, these operators are implemented on the `counter` type like any other number, which means you can use them as you would normally. However, **all of these split the context in two**, so you have to be careful. Here's an example of what you should **not** do.
 
-```
+```spwn
 my_counter = counter(1)
 my_group = ?g
 
@@ -72,7 +74,7 @@ my_group.move(10, 0, 0.5)
 
 We can start optimizing this by adding `else if` statements. Since a `counter` can't be two values at once, we only have to check if it is a certain value if we know its not some other value.
 
-```
+```spwn
 my_counter = counter(1)
 my_group = ?g
 
@@ -97,7 +99,7 @@ my_group.move(10, 0, 0.5)
 
 However, this is still not perfect. Ideally, we want to have no context splitting after the operation at all. The easiest way to do this is with an arrow statement:
 
-```
+```spwn
 my_counter = counter(1)
 my_group = ?g
 
@@ -119,3 +121,5 @@ wait(0.5)
 // there is now only 1 context!
 my_group.move(10, 0, 0.5)
 ```
+
+# Converting a `counter` to a Normal Number

@@ -4,7 +4,7 @@ Since you can't really print `Hello, world!` to the console using Geometry Dash 
 
 **In SPWN, variables are defined like this:**
 
-```
+```spwn
 // let [variable name] = [value]
 
 let a = 10
@@ -14,7 +14,7 @@ let c = a + b
 
 When referencing the variables' values, these will work as in any other programming language, however, when trying to change the value of variables in SPWN, they are quite limited. Therefore, most variables you make in SPWN will be _constant_. For convenience, you can define constant variables like this:
 
-```
+```spwn
 // [variable name] = [value]
 
 a = 10
@@ -31,7 +31,7 @@ c = a + b
 So, what kind of stuff can you put in your variables? Well, a lot of different things.
 Some value types are ones you might be familiar with from other languages:
 
-```
+```spwn
 num = 10
 
 text = "Hello, I'm a string!"
@@ -51,7 +51,7 @@ These values can be used as you would in any other programming language.
 
 Here are some examples:
 
-```
+```spwn
 num = -(1000 * 1000) / 10 // -100000
 
 name = "Spu7Nix"
@@ -80,7 +80,7 @@ let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
 
 In SPWN, there are also values that that are useful specifically when making Geometry dash levels:
 
-```go
+```spwn
 group = 10g // group 10
 color = 10c // color 10
 item  = 10i // item-ID 10
@@ -89,7 +89,7 @@ block = 10b // collision block-ID 10
 
 These values are called `ID`s, and are extremely essensial. Any time you want to get some actual output in your levels, you will use these. Sometimes you want to point to a specific `ID`, for example if you have already made a player-character in the editor and you want to move it around. However, in most cases, you won't really care exactly what `ID` you're using, as you will only be referencing it inside your code. When this is the case, you can use the `?` notation:
 
-```go
+```spwn
 group = ?g // some group
 color = ?c // some color
 item  = ?i // some item-ID

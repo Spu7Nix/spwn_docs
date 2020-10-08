@@ -2,7 +2,7 @@
 
 As you might remember, we used the arrow statament a bit earlier in this introduction to make to triggers happen at the same time.
 
-```
+```spwn
 -> 1g.move(0, 10, 0.5)
 2g.move(0, 10, 0.5)
 ```
@@ -44,7 +44,7 @@ In SPWN, because it generates Geometry Dash triggers, it's state also stores one
 
 The _arrow statement_ prevents the context from changing by whatever comes after. Let's look at the example of the arrow statement again:
 
-```
+```spwn
 // The context's group is now group 10
 
 // Because this macro adds a delay, the context gets changed
@@ -69,7 +69,7 @@ since it's not in an arrow statement
 
 This is the usecase you're already familiar with. There is also a way to run multiple triggers in parallel with the rest of the program, by creating a macro and immediatly calling it:
 
-```
+```spwn
 // macro definition: (){ /*code*/ }
 // macro calling: macro()
 // combined: (){ /*code*/ }()

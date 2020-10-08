@@ -6,14 +6,14 @@ Alright, lets actually make our SPWN program do something. Triggers in SPWN are 
 
 As you probably know, to move objects in Geometry Dash, you move the _group_ the objects are in. If you wanted to, say, move group 5 ten units on the x axis in 0.5 seconds, you would add a move trigger with those settings. In SPWN we do it like this:
 
-```go
+```spwn
 // group.move(x, y, [duration], [easing type], [easing rate])
 5g.move(10, 0, 0.5)
 ```
 
 The `move` macro doesn't actually just call a move trigger, it also adds a delay of whatever you set your duration to. This means that this code
 
-```go
+```spwn
 1g.move(0, 10, 0.5)
 2g.move(0, 10, 0.5)
 ```
@@ -22,7 +22,7 @@ will result in that group 1 moves up for 0.5 seconds, and then, when group 1 is 
 
 This is useful for a lot of cases, but sometimes you also want to move two groups at the same time. In this case, we want to use an arrow statement. The arrow statement is one of the most powerful features of SPWN, and I won't explain exactly what it does here. In this case, you can think of it as saying "don't wait for this macro to finish, just move on to the next statement". If we want to move both group 1 and 2 at once, this is how you would do it:
 
-```go
+```spwn
 -> 1g.move(0, 10, 0.5) // "don't wait for me!"
 2g.move(0, 10, 0.5)
 ```
