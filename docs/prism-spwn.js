@@ -1,5 +1,5 @@
 Prism.languages.spwn = Prism.languages.extend("clike", {
-  keyword: /\b(?:else|for|if|return|error|extract|in|let|type|import|impl|\->)\b/,
+  keyword: /\b(?:else|for|if|return|error|extract|in|let|type|import|impl|break|\=>|\->)\b/,
   builtin: /\b(?:null|trigger|obj|\$|self)\b/,
   boolean: /\b(?:_|iota|nil|true|false)\b/,
   operator: /(==|!=|<=|>=|<|>|&&|\|\||!|=|\+\=|\-\=|\*\=|\/\=|\+|\-|\*|\/|%|\^|\.\.)/,

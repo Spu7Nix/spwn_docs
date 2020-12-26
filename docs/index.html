@@ -21,7 +21,7 @@
       --theme-hue: 180;
       --theme-saturation: 50%;
 
-      --table-cell-border-width: 1px;
+      --table-cell-border-width: 5px;
 
     }
   </style>
@@ -31,17 +31,30 @@
 
 <body>
   <div id="app"></div>
+  
   <script>
     window.$docsify = {
-      name: '',
-      repo: '',
+      
+      name: 'SPWN Documentation',
+      repo: 'https://github.com/Spu7Nix/spwn_docs',
       loadSidebar: true,
+      search: {
+        noData: 'No results!',
+        paths: 'auto',
+        placeholder: 'Search'
+      },
+      logo: "assets/spwn_logo_name_large.png"
 
 
 
     }
+
+    
+
+    
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
 
   <script src="./prism-spwn.js"></script>
 
