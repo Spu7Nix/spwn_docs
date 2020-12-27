@@ -9,90 +9,7 @@ _This file was generated using `spwn doc [file name]`_
 
 - Adds 0 objects
 ## Exports:
-**Type:** `dictionary` 
-
-**Literal:** 
-
- ```
-
-{
-supress_signal: (delay: @number) { /* code omitted */ },
-SMALLER_THAN: {
-id: 2,
-type: @comparison
-},
-obj_props: {
-X_MOD: {
-type: @object_key,
-pattern: @number,
-id: 72
-},
-HIGH_DETAIL: {
-pattern: @bool,
-type: @object_key,
-id: 103
-},
-MAIN_ONLY: {
-pattern: @bool,
-id: 65,
-type: @object_key
-},
-ROTATION_SPEED: {
-type: @object_key,
-id: 97,
-pattern: @number
-},
-TOGGLE_MODE: {
-pattern: @number,
-id: 82,
-type: @object_key
-},
-COMPARISON: {
-type: @object_key,
-id: 88,
-pattern: @number
-},
-INTERVAL: {
-pattern: @number,
-id: 84,
-type: @object_key
-},
-DUAL_MODE: {
-pattern: @bool,
-id: 89,
-type: @object_key
-},
-BLOCK_A: {
-id: 80,
-type: @object_key,
-pattern: @block
-},
-X: {
-pattern: @number,
-type: @object_key,
-id: 2
-},
-... (83 more)
-},
-EXPONENTIAL_IN_OUT: {
-id: 10,
-type: @easing_type
-},
-call_with_delay: (time: @number | @epsilon = {
-type: @epsilon
-}, function: @function) { /* code omitted */ },
-enable_trail: () { /* code omitted */ },
-disable_trail: () { /* code omitted */ },
-EQUAL_TO: {
-id: 0,
-type: @comparison
-},
-counter: (source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ },
-touch_end: (dual_side: @bool = false) { /* code omitted */ },
-... (31 more)
-}
-
-``` 
+ **Type:** `@dictionary` 
 
 <details>
 <summary> View members </summary>
@@ -101,592 +18,246 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
 ## Macros:
 
 
-**`call_with_delay`**:
+## **call_with_delay**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(time: @number | @epsilon = {
->type: @epsilon
->}, function: @function) { /* code omitted */ }
->
->``` 
+> **Value:** `(time: @number | @epsilon = @epsilon::{
+>}, function: @function) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Call a function after a delay_
 >## Arguments:
->> _`time` (optional)_ : _Delay time in seconds (leave empty for minimum delay)_
->>
->>_Default value:_
->>
->>**Type:** `epsilon` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @epsilon
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@epsilon``` 
->>>
->>>
->>>
->>
->>
->>
 >
->
->
->
->> **`function`** _(obligatory)_: _Function to call after the delay_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `time` | @number or @epsilon | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
+>| 2 | **`function`** | @function | |Function to call after the delay |
 >
 >
 
-**`collision`**:
+## **collision**:
 
->**Type:** `macro` 
->
->**Literal:** ```(a: @block, b: @block) { /* code omitted */ }``` 
+> **Value:** `(a: @block, b: @block) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the collision trigger (returns an event)_
 >## Arguments:
->> **`a`** _(obligatory)_: _Block A ID_
 >
->
->
->
->> **`b`** _(obligatory)_: _Block B ID_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`a`** | @block | |Block A ID |
+>| 2 | **`b`** | @block | |Block B ID |
 >
 >
 
-**`collision_exit`**:
+## **collision_exit**:
 
->**Type:** `macro` 
->
->**Literal:** ```(a: @block, b: @block) { /* code omitted */ }``` 
+> **Value:** `(a: @block, b: @block) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Returns an event for when a collision exits_
 >## Arguments:
->> **`a`** _(obligatory)_: _Block A ID_
 >
->
->
->
->> **`b`** _(obligatory)_: _Block B ID_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`a`** | @block | |Block A ID |
+>| 2 | **`b`** | @block | |Block B ID |
 >
 >
 
-**`counter`**:
+## **counter**:
 
->**Type:** `macro` 
->
->**Literal:** ```(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }``` 
+> **Value:** `(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Creates a new counter_
 >## Arguments:
->> _`source` (optional)_ : _Source (can be a number, item ID or boolean)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
 >
->
->
->
->> _`delay` (optional)_ : _Adds a delay if a value gets added to the new item (to avoid confusing behavior)_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```true``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `source` | @number or @item or @bool | `0` |Source (can be a number, item ID or boolean) |
+>| 2 | `delay` | @bool | `true` |Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
 >
 >
 
-**`death`**:
+## **death**:
 
->**Type:** `macro` 
->
->**Literal:** ```() { /* code omitted */ }``` 
+> **Value:** `() { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Returns an event for when the player dies_
 >
 >
 
-**`disable_trail`**:
+## **disable_trail**:
 
->**Type:** `macro` 
->
->**Literal:** ```() { /* code omitted */ }``` 
+> **Value:** `() { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Disables the player's trail_
 >
 >
 
-**`enable_trail`**:
+## **enable_trail**:
 
->**Type:** `macro` 
->
->**Literal:** ```() { /* code omitted */ }``` 
+> **Value:** `() { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Enables the player's trail_
 >
 >
 
-**`for_loop`**:
+## **for_loop**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(range: @range, code: @macro, delay: @number | @epsilon = {
->type: @epsilon
->}, reset: @bool = true, reset_speed: @number = 1) { /* code omitted */ }
->
->``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of a spawn loop with a counter_
 >## Arguments:
->> **`range`** _(obligatory)_: _Range of values (for example 0..10)_
 >
->
->
->
->> **`code`** _(obligatory)_: _Macro of the code that gets looped, should take the iterator (a counter) as the first argument._
->
->
->
->
->> _`delay` (optional)_ : _Delay between loops (less than 0.05 may be unstable)_
->>
->>_Default value:_
->>
->>**Type:** `epsilon` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @epsilon
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@epsilon``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
->> _`reset` (optional)_ : _Weather to reset the iterator after looping (only disable if the loop is only triggered once)_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```true``` 
->>
->>
->>
->>
->
->
->
->
->> _`reset_speed` (optional)_ : _Operation speed of the reset of the iterator, if enabled_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`range`** | @range | |Range of values (for example 0..10) |
+>| 2 | **`code`** | @macro | |Macro of the code that gets looped, should take the iterator (a counter) as the first argument. |
+>| 3 | `delay` | @number or @epsilon | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
+>| 4 | `reset` | @bool | `true` |Weather to reset the iterator after looping (only disable if the loop is only triggered once) |
+>| 5 | `reset_speed` | @number | `1` |Operation speed of the reset of the iterator, if enabled |
 >
 >
 
-**`hide_player`**:
+## **hide_player**:
 
->**Type:** `macro` 
->
->**Literal:** ```() { /* code omitted */ }``` 
+> **Value:** `() { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Hides the player_
 >
 >
 
-**`on`**:
+## **on**:
 
->**Type:** `macro` 
->
->**Literal:** ```(event: @event, function: @function) { /* code omitted */ }``` 
+> **Value:** `(event: @event, function: @function) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Triggers a function every time an event fires_
 >## Arguments:
->> **`event`** _(obligatory)_: _Event to trigger on_
 >
->
->
->
->> **`function`** _(obligatory)_: _Function to trigger_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`event`** | @event | |Event to trigger on |
+>| 2 | **`function`** | @function | |Function to trigger |
 >
 >
 
-**`shake`**:
+## **shake**:
 
->**Type:** `macro` 
->
->**Literal:** ```(strength: @number = 1, interval: @number = 0, duration: @number = 0.5) { /* code omitted */ }``` 
+> **Value:** `(strength: @number = 1, interval: @number = 0, duration: @number = 0.5) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the shake trigger_
 >## Arguments:
->> _`strength` (optional)_ : _Strength value_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
 >
->
->
->
->> _`interval` (optional)_ : _Interval value_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`duration` (optional)_ : _Duration of shake_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0.5``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `strength` | @number | `1` |Strength value |
+>| 2 | `interval` | @number | `0` |Interval value |
+>| 3 | `duration` | @number | `0.5` |Duration of shake |
 >
 >
 
-**`show_player`**:
+## **show_player**:
 
->**Type:** `macro` 
->
->**Literal:** ```() { /* code omitted */ }``` 
+> **Value:** `() { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Shows the player_
 >
 >
 
-**`supress_signal`**:
+## **supress_signal**:
 
->**Type:** `macro` 
->
->**Literal:** ```(delay: @number) { /* code omitted */ }``` 
+> **Value:** `(delay: @number) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Stops signal from coming past for some time_
 >## Arguments:
->> **`delay`** _(obligatory)_: _Time to supress signal_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`delay`** | @number | |Time to supress signal |
 >
 >
 
-**`toggle_bg_effect`**:
+## **toggle_bg_effect**:
 
->**Type:** `macro` 
->
->**Literal:** ```(on: @bool = false) { /* code omitted */ }``` 
+> **Value:** `(on: @bool = false) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the bg effect on/off triggers_
 >## Arguments:
->> _`on` (optional)_ : _Weather to toggle bg effect on or off_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `on` | @bool | `false` |Weather to toggle bg effect on or off |
 >
 >
 
-**`touch`**:
+## **touch**:
 
->**Type:** `macro` 
->
->**Literal:** ```(dual_side: @bool = false) { /* code omitted */ }``` 
+> **Value:** `(dual_side: @bool = false) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the touch trigger (returns an event)_
 >## Arguments:
->> _`dual_side` (optional)_ : _Dual mode (only check for touch on the dual side)_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `dual_side` | @bool | `false` |Dual mode (only check for touch on the dual side) |
 >
 >
 
-**`touch_end`**:
+## **touch_end**:
 
->**Type:** `macro` 
->
->**Literal:** ```(dual_side: @bool = false) { /* code omitted */ }``` 
+> **Value:** `(dual_side: @bool = false) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Returns an event for when a touch ends_
 >## Arguments:
->> _`dual_side` (optional)_ : _Dual mode (only check for touch on the dual side)_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `dual_side` | @bool | `false` |Dual mode (only check for touch on the dual side) |
 >
 >
 
-**`wait`**:
+## **wait**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(time: @number | @epsilon = {
->type: @epsilon
->}) { /* code omitted */ }
->
->``` 
+> **Value:** `(time: @number | @epsilon = @epsilon::{
+>}) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Adds a delay before the next triggers_
 >## Arguments:
->> _`time` (optional)_ : _Delay time in seconds (leave empty for minimum delay)_
->>
->>_Default value:_
->>
->>**Type:** `epsilon` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @epsilon
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@epsilon``` 
->>>
->>>
->>>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `time` | @number or @epsilon | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
 >
 >
 
-**`while_loop`**:
+## **while_loop**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(expr: @macro, code: @macro, delay: @number | @epsilon = {
->type: @epsilon
->}) { /* code omitted */ }
->
->``` 
+> **Value:** `(expr: @macro, code: @macro, delay: @number | @epsilon = @epsilon::{
+>}) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of a conditional spawn loop_
 >## Arguments:
->> **`expr`** _(obligatory)_: _While loop condition, should return a boolean_
 >
->
->
->
->> **`code`** _(obligatory)_: _Macro of the code that gets looped_
->
->
->
->
->> _`delay` (optional)_ : _Delay between loops (less than 0.05 may be unstable)_
->>
->>_Default value:_
->>
->>**Type:** `epsilon` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @epsilon
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@epsilon``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`expr`** | @macro | |While loop condition, should return a boolean |
+>| 2 | **`code`** | @macro | |Macro of the code that gets looped |
+>| 3 | `delay` | @number or @epsilon | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
 >
 >
 ## Other values:
@@ -694,5424 +265,3666 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
 <details>
 <summary> View </summary>
 
-**`BACK_IN`**:
+## **BACK_IN**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 17,
->type: @easing_type
->}
->
->``` 
+> **Value:** `@easing_type::{
+>id: 17
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```17``` 
+>> **Value:** `17` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`BACK_IN_OUT`**:
+## **BACK_IN_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 16
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```16``` 
+>> **Value:** `16` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`BACK_OUT`**:
+## **BACK_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 18
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```18``` 
+>> **Value:** `18` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`BG`**:
+## **BG**:
 
->**Type:** `color` 
->
->**Literal:** ```1000c``` 
+> **Value:** `1000c` (`@color`) 
 >
 >
 >
 
-**`BOUNCE_IN`**:
+## **BOUNCE_IN**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 8
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```8``` 
+>> **Value:** `8` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`BOUNCE_IN_OUT`**:
+## **BOUNCE_IN_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 7
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```7``` 
+>> **Value:** `7` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`BOUNCE_OUT`**:
+## **BOUNCE_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 9,
->type: @easing_type
->}
->
->``` 
+> **Value:** `@easing_type::{
+>id: 9
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```9``` 
+>> **Value:** `9` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`EASE_IN`**:
+## **EASE_IN**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 2
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```2``` 
+>> **Value:** `2` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`EASE_IN_OUT`**:
+## **EASE_IN_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 1
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
+>> **Value:** `1` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`EASE_OUT`**:
+## **EASE_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 3
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
+>> **Value:** `3` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`ELASTIC_IN`**:
+## **ELASTIC_IN**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 5
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```5``` 
+>> **Value:** `5` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`ELASTIC_IN_OUT`**:
+## **ELASTIC_IN_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 4,
->type: @easing_type
->}
->
->``` 
+> **Value:** `@easing_type::{
+>id: 4
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```4``` 
+>> **Value:** `4` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`ELASTIC_OUT`**:
+## **ELASTIC_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 6
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```6``` 
+>> **Value:** `6` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`EQUAL_TO`**:
+## **EQUAL_TO**:
 
->**Type:** `comparison` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 0,
->type: @comparison
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@comparison``` 
->>
->>
->>
->
->
-
-**`EXPONENTIAL_IN`**:
-
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 11,
->type: @easing_type
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```11``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
->>
->>
->>
->
->
-
-**`EXPONENTIAL_IN_OUT`**:
-
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 10,
->type: @easing_type
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```10``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
->>
->>
->>
->
->
-
-**`EXPONENTIAL_OUT`**:
-
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
->id: 12
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```12``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
->>
->>
->>
->
->
-
-**`LARGER_THAN`**:
-
->**Type:** `comparison` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @comparison,
->id: 1
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@comparison``` 
->>
->>
->>
->
->
-
-**`NONE`**:
-
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@comparison::{
 >id: 0
->}
->
->``` 
+>}` (`@comparison`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
+>> **Value:** `0` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@comparison` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`SINE_IN`**:
+## **EXPONENTIAL_IN**:
 
->**Type:** `easing_type` 
+> **Value:** `@easing_type::{
+>id: 11
+>}` (`@easing_type`) 
 >
->**Literal:** 
+><details>
+><summary> View members </summary>
 >
-> ```
+>## **id**:
 >
->{
->type: @easing_type,
+>> **Value:** `11` (`@number`) 
+>>
+>>
+>>
+>
+>## **type**:
+>
+>> **Value:** `@easing_type` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **EXPONENTIAL_IN_OUT**:
+
+> **Value:** `@easing_type::{
+>id: 10
+>}` (`@easing_type`) 
+>
+><details>
+><summary> View members </summary>
+>
+>## **id**:
+>
+>> **Value:** `10` (`@number`) 
+>>
+>>
+>>
+>
+>## **type**:
+>
+>> **Value:** `@easing_type` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **EXPONENTIAL_OUT**:
+
+> **Value:** `@easing_type::{
+>id: 12
+>}` (`@easing_type`) 
+>
+><details>
+><summary> View members </summary>
+>
+>## **id**:
+>
+>> **Value:** `12` (`@number`) 
+>>
+>>
+>>
+>
+>## **type**:
+>
+>> **Value:** `@easing_type` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **LARGER_THAN**:
+
+> **Value:** `@comparison::{
+>id: 1
+>}` (`@comparison`) 
+>
+><details>
+><summary> View members </summary>
+>
+>## **id**:
+>
+>> **Value:** `1` (`@number`) 
+>>
+>>
+>>
+>
+>## **type**:
+>
+>> **Value:** `@comparison` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **NONE**:
+
+> **Value:** `@easing_type::{
+>id: 0
+>}` (`@easing_type`) 
+>
+><details>
+><summary> View members </summary>
+>
+>## **id**:
+>
+>> **Value:** `0` (`@number`) 
+>>
+>>
+>>
+>
+>## **type**:
+>
+>> **Value:** `@easing_type` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **SINE_IN**:
+
+> **Value:** `@easing_type::{
 >id: 14
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```14``` 
+>> **Value:** `14` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`SINE_IN_OUT`**:
+## **SINE_IN_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->type: @easing_type,
+> **Value:** `@easing_type::{
 >id: 13
->}
->
->``` 
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```13``` 
+>> **Value:** `13` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`SINE_OUT`**:
+## **SINE_OUT**:
 
->**Type:** `easing_type` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 15,
->type: @easing_type
->}
->
->``` 
+> **Value:** `@easing_type::{
+>id: 15
+>}` (`@easing_type`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`id`**:
+>## **id**:
 >
->>**Type:** `number` 
->>
->>**Literal:** ```15``` 
+>> **Value:** `15` (`@number`) 
 >>
 >>
 >>
 >
->**`type`**:
+>## **type**:
 >
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@easing_type``` 
+>> **Value:** `@easing_type` (`@type_indicator`) 
 >>
 >>
 >>
 >
 >
 
-**`SMALLER_THAN`**:
+## **SMALLER_THAN**:
 
->**Type:** `comparison` 
->
->**Literal:** 
->
-> ```
->
->{
->id: 2,
->type: @comparison
->}
->
->``` 
->
-><details>
-><summary> View members </summary>
->
->**`id`**:
->
->>**Type:** `number` 
->>
->>**Literal:** ```2``` 
->>
->>
->>
->
->**`type`**:
->
->>**Type:** `type_indicator` 
->>
->>**Literal:** ```@comparison``` 
->>
->>
->>
->
->
-
-**`obj_props`**:
-
->**Type:** `dictionary` 
->
->**Literal:** 
->
-> ```
->
->{
->X_MOD: {
->type: @object_key,
->pattern: @number,
->id: 72
->},
->HIGH_DETAIL: {
->pattern: @bool,
->type: @object_key,
->id: 103
->},
->MAIN_ONLY: {
->pattern: @bool,
->id: 65,
->type: @object_key
->},
->ROTATION_SPEED: {
->type: @object_key,
->id: 97,
->pattern: @number
->},
->TOGGLE_MODE: {
->pattern: @number,
->id: 82,
->type: @object_key
->},
->COMPARISON: {
->type: @object_key,
->id: 88,
->pattern: @number
->},
->INTERVAL: {
->pattern: @number,
->id: 84,
->type: @object_key
->},
->DUAL_MODE: {
->pattern: @bool,
->id: 89,
->type: @object_key
->},
->BLOCK_A: {
->id: 80,
->type: @object_key,
->pattern: @block
->},
->X: {
->pattern: @number,
->type: @object_key,
+> **Value:** `@comparison::{
 >id: 2
->},
->... (83 more)
->}
->
->``` 
+>}` (`@comparison`) 
 >
 ><details>
 ><summary> View members </summary>
 >
->**`ACTIVATE_GROUP`**:
+>## **id**:
 >
->>**Type:** `object_key` 
+>> **Value:** `2` (`@number`) 
 >>
->>**Literal:** 
 >>
->> ```
 >>
->>{
->>type: @object_key,
+>
+>## **type**:
+>
+>> **Value:** `@comparison` (`@type_indicator`) 
+>>
+>>
+>>
+>
+>
+
+## **obj_props**:
+
+> **Type:** `@dictionary` 
+>
+><details>
+><summary> View members </summary>
+>
+>## **ACTIVATE_GROUP**:
+>
+>> **Value:** `@object_key::{
 >>id: 56,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```56``` 
+>>> **Value:** `56` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ACTIVATE_ON_EXIT`**:
+>## **ACTIVATE_ON_EXIT**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 93,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```93``` 
+>>> **Value:** `93` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ANIMATION_ID`**:
+>## **ANIMATION_ID**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 76,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```76``` 
+>>> **Value:** `76` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ANIMATION_SPEED`**:
+>## **ANIMATION_SPEED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 107
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>id: 107,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```107``` 
+>>> **Value:** `107` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`BLENDING`**:
+>## **BLENDING**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 17,
->>type: @object_key,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```17``` 
+>>> **Value:** `17` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`BLOCK_A`**:
+>## **BLOCK_A**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 80,
->>type: @object_key,
 >>pattern: @block
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```80``` 
+>>> **Value:** `80` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@block``` 
+>>> **Value:** `@block` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`BLOCK_B`**:
+>## **BLOCK_B**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @block,
+>> **Value:** `@object_key::{
 >>id: 95,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @block
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```95``` 
+>>> **Value:** `95` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@block``` 
+>>> **Value:** `@block` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`CENTER`**:
+>## **CENTER**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @group,
->>id: 71
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```71``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@group``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COLOR`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @color,
->>id: 21,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```21``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@color``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COLOR_2`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @color,
->>id: 22,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```22``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@color``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COLOR_2_HVS`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 44,
->>pattern: @string
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```44``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@string``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COLOR_2_HVS_ENABLED`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @bool,
->>id: 42
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```42``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COMPARISON`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 88,
->>pattern: @number
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```88``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COPIED_COLOR_HVS`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @string,
->>id: 49
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```49``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@string``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COPIED_COLOR_ID`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 50,
->>pattern: @color
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```50``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@color``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COPY_OPACTITY`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @bool,
->>id: 60
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```60``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COUNT`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 77
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```77``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`COUNT_MULTI_ACTIVATE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>type: @object_key,
->>id: 104
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```104``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DELAY`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 91,
->>pattern: @number,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```91``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DETAIL_ONLY`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>id: 66,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```66``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DISABLE_ROTATION`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>id: 98,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```98``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DONT_ENTER`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 67,
->>pattern: @bool,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```67``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DONT_FADE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>type: @object_key,
->>id: 64
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```64``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DUAL_MODE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>id: 89,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```89``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DURATION`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 10
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```10``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`DYNAMIC_BLOCK`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 94,
->>pattern: @bool
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```94``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EASING`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 30
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```30``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EASING_RATE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 85
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```85``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EDITOR_DISABLE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 102,
->>pattern: @bool
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```102``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EDITOR_LAYER_1`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 20
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```20``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EDITOR_LAYER_2`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 61
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```61``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`EXCLUSIVE`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>type: @object_key,
->>id: 86
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```86``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`FADE_IN`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 45
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```45``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`FADE_OUT`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 47,
->>pattern: @number
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```47``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`FOLLOW`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 71,
 >>pattern: @group
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```71``` 
+>>> **Value:** `71` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@group``` 
+>>> **Value:** `@group` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`GLOW_DISABLED`**:
+>## **COLOR**:
 >
->>**Type:** `object_key` 
+>> **Value:** `@object_key::{
+>>pattern: @color,
+>>id: 21
+>>}` (`@object_key`) 
 >>
->>**Literal:** 
+>><details>
+>><summary> View members </summary>
 >>
->> ```
+>>## **id**:
 >>
->>{
->>type: @object_key,
+>>> **Value:** `21` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@color` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COLOR_2**:
+>
+>> **Value:** `@object_key::{
+>>id: 22,
+>>pattern: @color
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `22` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@color` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COLOR_2_HVS**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @string,
+>>id: 44
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `44` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@string` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COLOR_2_HVS_ENABLED**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 42
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `42` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COMPARISON**:
+>
+>> **Value:** `@object_key::{
+>>id: 88,
+>>pattern: @number
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `88` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COPIED_COLOR_HVS**:
+>
+>> **Value:** `@object_key::{
+>>id: 49,
+>>pattern: @string
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `49` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@string` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COPIED_COLOR_ID**:
+>
+>> **Value:** `@object_key::{
+>>id: 50,
+>>pattern: @color
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `50` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@color` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COPY_OPACTITY**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 60
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `60` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COUNT**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 77
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `77` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **COUNT_MULTI_ACTIVATE**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 104
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `104` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DELAY**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 91
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `91` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DETAIL_ONLY**:
+>
+>> **Value:** `@object_key::{
+>>id: 66,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `66` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DISABLE_ROTATION**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 98
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `98` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DONT_ENTER**:
+>
+>> **Value:** `@object_key::{
+>>id: 67,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `67` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DONT_FADE**:
+>
+>> **Value:** `@object_key::{
+>>id: 64,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `64` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DUAL_MODE**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 89
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `89` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DURATION**:
+>
+>> **Value:** `@object_key::{
+>>id: 10,
+>>pattern: @number
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `10` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **DYNAMIC_BLOCK**:
+>
+>> **Value:** `@object_key::{
+>>id: 94,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `94` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EASING**:
+>
+>> **Value:** `@object_key::{
+>>id: 30,
+>>pattern: @number
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `30` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EASING_RATE**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 85
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `85` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EDITOR_DISABLE**:
+>
+>> **Value:** `@object_key::{
+>>id: 102,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `102` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EDITOR_LAYER_1**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 20
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `20` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EDITOR_LAYER_2**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 61
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `61` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **EXCLUSIVE**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @bool,
+>>id: 86
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `86` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **FADE_IN**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 45
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `45` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **FADE_OUT**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 47
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `47` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **FOLLOW**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @group,
+>>id: 71
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `71` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@group` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **GLOW_DISABLED**:
+>
+>> **Value:** `@object_key::{
 >>id: 96,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```96``` 
+>>> **Value:** `96` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`GROUPS`**:
+>## **GROUPS**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: [@group] | @group,
->>type: @object_key,
 >>id: 57
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```57``` 
+>>> **Value:** `57` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `pattern` 
->>>
->>>**Literal:** ```[@group] | @group``` 
+>>> **Value:** `[@group] | @group` (`@pattern`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`GROUP_PARENT`**:
+>## **GROUP_PARENT**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>type: @object_key,
 >>id: 34
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```34``` 
+>>> **Value:** `34` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HIGH_DETAIL`**:
+>## **HIGH_DETAIL**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>type: @object_key,
 >>id: 103
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```103``` 
+>>> **Value:** `103` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HOLD`**:
+>## **HOLD**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
+>> **Value:** `@object_key::{
 >>id: 46,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```46``` 
+>>> **Value:** `46` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HOLD_MODE`**:
+>## **HOLD_MODE**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 81,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```81``` 
+>>> **Value:** `81` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HORIZONTAL_FLIP`**:
+>## **HORIZONTAL_FLIP**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 4,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```4``` 
+>>> **Value:** `4` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HVS`**:
+>## **HVS**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 43,
 >>pattern: @string
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```43``` 
+>>> **Value:** `43` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@string``` 
+>>> **Value:** `@string` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`HVS_ENABLED`**:
+>## **HVS_ENABLED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>pattern: @bool,
 >>id: 41
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```41``` 
+>>> **Value:** `41` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`INTERVAL`**:
+>## **INTERVAL**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
+>> **Value:** `@object_key::{
 >>id: 84,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```84``` 
+>>> **Value:** `84` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ITEM`**:
+>## **ITEM**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @item,
->>type: @object_key,
 >>id: 80
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```80``` 
+>>> **Value:** `80` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@item``` 
+>>> **Value:** `@item` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`LINKED_GROUP`**:
+>## **LINKED_GROUP**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 108,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```108``` 
+>>> **Value:** `108` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`LOCK_OBJECT_ROTATION`**:
+>## **LOCK_OBJECT_ROTATION**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 70,
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 70
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```70``` 
+>>> **Value:** `70` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`LOCK_TO_PLAYER_X`**:
+>## **LOCK_TO_PLAYER_X**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>id: 58,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 58
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```58``` 
+>>> **Value:** `58` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`LOCK_TO_PLAYER_Y`**:
+>## **LOCK_TO_PLAYER_Y**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 59,
->>type: @object_key,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```59``` 
+>>> **Value:** `59` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`MAIN_ONLY`**:
+>## **MAIN_ONLY**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>id: 65,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 65
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```65``` 
+>>> **Value:** `65` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`MAX_SPEED`**:
+>## **MAX_SPEED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 105,
->>pattern: @number
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 105
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```105``` 
+>>> **Value:** `105` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`MOVE_X`**:
+>## **MOVE_X**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 28,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```28``` 
+>>> **Value:** `28` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`MOVE_Y`**:
+>## **MOVE_Y**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 29,
->>type: @object_key,
->>pattern: @number
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```29``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`MULTI_TRIGGER`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @bool,
->>id: 87,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```87``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`OBJ_ID`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 1,
->>type: @object_key,
->>pattern: @number
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```1``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`OPACITY`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>id: 35,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 29
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```35``` 
+>>> **Value:** `29` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`PICKUP_MODE`**:
+>## **MULTI_TRIGGER**:
 >
->>**Type:** `object_key` 
+>> **Value:** `@object_key::{
+>>id: 87,
+>>pattern: @bool
+>>}` (`@object_key`) 
 >>
->>**Literal:** 
+>><details>
+>><summary> View members </summary>
 >>
->> ```
+>>## **id**:
 >>
->>{
->>id: 79,
->>type: @object_key,
+>>> **Value:** `87` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **OBJ_ID**:
+>
+>> **Value:** `@object_key::{
+>>id: 1,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```79``` 
+>>> **Value:** `1` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`PLAYER_COLOR_1`**:
+>## **OPACITY**:
 >
->>**Type:** `object_key` 
+>> **Value:** `@object_key::{
+>>id: 35,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
->>**Literal:** 
+>><details>
+>><summary> View members </summary>
 >>
->> ```
+>>## **id**:
 >>
->>{
->>pattern: @bool,
+>>> **Value:** `35` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **PICKUP_MODE**:
+>
+>> **Value:** `@object_key::{
+>>id: 79,
+>>pattern: @number
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `79` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **PLAYER_COLOR_1**:
+>
+>> **Value:** `@object_key::{
 >>id: 15,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```15``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`PLAYER_COLOR_2`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>id: 16,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```16``` 
+>>> **Value:** `15` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`PORTAL_CHECKED`**:
+>## **PLAYER_COLOR_2**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 13,
->>type: @object_key,
->>pattern: @bool
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```13``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`PULSE_HSV`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 48,
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 16
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```48``` 
+>>> **Value:** `16` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`RANDOMIZE_START`**:
+>## **PORTAL_CHECKED**:
 >
->>**Type:** `object_key` 
+>> **Value:** `@object_key::{
+>>id: 13,
+>>pattern: @bool
+>>}` (`@object_key`) 
 >>
->>**Literal:** 
+>><details>
+>><summary> View members </summary>
 >>
->> ```
+>>## **id**:
 >>
->>{
->>type: @object_key,
+>>> **Value:** `13` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **PULSE_HSV**:
+>
+>> **Value:** `@object_key::{
+>>id: 48,
+>>pattern: @bool
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `48` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@bool` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **RANDOMIZE_START**:
+>
+>> **Value:** `@object_key::{
 >>id: 106,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```106``` 
+>>> **Value:** `106` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ROTATE_DEGREES`**:
+>## **ROTATE_DEGREES**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>type: @object_key,
 >>id: 68
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```68``` 
+>>> **Value:** `68` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ROTATION`**:
+>## **ROTATION**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>id: 6,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 6
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```6``` 
+>>> **Value:** `6` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`ROTATION_SPEED`**:
+>## **ROTATION_SPEED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 97,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```97``` 
+>>> **Value:** `97` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`SCALING`**:
+>## **SCALING**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 32
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>id: 32,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```32``` 
+>>> **Value:** `32` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`SPAWN_DURATION`**:
+>## **SPAWN_DURATION**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number | @epsilon,
->>id: 63
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>id: 63,
+>>pattern: @number | @epsilon
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```63``` 
+>>> **Value:** `63` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `pattern` 
->>>
->>>**Literal:** ```@number | @epsilon``` 
+>>> **Value:** `@number | @epsilon` (`@pattern`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`SPAWN_TRIGGERED`**:
+>## **SPAWN_TRIGGERED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>id: 62,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 62
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```62``` 
+>>> **Value:** `62` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`SPEED`**:
+>## **SPEED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>pattern: @number,
 >>id: 90
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```90``` 
+>>> **Value:** `90` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`STRENGTH`**:
+>## **STRENGTH**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 75,
->>pattern: @number,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```75``` 
+>>> **Value:** `75` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`SUBTRACT_COUNT`**:
+>## **SUBTRACT_COUNT**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 78,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```78``` 
+>>> **Value:** `78` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TARGET`**:
+>## **TARGET**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 51,
 >>pattern: @color | @group | @function
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```51``` 
+>>> **Value:** `51` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `pattern` 
->>>
->>>**Literal:** ```@color | @group | @function``` 
+>>> **Value:** `@color | @group | @function` (`@pattern`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TARGET_COLOR`**:
+>## **TARGET_COLOR**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 23,
->>pattern: @color,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @color
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```23``` 
+>>> **Value:** `23` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@color``` 
+>>> **Value:** `@color` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TARGET_POS`**:
+>## **TARGET_POS**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @group,
->>id: 71,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 71
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```71``` 
+>>> **Value:** `71` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@group``` 
+>>> **Value:** `@group` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TARGET_POS_AXES`**:
+>## **TARGET_POS_AXES**:
 >
->>**Type:** `object_key` 
+>> **Value:** `@object_key::{
+>>id: 101,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
->>**Literal:** 
+>><details>
+>><summary> View members </summary>
 >>
->> ```
+>>## **id**:
 >>
->>{
->>type: @object_key,
+>>> **Value:** `101` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **TARGET_TYPE**:
+>
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>id: 101
->>}
->>
->>``` 
+>>id: 52
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```101``` 
+>>> **Value:** `52` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TARGET_TYPE`**:
+>## **TEXT**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 52,
->>pattern: @number,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```52``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`TEXT`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 31,
->>pattern: @string,
->>type: @object_key
->>}
->>
->>``` 
+>>pattern: @string
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```31``` 
+>>> **Value:** `31` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@string``` 
+>>> **Value:** `@string` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TIMES_360`**:
+>## **TIMES_360**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>type: @object_key,
 >>id: 69
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```69``` 
+>>> **Value:** `69` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TOGGLE_MODE`**:
+>## **TOGGLE_MODE**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>id: 82,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 82
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```82``` 
+>>> **Value:** `82` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TOUCH_TRIGGERED`**:
+>## **TOUCH_TRIGGERED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>id: 11,
->>type: @object_key,
 >>pattern: @bool
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```11``` 
+>>> **Value:** `11` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TRIGGER_BLUE`**:
+>## **TRIGGER_BLUE**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>id: 9,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 9
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```9``` 
+>>> **Value:** `9` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TRIGGER_GREEN`**:
+>## **TRIGGER_GREEN**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>type: @object_key,
->>id: 8
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>id: 8,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```8``` 
+>>> **Value:** `8` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`TRIGGER_RED`**:
+>## **TRIGGER_RED**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>type: @object_key,
 >>id: 7
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```7``` 
+>>> **Value:** `7` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`USE_TARGET`**:
+>## **USE_TARGET**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>pattern: @bool,
 >>id: 100
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```100``` 
+>>> **Value:** `100` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`VERTICAL_FLIP`**:
+>## **VERTICAL_FLIP**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @bool,
->>id: 5,
->>type: @object_key
->>}
->>
->>``` 
+>>id: 5
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```5``` 
+>>> **Value:** `5` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@bool``` 
+>>> **Value:** `@bool` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`X`**:
+>## **X**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>type: @object_key,
 >>id: 2
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```2``` 
+>>> **Value:** `2` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`X_MOD`**:
+>## **X_MOD**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 72
->>}
->>
->>``` 
+>> **Value:** `@object_key::{
+>>id: 72,
+>>pattern: @number
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```72``` 
+>>> **Value:** `72` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`Y`**:
+>## **Y**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>id: 3,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```3``` 
+>>> **Value:** `3` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`YELLOW_TELEPORTATION_PORTAL_DISTANCE`**:
+>## **YELLOW_TELEPORTATION_PORTAL_DISTANCE**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
+>> **Value:** `@object_key::{
 >>pattern: @number,
->>type: @object_key,
 >>id: 54
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```54``` 
+>>> **Value:** `54` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`Y_MOD`**:
+>## **Y_MOD**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
+>> **Value:** `@object_key::{
 >>pattern: @number,
 >>id: 73
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```73``` 
+>>> **Value:** `73` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
 >>
 >
->**`Y_OFFSET`**:
+>## **Y_OFFSET**:
 >
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @object_key,
->>pattern: @number,
->>id: 92
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```92``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`Z_LAYER`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>pattern: @number,
->>id: 24,
->>type: @object_key
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```24``` 
->>>
->>>
->>>
->>
->>**`pattern`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@object_key``` 
->>>
->>>
->>>
->>
->>
->
->**`Z_ORDER`**:
->
->>**Type:** `object_key` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 25,
->>type: @object_key,
+>> **Value:** `@object_key::{
+>>id: 92,
 >>pattern: @number
->>}
->>
->>``` 
+>>}` (`@object_key`) 
 >>
 >><details>
 >><summary> View members </summary>
 >>
->>**`id`**:
+>>## **id**:
 >>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```25``` 
+>>> **Value:** `92` (`@number`) 
 >>>
 >>>
 >>>
 >>
->>**`pattern`**:
+>>## **pattern**:
 >>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@number``` 
+>>> **Value:** `@number` (`@type_indicator`) 
 >>>
 >>>
 >>>
 >>
->>**`type`**:
+>>## **type**:
 >>
->>>**Type:** `type_indicator` 
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
->>>**Literal:** ```@object_key``` 
+>>>
+>>>
+>>
+>>
+>
+>## **Z_LAYER**:
+>
+>> **Value:** `@object_key::{
+>>pattern: @number,
+>>id: 24
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `24` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>
+>
+>## **Z_ORDER**:
+>
+>> **Value:** `@object_key::{
+>>id: 25,
+>>pattern: @number
+>>}` (`@object_key`) 
+>>
+>><details>
+>><summary> View members </summary>
+>>
+>>## **id**:
+>>
+>>> **Value:** `25` (`@number`) 
+>>>
+>>>
+>>>
+>>
+>>## **pattern**:
+>>
+>>> **Value:** `@number` (`@type_indicator`) 
+>>>
+>>>
+>>>
+>>
+>>## **type**:
+>>
+>>> **Value:** `@object_key` (`@type_indicator`) 
 >>>
 >>>
 >>>
@@ -6131,738 +3944,170 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`alpha`**:
+## **alpha**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, opacity: @number = 1, duration: @number = 0) { /* code omitted */ }``` 
+> **Value:** `(self, opacity: @number = 1, duration: @number = 0) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the alpha trigger_
 >## Arguments:
->> _`opacity` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
 >
->
->
->
->> _`duration` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `opacity` | @number | `1` | |
+>| 3 | `duration` | @number | `0` | |
 >
 >
 
-**`follow`**:
+## **follow**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @group, x_mod: @number = 1, y_mod: @number = 1, duration: @number = 999) { /* code omitted */ }``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the follow trigger_
 >## Arguments:
->> **`other`** _(obligatory)_: _Group of object to follow_
 >
->
->
->
->> _`x_mod` (optional)_ : _Multiplier for the movement on the X-axis_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
->> _`y_mod` (optional)_ : _Multiplier for the movement on the Y-axis_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
->> _`duration` (optional)_ : _Duration of following_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```999``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @group | |Group of object to follow |
+>| 3 | `x_mod` | @number | `1` |Multiplier for the movement on the X-axis |
+>| 4 | `y_mod` | @number | `1` |Multiplier for the movement on the Y-axis |
+>| 5 | `duration` | @number | `999` |Duration of following |
 >
 >
 
-**`follow_player_y`**:
+## **follow_player_y**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, speed: @number = 1, delay: @number = 0, offset: @number = 0, max_speed: @number = 0, duration: @number = 999) { /* code omitted */ }``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the follow player Y trigger_
 >## Arguments:
->> _`speed` (optional)_ : _Interpolation factor (?)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
 >
->
->
->
->> _`delay` (optional)_ : _Delay of movement_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`offset` (optional)_ : _Offset on the Y-axis_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`max_speed` (optional)_ : _Maximum speed_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`duration` (optional)_ : _Duration of following_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```999``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `speed` | @number | `1` |Interpolation factor (?) |
+>| 3 | `delay` | @number | `0` |Delay of movement |
+>| 4 | `offset` | @number | `0` |Offset on the Y-axis |
+>| 5 | `max_speed` | @number | `0` |Maximum speed |
+>| 6 | `duration` | @number | `999` |Duration of following |
 >
 >
 
-**`lock_to_player`**:
+## **lock_to_player**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, lock_x: @bool = true, lock_y: @bool = true, duration: @number = 999) { /* code omitted */ }``` 
+> **Value:** `(self, lock_x: @bool = true, lock_y: @bool = true, duration: @number = 999) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Lock group to player position_
 >## Arguments:
->> _`lock_x` (optional)_ : _Lock to player X_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```true``` 
->>
->>
->>
->>
 >
->
->
->
->> _`lock_y` (optional)_ : _Lock to player Y_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```true``` 
->>
->>
->>
->>
->
->
->
->
->> _`duration` (optional)_ : _Duration of lock_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```999``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `lock_x` | @bool | `true` |Lock to player X |
+>| 3 | `lock_y` | @bool | `true` |Lock to player Y |
+>| 4 | `duration` | @number | `999` |Duration of lock |
 >
 >
 
-**`move`**:
+## **move**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = {
->id: 0,
->type: @easing_type
->}, easing_rate: @number = 2) { /* code omitted */ }
->
->``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the move trigger_
 >## Arguments:
->> **`x`** _(obligatory)_: _Units to move on the X axis_
 >
->
->
->
->> **`y`** _(obligatory)_: _Units to move on the Y axis_
->
->
->
->
->> _`duration` (optional)_ : _Duration of movement_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`easing` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `easing_type` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 0,
->>type: @easing_type
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```0``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@easing_type``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
->> _`easing_rate` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```2``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`x`** | @number | |Units to move on the X axis |
+>| 3 | **`y`** | @number | |Units to move on the Y axis |
+>| 4 | `duration` | @number | `0` |Duration of movement |
+>| 5 | `easing` | @easing_type | `@easing_type::{id: 0}` | |
+>| 6 | `easing_rate` | @number | `2` | |
 >
 >
 
-**`move_to`**:
+## **move_to**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(self, target: @group, duration: @number = 0, x_only: @bool = false, y_only: @bool = false, easing: @easing_type = {
->id: 0,
->type: @easing_type
->}, easing_rate: @number = 2) { /* code omitted */ }
->
->``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the 'Move target' feature of the move trigger_
 >## Arguments:
->> **`target`** _(obligatory)_: _Group of the object to move to_
 >
->
->
->
->> _`duration` (optional)_ : _Duration of movement_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`x_only` (optional)_ : _Will move to the object only on the X-axis_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
->> _`y_only` (optional)_ : _Will move to the object only on the y-axis_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
->> _`easing` (optional)_ : _Easing type_
->>
->>_Default value:_
->>
->>**Type:** `easing_type` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 0,
->>type: @easing_type
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```0``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@easing_type``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
->> _`easing_rate` (optional)_ : _Easing rate_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```2``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`target`** | @group | |Group of the object to move to |
+>| 3 | `duration` | @number | `0` |Duration of movement |
+>| 4 | `x_only` | @bool | `false` |Will move to the object only on the X-axis |
+>| 5 | `y_only` | @bool | `false` |Will move to the object only on the y-axis |
+>| 6 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 7 | `easing_rate` | @number | `2` |Easing rate |
 >
 >
 
-**`pulse`**:
+## **pulse**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, r: @number, g: @number, b: @number, fade_in: @number = 0, hold: @number = 0, fade_out: @number = 0, exclusive: @bool = false, hsv: @bool = false) { /* code omitted */ }``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the pulse trigger for groups_
 >## Arguments:
->> **`r`** _(obligatory)_: _Red value of pulse color (or hue if HSV is enabled)_
 >
->
->
->
->> **`g`** _(obligatory)_: _Green value of pulse color (or saturation if HSV is enabled)_
->
->
->
->
->> **`b`** _(obligatory)_: _Blue value of pulse color (or brightness/value if HSV is enabled)_
->
->
->
->
->> _`fade_in` (optional)_ : _Fade-in duration_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`hold` (optional)_ : _Duration to hold the color_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`fade_out` (optional)_ : _Fade-out duration_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`exclusive` (optional)_ : _Weather to prioritize this pulse over simultaneous pulses_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
->> _`hsv` (optional)_ : _Toggle HSV mode_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`r`** | @number | |Red value of pulse color (or hue if HSV is enabled) |
+>| 3 | **`g`** | @number | |Green value of pulse color (or saturation if HSV is enabled) |
+>| 4 | **`b`** | @number | |Blue value of pulse color (or brightness/value if HSV is enabled) |
+>| 5 | `fade_in` | @number | `0` |Fade-in duration |
+>| 6 | `hold` | @number | `0` |Duration to hold the color |
+>| 7 | `fade_out` | @number | `0` |Fade-out duration |
+>| 8 | `exclusive` | @bool | `false` |Weather to prioritize this pulse over simultaneous pulses |
+>| 9 | `hsv` | @bool | `false` |Toggle HSV mode |
 >
 >
 
-**`rotate`**:
+## **rotate**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(self, center: @group, degrees: @number, duration: @number = 0, easing: @easing_type = {
->id: 0,
->type: @easing_type
->}, easing_rate: @number = 2, lock_object_rotation: @bool = false) { /* code omitted */ }
->
->``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the rotate trigger_
 >## Arguments:
->> **`center`** _(obligatory)_: _Group of object to rotate around_
 >
->
->
->
->> **`degrees`** _(obligatory)_: _Rotation in degrees_
->
->
->
->
->> _`duration` (optional)_ : _Duration of rotation_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`easing` (optional)_ : _Easing type_
->>
->>_Default value:_
->>
->>**Type:** `easing_type` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>id: 0,
->>type: @easing_type
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`id`**:
->>
->>>**Type:** `number` 
->>>
->>>**Literal:** ```0``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@easing_type``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
->> _`easing_rate` (optional)_ : _Easing rate_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```2``` 
->>
->>
->>
->>
->
->
->
->
->> _`lock_object_rotation` (optional)_ : _Only rotate positions of the objects, not the textures_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`center`** | @group | |Group of object to rotate around |
+>| 3 | **`degrees`** | @number | |Rotation in degrees |
+>| 4 | `duration` | @number | `0` |Duration of rotation |
+>| 5 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 6 | `easing_rate` | @number | `2` |Easing rate |
+>| 7 | `lock_object_rotation` | @bool | `false` |Only rotate positions of the objects, not the textures |
 >
 >
 
-**`stop`**:
+## **stop**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self) { /* code omitted */ }``` 
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the stop trigger_
 >
 >
 
-**`toggle_off`**:
+## **toggle_off**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self) { /* code omitted */ }``` 
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Toggles the group off_
 >
 >
 
-**`toggle_on`**:
+## **toggle_on**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self) { /* code omitted */ }``` 
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Toggles the group on_
@@ -6874,177 +4119,43 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`pulse`**:
+## **pulse**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, r: @number, g: @number, b: @number, fade_in: @number = 0, hold: @number = 0, fade_out: @number = 0, exclusive: @bool = false, hsv: @bool = false) { /* code omitted */ }``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the pulse trigger for colors_
 >## Arguments:
->> **`r`** _(obligatory)_: _Red value of pulse color (or hue if HSV is enabled)_
 >
->
->
->
->> **`g`** _(obligatory)_: _Green value of pulse color (or saturation if HSV is enabled)_
->
->
->
->
->> **`b`** _(obligatory)_: _Blue value of pulse color (or brightness/value if HSV is enabled)_
->
->
->
->
->> _`fade_in` (optional)_ : _Fade-in duration_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`hold` (optional)_ : _Duration to hold the color_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`fade_out` (optional)_ : _Fade-out duration_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`exclusive` (optional)_ : _Weather to prioritize this pulse over simultaneous pulses_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
->> _`hsv` (optional)_ : _Toggle HSV mode_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`r`** | @number | |Red value of pulse color (or hue if HSV is enabled) |
+>| 3 | **`g`** | @number | |Green value of pulse color (or saturation if HSV is enabled) |
+>| 4 | **`b`** | @number | |Blue value of pulse color (or brightness/value if HSV is enabled) |
+>| 5 | `fade_in` | @number | `0` |Fade-in duration |
+>| 6 | `hold` | @number | `0` |Duration to hold the color |
+>| 7 | `fade_out` | @number | `0` |Fade-out duration |
+>| 8 | `exclusive` | @bool | `false` |Weather to prioritize this pulse over simultaneous pulses |
+>| 9 | `hsv` | @bool | `false` |Toggle HSV mode |
 >
 >
 
-**`set`**:
+## **set**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, r: @number, g: @number, b: @number, duration: @number = 0, opacity: @number = 1, blending: @bool = false) { /* code omitted */ }``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Implementation of the color trigger_
 >## Arguments:
->> **`r`** _(obligatory)_: _Red value of the target color_
 >
->
->
->
->> **`g`** _(obligatory)_: _Green value of the target color_
->
->
->
->
->> **`b`** _(obligatory)_: _Blue value of the target color_
->
->
->
->
->> _`duration` (optional)_ : _Duration of color change_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
->
->
->
->
->> _`opacity` (optional)_ : _Opacity of target color_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
->> _`blending` (optional)_ : _Toggle blending on target color_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```false``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`r`** | @number | |Red value of the target color |
+>| 3 | **`g`** | @number | |Green value of the target color |
+>| 4 | **`b`** | @number | |Blue value of the target color |
+>| 5 | `duration` | @number | `0` |Duration of color change |
+>| 6 | `opacity` | @number | `1` |Opacity of target color |
+>| 7 | `blending` | @bool | `false` |Toggle blending on target color |
 >
 >
 </details>
@@ -7053,20 +4164,17 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`create_tracker_item`**:
+## **create_tracker_item**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @block) { /* code omitted */ }``` 
+> **Value:** `(self, other: @block) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Returns an item ID that is 1 when the blocks are colliding and 0 when they are not_
 >## Arguments:
->> **`other`** _(obligatory)_: _Block ID to check against_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @block | |Block ID to check against |
 >
 >
 </details>
@@ -7075,74 +4183,47 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`add`**:
+## **add**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, amount: @number) { /* code omitted */ }``` 
+> **Value:** `(self, amount: @number) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the pickup trigger_
 >## Arguments:
->> **`amount`** _(obligatory)_: _Amount to add_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`amount`** | @number | |Amount to add |
 >
 >
 
-**`count`**:
+## **count**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, number: @number = 0) { /* code omitted */ }``` 
+> **Value:** `(self, number: @number = 0) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the count trigger (returns an event)_
 >## Arguments:
->> _`number` (optional)_ : _Number to check against_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `number` | @number | `0` |Number to check against |
 >
 >
 
-**`if_is`**:
+## **if_is**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, comparison: @comparison, other: @number, function: @function) { /* code omitted */ }``` 
+> **Value:** `(self, comparison: @comparison, other: @number, function: @function) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the instant count trigger_
 >## Arguments:
->> **`comparison`** _(obligatory)_: _Comparison mode_
 >
->
->
->
->> **`other`** _(obligatory)_: _Number to compare with_
->
->
->
->
->> **`function`** _(obligatory)_: _Target function if comparison is 'true'_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`comparison`** | @comparison | |Comparison mode |
+>| 3 | **`other`** | @number | |Number to compare with |
+>| 4 | **`function`** | @function | |Target function if comparison is 'true' |
 >
 >
 </details>
@@ -7151,83 +4232,51 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`contains`**:
+## **contains**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, el) { /* code omitted */ }``` 
+> **Value:** `(self, el) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`el`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`el`** |any | | |
 >
 >
 
-**`max`**:
+## **max**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, minval = 0) { /* code omitted */ }``` 
+> **Value:** `(self, minval = 0) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> _`minval` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `minval` |any | `0` | |
 >
 >
 
-**`min`**:
+## **min**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, max_val = 999999999999) { /* code omitted */ }``` 
+> **Value:** `(self, max_val = 999999999999) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> _`max_val` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```999999999999``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `max_val` |any | `999999999999` | |
 >
 >
 
-**`push`**:
+## **push**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, value) { /* code omitted */ }``` 
+> **Value:** `(self, value) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`value`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`value`** |any | | |
 >
 >
 </details>
@@ -7236,25 +4285,18 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`on`**:
+## **on**:
 
->**Type:** `macro` 
->
->**Literal:** ```(event: @event, function: @function) { /* code omitted */ }``` 
+> **Value:** `(event: @event, function: @function) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Triggers a function every time an event fires_
 >## Arguments:
->> **`event`** _(obligatory)_: _Event to trigger on_
 >
->
->
->
->> **`function`** _(obligatory)_: _Function to trigger_
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`event`** | @event | |Event to trigger on |
+>| 2 | **`function`** | @function | |Function to trigger |
 >
 >
 </details>
@@ -7263,661 +4305,370 @@ touch_end: (dual_side: @bool = false) { /* code omitted */ },
  <details>
 <summary> View members </summary>
 
-**`_add_`**:
+## **_add_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_as_`**:
+## **_as_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, _type: @type_indicator) { /* code omitted */ }``` 
+> **Value:** `(self, _type: @type_indicator) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`_type`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`_type`** | @type_indicator | | |
 >
 >
 
-**`_assign_`**:
+## **_assign_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_divide_`**:
+## **_divide_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_divided_by_`**:
+## **_divided_by_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_equal_`**:
+## **_equal_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_less_or_equal_`**:
+## **_less_or_equal_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_less_than_`**:
+## **_less_than_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_minus_`**:
+## **_minus_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_more_or_equal_`**:
+## **_mod_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_more_than_`**:
+## **_more_or_equal_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_multiply_`**:
+## **_more_than_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_not_equal_`**:
+## **_multiply_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`_plus_`**:
+## **_not_equal_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_subtract_`**:
+## **_plus_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
 >
 >
 
-**`_times_`**:
+## **_subtract_**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, num: @number | @counter) { /* code omitted */ }``` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`num`** _(obligatory)_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
 >
 >
 
-**`add`**:
+## **_times_**:
 
->**Type:** `macro` 
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
->**Literal:** ```(self, num: @number) { /* code omitted */ }``` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>
+>
+
+## **add**:
+
+> **Value:** `(self, num: @number) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Implementation of the pickup trigger_
 >## Arguments:
->> **`num`** _(obligatory)_: _Amount to add_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number | |Amount to add |
 >
 >
 
-**`add_to`**:
+## **add_to**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, items: @array, speed: @number = 3, factor: @number = 1) { /* code omitted */ }``` 
+> **Value:** `(self, items: @array, speed: @number = 3, factor: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Adds the counter's value to all item IDs in a list, and resets the counter to 0 in the process_
 >## Arguments:
->> **`items`** _(obligatory)_: _Item IDs to add to_
 >
->
->
->
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
->> _`factor` (optional)_ : _Multiplyer for the value added_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | @array | |Item IDs to add to |
+>| 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
+>| 4 | `factor` | @number | `1` |Multiplyer for the value added |
 >
 >
 
-**`clone`**:
+## **clone**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, speed: @number = 3) { /* code omitted */ }``` 
+> **Value:** `(self, speed: @number = 3) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Copies the counter and returns the copy_
 >## Arguments:
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
 >
 >
 
-**`compare`**:
+## **compare**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, other: @counter, speed: @number = 3) { /* code omitted */ }``` 
+> **Value:** `(self, other: @counter, speed: @number = 3) { /* code omitted */ }` (`@macro`) 
 >
 >## Arguments:
->> **`other`** _(obligatory)_
 >
->
->
->
->> _`speed` (optional)_ 
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @counter | | |
+>| 3 | `speed` | @number | `3` | |
 >
 >
 
-**`copy_to`**:
+## **copy_to**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, items: [@item | @counter], speed: @number = 3, factor: @number = 1) { /* code omitted */ }``` 
+> **Value:** `(self, items: [@item | @counter], speed: @number = 3, factor: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Copies the value of the counter to another item ID, without consuming the original_
 >## Arguments:
->> **`items`** _(obligatory)_: _Items to copy to_
 >
->
->
->
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
->> _`factor` (optional)_ : _Factor of to multiply the copy by_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | [@item or @counter] | |Items to copy to |
+>| 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
+>| 4 | `factor` | @number | `1` |Factor of to multiply the copy by |
 >
 >
 
-**`divide`**:
+## **divide**:
 
->**Type:** `macro` 
->
->**Literal:** 
->
-> ```
->
->(self, divisor: @counter | @number, remainder: @counter | @item = {
->type: @counter,
->item: ?i
->}, speed: @number = 3) { /* code omitted */ }
->
->``` 
+> **Type:** `@macro` 
 >
 >## Description: 
 > _Devides the value of the counter by some divisor_
 >## Arguments:
->> **`divisor`** _(obligatory)_: _Divisor to divide by, either another counter (very expensive) or a normal number_
 >
->
->
->
->> _`remainder` (optional)_ : _Counter or item to set to the remainder value_
->>
->>_Default value:_
->>
->>**Type:** `counter` 
->>
->>**Literal:** 
->>
->> ```
->>
->>{
->>type: @counter,
->>item: ?i
->>}
->>
->>``` 
->>
->><details>
->><summary> View members </summary>
->>
->>**`item`**:
->>
->>>**Type:** `item` 
->>>
->>>**Literal:** ```?i``` 
->>>
->>>
->>>
->>
->>**`type`**:
->>
->>>**Type:** `type_indicator` 
->>>
->>>**Literal:** ```@counter``` 
->>>
->>>
->>>
->>
->>
->>
->
->
->
->
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`divisor`** | @counter or @number | |Divisor to divide by, either another counter (very expensive) or a normal number |
+>| 3 | `remainder` | @counter or @item | `@counter::{item: ?i}` |Counter or item to set to the remainder value |
+>| 4 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
 >
 >
 
-**`multiply`**:
+## **multiply**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, factor: @counter | @number, speed: @number = 3) { /* code omitted */ }``` 
+> **Value:** `(self, factor: @counter | @number, speed: @number = 3) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Multiplies the value of the counter by some factor (does not consume the factor)_
 >## Arguments:
->> **`factor`** _(obligatory)_: _Factor to multiply by, either another counter (very expensive) or a normal number_
 >
->
->
->
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`factor`** | @counter or @number | |Factor to multiply by, either another counter (very expensive) or a normal number |
+>| 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
 >
 >
 
-**`new`**:
+## **new**:
 
->**Type:** `macro` 
->
->**Literal:** ```(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }``` 
+> **Value:** `(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Creates a new counter_
 >## Arguments:
->> _`source` (optional)_ : _Source (can be a number, item ID or boolean)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```0``` 
->>
->>
->>
->>
 >
->
->
->
->> _`delay` (optional)_ : _Adds a delay if a value gets added to the new item (to avoid confusing behavior)_
->>
->>_Default value:_
->>
->>**Type:** `bool` 
->>
->>**Literal:** ```true``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `source` | @number or @item or @bool | `0` |Source (can be a number, item ID or boolean) |
+>| 2 | `delay` | @bool | `true` |Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
 >
 >
 
-**`reset`**:
+## **reset**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, speed: @number = 3) { /* code omitted */ }``` 
+> **Value:** `(self, speed: @number = 3) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Resets counter to 0_
 >## Arguments:
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
 >
 >
 
-**`subtract_from`**:
+## **subtract_from**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, items: @array, speed: @number = 3, factor: @number = 1) { /* code omitted */ }``` 
+> **Value:** `(self, items: @array, speed: @number = 3, factor: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Subtracts the counter's value from all item IDs in a list, and resets the counter to 0 in the process_
 >## Arguments:
->> **`items`** _(obligatory)_: _Item IDs to add to_
 >
->
->
->
->> _`speed` (optional)_ : _Speed of operation (higher number increases group usage)_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```3``` 
->>
->>
->>
->>
->
->
->
->
->> _`factor` (optional)_ : _Multiplyer for the value subtracted_
->>
->>_Default value:_
->>
->>**Type:** `number` 
->>
->>**Literal:** ```1``` 
->>
->>
->>
->>
->
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | @array | |Item IDs to add to |
+>| 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
+>| 4 | `factor` | @number | `1` |Multiplyer for the value subtracted |
 >
 >
 
-**`to_const`**:
+## **to_const**:
 
->**Type:** `macro` 
->
->**Literal:** ```(self, range: [@number] | @range) { /* code omitted */ }``` 
+> **Value:** `(self, range: [@number] | @range) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Converts the counter into a normal number (very context-splitting, be careful)_
 >## Arguments:
->> **`range`** _(obligatory)_: _Array or range of possible output values_
 >
->
->
->
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`range`** | [@number] or @range | |Array or range of possible output values |
 >
 >
 </details>

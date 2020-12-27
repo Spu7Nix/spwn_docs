@@ -57,7 +57,7 @@ num = -(1000 * 1000) / 10 // -100000
 name = "Spu7Nix"
 text = "Hello, my name is " + name + "!"
 
-array = [1, 2, 3]
+let array = [1, 2, 3]
 my_number = array[2] // 3
 
 array.push(4) // after this, the array will now be [1, 2, 3, 4]
@@ -72,7 +72,7 @@ let dict = {
 }
 
 a = dict.a // 1
-dict.d = 4 //inserts a new key "c" with a constant value of 4 into dict
+dict.d = 4 //inserts a new key "d" with a constant value of 4 into dict
 let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
 ```
 
