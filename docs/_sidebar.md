@@ -13,4 +13,12 @@
 - [Script Assisted Building](scriptassistedbuilding/script_assisted_building.md)
 
 - [Compile-time/runtime actions](compiletime.md)
-- [Documentation for the Standard library](std_docs/std-docs.md)
+- [Standart Library](std-docs/std-docs.md)
+  - [**@group**](std-docs/group.md)
+  - [**@color**](std-docs/color.md)
+  - [**@block**](std-docs/block.md)
+  - [**@item**](std-docs/item.md)
+  - [**@array**](std-docs/array.md)
+  - [**@event**](std-docs/event.md)
+  - [**@counter**](std-docs/counter.md)
+  - [**@file**](std-docs/file.md)

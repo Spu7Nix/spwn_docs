@@ -27,4 +27,4 @@ This is useful for a lot of cases, but sometimes you also want to move two group
 2g.move(0, 10, 0.5)
 ```
 
-There are, of course, a lot more triggers than just the move trigger. To find the macro for any specific trigger you want to use, check out the [_SPWN Standard Library Documentation_](std_docs/std-docs.md)
+There are, of course, a lot more triggers than just the move trigger. To find the macro for any specific trigger you want to use, check out the [_SPWN Standard Library Documentation_](std-docs/std-docs.md)
