@@ -70,3 +70,5 @@ num = my_counter.to_const(0..10)
 // now you can use it like a regular number
 10g.move(num, 0, 0.5)
 ```
+
+[**Next page**](triggerlanguage/6libraries.md)

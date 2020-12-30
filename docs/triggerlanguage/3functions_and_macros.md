@@ -74,3 +74,5 @@ is_sum_too_big(5, 6) // true
 
 is_sum_too_big(3, 4) // false, and group 10 moves
 ```
+
+[**Next page**](triggerlanguage/4control_flow.md)

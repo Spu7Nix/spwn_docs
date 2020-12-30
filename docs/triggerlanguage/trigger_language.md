@@ -13,3 +13,5 @@ So, in this usecase, you can think of your code as the source code for the trigg
 If you don't understand this yet, don't worry. We will get on to examples of SPWN in action soon.
 
 _**Note:** This introduction assumes you have some understanding of basic programming concepts, and basic understanding of Geometry Dash triggers_
+
+[**Next page**](triggerlanguage/1variables.md)

@@ -167,3 +167,5 @@ gs.button_a().on_triggered({
     selector.move_to(current_anchor)
 })
 ```
+
+[**Next page**](triggerlanguage/8bugfixing.md)

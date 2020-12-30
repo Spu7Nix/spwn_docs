@@ -93,3 +93,5 @@ while_loop(() => num > 50, (){
 // this will divide num by two until it is less than 50, when it will exit the loop
 // num now equals 32
 ```
+
+[**Next page**](triggerlanguage/5counter.md)

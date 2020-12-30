@@ -78,3 +78,5 @@ invis_group = import "setup.spwn"
 # Installing new libraries
 
 _**coming soon...**_
+
+[**Next page**](triggerlanguage/7selectorpanel.md)

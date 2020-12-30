@@ -13,6 +13,7 @@
 - [Script Assisted Building](scriptassistedbuilding/script_assisted_building.md)
 
 - [Compile-time/runtime actions](compiletime.md)
+- [Operators](operators.md)
 - [Standart Library](std-docs/std-docs.md)
   - [**@group**](std-docs/group.md)
   - [**@color**](std-docs/color.md)

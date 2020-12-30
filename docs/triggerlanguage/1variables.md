@@ -99,3 +99,5 @@ block = ?b // some collision block-ID
 _You can think of this as being the same as pressing the "next free" button when adding a group to an object_
 
 These are all the value types you need to worry about for now.
+
+[**Next page**](triggerlanguage/2basic_triggers.md)
