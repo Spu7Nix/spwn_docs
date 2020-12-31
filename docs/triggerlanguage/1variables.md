@@ -76,6 +76,8 @@ dict.d = 4 //inserts a new key "d" with a constant value of 4 into dict
 let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
 ```
 
+> _**Note:** To see a list of all the operators in SPWN, go [here](operators.md)_
+
 ## IDs
 
 In SPWN, there are also values that that are useful specifically when making Geometry dash levels:

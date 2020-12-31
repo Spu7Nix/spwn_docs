@@ -1,4 +1,4 @@
-- [Introduction](introduction.md)
+- [Introduction](/)
 - [Trigger Language](triggerlanguage/trigger_language.md)
 
   - [**1.1.** Variables and Values](triggerlanguage/1variables.md)
@@ -12,8 +12,11 @@
 
 - [Script Assisted Building](scriptassistedbuilding/script_assisted_building.md)
 
+  - [**2.1.** Built-in Functions](scriptassistedbuilding/1builtin.md)
+
 - [Compile-time/runtime actions](compiletime.md)
 - [Operators](operators.md)
+- [Built-in Functions](builtins.md)
 - [Standart Library](std-docs/std-docs.md)
   - [**@group**](std-docs/group.md)
   - [**@color**](std-docs/color.md)
