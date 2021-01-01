@@ -7,7 +7,7 @@ Ok, first of, what is SPWN even used for?
 > - Compiling readable code to Geometry Dash triggers
 > - Programmatically building levels, or doing tedious/repetitive tasks in the editor
 
-In this first part of the introduction, ill cover the first usecase.
+In this first part of the introduction, i'll cover the first usecase.
 
 So, in this usecase, you can think of your code as the source code for the triggers in your level.
 If you don't understand this yet, don't worry. We will get on to examples of SPWN in action soon.

@@ -32,4 +32,4 @@ loop = {
 
 ## Reading and writing to counters/items
 
-coming soon ish
+In SPWN, not all actions happen after the previous action is finished. If you do multiple actions that only require one trigger each, they will essensially happen at the same time.
