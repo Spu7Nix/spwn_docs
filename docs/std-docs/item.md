@@ -1,55 +1,63 @@
-# **@item**:
+  
 
+# **@item**: 
+ 
 ## **\_range\_**:
 
-> **Value:** `(self, other: @item) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @item) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type  | default value | description |
-> | --- | ----------- | ----- | ------------- | ----------- |
-> | 2   | **`other`** | @item |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @item | | |
+>  
+>  
+>
 
 ## **add**:
 
-> **Value:** `(self, amount: @number) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, amount: @number) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Implementation of the pickup trigger_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`amount`** | @number | |Amount to add |
+>  
+>  
 >
-> | #   | name         | type    | default value | description   |
-> | --- | ------------ | ------- | ------------- | ------------- |
-> | 2   | **`amount`** | @number |               | Amount to add |
 
 ## **count**:
 
-> **Value:** `(self, number: @number = 0) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, number: @number = 0) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Implementation of the count trigger (returns an event)_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `number` | @number | `0` |Number to check against |
+>  
+>  
 >
-> | #   | name     | type    | default value | description             |
-> | --- | -------- | ------- | ------------- | ----------------------- |
-> | 2   | `number` | @number | `0`           | Number to check against |
 
-## **if_is**:
+## **if\_is**:
 
-> **Value:** `(self, comparison: @comparison, other: @number, function: @function) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, comparison: @comparison, other: @number, function: @trigger_function) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Implementation of the instant count trigger_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`comparison`** | @comparison | |Comparison mode |
+>  | 3 | **`other`** | @number | |Number to compare with |
+>  | 4 | **`function`** | @trigger_function | |Target function if comparison is 'true' |
+>  
+>  
 >
-> | #   | name             | type        | default value | description                             |
-> | --- | ---------------- | ----------- | ------------- | --------------------------------------- |
-> | 2   | **`comparison`** | @comparison |               | Comparison mode                         |
-> | 3   | **`other`**      | @number     |               | Number to compare with                  |
-> | 4   | **`function`**   | @function   |               | Target function if comparison is 'true' |

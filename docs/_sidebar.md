@@ -3,7 +3,7 @@
 
   - [**1.1.** Variables and Values](triggerlanguage/1variables.md)
   - [**1.2.** Basic triggers](triggerlanguage/2basic_triggers.md)
-  - [**1.3.** Functions and Macros](triggerlanguage/3functions_and_macros.md)
+  - [**1.3.** Functions](triggerlanguage/3functions.md)
   - [**1.4.** Control Flow](triggerlanguage/4control_flow.md)
   - [**1.5.** Counters](triggerlanguage/5counter.md)
   - [**1.6.** Libraries](triggerlanguage/6libraries.md)
@@ -14,10 +14,14 @@
 
   - [**2.1.** Built-in Functions](scriptassistedbuilding/1builtin.md)
 
+- [Advanced SPWN](advancedspwn/advanced_spwn.md)
+
+  - [**3.1.** Datatypes](advancedspwn/1types.md)
+
 - [Compile-time/runtime actions](compiletime.md)
 - [Operators](operators.md)
 - [Built-in Functions](builtins.md)
-- [Standart Library](std-docs/std-docs.md)
+- [Standard Library](std-docs/std-docs.md)
   - [**@group**](std-docs/group.md)
   - [**@color**](std-docs/color.md)
   - [**@block**](std-docs/block.md)
