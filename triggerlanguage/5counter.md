@@ -71,4 +71,12 @@ num = my_counter.to_const(0..10)
 10g.move(num, 0, 0.5)
 ```
 
+You can also use the `to_const_enclosed` macro if you only need to use the number for a short amount of time. This should decrease the amount of groups and triggers created if used right
+
+```spwn
+my_counter.to_const_enclosed(0..10,(num) {
+	10g.move(num, 0, 0.5)
+})
+```
+
 [**Next page**](triggerlanguage/6libraries.md)

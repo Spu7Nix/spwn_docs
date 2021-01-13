@@ -32,4 +32,5 @@ This is a list of operators in SPWN, what they do and how to use them, for refer
 | `++`     | Increments a variable by 1                                     | `val++`               | `a++` or `++a` |            |                   |
 | `--`     | Decrements a variable by 1                                     | `val--`               | `a--` or `--a` |            |                   |
 | `as`     | Converts a value to another type                               | `100 as @string`      | `a as b`       | 10         | `_as_`            |
+| `has`    | Checks if one value contains another                           | `number_list has 4`   | `a has b`      | 2          | `_has_`           |
 | `..`     | Creates a range between two values                             | `0..10`               | `a..b`         | 5          | `_range_`         |

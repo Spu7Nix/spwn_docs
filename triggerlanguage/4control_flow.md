@@ -1,6 +1,6 @@
 # Control Flow
 
-In SPWN, there are currently two _control flow_ statements available: if statements and for loops
+In SPWN, there are currently four _control flow_ statements available: if statements, ternary expressions, switch statements, and for loops
 
 ## If statement
 
@@ -26,6 +26,36 @@ if condition {
 }
 ```
 
+## Switch statement
+
+SPWN also supports switch statements for both pattern matching and value checking:
+
+```spwn
+switch value {
+    @number | @group: /* code */,
+    case "my_value": /* code */,
+    else: /* code */
+}
+```
+
+You can also assign a value to the result of a switch statement:
+
+```spwn
+let example_list = switch example_val {
+    @number: [example_val],
+    @string: [example_val as @number],
+    [@number]: example_val,
+    else: throw "Unsupported type"
+}
+```
+
+## Ternary expression
+
+For convenience, you can simplify an if-statement into an inline ternary expression:
+
+```spwn
+let value = option_1 if condition else option_2 
+```
 ## For loop
 
 You can make a for loop in spwn like this:

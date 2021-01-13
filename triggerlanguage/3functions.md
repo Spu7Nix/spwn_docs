@@ -49,6 +49,10 @@ my_function = !{
 >
 > `my_macro = (arguments) => expression`
 >
+> Or, for single-argument macros, like this
+>
+> `my_macro = argument=>expression`
+>
 > This will be equivalent to
 >
 > `my_macro = (arguments) {return expression}`

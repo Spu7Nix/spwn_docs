@@ -74,6 +74,7 @@ let dict = {
 a = dict.a // 1
 dict.d = 4 //inserts a new key "d" with a constant value of 4 into dict
 let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
+let dict['f'] = 6 // indexing is also supported for adding to dictionaries
 ```
 
 > _**Note:** To see a list of all the operators in SPWN, go [here](operators.md)_
