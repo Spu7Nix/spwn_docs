@@ -10,11 +10,11 @@ One of the most common solutions to this is making a _selector panel_, where you
 
 You could technically do this all in SPWN, but when making the graphical bits, it's often more useful to visually see what we're doing. Therefore, we will do some setup in the gd level editor before we apply a SPWN script on it.
 
-First off, we need to place where our buttons should be. To do this, we're going to place some objects (with one group each) in a pattern of our choosing. I chose a hexagon (because hexagons are the bestagons).
+First off, we need to place where our buttons should be. To do this, we're going to place some objects (with one group each) in a pattern of our choosing. I chose a hexagon (because hexagons are the bestagons). Make sure to add group 1 to object 1, group 2 to object 2 and so on till you've used groups 1 - 6.
 
 ![Objects that choose the position of each button](../assets/anchors.PNG)
 
-Next up, we need some kind of graphical element to show which button is currently selected. To do this, I just used a circle, but you can get as creative as you like.
+Next up, we need some kind of graphical element to show which button is currently selected. To do this, I just used a circle, but you can get as creative as you like. Remember to add group 7 to the selector
 
 Here's my final setup:
 
