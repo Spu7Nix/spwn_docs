@@ -20,10 +20,10 @@
 | substr            | a string to be sliced, a start index, and an end index     | `$.substr("hello there", 1, 5)`    | Returns a specified part of the input string                                               |
 | matches           | a value to be checked and a pattern                        | `$.matches([1, 2, 3], [@number])`  | Returns `true` if the value matches the pattern, otherwise it returns `false`              |
 | edit_obj          | an object, an object key, and a value                      | `$.edit_obj(object, ROTATION, 180)`| Changes the value of an object key. You can also use `object.set(key, value)`              |
-| b64encrypt        | a string to be encrypted                                   | `$.b64encrypt("hello there")`      | Returns the input string encrypted with base 64 encryption (useful for text objects)       |
-| b64decrypt        | a string to be decrypted                                   | `$.b64encrypt("aGVsbG8gdGhlcmU=")` | Returns the input string decrypted from base 64 encryption (useful for text objects)       |
+| b64encrypt        | a string to be encrypted                                   | `$.b64encrypt("hello there")`      | Returns the input string encrypted with base64 encryption (useful for text objects)       |
+| b64decrypt        | a string to be decrypted                                   | `$.b64decrypt("aGVsbG8gdGhlcmU=")` | Returns the input string decrypted from base64 encryption (useful for text objects)       |
 | get_input         | any number of values with types that can convert to string | `$.get_input("Enter a number:")`   | Prompts the user for input and returns the result as a string                              |
-| mutability        | one value                                                  | `$.mutability(my_array`            | Returns whether the given value is mutable or not.                                         |
+| mutability        | one value                                                  | `$.mutability(my_array)`           | Returns whether the given value is mutable or not.                                         |
 | \_or\_            | two booleans                                               | `$._or_(true, false)`              | Default implementation of the `\|\|` operator                                              |
 | \_and\_           | two booleans                                               | `$._and_(true, true)`              | Default implementation of the `&&` operator                                                |
 | \_more_than\_     | two booleans                                               | `$._more_than_(100, 50)`           | Default implementation of the `>` operator                                                 |
@@ -40,7 +40,7 @@
 | \_not_equal\_     | two values                                                 | `$._not_equal_("hello", "bye")`    | Default implementation of the `!=` operator                                                |
 | \_assign\_        | a variable and a value                                     | `$._assign_(val, 64)`              | Default implementation of the `=` operator                                                 |
 | \_as\_            | a value and a type-indicator                               | `$._as_(1000, @string)`            | Default implementation of the `as` operator                                                |
-| \_swap\_          | two values                                                 | `$.swap(a, b)`                     | Default implementation of the `<=>` operator
+| \_swap\_          | two values                                                 | `$._swap_(a, b)`                     | Default implementation of the `<=>` operator
 | \_has\_           | two values                                                 | `$._has_([1,2,3], 2)`              | Default implementation of the `has` operator                                               |
 | \_add\_           | a variable and a number                                    | `$._add_(val, 10)`                 | Default implementation of the `+=` operator                                                |
 | \_subtract\_      | a variable and a number                                    | `$._subtract_(val, 10)`            | Default implementation of the `-=` operator                                                |
