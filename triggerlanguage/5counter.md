@@ -16,7 +16,6 @@ You can also create them like this if you like that better:
 
 ```spwn
 highscore1 = @counter::new(100)
-
 ```
 
 # Modifying a `counter`

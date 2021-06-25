@@ -104,7 +104,7 @@ for_loop(0..10, (i) {
 
 > _**Note:** If you plan on only using your for loop only once in your program, you can add `reset = false` somewhere in your arguments, so it doesn't use extra groups resetting the counter (you can read more about all the options for this macro in the documentation for the standard library)_
 
-I'm sure you're familiar with the concept of a _while loop_ from other programming languages. Even though there is no native while loop in SWPN (yet), there is a trigger loop for it: `while_loop`. This takes a _macro_ as its first argument, which is called on each loop, and should return a boolean. In this case, it's nice to use the shorter version of the macro syntax, which we looked at in the previous chapter.
+I'm sure you're familiar with the concept of a _while loop_ from other programming languages. Even though there is no native while loop in SPWN (yet), there is a trigger loop for it: `while_loop`. This takes a _macro_ as its first argument, which is called on each loop, and should return a boolean. In this case, it's nice to use the shorter version of the macro syntax, which we looked at in the previous chapter.
 
 ```spwn
 // example of while_loop in action
