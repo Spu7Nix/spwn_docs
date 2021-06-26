@@ -10,7 +10,7 @@
 | acos              | a number                                                   | `$.acos(3.14159)`                  | Calculates the _arccos_ of a number                                                        |
 | atan              | a number                                                   | `$.atan(3.14159)`                  | Calculates the _arctan_ of a number                                                        |
 | floor             | a number                                                   | `$.floor(3.14159) == 3`            | Calculates the _floor_ of a number, AKA the number rounded **down** to the nearest integer |
-| ceil              | a number                                                   | `$.ceil(3.14159) == 4`             | Calculates the _floor_ of a number, AKA the number rounded **up** to the nearest integer   |
+| ceil              | a number                                                   | `$.ceil(3.14159) == 4`             | Calculates the _ceil_ of a number, AKA the number rounded **up** to the nearest integer   |
 | add               | an `@object` or a `@trigger` value                         | `$.add(obj{ 1: 1 })`               | Adds a Geometry Dash object or trigger to the target level                                 |
 | append            | an array, and a value to append to the array               | `$.append(names, "joe")`           | Appends a value to the end of an array. You can also use `array.push(value)`               |
 | pop               | an array                                                   | `$.pop(names)`                     | Removes a value from the end of an array. You can also use `array.pop()`                   |
@@ -20,8 +20,8 @@
 | substr            | a string to be sliced, a start index, and an end index     | `$.substr("hello there", 1, 5)`    | Returns a specified part of the input string                                               |
 | matches           | a value to be checked and a pattern                        | `$.matches([1, 2, 3], [@number])`  | Returns `true` if the value matches the pattern, otherwise it returns `false`              |
 | edit_obj          | an object, an object key, and a value                      | `$.edit_obj(object, ROTATION, 180)`| Changes the value of an object key. You can also use `object.set(key, value)`              |
-| b64encode        | a string to be encoded                                      | `$.b64encode"hello there")`      | Returns the input string encrypted with base64 encoding (useful for text objects)            |
-| b64decode        | a string to be decoded                                      | `$.b64decode("aGVsbG8gdGhlcmU=")` | Returns the input string decrypted from base64 encoding (useful for text objects)           |
+| b64encode        | a string to be encoded                                      | `$.b64encode"hello there")`      | Returns the input string encoded with base64 encoding (useful for text objects)            |
+| b64decode        | a string to be decoded                                      | `$.b64decode("aGVsbG8gdGhlcmU=")` | Returns the input string decoded from base64 encoding (useful for text objects)           |
 | get_input         | any number of values with types that can convert to string | `$.get_input("Enter a number:")`   | Prompts the user for input and returns the result as a string                              |
 | mutability        | one value                                                  | `$.mutability(my_array)`           | Returns whether the given value is mutable or not.                                         |
 | \_or\_            | two booleans                                               | `$._or_(true, false)`              | Default implementation of the `\|\|` operator                                              |
