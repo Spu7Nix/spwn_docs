@@ -15,8 +15,6 @@ The data inside the `{}` curly braces represents properties of the object. Each 
 
 > **Note:** To avoid typing `obj_props.` all the time, you will usually start your file with `extract obj_props` when you will be working with objects and triggers.
 
-
-
 If you ever need to change an object's properties after creating it, you can do so by calling the `set` method:
 
 ```spwn
