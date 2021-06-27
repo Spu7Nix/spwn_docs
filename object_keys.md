@@ -4,7 +4,7 @@
 | -------------------------------------- | --- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
 | `OBJ_ID `                              | 1   | `@number `                                    | The ID that decides what kind of object this is. Each object type in gd has a unique ID. |
 | `X `                                   | 2   | `@number `                                    | The X position of an object in units (one grid square = 30 units, +x is to the right)    |
-| `Y `                                   | 3   | `@number `                                    | The Y position of an object in units (one grid square = 30 units, +y is to the up)       |
+| `Y `                                   | 3   | `@number `                                    | The Y position of an object in units (one grid square = 30 units, +y is up)              |
 | `HORIZONTAL_FLIP `                     | 4   | `@bool `                                      | Wether the object is horizontally flipped                                                |
 | `VERTICAL_FLIP `                       | 5   | `@bool `                                      | Wether the object is vertically flipped                                                  |
 | `ROTATION `                            | 6   | `@number `                                    | Rotation of the object in degrees                                                        |
