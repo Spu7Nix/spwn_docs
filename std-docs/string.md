@@ -67,3 +67,29 @@
 >  
 >  
 >
+
+## **index**:
+
+> **Value:** `(self, substr: @string) { /* code omitted */ }` (`@macro`) 
+>
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`substr`** | @string | | |
+>  
+>  
+>
+
+## **contains**:
+
+> **Value:** `(self, substr: @string) { /* code omitted */ }` (`@macro`) 
+>
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`substr`** | @string | | |
+>  
+>  
+>
