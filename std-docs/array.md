@@ -158,3 +158,40 @@
 >
 >  
 >
+
+## **sum**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>
+>  
+>
+
+## **sort**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>
+>  
+>
+
+## **shift**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>
+>  
+>
+
+## **unshift**:
+
+> **Value:** `(self, value) { /* code omitted */ }` (`@macro`) 
+>
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`value`** |any | | |
+>  
+>  
+>
