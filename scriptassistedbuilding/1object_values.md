@@ -26,3 +26,5 @@ let my_object = obj {
 }
 my_object.set(SCALING, 2)
 ```
+
+To add an object to the level, use `$.add(...)`.
