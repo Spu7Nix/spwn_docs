@@ -20,7 +20,7 @@ Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTA
 
 > **Note:** To find out what a specific key from `obj_props` does, you can use [this lookup table](../object_keys.md)
 
-A `trigger` are very similar to an `obj`, but it has a slightly different usecase. You will learn more about this in a later chapter.
+A `trigger` is very similar to an `obj`, but it has a slightly different usecase. You will learn more about this in a later chapter.
 
 # Changing Object Properties
 
