@@ -20,7 +20,7 @@
 | substr            | a string to be sliced, a start index, and an end index     | `$.substr("hello there", 1, 5)`    | Returns a specified part of the input string                                               |
 | matches           | a value to be checked and a pattern                        | `$.matches([1, 2, 3], [@number])`  | Returns `true` if the value matches the pattern, otherwise it returns `false`              |
 | edit_obj          | an object, an object key, and a value                      | `$.edit_obj(object, ROTATION, 180)`| Changes the value of an object key. You can also use `object.set(key, value)`              |
-| b64encode        | a string to be encoded                                      | `$.b64encode"hello there")`      | Returns the input string encoded with base64 encoding (useful for text objects)            |
+| b64encode        | a string to be encoded                                      | `$.b64encode("hello there")`      | Returns the input string encoded with base64 encoding (useful for text objects)            |
 | b64decode        | a string to be decoded                                      | `$.b64decode("aGVsbG8gdGhlcmU=")` | Returns the input string decoded from base64 encoding (useful for text objects)           |
 | get_input         | any number of values with types that can convert to string | `$.get_input("Enter a number:")`   | Prompts the user for input and returns the result as a string                              |
 | mutability        | one value                                                  | `$.mutability(my_array)`           | Returns whether the given value is mutable or not.                                         |
