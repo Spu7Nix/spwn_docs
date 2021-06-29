@@ -33,3 +33,30 @@ loop = !{
 ## Reading and writing to counters/items
 
 In SPWN, not all actions happen after the previous action is finished. If you do multiple actions that only require one trigger each, they will essentially happen at the same time.
+This can cause some problems when working with counters, for example in this case:
+
+```spwn
+c = counter(10)
+
+if c == 10 {
+    c -= 3
+} else {
+    c += 100000
+}
+
+```
+
+This might seem innocent, but there is a major flaw with this code. The check for if `c` is _equal_ to 10, and the check for if it is _not equal_ to 10, happens at basically the same time. This means that there might be a situation where `c` is 10, so it subtracts 3, but then after subtracting 3, since `c` is no longer 10, the else clause runs, and it adds 100000. The solution to this is to add a little bit of delay to each clause, to make sure both the possibilities are checked **before** any changes have been made to the values being checked. Something like this:
+
+```spwn
+c = counter(10)
+
+if c == 10 {
+    wait()
+    c -= 3
+} else {
+    wait()
+    c += 100000
+}
+
+```
