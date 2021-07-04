@@ -13,58 +13,58 @@
 | `TRIGGER_BLUE `                        | 9   | `@number `                                    | Blue value of the color in a color trigger                                               |
 | `DURATION `                            | 10  | `@number `                                    | Duration of a trigger                                                                    |
 | `TOUCH_TRIGGERED `                     | 11  | `@bool `                                      | Wether a trigger is touch triggered                                                      |
-| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | ...                                                                                      |
-| `PLAYER_COLOR_1 `                      | 15  | `@bool `                                      |
-| `PLAYER_COLOR_2 `                      | 16  | `@bool `                                      |
-| `BLENDING `                            | 17  | `@bool `                                      |
-| `EDITOR_LAYER_1 `                      | 20  | `@number `                                    |
-| `COLOR `                               | 21  | `@color `                                     |
-| `COLOR_2 `                             | 22  | `@color `                                     |
-| `TARGET_COLOR `                        | 23  | `@color `                                     |
-| `Z_LAYER `                             | 24  | `@number `                                    |
-| `Z_ORDER `                             | 25  | `@number `                                    |
-| `MOVE_X `                              | 28  | `@number `                                    |
+| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | Wether a portal is check(to show the boundries)                                                                                |
+| `PLAYER_COLOR_1 `                      | 15  | `@bool `                                      | If player color 1 is checked on a color
+| `PLAYER_COLOR_2 `                      | 16  | `@bool `                                      | If player color 2 is checked on a color
+| `BLENDING `                            | 17  | `@bool `                                      | If blending is checked on a color
+| `EDITOR_LAYER_1 `                      | 20  | `@number `                                    | The first editor layer of an object
+| `COLOR `                               | 21  | `@color `                                     | 
+| `COLOR_2 `                             | 22  | `@color `                                     | 
+| `TARGET_COLOR `                        | 23  | `@color `                                     | 
+| `Z_LAYER `                             | 24  | `@number `                                    | The z layer an object is located on
+| `Z_ORDER `                             | 25  | `@number `                                    | the z order an object is set too
+| `MOVE_X `                              | 28  | `@number `                                    | The x movement of a move trigger
 | `MOVE_Y `                              | 29  | `@number `                                    |
-| `EASING `                              | 30  | `@number `                                    |
-| `TEXT `                                | 31  | `@string `                                    |
-| `SCALING `                             | 32  | `@number `                                    |
-| `GROUP_PARENT `                        | 34  | `@bool `                                      |
-| `OPACITY `                             | 35  | `@number `                                    |
-| `HVS_ENABLED `                         | 41  | `@bool `                                      |
+| `EASING `                              | 30  | `@number `                                    | 
+| `TEXT `                                | 31  | `@string `                                    | The text to display on a text object(use $.b64encode("string"))
+| `SCALING `                             | 32  | `@number `                                    | The scale of an object
+| `GROUP_PARENT `                        | 34  | `@bool `                                      | If group parent is checked on an object
+| `OPACITY `                             | 35  | `@number `                                    | Changes the opacity of the object
+| `HVS_ENABLED `                         | 41  | `@bool `                                      | Wether HSV is enabled
 | `COLOR_2_HVS_ENABLED `                 | 42  | `@bool `                                      |
-| `HVS `                                 | 43  | `@string `                                    |
+| `HVS `                                 | 43  | `@string `                                    | A triggers HSV value
 | `COLOR_2_HVS `                         | 44  | `@string `                                    |
-| `FADE_IN `                             | 45  | `@number `                                    |
-| `HOLD `                                | 46  | `@number `                                    |
-| `FADE_OUT `                            | 47  | `@number `                                    |
-| `PULSE_HSV `                           | 48  | `@bool `                                      |
+| `FADE_IN `                             | 45  | `@number `                                    | A pulse trigger's fade in time
+| `HOLD `                                | 46  | `@number `                                    | A pulse trigger's hold time
+| `FADE_OUT `                            | 47  | `@number `                                    | A pulse trigger's fade out time
+| `PULSE_HSV `                           | 48  | `@bool `                                      | 
 | `COPIED_COLOR_HVS `                    | 49  | `@string `                                    |
 | `COPIED_COLOR_ID `                     | 50  | `@color `                                     |
 | `TARGET `                              | 51  | `@color ` or `@group` or ` @trigger_function` |
 | `TARGET_TYPE `                         | 52  | `@number `                                    |
-| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    |
+| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    | The distance from the blue telportation portal to the blue one
 | `ACTIVATE_GROUP `                      | 56  | `@bool `                                      |
-| `GROUPS `                              | 57  | `[@group] ` or `@group`                       |
-| `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      |
-| `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      |
+| `GROUPS `                              | 57  | `[@group] ` or `@group`                       | The group(s) an object should have
+| `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Wether to lock the position of an object to the players x position
+| `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Wether to lock the position of an object to the players y position
 | `COPY_OPACTITY `                       | 60  | `@bool `                                      |
-| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    |
-| `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      |
+| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layor of an object
+| `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Wether an object should be used by a spawn trigger
 | `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      |
-| `DONT_FADE `                           | 64  | `@bool `                                      |
-| `MAIN_ONLY `                           | 65  | `@bool `                                      |
+| `DONT_FADE `                           | 64  | `@bool `                                      | Wether an object should fade in
+| `MAIN_ONLY `                           | 65  | `@bool `                                      | 
 | `DETAIL_ONLY `                         | 66  | `@bool `                                      |
-| `DONT_ENTER `                          | 67  | `@bool `                                      |
-| `ROTATE_DEGREES `                      | 68  | `@number `                                    |
-| `TIMES_360 `                           | 69  | `@number `                                    |
-| `LOCK_OBJECT_ROTATION `                | 70  | `@bool `                                      |
+| `DONT_ENTER `                          | 67  | `@bool `                                      | Wether an object should enter
+| `ROTATE_DEGREES `                      | 68  | `@number `                                    | The number of degrees to rotate an object in a rotate trigger
+| `TIMES_360 `                           | 69  | `@number `                                    | The number of times to do a 360 rotation in a rotate trigger
+| `LOCK_OBJECT_ROTATION `                | 70  | `@bool `                                      | Wether to lock object rotation
 | `FOLLOW `                              | 71  | `@group `                                     |
 | `CENTER `                              | 71  | `@group `                                     |
 | `TARGET_POS `                          | 71  | `@group `                                     |
 | `X_MOD `                               | 72  | `@number `                                    |
 | `Y_MOD `                               | 73  | `@number `                                    |
 | `STRENGTH `                            | 75  | `@number `                                    |
-| `ANIMATION_ID `                        | 76  | `@number `                                    |
+| `ANIMATION_ID `                        | 76  | `@number `                                    | The animation id of animated objects(used in the animate trigger)
 | `COUNT `                               | 77  | `@number `                                    |
 | `SUBTRACT_COUNT `                      | 78  | `@number `                                    |
 | `PICKUP_MODE `                         | 79  | `@number `                                    |
@@ -73,9 +73,9 @@
 | `HOLD_MODE `                           | 81  | `@bool `                                      |
 | `TOGGLE_MODE `                         | 82  | `@number `                                    |
 | `INTERVAL `                            | 84  | `@number `                                    |
-| `EASING_RATE `                         | 85  | `@number `                                    |
+| `EASING_RATE `                         | 85  | `@number `                                    | What the easing rate is on a move trigger
 | `EXCLUSIVE `                           | 86  | `@bool `                                      |
-| `MULTI_TRIGGER `                       | 87  | `@bool `                                      |
+| `MULTI_TRIGGER `                       | 87  | `@bool `                                      | Wether an object should be set as multi trigger(orbs and portals)
 | `COMPARISON `                          | 88  | `@number `                                    |
 | `DUAL_MODE `                           | 89  | `@bool `                                      |
 | `SPEED `                               | 90  | `@number `                                    |
@@ -84,14 +84,14 @@
 | `ACTIVATE_ON_EXIT `                    | 93  | `@bool `                                      |
 | `DYNAMIC_BLOCK `                       | 94  | `@bool `                                      |
 | `BLOCK_B `                             | 95  | `@block `                                     |
-| `GLOW_DISABLED `                       | 96  | `@bool `                                      |
+| `GLOW_DISABLED `                       | 96  | `@bool `                                      | Wether glow is disabled on an object
 | `ROTATION_SPEED `                      | 97  | `@number `                                    |
 | `DISABLE_ROTATION `                    | 98  | `@bool `                                      |
 | `COUNT_MULTI_ACTIVATE `                | 104 | `@bool `                                      |
-| `USE_TARGET `                          | 100 | `@bool `                                      |
+| `USE_TARGET `                          | 100 | `@bool `                                      | Wether 'use target' is checked on a move trigger
 | `TARGET_POS_AXES `                     | 101 | `@number `                                    |
-| `EDITOR_DISABLE `                      | 102 | `@bool `                                      |
-| `HIGH_DETAIL `                         | 103 | `@bool `                                      |
+| `EDITOR_DISABLE `                      | 102 | `@bool `                                      | Wether a spawn trigger should be disabled in the editor
+| `HIGH_DETAIL `                         | 103 | `@bool `                                      | Wether an object is marked as 'high detail
 | `MAX_SPEED `                           | 105 | `@number `                                    |
 | `RANDOMIZE_START `                     | 106 | `@bool `                                      |
 | `ANIMATION_SPEED `                     | 107 | `@number `                                    |
