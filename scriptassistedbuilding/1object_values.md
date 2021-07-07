@@ -18,7 +18,6 @@ Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTA
 <details>
   <summary>Here are some useful object ids</summary>
     https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png
-    
     https://user-images.githubusercontent.com/43052612/124507895-a2664e00-dd83-11eb-9b53-52e515cd0e8a.png
 </details>
 
