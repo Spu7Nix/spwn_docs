@@ -3,7 +3,6 @@
 `counter` is a type from the _standard library_, and is a wrapper around the item ID system in Geometry Dash. In practice, it works as a replacement for numbers. Since mutable variables are very limited in SPWN, this proves quite useful when you need to keep track of numbers throughout your program.
 
 > **Note:** The `counter` type is written entirely in SPWN, with no cheaty help from the compiler whatsoever. If you want to look at the source code for the `counter` type, you can find it in the `counter.spwn` file in _standard library_.
-<!-- i find this note not helpful at all lol, i wonder why it's added. -->
 
 # Creating a `counter`
 
