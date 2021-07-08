@@ -26,7 +26,7 @@
 | `MOVE_X `                              | 28  | `@number `                                    | The x movement of a move trigger
 | `MOVE_Y `                              | 29  | `@number `                                    | The y movement of a move trigger
 | `EASING `                              | 30  | `@number ` or `@easing_type`                  | Easing type of a trigger
-| `TEXT `                                | 31  | `@string `                                    | The text to display on a text object(use $.b64encrypt("string"))
+| `TEXT `                                | 31  | `@string `                                    | The text to display on a text object(use $.b64encode("string"))
 | `SCALING `                             | 32  | `@number `                                    | The scale of an object
 | `GROUP_PARENT `                        | 34  | `@bool `                                      | If group parent is checked on an object
 | `OPACITY `                             | 35  | `@number `                                    | Changes the opacity of the object
