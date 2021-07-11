@@ -49,7 +49,7 @@
 | `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Wether "Lock to player X" is activated in a move trigger
 | `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Wether "Lock to player Y" is activated in a move trigger
 | `COPY_OPACITY `                       | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
-| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layor of an object
+| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layer of an object
 | `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Wether a trigger should be activated by a spawn trigger
 | `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      | Delay value in a spawn trigger
 | `DONT_FADE `                           | 64  | `@bool `                                      | Wether an object should fade in
