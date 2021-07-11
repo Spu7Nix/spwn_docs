@@ -90,7 +90,7 @@ item  = 10i // item-ID 10
 block = 10b // collision block-ID 10
 ```
 
-These values are called `ID`s, and are extremely essential. Any time you want to get some actual output in your levels, you will use these. Sometimes you want to point to a specific `ID`, for example if you have already made a player-character in the editor and you want to move it around. However, if that's not the case, and you will only be referencing these values inside your code, you won't need to know what `ID` you're using. in that case you can use this `?` notation:
+These values are called `ID`s, and are extremely essential. Any time you want to get some actual output in your levels, you will use these. Sometimes you want to point to a specific `ID`, for example if you have already made a player-character in the editor and you want to move it around. However, if that's not the case, and you will only be referencing these values inside your code, you won't need to know what `ID` you're using. In that case you can use this `?` notation:
 
 ```spwn
 group = ?g // some group
@@ -101,7 +101,7 @@ block = ?b // some collision block-ID
 
 _You can think of this as being the same as pressing the "next free" button when adding a group to an object, except you won't know its value_
 
-> _**Note:** When you define an item-ID this way, you can't interact with the value of the item-ID directly, since it's only store the item-ID and not the value itself. you will have to use ["counter"](triggerlanguage/5counter.md) that we mentioned earlier for that._
+> _**Note:** When you define an item-ID this way, you can't interact with the value of the item-ID directly, since it only stores the item-ID and not the value itself. You will have to use ["counter"](triggerlanguage/5counter.md) that we mentioned earlier for that._
 
 These are all the value types you need to worry about for now.
 
