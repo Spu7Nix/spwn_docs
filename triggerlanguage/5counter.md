@@ -9,14 +9,20 @@
 The easiest way to create a counter is to use the `counter` macro. You can create it out of a number, a boolean or an item ID.
 
 ```spwn
-highscore = counter(100)
+counterFromNumber = counter(100)
+counterFromBoolean = counter(true)
+counterFromItemID = counter(1i)
 ```
 
 You can also create them like this if you like that better:
 
 ```spwn
-highscore1 = @counter::new(100)
+counterFromNumber = @counter::new(100)
+counterFromBoolean = @counter::new(true)
+counterFromItemID = @counter::new(1i)
 ```
+
+> **Note:** Even though we didn't write "let" before the variable name here, the `counter` is still mutable. This is because the item-ID itself is mutable inside the game.
 
 # Modifying a `counter`
 
@@ -34,7 +40,7 @@ score = 0
 
 > **Note:** The multiply `*=`, divide `/=` and assign `=` operators are not in Geometry Dash by default, and are therefore quite group-expensive. You should prefer using add `+=` and subtract `-=` when possible.
 
-> **Note:** You can add, multiply, divide and assign `counter`s to other `counter`s, however, this is even more group expensive.
+> **Note:** You can add, multiply, divide and assign `counter`s to other `counter`s, however, this is even more group-expensive.
 
 # Testing the Value of a `counter`
 
@@ -59,7 +65,7 @@ else if my_counter < 3 {
 
 # Converting a `counter` to a Normal Number
 
-In most cases, having a normal number is more practical than having a `counter`. However, converting a counter to a normal number is quite limited, and also quite expensive.
+In most cases, having a normal number is more practical than having a `counter`. However, converting a counter to a normal number is quite limited, and also quite group-expensive.
 
 To convert a counter to a normal number, you use the `to_const` macro. This macro takes one argument, which is a list or range of values the counter may have. The more values this list/range includes, the more groups this macro will use. Here is an example of this macro in practice:
 
