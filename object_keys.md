@@ -31,10 +31,10 @@
 | `GROUP_PARENT `                        | 34  | `@bool `                                      | If group parent is checked on an object
 | `OPACITY `                             | 35  | `@number `                                    | Changes the opacity of the object
 | `ACTIVE_TRIGGER `                      | 36, | `@bool `                                      |
-| `HVS_ENABLED `                         | 41  | `@bool `                                      | Wether HSV is enabled
-| `COLOR_2_HVS_ENABLED `                 | 42  | `@bool `                                      |
-| `HVS `                                 | 43  | `@string `                                    | A triggers HSV value
-| `COLOR_2_HVS `                         | 44  | `@string `                                    |
+| `HVS_ENABLED `                         | 41  | `@bool `                                      | Wether "Main" color of an object HSV/Hue, Saturation and brightness is modified
+| `COLOR_2_HVS_ENABLED `                 | 42  | `@bool `                                      | Wether "Detail" color of an object HSV/Hue, Saturation and brightness is modified
+| `HVS `                                 | 43  | `@string `                                    | An object's "Main" color HSV value (format : "<hue>a<saturation>a<brightness>a<saturation checked(0/1)>a<brightness checked(0/1)>". example : "60a-1a0.5a1a0")
+| `COLOR_2_HVS `                         | 44  | `@string `                                    | An object's "Detail" color HSV value
 | `FADE_IN `                             | 45  | `@number `                                    | A pulse trigger's fade in time
 | `HOLD `                                | 46  | `@number `                                    | A pulse trigger's hold time
 | `FADE_OUT `                            | 47  | `@number `                                    | A pulse trigger's fade out time
@@ -48,7 +48,7 @@
 | `GROUPS `                              | 57  | `[@group] ` or `@group`                       | The group(s) an object should have
 | `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Wether "Lock to player X" is activated in a move trigger
 | `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Wether "Lock to player Y" is activated in a move trigger
-| `COPY_OPACITY `                       | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
+| `COPY_OPACITY `                        | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
 | `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layer of an object
 | `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Wether a trigger should be activated by a spawn trigger
 | `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      | Delay value in a spawn trigger
@@ -65,7 +65,7 @@
 | `X_MOD `                               | 72  | `@number `                                    | "X mod" value of a follow trigger
 | `Y_MOD `                               | 73  | `@number `                                    | "Y mod" value of a follow trigger
 | `STRENGTH `                            | 75  | `@number `                                    | Strength of shake on a shake trigger
-| `ANIMATION_ID `                        | 76  | `@number `                                    | The animation id of animated objects(used in the animate trigger)
+| `ANIMATION_ID `                        | 76  | `@number `                                    | The animation id of animated objects (used in the animate trigger)
 | `COUNT `                               | 77  | `@number `                                    | Item ID that will be affected by a pickup item
 | `SUBTRACT_COUNT `                      | 78  | `@number `                                    | Wether a pickup item add or subtract from an Item ID when collected (0 = add, 1 = subtract)
 | `PICKUP_MODE `                         | 79  | `@number `                                    | Wether a pickup item is on "Pickup item" mode or "Toggle trigger" mode (1 = Pickup item, 2= Toggle trigger)
@@ -83,7 +83,7 @@
 | `DELAY `                               | 91  | `@number `                                    | "Delay" value of a Follow player Y trigger
 | `Y_OFFSET `                            | 92  | `@number `                                    | "Offset" value of a Follow player Y trigger
 | `ACTIVATE_ON_EXIT `                    | 93  | `@bool `                                      | 
-| `DYNAMIC_BLOCK `                       | 94  | `@bool `                                      | Wether a collision block is a dynamic block(should set to true if you will be moving the collision block)
+| `DYNAMIC_BLOCK `                       | 94  | `@bool `                                      | Wether a collision block is a dynamic block (should set to true if you will be moving the collision block)
 | `BLOCK_B `                             | 95  | `@block `                                     | Block B ID of a collision trigger
 | `GLOW_DISABLED `                       | 96  | `@bool `                                      | Wether glow is disabled on an object
 | `ROTATION_SPEED `                      | 97  | `@number `                                    |
