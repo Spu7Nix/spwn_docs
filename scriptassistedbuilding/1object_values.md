@@ -4,11 +4,11 @@ To place an object programmatically, it's practical to have some datatype to rep
 
 ```spwn
 obj {
-    OBJ_ID: 54,
-    X: 300,
-    Y: 90,
-    SCALING: 1.5,
-    ROTATION: 45,
+    obj_props.OBJ_ID: 54,
+    obj_props.X: 300,
+    obj_props.Y: 90,
+    obj_props.SCALING: 1.5,
+    obj_props.ROTATION: 45,
 }
 ```
 
