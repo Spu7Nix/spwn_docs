@@ -16,7 +16,7 @@
 | pop               | an array                                                   | `$.pop(names)`                     | Removes a value from the end of an array. You can also use `array.pop()`                   |
 | remove_index      | an array, and the index of a value to be removed           | `$.remove_index(names, 2)`         | Removes a specific value from an array. You can also use `array.remove(index)`             |
 | readfile          | a file path (string)                                       | `$.readfile("file.txt")`           | Opens a file and returns it as a string                                                    |
-| split_str         | a string to be split, and a string delimeter               | `$.split_str("1,2,3", ",")`        | Returns an array from the split string. You can also use `string.split(delimeter)`         |
+| split_str         | a string to be split, and a string delimiter               | `$.split_str("1,2,3", ",")`        | Returns an array from the split string. You can also use `string.split(delimiter)`         |
 | substr            | a string to be sliced, a start index, and an end index     | `$.substr("hello there", 1, 5)`    | Returns a specified part of the input string                                               |
 | matches           | a value to be checked and a pattern                        | `$.matches([1, 2, 3], [@number])`  | Returns `true` if the value matches the pattern, otherwise it returns `false`              |
 | edit_obj          | an object, an object key, and a value                      | `$.edit_obj(object, ROTATION, 180)`| Changes the value of an object key. You can also use `object.set(key, value)`              |

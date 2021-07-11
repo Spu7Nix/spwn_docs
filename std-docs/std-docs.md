@@ -206,7 +206,7 @@ _Generated using `spwn doc [file name]`_
 >  
 >
 
-## **supress\_signal**:
+## **suppress\_signal**:
 
 > **Value:** `(delay: @number) { /* code omitted */ }` (`@macro`) 
 >
@@ -216,7 +216,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`delay`** | @number | |Time to supress signal |
+>| 1 | **`delay`** | @number | |Time to suppress signal |
 >  
 >  
 >
@@ -1353,7 +1353,7 @@ _Generated using `spwn doc [file name]`_
 >>  
 >>
 >
->## **COPY\_OPACTITY**:
+>## **COPY\_OPACITY**:
 >
 >> **Value:** `@object_key::{pattern: @bool,id: 60}` (`@object_key`) 
 >>

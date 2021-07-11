@@ -2,7 +2,7 @@
 
 ## Libraries
 
-One of the most essential aspects of writing code is sharability. If someone has written and shared the code you're trying to write, it's better to just use theirs than to try to write it yourself.
+One of the most essential aspects of writing code is shareability. If someone has written and shared the code you're trying to write, it's better to just use theirs than to try to write it yourself.
 
 In SPWN, a library is essentially a bunch of code that runs when the library is imported. This code can also return some values, for example macros and functions which you can use in your own code.
 

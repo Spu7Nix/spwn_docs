@@ -13,7 +13,7 @@
 | `TRIGGER_BLUE `                        | 9   | `@number `                                    | Blue value of the color in a color trigger                                               |
 | `DURATION `                            | 10  | `@number `                                    | Duration of a trigger                                                                    |
 | `TOUCH_TRIGGERED `                     | 11  | `@bool `                                      | Wether a trigger is touch triggered                                                      |
-| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | Wether a portal is check(to show the boundries)                                                                                |
+| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | Wether a portal is check(to show the boundaries)                                                                                |
 | `PLAYER_COLOR_1 `                      | 15  | `@bool `                                      | If player color 1 is checked on a color
 | `PLAYER_COLOR_2 `                      | 16  | `@bool `                                      | If player color 2 is checked on a color
 | `BLENDING `                            | 17  | `@bool `                                      | If blending is checked on a color
@@ -43,12 +43,12 @@
 | `COPIED_COLOR_ID `                     | 50  | `@color `                                     |
 | `TARGET `                              | 51  | `@color ` or `@group` or ` @trigger_function` | ID affected by the trigger
 | `TARGET_TYPE `                         | 52  | `@number `                                    |
-| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    | The distance from the blue telportation portal to the blue one
+| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    | The distance from the blue teleportation portal to the blue one
 | `ACTIVATE_GROUP `                      | 56  | `@bool `                                      | Wether "Activate group" is checked in count & collision trigger
 | `GROUPS `                              | 57  | `[@group] ` or `@group`                       | The group(s) an object should have
 | `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Wether "Lock to player X" is activated in a move trigger
 | `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Wether "Lock to player Y" is activated in a move trigger
-| `COPY_OPACTITY `                       | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
+| `COPY_OPACITY `                       | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
 | `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layor of an object
 | `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Wether a trigger should be activated by a spawn trigger
 | `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      | Delay value in a spawn trigger

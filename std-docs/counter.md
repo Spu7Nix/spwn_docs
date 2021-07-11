@@ -276,7 +276,7 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 2 | **`items`** | @array | |Item IDs to add to |
 >  | 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
->  | 4 | `factor` | @number | `1` |Multiplyer for the value added |
+>  | 4 | `factor` | @number | `1` |Multiplayer for the value added |
 >  
 >  
 >
@@ -348,7 +348,7 @@
 > **Type:** `@macro` 
 >
 >## Description: 
-> _Devides the value of the counter by some divisor_
+> _Divides the value of the counter by some divisor_
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -419,7 +419,7 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 2 | **`items`** | @array | |Item IDs to add to |
 >  | 3 | `speed` | @number | `3` |Speed of operation (higher number increases group usage) |
->  | 4 | `factor` | @number | `1` |Multiplyer for the value subtracted |
+>  | 4 | `factor` | @number | `1` |Multiplayer for the value subtracted |
 >  
 >  
 >
