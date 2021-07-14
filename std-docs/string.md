@@ -117,3 +117,25 @@
 >  
 >  
 >
+
+## **reverse**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>  
+>
+
+## **lowercase**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>
+>
+
+## **uppercase**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>
+>
+
