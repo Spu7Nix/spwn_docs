@@ -10,7 +10,7 @@ When building a level, there is one thing that is very important to know how to 
 
 # Adding objects to the level with `add`
 
-When working with the `add` builtin, it is important to remember it, like all other builtins, is a compile-time operation. You cannot add an object when you're already playing the level, it has to be done beforehand. Therefore, to avoid confusion, SPWN ensures that you add all your objects _before_ you start actually defining things that happen during the level's runtime. If you attempt to add an object in this period, you will get an error like this:
+When working with the `add` builtin, it is important to remember that it, like all other builtins, is a compile-time operation. You cannot add an object when you're already playing the level, it has to be done beforehand. Therefore, to avoid confusion, SPWN ensures that you add all your objects _before_ you start actually defining things that happen during the level's runtime. If you attempt to add an object in this period, you will get an error like this:
 
 ```
 Error at d:\spwn\spwn-lang\test\test.spwn:3:1
