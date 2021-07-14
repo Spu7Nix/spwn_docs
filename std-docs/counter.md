@@ -1,390 +1,459 @@
-# **@counter**:
+  
 
+# **@counter**: 
+ 
 ## **\_add\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_as\_**:
 
-> **Value:** `(self, _type: @type_indicator) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, _type: @type_indicator) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type            | default value | description |
-> | --- | ----------- | --------------- | ------------- | ----------- |
-> | 2   | **`_type`** | @type_indicator |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`_type`** | @type_indicator | | |
+>  
+>  
+>
 
 ## **\_assign\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_divide\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_divided_by\_**:
+## **\_divided\_by\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_equal\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_less_or_equal\_**:
+## **\_less\_or\_equal\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_less_than\_**:
+## **\_less\_than\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_minus\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_mod\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_modulate\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_more_or_equal\_**:
+## **\_more\_or\_equal\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_more_than\_**:
+## **\_more\_than\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_multiply\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
-## **\_not_equal\_**:
+## **\_not\_equal\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_plus\_**:
 
-> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type                | default value | description |
-> | --- | ----------- | ------------------- | ------------- | ----------- |
-> | 2   | **`other`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_subtract\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **\_swap\_**:
 
-> **Value:** `(self, num: @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type     | default value | description |
-> | --- | --------- | -------- | ------------- | ----------- |
-> | 2   | **`num`** | @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @counter | | |
+>  
+>  
+>
 
 ## **\_times\_**:
 
-> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number | @counter) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name      | type                | default value | description |
-> | --- | --------- | ------------------- | ------------- | ----------- |
-> | 2   | **`num`** | @number or @counter |               |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number or @counter | | |
+>  
+>  
+>
 
 ## **add**:
 
-> **Value:** `(self, num: @number) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, num: @number) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Implementation of the pickup trigger_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`num`** | @number | |Amount to add |
+>  
+>  
 >
-> | #   | name      | type    | default value | description   |
-> | --- | --------- | ------- | ------------- | ------------- |
-> | 2   | **`num`** | @number |               | Amount to add |
 
-## **add_to**:
+## **add\_to**:
 
-> **Type:** `@macro`
+> **Type:** `@macro` 
 >
-> ## Description:
->
+>## Description: 
 > _Adds the counter's value to all item IDs in a list, and resets the counter to 0 in the process_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | @array | |Item IDs to add to |
+>  | 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  | 4 | `factor` | @number | `1` |Multiplyer for the value added |
+>  | 5 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>  
+>  
 >
-> | #   | name        | type    | default value | description                                              |
-> | --- | ----------- | ------- | ------------- | -------------------------------------------------------- |
-> | 2   | **`items`** | @array  |               | Item IDs to add to                                       |
-> | 3   | `speed`     | @number | `3`           | Speed of operation (higher number increases group usage) |
-> | 4   | `factor`    | @number | `1`           | Multiplayer for the value added                          |
 
 ## **clone**:
 
-> **Value:** `(self, speed: @number = 3) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, speed: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Copies the counter and -> returns the copy_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  
+>  
 >
-> | #   | name    | type    | default value | description                                              |
-> | --- | ------- | ------- | ------------- | -------------------------------------------------------- |
-> | 2   | `speed` | @number | `3`           | Speed of operation (higher number increases group usage) |
 
 ## **compare**:
 
-> **Value:** `(self, other: @counter, speed: @number = 3) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, other: @counter, speed: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
-> ## Arguments:
+>## Arguments:
 >
-> | #   | name        | type     | default value | description |
-> | --- | ----------- | -------- | ------------- | ----------- |
-> | 2   | **`other`** | @counter |               |             |
-> | 3   | `speed`     | @number  | `3`           |             |
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`other`** | @counter | | |
+>  | 3 | `speed` | @number | `1` | |
+>  
+>  
+>
 
-## **copy_to**:
+## **copy\_to**:
 
-> **Value:** `(self, items: [@item | @counter], speed: @number = 3, factor: @number = 1) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, items: [@item | @counter], speed: @number = 1, factor: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Copies the value of the counter to another item ID, without consuming the original_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | [@item or @counter] | |Items to copy to |
+>  | 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  | 4 | `factor` | @number | `1` |Factor of to multiply the copy by |
+>  
+>  
 >
-> | #   | name        | type                | default value | description                                              |
-> | --- | ----------- | ------------------- | ------------- | -------------------------------------------------------- |
-> | 2   | **`items`** | [@item or @counter] |               | Items to copy to                                         |
-> | 3   | `speed`     | @number             | `3`           | Speed of operation (higher number increases group usage) |
-> | 4   | `factor`    | @number             | `1`           | Factor of to multiply the copy by                        |
 
 ## **display**:
 
-> **Value:** `(self, x, y) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, x, y) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Creates a item display object that displays the value of the counter_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`x`** |any | |X pos of display in units (1 grid square = 30 units) |
+>  | 3 | **`y`** |any | |Y pos of display in units |
+>  
+>  
 >
-> | #   | name    | type | default value | description                                          |
-> | --- | ------- | ---- | ------------- | ---------------------------------------------------- |
-> | 2   | **`x`** | any  |               | X pos of display in units (1 grid square = 30 units) |
-> | 3   | **`y`** | any  |               | Y pos of display in units                            |
 
 ## **divide**:
 
-> **Type:** `@macro`
+> **Type:** `@macro` 
 >
-> ## Description:
+>## Description: 
+> _Devides the value of the counter by some divisor_
+>## Arguments:
 >
-> _Divides the value of the counter by some divisor_
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`divisor`** | @counter or @number | |Divisor to divide by, either another counter (very expensive) or a normal number |
+>  | 3 | `remainder` | @counter or @item | `@counter::{item: ?i}` |Counter or item to set to the remainder value |
+>  | 4 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  
+>  
 >
-> ## Arguments:
->
-> | #   | name          | type                | default value          | description                                                                      |
-> | --- | ------------- | ------------------- | ---------------------- | -------------------------------------------------------------------------------- |
-> | 2   | **`divisor`** | @counter or @number |                        | Divisor to divide by, either another counter (very expensive) or a normal number |
-> | 3   | `remainder`   | @counter or @item   | `@counter::{item: ?i}` | Counter or item to set to the remainder value                                    |
-> | 4   | `speed`       | @number             | `3`                    | Speed of operation (higher number increases group usage)                         |
 
 ## **multiply**:
 
-> **Value:** `(self, factor: @counter | @number, speed: @number = 3) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, factor: @counter | @number, speed: @number = 1) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Multiplies the value of the counter by some factor (does not consume the factor)_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`factor`** | @counter or @number | |Factor to multiply by, either another counter (very expensive) or a normal number |
+>  | 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  
+>  
 >
-> | #   | name         | type                | default value | description                                                                       |
-> | --- | ------------ | ------------------- | ------------- | --------------------------------------------------------------------------------- |
-> | 2   | **`factor`** | @counter or @number |               | Factor to multiply by, either another counter (very expensive) or a normal number |
-> | 3   | `speed`      | @number             | `3`           | Speed of operation (higher number increases group usage)                          |
 
 ## **new**:
 
-> **Value:** `(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }` (`@macro`)
+> **Value:** `(source: @number | @item | @bool = 0, delay: @bool = true) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Creates a new counter_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `source` | @number or @item or @bool | `0` |Source (can be a number, item ID or boolean) |
+>  | 2 | `delay` | @bool | `true` |Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
+>  
+>  
 >
-> | #   | name     | type                      | default value | description                                                                      |
-> | --- | -------- | ------------------------- | ------------- | -------------------------------------------------------------------------------- |
-> | 1   | `source` | @number or @item or @bool | `0`           | Source (can be a number, item ID or boolean)                                     |
-> | 2   | `delay`  | @bool                     | `true`        | Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
 
 ## **reset**:
 
-> **Value:** `(self, speed: @number = 3, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, speed: @number = 1, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Resets counter to 0_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  | 3 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>  
+>  
 >
-> | #   | name       | type    | default value                | description                                                                                                                                                            |
-> | --- | ---------- | ------- | ---------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-> | 2   | `speed`    | @number | `3`                          | Speed of operation (higher number increases group usage)                                                                                                               |
-> | 3   | `for_each` | @macro  | `(n) { /* code omitted */ }` | Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 
-## **subtract_from**:
+## **subtract\_from**:
 
-> **Type:** `@macro`
+> **Type:** `@macro` 
 >
-> ## Description:
->
+>## Description: 
 > _Subtracts the counter's value from all item IDs in a list, and resets the counter to 0 in the process_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`items`** | @array | |Item IDs to add to |
+>  | 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>  | 4 | `factor` | @number | `1` |Multiplyer for the value subtracted |
+>  | 5 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>  
+>  
 >
-> | #   | name        | type    | default value | description                                              |
-> | --- | ----------- | ------- | ------------- | -------------------------------------------------------- |
-> | 2   | **`items`** | @array  |               | Item IDs to add to                                       |
-> | 3   | `speed`     | @number | `3`           | Speed of operation (higher number increases group usage) |
->
-> <<<<<<< HEAD
-> | 4 | `factor` | @number | `1` |Multiplyer for the value subtracted |
-> | 5 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
-> =======
-> | 4 | `factor` | @number | `1` |Multiplayer for the value subtracted |
->
-> > > > > > > 07900e81b658d261395789e5dbbc1661977db3d5
 
-## **to_const**:
+## **to\_const**:
 
-> **Value:** `(self, range: [@number] | @range) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, range: [@number] | @range) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Converts the counter into a normal number (very context-splitting, be careful)_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`range`** | [@number] or @range | |Array or range of possible output values |
+>  
+>  
 >
-> | #   | name        | type                | default value | description                              |
-> | --- | ----------- | ------------------- | ------------- | ---------------------------------------- |
-> | 2   | **`range`** | [@number] or @range |               | Array or range of possible output values |
 
-## **to_const_enclosed**:
+## **to\_const\_enclosed**:
 
-> **Value:** `(self, range: [@number] | @range, closure: @macro) { /* code omitted */ }` (`@macro`)
+> **Value:** `(self, range: [@number] | @range, closure: @macro) { /* code omitted */ }` (`@macro`) 
 >
-> ## Description:
->
+>## Description: 
 > _Converts the counter into a normal number that you can use within a macro_
+>## Arguments:
 >
-> ## Arguments:
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 2 | **`range`** | [@number] or @range | |Array or range of possible output values |
+>  | 3 | **`closure`** | @macro | |Closure where you can use the const value, should take the value as the first argument |
+>  
+>  
 >
-> | #   | name          | type                | default value | description                                                                            |
-> | --- | ------------- | ------------------- | ------------- | -------------------------------------------------------------------------------------- |
-> | 2   | **`range`**   | [@number] or @range |               | Array or range of possible output values                                               |
-> | 3   | **`closure`** | @macro              |               | Closure where you can use the const value, should take the value as the first argument |

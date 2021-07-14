@@ -2,7 +2,7 @@
 _Generated using `spwn doc [file name]`_
 ## Info:
 
-- Uses 0 groups
+- Uses 1 groups
 - Uses 0 colors
 - Uses 0 block IDs
 - Uses 2 item IDs
@@ -18,8 +18,10 @@ _Generated using `spwn doc [file name]`_
 - [**@array**](std-docs/array.md)
 - [**@object**](std-docs/object.md)
 - [**@event**](std-docs/event.md)
+- [**@obj_set**](std-docs/obj_set.md)
 - [**@counter**](std-docs/counter.md)
 - [**@file**](std-docs/file.md)
+- [**@regex**](std-docs/regex.md)
 # Exports:
  **Type:** `@dictionary` 
 
@@ -34,6 +36,13 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Call a function after a delay_
+>### Example: 
+>```spwn
+> BG.set(255, 0, 0) // turn background red
+>call_with_delay(2, !{
+>	BG.set(0, 255, 0) // turn background green 2 seconds later
+>})
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -118,6 +127,16 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Implementation of a conditional spawn loop_
+>### Example: 
+>```spwn
+> c = counter(4)
+>
+>do_while_loop(() => c > 10, () {
+>	c -= 2
+>})
+>
+>// c is now 2
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -145,6 +164,16 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Implementation of a spawn loop with a counter_
+>### Example: 
+>```spwn
+> for_loop(0..10, (i) {
+>	if i < 5 {
+>		10g.move(-10, 0)
+>	} else {
+>		10g.move(10, 0)
+>	}
+>})
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -165,6 +194,24 @@ _Generated using `spwn doc [file name]`_
 >## Description: 
 > _Hides the player_
 >
+>  
+>
+
+## **obj\_set**:
+
+> **Value:** `(objects: @array, group: @group = ?g) { /* code omitted */ }` (`@macro`) 
+>
+>### Example: 
+>```spwn
+> @obj_set::new([]);
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`objects`** | @array | | |
+>  | 2 | `group` | @group | `?g` |The group to use for rotation (?) |
+>  
 >  
 >
 
@@ -197,6 +244,21 @@ _Generated using `spwn doc [file name]`_
 >  
 >
 
+## **regex**:
+
+> **Value:** `(re: @string) { /* code omitted */ }` (`@macro`) 
+>
+>## Description: 
+> _Create a new instance of regex_
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
+>  
+>  
+>
+
 ## **shake**:
 
 > **Value:** `(strength: @number = 1, interval: @number = 0, duration: @number = 0.5) { /* code omitted */ }` (`@macro`) 
@@ -224,17 +286,32 @@ _Generated using `spwn doc [file name]`_
 >  
 >
 
-## **suppress\_signal**:
+## **supress\_signal**:
 
 > **Value:** `(delay: @number) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
 > _Stops signal from coming past for some time_
+>### Example: 
+>```spwn
+> f = !{
+>	supress_signal(1)
+>	10g.move(10, 0)
+>}
+>
+>f! // moves
+>wait(0.4)
+>f! // does nothing
+>wait(0.4)
+>f! // does nothing
+>wait(0.4)
+>f! // moves
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`delay`** | @number | |Time to suppress signal |
+>| 1 | **`delay`** | @number | |Time to supress signal |
 >  
 >  
 >
@@ -245,22 +322,19 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Stops signal from coming past after call_
+>### Example: 
+>```spwn
+> f = !{
+>	supress_signal_forever()
+>	10g.move(10, 0)
+>}
+>f! // moves
+>wait(0.4)
+>f! // does nothing
+>wait(1000)
+>f! // does nothing
+>```
 >
->  
->
-
-## **supress\_signal\_quick**:
-
-> **Value:** `(delay: @number) { /* code omitted */ }` (`@macro`) 
->
->## Description: 
-> _Stops signal from coming past for some time (better for quick/glitchy signals)_
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`delay`** | @number | |Time to supress signal |
->  
 >  
 >
 
@@ -315,6 +389,12 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Adds a delay before the next triggers_
+>### Example: 
+>```spwn
+> BG.set(255, 0, 0) // turn background red
+>wait(2) // wait 2 seconds
+>BG.set(0, 255, 0) // turn background green
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -330,6 +410,16 @@ _Generated using `spwn doc [file name]`_
 >
 >## Description: 
 > _Implementation of a conditional spawn loop_
+>### Example: 
+>```spwn
+> c = counter(11)
+>
+>while_loop(() => c > 4, () {
+>	c -= 2
+>})
+>
+>// c is now 3
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -958,7 +1048,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **ACTIVATE\_ON\_EXIT**:
 >
->> **Value:** `@object_key::{id: 93,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 93}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1022,7 +1112,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **ANIMATION\_ID**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 76}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 76,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1118,7 +1208,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **BLOCK\_A**:
 >
->> **Value:** `@object_key::{pattern: @block,id: 80}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 80,pattern: @block}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1182,7 +1272,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **CENTER**:
 >
->> **Value:** `@object_key::{pattern: @group,id: 71}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 71,pattern: @group}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1214,7 +1304,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COLOR**:
 >
->> **Value:** `@object_key::{pattern: @color,id: 21}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 21,pattern: @color}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1342,7 +1432,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COMPARISON**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 88}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 88,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1374,7 +1464,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COPIED\_COLOR\_HVS**:
 >
->> **Value:** `@object_key::{pattern: @string,id: 49}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 49,pattern: @string}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1406,7 +1496,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COPIED\_COLOR\_ID**:
 >
->> **Value:** `@object_key::{id: 50,pattern: @color}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @color,id: 50}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1438,7 +1528,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COPY\_OPACITY**:
 >
->> **Value:** `@object_key::{id: 60,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 60}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1502,7 +1592,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **COUNT\_MULTI\_ACTIVATE**:
 >
->> **Value:** `@object_key::{pattern: @bool,id: 104}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 104,pattern: @bool}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1534,7 +1624,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **DELAY**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 91}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 91,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1566,7 +1656,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **DETAIL\_ONLY**:
 >
->> **Value:** `@object_key::{pattern: @bool,id: 66}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 66,pattern: @bool}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1726,7 +1816,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **DURATION**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 10}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 10,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1790,7 +1880,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **EASING**:
 >
->> **Value:** `@object_key::{id: 30,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 30}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -1886,7 +1976,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **EDITOR\_LAYER\_1**:
 >
->> **Value:** `@object_key::{id: 20,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 20}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2046,7 +2136,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **FOLLOW**:
 >
->> **Value:** `@object_key::{pattern: @group,id: 71}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 71,pattern: @group}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2078,7 +2168,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **GLOW\_DISABLED**:
 >
->> **Value:** `@object_key::{pattern: @bool,id: 96}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 96,pattern: @bool}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2110,7 +2200,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **GROUPS**:
 >
->> **Value:** `@object_key::{id: 57,pattern: [@group] | @group}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: [@group] | @group,id: 57}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2142,7 +2232,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **GROUP\_PARENT**:
 >
->> **Value:** `@object_key::{id: 34,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 34}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2174,7 +2264,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **HIGH\_DETAIL**:
 >
->> **Value:** `@object_key::{id: 103,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 103}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2206,7 +2296,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **HOLD**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 46}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 46,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2238,7 +2328,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **HOLD\_MODE**:
 >
->> **Value:** `@object_key::{pattern: @bool,id: 81}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 81,pattern: @bool}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2302,7 +2392,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **HVS**:
 >
->> **Value:** `@object_key::{pattern: @string,id: 43}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 43,pattern: @string}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2430,7 +2520,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **LINKED\_GROUP**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 108}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 108,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2462,7 +2552,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **LOCK\_OBJECT\_ROTATION**:
 >
->> **Value:** `@object_key::{id: 70,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 70}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2590,7 +2680,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **MAX\_SPEED**:
 >
->> **Value:** `@object_key::{id: 105,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 105}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2622,7 +2712,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **MOVE\_X**:
 >
->> **Value:** `@object_key::{id: 28,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 28}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2750,7 +2840,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **OPACITY**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 35}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 35,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2814,7 +2904,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **PLAYER\_COLOR\_1**:
 >
->> **Value:** `@object_key::{pattern: @bool,id: 15}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 15,pattern: @bool}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -2878,7 +2968,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **PORTAL\_CHECKED**:
 >
->> **Value:** `@object_key::{id: 13,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 13}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3038,7 +3128,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **ROTATION\_SPEED**:
 >
->> **Value:** `@object_key::{id: 97,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 97}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3070,7 +3160,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **SCALING**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 32}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 32,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3102,7 +3192,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **SPAWN\_DURATION**:
 >
->> **Value:** `@object_key::{id: 63,pattern: @number | @epsilon}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number | @epsilon,id: 63}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3166,7 +3256,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **SPEED**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 90}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 90,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3230,7 +3320,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **SUBTRACT\_COUNT**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 78}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 78,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3262,7 +3352,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TARGET**:
 >
->> **Value:** `@object_key::{id: 51,pattern: @color | @group | @trigger_function}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @color | @group | @trigger_function,id: 51}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3390,7 +3480,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TARGET\_TYPE**:
 >
->> **Value:** `@object_key::{id: 52,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 52}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3422,7 +3512,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TEXT**:
 >
->> **Value:** `@object_key::{pattern: @string,id: 31}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 31,pattern: @string}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3518,7 +3608,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TOUCH\_TRIGGERED**:
 >
->> **Value:** `@object_key::{id: 11,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 11}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3550,7 +3640,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TRIGGER\_BLUE**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 9}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 9,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3582,7 +3672,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TRIGGER\_GREEN**:
 >
->> **Value:** `@object_key::{id: 8,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 8}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3614,7 +3704,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **TRIGGER\_RED**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 7}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 7,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3678,7 +3768,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **VERTICAL\_FLIP**:
 >
->> **Value:** `@object_key::{id: 5,pattern: @bool}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @bool,id: 5}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3742,7 +3832,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **X\_MOD**:
 >
->> **Value:** `@object_key::{id: 72,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 72}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3774,7 +3864,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **Y**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 3}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 3,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3806,7 +3896,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **YELLOW\_TELEPORTATION\_PORTAL\_DISTANCE**:
 >
->> **Value:** `@object_key::{id: 54,pattern: @number}` (`@object_key`) 
+>> **Value:** `@object_key::{pattern: @number,id: 54}` (`@object_key`) 
 >>
 >>
 >>## **id**:
@@ -3902,7 +3992,7 @@ _Generated using `spwn doc [file name]`_
 >
 >## **Z\_LAYER**:
 >
->> **Value:** `@object_key::{pattern: @number,id: 24}` (`@object_key`) 
+>> **Value:** `@object_key::{id: 24,pattern: @number}` (`@object_key`) 
 >>
 >>
 >>## **id**:

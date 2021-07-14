@@ -47,6 +47,36 @@
 >  
 >
 
+## **is\_empty**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>## Description: 
+> _Returns true if the string has a length of 0, false otherwise_
+>
+>  
+>
+
+## **is\_lower**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>## Description: 
+> _Checks if whole string is lowercase, ignores characters that is not in the alphabet._
+>
+>  
+>
+
+## **is\_upper**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>## Description: 
+> _Checks if whole string is uppercase, ignores characters that is not in the alphabet._
+>
+>  
+>
+
 ## **join**:
 
 > **Value:** `(self, list: @array) { /* code omitted */ }` (`@macro`) 
@@ -59,6 +89,16 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 2 | **`list`** | @array | | |
 >  
+>  
+>
+
+## **lowercase**:
+
+> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
+>
+>## Description: 
+> _Makes whole string lowercase._
+>
 >  
 >
 
@@ -77,7 +117,7 @@
 > **Value:** `(self, spstr: @string) { /* code omitted */ }` (`@macro`) 
 >
 >## Description: 
-> _Splits the string by teh specified seperator._
+> _Splits the string by the specified seperator._
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -118,24 +158,12 @@
 >  
 >
 
-## **reverse**:
-
-> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
->
->  
->
-
-## **lowercase**:
-
-> **Value:** `(self) { /* code omitted */ }` (`@macro`) 
->
->
->
-
 ## **uppercase**:
 
 > **Value:** `(self) { /* code omitted */ }` (`@macro`) 
 >
+>## Description: 
+> _Makes whole string uppercase._
 >
+>  
 >
-
