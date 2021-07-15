@@ -16,7 +16,8 @@
   <meta name="description" content="content">
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple-dark.css">
+  <link rel="stylesheet" href="https://unpkg.com/docsify-themeable@0.8.4/dist/css/theme-simple-dark.css">
+
 
   
 
@@ -27,8 +28,15 @@
       --theme-hue: 180;
       --theme-saturation: 50%;
 
-      --table-cell-border-width: 5px;
-
+      --table-cell-border-width: 0px;
+      --code-theme-background: #191b20;
+      --table-row-odd-background: #222731;
+    }
+    .markdown-section th {
+      border-bottom: 2px solid var(--table-cell-border-color);
+    }
+    .markdown-section td {
+      border-bottom: 2px solid var(--table-cell-border-color);
     }
   </style>
 

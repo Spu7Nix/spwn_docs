@@ -2,7 +2,7 @@
 
 Alright, lets actually make our SPWN program do something. Triggers in SPWN are made by calling a macro, usually on an id.
 
-> _**Note:** In SPWN, a macro is the same thing as what you would usually call a "function" in other programming languages, but in SPWN, a function is something slightly different, so we use the term "macro" instead_
+?> _**Note:** In SPWN, a macro is the same thing as what you would usually call a "function" in other programming languages, but in SPWN, a function is something slightly different, so we use the term "macro" instead_
 
 As you probably know, to move objects in Geometry Dash, you move the _group_ the objects are in. If you wanted to, say, move group 5 ten units on the x-axis in 0.5 seconds, you would add a move trigger with those settings. In SPWN we do it like this:
 

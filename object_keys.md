@@ -1,99 +1,99 @@
 # Object Keys
 
-| Key name                               | ID  | Value type                                    | Description                                                                              |
-| -------------------------------------- | --- | --------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `OBJ_ID `                              | 1   | `@number `                                    | The ID that decides what kind of object this is. Each object type in gd has a unique ID. |
-| `X `                                   | 2   | `@number `                                    | The X position of an object in units (one grid square = 30 units, +x is to the right)    |
-| `Y `                                   | 3   | `@number `                                    | The Y position of an object in units (one grid square = 30 units, +y is up)              |
-| `HORIZONTAL_FLIP `                     | 4   | `@bool `                                      | Wether the object is horizontally flipped                                                |
-| `VERTICAL_FLIP `                       | 5   | `@bool `                                      | Wether the object is vertically flipped                                                  |
-| `ROTATION `                            | 6   | `@number `                                    | Rotation of the object in degrees                                                        |
-| `TRIGGER_RED `                         | 7   | `@number `                                    | Red value of the color in a color trigger                                                |
-| `TRIGGER_GREEN `                       | 8   | `@number `                                    | Green value of the color in a color trigger                                              |
-| `TRIGGER_BLUE `                        | 9   | `@number `                                    | Blue value of the color in a color trigger                                               |
-| `DURATION `                            | 10  | `@number `                                    | Duration of a trigger                                                                    |
-| `TOUCH_TRIGGERED `                     | 11  | `@bool `                                      | Wether a trigger is touch triggered                                                      |
-| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | Wether a portal is check(to show the boundaries)                                                                                |
-| `PLAYER_COLOR_1 `                      | 15  | `@bool `                                      | If player color 1 is checked on a color
-| `PLAYER_COLOR_2 `                      | 16  | `@bool `                                      | If player color 2 is checked on a color
-| `BLENDING `                            | 17  | `@bool `                                      | If blending is checked on a color
-| `EDITOR_LAYER_1 `                      | 20  | `@number `                                    | The first editor layer of an object
-| `COLOR `                               | 21  | `@color `                                     | "Base" color of an object
-| `COLOR_2 `                             | 22  | `@color `                                     | "Detail" color of an object
-| `TARGET_COLOR `                        | 23  | `@color `                                     | 
-| `Z_LAYER `                             | 24  | `@number `                                    | The z layer an object is located on
-| `Z_ORDER `                             | 25  | `@number `                                    | the z order an object is set too
-| `MOVE_X `                              | 28  | `@number `                                    | The x movement of a move trigger
-| `MOVE_Y `                              | 29  | `@number `                                    | The y movement of a move trigger
-| `EASING `                              | 30  | `@number ` or `@easing_type`                  | Easing type of a trigger
-| `TEXT `                                | 31  | `@string `                                    | The text to display on a text object(use $.b64encode("string"))
-| `SCALING `                             | 32  | `@number `                                    | The scale of an object
-| `GROUP_PARENT `                        | 34  | `@bool `                                      | If group parent is checked on an object
-| `OPACITY `                             | 35  | `@number `                                    | Changes the opacity of the object
-| `ACTIVE_TRIGGER `                      | 36, | `@bool `                                      |
-| `HVS_ENABLED `                         | 41  | `@bool `                                      | Wether "Main" color of an object HSV/Hue, Saturation and brightness is modified
-| `COLOR_2_HVS_ENABLED `                 | 42  | `@bool `                                      | Wether "Detail" color of an object HSV/Hue, Saturation and brightness is modified
-| `HVS `                                 | 43  | `@string `                                    | An object's "Main" color HSV value (format : "<hue>a<saturation>a<brightness>a<saturation checked(0/1)>a<brightness checked(0/1)>". example : "60a-1a0.5a1a0")
-| `COLOR_2_HVS `                         | 44  | `@string `                                    | An object's "Detail" color HSV value
-| `FADE_IN `                             | 45  | `@number `                                    | A pulse trigger's fade in time
-| `HOLD `                                | 46  | `@number `                                    | A pulse trigger's hold time
-| `FADE_OUT `                            | 47  | `@number `                                    | A pulse trigger's fade out time
-| `PULSE_HSV `                           | 48  | `@bool `                                      | 
+| Key name                               | ID  | Value type                                    | Description                                                                                                                                                    |
+| -------------------------------------- | --- | --------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `OBJ_ID `                              | 1   | `@number `                                    | The ID that decides what kind of object this is. Each object type in gd has a unique ID.                                                                       |
+| `X `                                   | 2   | `@number `                                    | The X position of an object in units (one grid square = 30 units, +x is to the right)                                                                          |
+| `Y `                                   | 3   | `@number `                                    | The Y position of an object in units (one grid square = 30 units, +y is up)                                                                                    |
+| `HORIZONTAL_FLIP `                     | 4   | `@bool `                                      | Weather the object is horizontally flipped                                                                                                                     |
+| `VERTICAL_FLIP `                       | 5   | `@bool `                                      | Weather the object is vertically flipped                                                                                                                       |
+| `ROTATION `                            | 6   | `@number `                                    | Rotation of the object in degrees                                                                                                                              |
+| `TRIGGER_RED `                         | 7   | `@number `                                    | Red value of the color in a color trigger                                                                                                                      |
+| `TRIGGER_GREEN `                       | 8   | `@number `                                    | Green value of the color in a color trigger                                                                                                                    |
+| `TRIGGER_BLUE `                        | 9   | `@number `                                    | Blue value of the color in a color trigger                                                                                                                     |
+| `DURATION `                            | 10  | `@number `                                    | Duration of a trigger                                                                                                                                          |
+| `TOUCH_TRIGGERED `                     | 11  | `@bool `                                      | Weather a trigger is touch triggered                                                                                                                           |
+| `PORTAL_CHECKED `                      | 13  | `@bool `                                      | Weather a portal is check(to show the boundaries)                                                                                                              |
+| `PLAYER_COLOR_1 `                      | 15  | `@bool `                                      | If player color 1 is checked on a color                                                                                                                        |
+| `PLAYER_COLOR_2 `                      | 16  | `@bool `                                      | If player color 2 is checked on a color                                                                                                                        |
+| `BLENDING `                            | 17  | `@bool `                                      | If blending is checked on a color                                                                                                                              |
+| `EDITOR_LAYER_1 `                      | 20  | `@number `                                    | The first editor layer of an object                                                                                                                            |
+| `COLOR `                               | 21  | `@color `                                     | "Base" color of an object                                                                                                                                      |
+| `COLOR_2 `                             | 22  | `@color `                                     | "Detail" color of an object                                                                                                                                    |
+| `TARGET_COLOR `                        | 23  | `@color `                                     | The target color ID of a color trigger                                                                                                                         |
+| `Z_LAYER `                             | 24  | `@number `                                    | The z layer an object is located on                                                                                                                            |
+| `Z_ORDER `                             | 25  | `@number `                                    | the z order an object is set too                                                                                                                               |
+| `MOVE_X `                              | 28  | `@number `                                    | The x movement of a move trigger                                                                                                                               |
+| `MOVE_Y `                              | 29  | `@number `                                    | The y movement of a move trigger                                                                                                                               |
+| `EASING `                              | 30  | `@number ` or `@easing_type`                  | Easing type of a trigger                                                                                                                                       |
+| `TEXT `                                | 31  | `@string `                                    | The text to display on a text object(use $.b64encode("string"))                                                                                                |
+| `SCALING `                             | 32  | `@number `                                    | The scale of an object                                                                                                                                         |
+| `GROUP_PARENT `                        | 34  | `@bool `                                      | If group parent is checked on an object                                                                                                                        |
+| `OPACITY `                             | 35  | `@number `                                    | Changes the opacity of the object                                                                                                                              |
+| `ACTIVE_TRIGGER `                      | 36  | `@bool `                                      |
+| `HVS_ENABLED `                         | 41  | `@bool `                                      | Weather "Main" color of an object HSV/Hue, Saturation and brightness is modified                                                                               |
+| `COLOR_2_HVS_ENABLED `                 | 42  | `@bool `                                      | Weather "Detail" color of an object HSV/Hue, Saturation and brightness is modified                                                                             |
+| `HVS `                                 | 43  | `@string `                                    | An object's "Main" color HSV value (format : "<hue>a<saturation>a<brightness>a<saturation checked(0/1)>a<brightness checked(0/1)>". example : "60a-1a0.5a1a0") |
+| `COLOR_2_HVS `                         | 44  | `@string `                                    | An object's "Detail" color HSV value                                                                                                                           |
+| `FADE_IN `                             | 45  | `@number `                                    | A pulse trigger's fade in time                                                                                                                                 |
+| `HOLD `                                | 46  | `@number `                                    | A pulse trigger's hold time                                                                                                                                    |
+| `FADE_OUT `                            | 47  | `@number `                                    | A pulse trigger's fade out time                                                                                                                                |
+| `PULSE_HSV `                           | 48  | `@bool `                                      | Weather a pulse trigger uses HSV                                                                                                                               |
 | `COPIED_COLOR_HVS `                    | 49  | `@string `                                    |
 | `COPIED_COLOR_ID `                     | 50  | `@color `                                     |
-| `TARGET `                              | 51  | `@color ` or `@group` or ` @trigger_function` | ID affected by the trigger
-| `TARGET_TYPE `                         | 52  | `@number `                                    |
-| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    | The distance from the blue teleportation portal to the blue one
-| `ACTIVATE_GROUP `                      | 56  | `@bool `                                      | Wether "Activate group" is checked in count & collision trigger
-| `GROUPS `                              | 57  | `[@group] ` or `@group`                       | The group(s) an object should have
-| `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Wether "Lock to player X" is activated in a move trigger
-| `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Wether "Lock to player Y" is activated in a move trigger
-| `COPY_OPACITY `                        | 60  | `@bool `                                      | Wether "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)
-| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layer of an object
-| `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Wether a trigger should be activated by a spawn trigger
-| `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      | Delay value in a spawn trigger
-| `DONT_FADE `                           | 64  | `@bool `                                      | Wether an object should fade in
-| `MAIN_ONLY `                           | 65  | `@bool `                                      | Wether "Main only" is checked on a pulse trigger (When you activate pulse on a group)
-| `DETAIL_ONLY `                         | 66  | `@bool `                                      | Wether "Detail only" is checked on a pulse trigger (When you activate pulse on a group)
-| `DONT_ENTER `                          | 67  | `@bool `                                      | Wether an object should enter
-| `ROTATE_DEGREES `                      | 68  | `@number `                                    | The number of degrees to rotate an object in a rotate trigger
-| `TIMES_360 `                           | 69  | `@number `                                    | The number of times to do a 360 rotation in a rotate trigger
-| `LOCK_OBJECT_ROTATION `                | 70  | `@bool `                                      | Wether to lock object rotation in a rotate trigger
-| `FOLLOW `                              | 71  | `@group `                                     | "Follow group ID" value of a follow trigger
-| `CENTER `                              | 71  | `@group `                                     | Center of rotation of a rotate trigger
-| `TARGET_POS `                          | 71  | `@group `                                     | "Target pos group ID" value of a move trigger (when "Use target" is activated)
-| `X_MOD `                               | 72  | `@number `                                    | "X mod" value of a follow trigger
-| `Y_MOD `                               | 73  | `@number `                                    | "Y mod" value of a follow trigger
-| `STRENGTH `                            | 75  | `@number `                                    | Strength of shake on a shake trigger
-| `ANIMATION_ID `                        | 76  | `@number `                                    | The animation id of animated objects (used in the animate trigger)
-| `COUNT `                               | 77  | `@number `                                    | Item ID that will be affected by a pickup item
-| `SUBTRACT_COUNT `                      | 78  | `@number `                                    | Wether a pickup item add or subtract from an Item ID when collected (0 = add, 1 = subtract)
-| `PICKUP_MODE `                         | 79  | `@number `                                    | Wether a pickup item is on "Pickup item" mode or "Toggle trigger" mode (1 = Pickup item, 2= Toggle trigger)
-| `ITEM `                                | 80  | `@item `                                      | 
-| `BLOCK_A `                             | 80  | `@block `                                     | "Block A ID" of a collision trigger
-| `HOLD_MODE `                           | 81  | `@bool `                                      | Wether "Hold mode" is activated on a touch trigger
-| `TOGGLE_MODE `                         | 82  | `@number `                                    |
-| `INTERVAL `                            | 84  | `@number `                                    | Interval between each shake on a shake trigger
-| `EASING_RATE `                         | 85  | `@number `                                    | What the easing rate is on a move trigger
-| `EXCLUSIVE `                           | 86  | `@bool `                                      | Wether "Exclusive" is checked on a pulse trigger 
-| `MULTI_TRIGGER `                       | 87  | `@bool `                                      | Wether a trigger is capable to be activated multiple times (when "Spawn trigger" is activated)
-| `COMPARISON `                          | 88  | `@number `                                    | Comparison type in an instant count trigger (0 = equal, 1 = Larger, 2 = Smaller)
-| `DUAL_MODE `                           | 89  | `@bool `                                      | Wether "Dual mode" is activated on a touch trigger
-| `SPEED `                               | 90  | `@number `                                    | "Speed" value of a Follow player Y trigger
-| `DELAY `                               | 91  | `@number `                                    | "Delay" value of a Follow player Y trigger
-| `Y_OFFSET `                            | 92  | `@number `                                    | "Offset" value of a Follow player Y trigger
-| `ACTIVATE_ON_EXIT `                    | 93  | `@bool `                                      | 
-| `DYNAMIC_BLOCK `                       | 94  | `@bool `                                      | Wether a collision block is a dynamic block (should set to true if you will be moving the collision block)
-| `BLOCK_B `                             | 95  | `@block `                                     | Block B ID of a collision trigger
-| `GLOW_DISABLED `                       | 96  | `@bool `                                      | Wether glow is disabled on an object
-| `ROTATION_SPEED `                      | 97  | `@number `                                    |
-| `DISABLE_ROTATION `                    | 98  | `@bool `                                      |
-| `COUNT_MULTI_ACTIVATE `                | 104 | `@bool `                                      |
-| `USE_TARGET `                          | 100 | `@bool `                                      | Wether 'use target' is checked on a move trigger
-| `TARGET_POS_AXES `                     | 101 | `@number `                                    |
-| `EDITOR_DISABLE `                      | 102 | `@bool `                                      | Wether a spawn trigger should be disabled in the editor
-| `HIGH_DETAIL `                         | 103 | `@bool `                                      | Wether an object is marked as 'high detail
-| `MAX_SPEED `                           | 105 | `@number `                                    | "Max speed" value of a Follow player Y trigger
-| `RANDOMIZE_START `                     | 106 | `@bool `                                      | 
-| `ANIMATION_SPEED `                     | 107 | `@number `                                    | 
-| `LINKED_GROUP `                        | 108 | `@number `                                    |
+| `TARGET `                              | 51  | `@color ` or `@group` or ` @trigger_function` | ID affected by the trigger                                                                                                                                     |
+| `TARGET_TYPE `                         | 52  | `@number `                                    | The target of a pulse trigger (0 = color channel, 1 = group ID)                                                                                                |
+| `YELLOW_TELEPORTATION_PORTAL_DISTANCE` | 54  | `@number `                                    | The distance from the blue teleportation portal to the blue one                                                                                                |
+| `ACTIVATE_GROUP `                      | 56  | `@bool `                                      | Weather "Activate group" is checked in count & collision trigger                                                                                               |
+| `GROUPS `                              | 57  | `[@group] ` or `@group`                       | The group(s) an object should have                                                                                                                             |
+| `LOCK_TO_PLAYER_X `                    | 58  | `@bool `                                      | Weather "Lock to player X" is activated in a move trigger                                                                                                      |
+| `LOCK_TO_PLAYER_Y `                    | 59  | `@bool `                                      | Weather "Lock to player Y" is activated in a move trigger                                                                                                      |
+| `COPY_OPACITY `                        | 60  | `@bool `                                      | Weather "Copy opacity" is checked in a color trigger (when "Copy color" is also checked)                                                                       |
+| `EDITOR_LAYER_2 `                      | 61  | `@number `                                    | The second editor layer of an object                                                                                                                           |
+| `SPAWN_TRIGGERED `                     | 62  | `@bool `                                      | Weather a trigger should be activated by a spawn trigger                                                                                                       |
+| `SPAWN_DURATION `                      | 63  | `@number ` or `@epsilon`                      | Delay value in a spawn trigger                                                                                                                                 |
+| `DONT_FADE `                           | 64  | `@bool `                                      | Weather an object should fade in                                                                                                                               |
+| `MAIN_ONLY `                           | 65  | `@bool `                                      | Weather "Main only" is checked on a pulse trigger (When you activate pulse on a group)                                                                         |
+| `DETAIL_ONLY `                         | 66  | `@bool `                                      | Weather "Detail only" is checked on a pulse trigger (When you activate pulse on a group)                                                                       |
+| `DONT_ENTER `                          | 67  | `@bool `                                      | Weather an object should enter                                                                                                                                 |
+| `ROTATE_DEGREES `                      | 68  | `@number `                                    | The number of degrees to rotate an object in a rotate trigger                                                                                                  |
+| `TIMES_360 `                           | 69  | `@number `                                    | The number of times to do a 360 rotation in a rotate trigger                                                                                                   |
+| `LOCK_OBJECT_ROTATION `                | 70  | `@bool `                                      | Weather to lock object rotation in a rotate trigger                                                                                                            |
+| `FOLLOW `                              | 71  | `@group `                                     | "Follow group ID" value of a follow trigger                                                                                                                    |
+| `CENTER `                              | 71  | `@group `                                     | Center of rotation of a rotate trigger                                                                                                                         |
+| `TARGET_POS `                          | 71  | `@group `                                     | "Target pos group ID" value of a move trigger (when "Use target" is activated)                                                                                 |
+| `X_MOD `                               | 72  | `@number `                                    | "X mod" value of a follow trigger                                                                                                                              |
+| `Y_MOD `                               | 73  | `@number `                                    | "Y mod" value of a follow trigger                                                                                                                              |
+| `STRENGTH `                            | 75  | `@number `                                    | Strength of shake on a shake trigger                                                                                                                           |
+| `ANIMATION_ID `                        | 76  | `@number `                                    | The animation id of animated objects (used in the animate trigger)                                                                                             |
+| `COUNT `                               | 77  | `@number `                                    | Item ID that will be affected by a pickup item                                                                                                                 |
+| `SUBTRACT_COUNT `                      | 78  | `@number `                                    | Weather a pickup item add or subtract from an Item ID when collected (0 = add, 1 = subtract)                                                                   |
+| `PICKUP_MODE `                         | 79  | `@number `                                    | Weather a pickup item is on "Pickup item" mode or "Toggle trigger" mode (1 = Pickup item, 2= Toggle trigger)                                                   |
+| `ITEM `                                | 80  | `@item `                                      | The item ID of the count, instant count and pickup triggers                                                                                                    |
+| `BLOCK_A `                             | 80  | `@block `                                     | "Block A ID" of a collision trigger, or the block ID of a collision block                                                                                      |
+| `HOLD_MODE `                           | 81  | `@bool `                                      | Weather "Hold mode" is activated on a touch trigger                                                                                                            |
+| `TOGGLE_MODE `                         | 82  | `@number `                                    | The toggle mode of a touch trigger (0 = Default, 1 = On, 2 = Off)                                                                                              |
+| `INTERVAL `                            | 84  | `@number `                                    | Interval between each shake on a shake trigger                                                                                                                 |
+| `EASING_RATE `                         | 85  | `@number `                                    | What the easing rate is on a move trigger                                                                                                                      |
+| `EXCLUSIVE `                           | 86  | `@bool `                                      | Weather "Exclusive" is checked on a pulse trigger                                                                                                              |
+| `MULTI_TRIGGER `                       | 87  | `@bool `                                      | Weather a trigger is capable to be activated multiple times (when "Spawn trigger" is activated)                                                                |
+| `COMPARISON `                          | 88  | `@number `                                    | Comparison type in an instant count trigger (0 = equal, 1 = Larger, 2 = Smaller)                                                                               |
+| `DUAL_MODE `                           | 89  | `@bool `                                      | Weather "Dual mode" is activated on a touch trigger                                                                                                            |
+| `SPEED `                               | 90  | `@number `                                    | "Speed" value of a Follow player Y trigger                                                                                                                     |
+| `DELAY `                               | 91  | `@number `                                    | "Delay" value of a Follow player Y trigger                                                                                                                     |
+| `Y_OFFSET `                            | 92  | `@number `                                    | "Offset" value of a Follow player Y trigger                                                                                                                    |
+| `ACTIVATE_ON_EXIT `                    | 93  | `@bool `                                      | Weather a collision trigger activates on exit instead of on enter                                                                                              |
+| `DYNAMIC_BLOCK `                       | 94  | `@bool `                                      | Weather a collision block is a dynamic block (should set to true if you will be moving the collision block)                                                    |
+| `BLOCK_B `                             | 95  | `@block `                                     | Block B ID of a collision trigger                                                                                                                              |
+| `GLOW_DISABLED `                       | 96  | `@bool `                                      | Weather glow is disabled on an object                                                                                                                          |
+| `ROTATION_SPEED `                      | 97  | `@number `                                    | Rotation speed of rotating objects (like saws)                                                                                                                 |
+| `DISABLE_ROTATION `                    | 98  | `@bool `                                      | Disbles rotation of rotating objects (like saws)                                                                                                               |
+| `COUNT_MULTI_ACTIVATE `                | 104 | `@bool `                                      | Weather a count trigger should activate more than once                                                                                                         |
+| `USE_TARGET `                          | 100 | `@bool `                                      | Weather 'use target' is checked on a move trigger                                                                                                              |
+| `TARGET_POS_AXES `                     | 101 | `@number `                                    | The move axes of a move trigger with 'use target' enabled (0 = Both, 1 = X Only, 2 = Y Only)                                                                   |
+| `EDITOR_DISABLE `                      | 102 | `@bool `                                      | Weather a spawn trigger should be disabled in the editor                                                                                                       |
+| `HIGH_DETAIL `                         | 103 | `@bool `                                      | Weather an object is marked as 'high detail'                                                                                                                   |
+| `MAX_SPEED `                           | 105 | `@number `                                    | "Max speed" value of a Follow player Y trigger                                                                                                                 |
+| `RANDOMIZE_START `                     | 106 | `@bool `                                      | 'randomize start' setting on pulsating animated objects                                                                                                        |
+| `ANIMATION_SPEED `                     | 107 | `@number `                                    | 'speed' setting on pulsating animated objects                                                                                                                  |
+| `LINKED_GROUP `                        | 108 | `@number `                                    | The ID of the linked group the object is in                                                                                                                    |

@@ -1,42 +1,44 @@
   
-
 # **@file**: 
  
 ## **new**:
 
-> **Value:** `(path: @string) { /* code omitted */ }` (`@macro`) 
->
+> **Value:** 
+>```spwn
+>(path: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`path`** | @string | | |
->  
->  
 >
 
 ## **read**:
 
-> **Value:** `(self, s = -1) { /* code omitted */ }` (`@macro`) 
->
+> **Value:** 
+>```spwn
+>(self, s = -1) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 2 | `s` |any | `-1` | |
->  
->  
+>| 1 | `s` |any | `-1` | |
 >
 
 ## **seek**:
 
-> **Value:** `(self, s: @number) { /* code omitted */ }` (`@macro`) 
->
+> **Value:** 
+>```spwn
+>(self, s: @number) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 2 | **`s`** | @number | | |
->  
->  
+>| 1 | **`s`** | @number | | |
 >
