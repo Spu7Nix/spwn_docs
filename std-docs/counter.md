@@ -464,7 +464,10 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to add to || 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) || 3 | `factor` | @number | `1` |Multiplyer for the value added || 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to add to |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 3 | `factor` | @number | `1` |Multiplyer for the value added |
+>| 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 
 ## **clone**:
@@ -510,7 +513,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @counter | | || 2 | `speed` | @number | `1` | |
+>| 1 | **`other`** | @counter | | |
+>| 2 | `speed` | @number | `1` | |
 >
 
 ## **copy\_to**:
@@ -534,7 +538,9 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`items`** | [@counter or @item] or @counter or @item | |Items to copy to || 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) || 3 | `factor` | @number | `1` |Factor of to multiply the copy by |
+>| 1 | **`items`** | [@counter or @item] or @counter or @item | |Items to copy to |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 3 | `factor` | @number | `1` |Factor of to multiply the copy by |
 >
 
 ## **display**:
@@ -555,7 +561,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`x`** |any | |X pos of display in units (1 grid square = 30 units) || 2 | **`y`** |any | |Y pos of display in units |
+>| 1 | **`x`** |any | |X pos of display in units (1 grid square = 30 units) |
+>| 2 | **`y`** |any | |Y pos of display in units |
 >
 
 ## **divide**:
@@ -580,7 +587,9 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`divisor`** | @counter or @number | |Divisor to divide by, either another counter (very expensive) or a normal number || 2 | `remainder` | @counter or @item | `@counter::{item: ?i}` |Counter or item to set to the remainder value || 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 1 | **`divisor`** | @counter or @number | |Divisor to divide by, either another counter (very expensive) or a normal number |
+>| 2 | `remainder` | @counter or @item | `@counter::{item: ?i}` |Counter or item to set to the remainder value |
+>| 3 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
 >
 
 ## **multiply**:
@@ -603,7 +612,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`factor`** | @counter or @number | |Factor to multiply by, either another counter (very expensive) or a normal number || 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 1 | **`factor`** | @counter or @number | |Factor to multiply by, either another counter (very expensive) or a normal number |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
 >
 
 ## **new**:
@@ -626,7 +636,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `source` | @number or @item or @bool | `0` |Source (can be a number, item ID or boolean) || 2 | `delay` | @bool | `true` |Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
+>| 1 | `source` | @number or @item or @bool | `0` |Source (can be a number, item ID or boolean) |
+>| 2 | `delay` | @bool | `true` |Adds a delay if a value gets added to the new item (to avoid confusing behavior) |
 >
 
 ## **reset**:
@@ -649,7 +660,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) || 2 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>| 1 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 2 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 
 ## **subtract\_from**:
@@ -673,7 +685,10 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to subtract from || 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) || 3 | `factor` | @number | `1` |Multiplyer for the value subtracted || 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
+>| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to subtract from |
+>| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
+>| 3 | `factor` | @number | `1` |Multiplyer for the value subtracted |
+>| 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 
 ## **to\_const**:
@@ -721,5 +736,6 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`range`** | [@number] or @range | |Array or range of possible output values || 2 | **`closure`** | @macro | |Closure where you can use the const value, should take the value as the first argument |
+>| 1 | **`range`** | [@number] or @range | |Array or range of possible output values |
+>| 2 | **`closure`** | @macro | |Closure where you can use the const value, should take the value as the first argument |
 >

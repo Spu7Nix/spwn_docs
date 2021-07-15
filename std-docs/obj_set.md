@@ -32,24 +32,31 @@
 >**Type:** `@macro` 
 >## Description: 
 > _Returns true if this set contains no objects, false otherwise._
+>### Example: 
+>```spwn
+> $.assert(@obj_set::new().is_empty())
+>```
 >
 
 ## **new**:
 
 > **Value:** 
 >```spwn
->(objects: @array, group: @group = ?g) { /* code omitted */ }
+>(objects: @array = [], group: @group = ?g) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
+>## Description: 
+> _Creates a new object set_
 >### Example: 
 >```spwn
-> @obj_set::new([]);
+> my_objects = @obj_set::new()
 >```
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`objects`** | @array | | || 2 | `group` | @group | `?g` |The group to use for rotation (?) |
+>| 1 | `objects` | @array | `[]` | |
+>| 2 | `group` | @group | `?g` |The center group to use for rotation |
 >
 
 ## **push**:
@@ -97,5 +104,10 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`center_group`** | @group | | || 2 | **`deg`** | @number | | || 3 | **`duration`** | @number | | || 4 | **`easing`** | @easing_type | | || 5 | **`easing_rate`** | @number | | || 6 | **`lock_object_rotation`** | @bool | | |
+>| 1 | **`center_group`** | @group | | |
+>| 2 | **`deg`** | @number | | |
+>| 3 | **`duration`** | @number | | |
+>| 4 | **`easing`** | @easing_type | | |
+>| 5 | **`easing_rate`** | @number | | |
+>| 6 | **`lock_object_rotation`** | @bool | | |
 >

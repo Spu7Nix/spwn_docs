@@ -46,5 +46,6 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`to_replace`** | @string | | || 2 | **`replacer`** | @string | | |
+>| 1 | **`to_replace`** | @string | | |
+>| 2 | **`replacer`** | @string | | |
 >

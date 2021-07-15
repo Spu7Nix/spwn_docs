@@ -165,7 +165,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`start`** | @number | | || 2 | **`end`** | @number | | |
+>| 1 | **`start`** | @number | | |
+>| 2 | **`end`** | @number | | |
 >
 
 ## **uppercase**:

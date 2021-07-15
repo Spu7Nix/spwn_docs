@@ -41,3 +41,4 @@
     - [**@counter**](std-docs/counter.md)
     - [**@file**](std-docs/file.md)
     - [**@regex**](std-docs/regex.md)
+  - [Gamescene Library](gamescene-docs.md)

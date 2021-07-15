@@ -73,7 +73,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @string | | || 2 | `default` |any | `@dict_not_found::{}` | |
+>| 1 | **`key`** | @string | | |
+>| 2 | `default` |any | `@dict_not_found::{}` | |
 >
 
 ## **is\_empty**:
@@ -162,7 +163,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @string | | || 2 | **`val`** |any | | |
+>| 1 | **`key`** | @string | | |
+>| 2 | **`val`** |any | | |
 >
 
 ## **values**:

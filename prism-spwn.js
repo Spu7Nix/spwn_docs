@@ -4,7 +4,7 @@ Prism.languages.spwn = Prism.languages.extend("clike", {
   builtin: /\b(?:null|trigger|obj|\$|self)\b/,
   boolean: /\b(?:true|false)\b/,
   operator: /(==|!=|<=|>=|<|>|&&|\|\||!|=|\+\=|\-\=|\*\=|\/\=|\+|\-|\*|\/|%|\^|\.\.)/,
-  number: /(?:\b\d+(\.\d+)?\b)|(\b[0-9?]+[gbci]\b)/i,
+  number: /(?:\b\d+(\.\d+)?\b)|(\b([0-9]+|\?)[gbci]\b)/,
   string: /\"[^\n\r\"]*\"/,
   tag: /@([a-zA-Z_][a-zA-Z0-9_]*)/,
 })

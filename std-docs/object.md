@@ -35,5 +35,6 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @object_key | | || 2 | **`value`** |any | | |
+>| 1 | **`key`** | @object_key | | |
+>| 2 | **`value`** |any | | |
 >
