@@ -110,7 +110,7 @@ _Generated using `spwn doc [file name]`_
 >```spwn
 > @counter::new()     // creates a new counter with a starting value of 0
 >@counter::new(10)   // creates a new counter with a starting value of 10
->@counter::new(5i)   // creates a new counter thaat uses item ID 5
+>@counter::new(5i)   // creates a new counter that uses item ID 5
 >@counter::new(true)   // creates a new counter with a starting value of true (1)
 >```
 >## Arguments:
@@ -358,7 +358,7 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 
-## **supress\_signal**:
+## **suppress\_signal**:
 
 > **Value:** 
 >```spwn
@@ -370,7 +370,7 @@ _Generated using `spwn doc [file name]`_
 >### Example: 
 >```spwn
 > f = !{
->	supress_signal(1)
+>	suppress_signal(1)
 >	10g.move(10, 0)
 >}
 >
@@ -386,10 +386,10 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`delay`** | @number | |Time to supress signal |
+>| 1 | **`delay`** | @number | |Time to suppress signal |
 >
 
-## **supress\_signal\_forever**:
+## **suppress\_signal\_forever**:
 
 > **Value:** 
 >```spwn
@@ -401,7 +401,7 @@ _Generated using `spwn doc [file name]`_
 >### Example: 
 >```spwn
 > f = !{
->	supress_signal_forever()
+>	suppress_signal_forever()
 >	10g.move(10, 0)
 >}
 >f! // moves

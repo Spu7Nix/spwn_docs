@@ -466,7 +466,7 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to add to |
 >| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
->| 3 | `factor` | @number | `1` |Multiplyer for the value added |
+>| 3 | `factor` | @number | `1` |Multiplayer for the value added |
 >| 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 
@@ -573,7 +573,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Devides the value of the counter by some divisor_
+> _Divides the value of the counter by some divisor_
 >### Example: 
 >```spwn
 > c = counter(7)
@@ -629,7 +629,7 @@
 >```spwn
 > @counter::new()     // creates a new counter with a starting value of 0
 >@counter::new(10)   // creates a new counter with a starting value of 10
->@counter::new(5i)   // creates a new counter thaat uses item ID 5
+>@counter::new(5i)   // creates a new counter that uses item ID 5
 >@counter::new(true)   // creates a new counter with a starting value of true (1)
 >```
 >## Arguments:
@@ -687,7 +687,7 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to subtract from |
 >| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
->| 3 | `factor` | @number | `1` |Multiplyer for the value subtracted |
+>| 3 | `factor` | @number | `1` |Multiplayer for the value subtracted |
 >| 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 

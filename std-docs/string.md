@@ -128,7 +128,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Splits the string by the specified seperator._
+> _Splits the string by the specified separator._
 >## Arguments:
 >
 >| # | name | type | default value | description |
