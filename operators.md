@@ -17,7 +17,7 @@ This is a list of operators in SPWN, what they do and how to use them, for refer
 | `<`      | Checks if one value is smaller than another                    | `50 < 100`            | `a < b`        | 3          | `_less_`          |
 | `*`      | Calculates the product of two values                           | `100 * 100`           | `a * b`        | 7          | `_times_`         |
 | `%`      | Calculates the modulo of two values                            | `100 % 10`            | `a % b`        | 7          | `_modulo_`        |
-| `^`/`**` | Calculates the result of a value to the power of another value | `100 ^ 2`             | `a ^ b`        | 9          | `_power_`         |
+| `^`/`**` | Calculates the result of a value to the power of another value | `100 ^ 2`             | `a ^ b`        | 9          | `_pow_`           |
 | `+`      | Calculates the sum of two values                               | `100 + 100`           | `a + b`        | 6          | `_plus_`          |
 | `-`      | Calculates the difference of two values                        | `100 - 100`           | `a - b`        | 6          | `_minus_`         |
 | `/`      | Calculates the quotient of two values                          | `100 / 2`             | `a / b`        | 7          | `_divided_by_`    |
