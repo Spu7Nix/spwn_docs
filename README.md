@@ -25,4 +25,6 @@ To be clear, you do NOT have to delete and remake your level when running `spwn 
 
 > **Note:** The standard file ending for SPWN scripts is `.spwn`
 
+> **Note:** SPWN generates triggers near the top of your level, so you might not see any difference.
+
 The first part of this documentation is an introduction to the features of SPWN, divided into courses. Read the [Trigger Language](triggerlanguage/trigger_language.md) course to get started!
