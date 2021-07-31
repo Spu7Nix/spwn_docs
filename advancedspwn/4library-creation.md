@@ -8,19 +8,19 @@ If I want to create a library named `mylib`, I would have this
 
 ```
 working-directory/
-├─ main.spwn
-├─ libraries/
-│  ├─ mylib/
+ ├── main.spwn
+ └── libraries/
+      └── mylib/
 ```
 
 Then, add a `lib.spwn` file in your library folder, like this
 
 ```
 working-directory/
-├─ main.spwn
-├─ libraries/
-│  ├─ mylib/
-│  │  ├─ lib.spwn
+ ├── main.spwn
+ └── libraries/
+      └── mylib/
+           └── lib.spwn
 ```
 
 `lib.spwn` is the file that gets run when you import its library, and it is what returns what you want your library to return. If our main file was called `main.spwn` like above, then to export a variable you can do as such
@@ -49,11 +49,11 @@ Let's say I placed a function in another file called `myfunc.spwn` and I want to
 
 ```
 working-directory/
-├─ main.spwn
-├─ libraries/
-│  ├─ mylib/
-│  │  ├─ lib.spwn
-│  │  ├─ myfunc.spwn
+ ├── main.spwn
+ └── libraries/
+      └── mylib/
+           ├── lib.spwn
+           └── myfunc.spwn
 ```
 
 Note: You can put folders and nest them in your `mylib`, just make sure to get the right path (remember that paths are relative to the file that's importing them) 
