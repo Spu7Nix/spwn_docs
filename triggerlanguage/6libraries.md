@@ -77,6 +77,24 @@ invis_group = import "setup.spwn"
 
 # Installing new libraries
 
-_**coming soon...**_
+If you don't already, create a `libraries` folder in your main directory. Then drag the folder that contains the library into the `libraries` folder. Make sure to check that the library has a `lib.spwn` file in its root.
+
+Let's say I want to install a library named `mylib` and import it from my main file `main.spwn`, this is how the architecture would look like.
+
+```
+working-directory/
+├─ main.spwn
+├─ libraries/
+│  ├─ mylib/
+│  │  ├─ lib.spwn
+```
+
+In `main.spwn`, import it like this without quotes
+
+```spwn
+import mylib
+```
+
+Note: When a working package manager gets created, this process will be smoother
 
 [**Next page**](triggerlanguage/7selectorpanel.md)
