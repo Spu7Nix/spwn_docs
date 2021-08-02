@@ -31,4 +31,4 @@ $.add(obj {
 })
 ```
 
-To see a list of all the builtins currently in SPWN, go [here](/builtins.md)!
+To see a list of all the builtins currently in SPWN, go [here](builtins.md)!
