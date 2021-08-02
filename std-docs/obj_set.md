@@ -42,7 +42,7 @@
 
 > **Value:** 
 >```spwn
->(objects: @array = [], group: @group = ?g) { /* code omitted */ }
+>(objects: [@object] = [], group: @group = ?g) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -55,7 +55,7 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `objects` | @array | `[]` | |
+>| 1 | `objects` | [@object] | `[]` | |
 >| 2 | `group` | @group | `?g` |The center group to use for rotation |
 >
 

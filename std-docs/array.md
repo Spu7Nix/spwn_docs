@@ -1,6 +1,24 @@
   
 # **@array**: 
  
+## **\_partition**:
+
+> **Value:** 
+>```spwn
+>(self, low: @number, high: @number, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Private function needed for .sort()_
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`low`** | @number | | |
+>| 2 | **`high`** | @number | | |
+>| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
+>
+
 ## **all**:
 
 > **Value:** 
@@ -192,7 +210,7 @@
 
 > **Value:** 
 >```spwn
->(self, minval = -999999999999) { /* code omitted */ }
+>(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -201,19 +219,22 @@
 >```spwn
 > arr = [3, 1, 4, 1]
 >$.assert(arr.max() == 4)
+>
+>arr = ['abc', 'b', 'abdc']
+>$.assert(arr.max(key = (el: @string) => el.length) == 'abdc')
 >```
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `minval` |any | `-999999999999` | |
+>| 1 | `key` | @macro | `(el) { /* code omitted */ }` | |
 >
 
 ## **min**:
 
 > **Value:** 
 >```spwn
->(self, max_val = 999999999999) { /* code omitted */ }
+>(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -222,12 +243,15 @@
 >```spwn
 > arr = [3, 1, 4, 1]
 >$.assert(arr.min() == 1)
+>
+>arr = ['abc', 'b', 'abdc']
+>$.assert(arr.max(key = (el: @string) => el.length) == 'b')
 >```
 >## Arguments:
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `max_val` |any | `999999999999` | |
+>| 1 | `key` | @macro | `(el) { /* code omitted */ }` | |
 >
 
 ## **pop**:
@@ -351,15 +375,49 @@
 
 > **Value:** 
 >```spwn
+>(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Sorts array in-place_
+>### Example: 
+>```spwn
+> arr = [5, 1, 5, 3, 2]
+>arr.sort()
+>$.assert(arr == [1, 2, 3, 5, 5])
+>
+>arr = [5, 1, 5, 3, 2]
+>arr.sort(begin = 2, end = 4)
+>$.assert(arr == [5, 1, 2, 3, 5])
+>
+>arr = [5, 1, 5, 3, 2]
+>arr.sort(key = (a, b) => a > b)
+>$.assert(arr == [5, 5, 3, 2, 1])
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `begin` | @number | `0` | |
+>| 2 | `end` | @number | `-1` | |
+>| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
+>
+
+## **sorted**:
+
+> **Value:** 
+>```spwn
 >(self) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Returns a sorted version of the array._
+> _Returns a sorted verison of the array_
 >### Example: 
 >```spwn
 > arr = [5, 1, 5, 3, 2]
->$.assert(arr.sort() == [1, 2, 3, 5, 5])
+>$.assert(arr.sorted() == [1, 2, 3, 5, 5])
+>$.assert(arr.sorted(begin = 2, end = 4) == [5, 1, 2, 3, 5])
+>$.assert(arr.sorted(key = (a, b) => a >= b) == [5, 5, 3, 2, 1])
 >```
 >
 

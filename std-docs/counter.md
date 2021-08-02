@@ -67,6 +67,23 @@
 >| 1 | **`num`** | @number or @counter | | |
 >
 
+## **\_decrement\_**:
+
+> **Value:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the decrement (`n--`) operator. Does not return any value._
+>### Example: 
+>```spwn
+> c = counter(10)
+>c--
+>// c is now 9
+>```
+>
+
 ## **\_divide\_**:
 
 > **Value:** 
@@ -131,6 +148,23 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`other`** | @number or @counter | | |
+>
+
+## **\_increment\_**:
+
+> **Value:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the increment (`n++`) operator. Does not return any value._
+>### Example: 
+>```spwn
+> c = counter(10)
+>c++
+>// c is now 11
+>```
 >
 
 ## **\_less\_or\_equal\_**:
@@ -466,7 +500,7 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`items`** | [@counter or @item] or @counter or @item | |Counter(s) to add to |
 >| 2 | `speed` | @number | `1` |Speed of operation (higher number increases group usage) |
->| 3 | `factor` | @number | `1` |Multiplyer for the value added |
+>| 3 | `factor` | @number | `1` |Multiplier for the value added |
 >| 4 | `for_each` | @macro | `(n) { /* code omitted */ }` |Macro to be called for each decrease of the counter. Takes one argument representing the number the counter is being decreased by (if speed = 1 this will always be 1) |
 >
 
@@ -547,7 +581,7 @@
 
 > **Value:** 
 >```spwn
->(self, x, y) { /* code omitted */ }
+>(self, x: @number, y: @number) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -561,8 +595,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`x`** |any | |X pos of display in units (1 grid square = 30 units) |
->| 2 | **`y`** |any | |Y pos of display in units |
+>| 1 | **`x`** | @number | |X pos of display in units (1 grid square = 30 units) |
+>| 2 | **`y`** | @number | |Y pos of display in units |
 >
 
 ## **divide**:

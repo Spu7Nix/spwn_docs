@@ -32,6 +32,7 @@
     - [**@color**](std-docs/color.md)
     - [**@block**](std-docs/block.md)
     - [**@item**](std-docs/item.md)
+    - [**@number**](std-docs/number.md)
     - [**@dictionary**](std-docs/dictionary.md)
     - [**@string**](std-docs/string.md)
     - [**@array**](std-docs/array.md)
