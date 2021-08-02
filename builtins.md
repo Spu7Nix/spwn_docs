@@ -19,7 +19,6 @@
 | get_input           | nothing                                                    | `inp = $.get_input()`               | Gets some input from the user                                                              |
 | spwn_version        | nothing                                                    | `$.spwn_version()`                  | Gets the current version of spwn                                                           |
 | extend_trigger_func |                                                            |                                     |                                                                                            |
-| readfile            |                                                            |                                     |                                                                                            |
 | regex               |                                                            |                                     |                                                                                            |
 | remove_index        | an array, and the index of a value to be removed           | `$.remove_index(names, 2)`          | Removes a specific value from an array. You can also use `array.remove(index)`             |
 | readfile            | a file path (string)                                       | `$.readfile("file.txt")`            | Opens a file and returns it as a string                                                    |

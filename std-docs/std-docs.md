@@ -111,7 +111,7 @@ _Generated using `spwn doc [file name]`_
 >```spwn
 > @counter::new()     // creates a new counter with a starting value of 0
 >@counter::new(10)   // creates a new counter with a starting value of 10
->@counter::new(5i)   // creates a new counter thaat uses item ID 5
+>@counter::new(5i)   // creates a new counter that uses item ID 5
 >@counter::new(true)   // creates a new counter with a starting value of true (1)
 >```
 >## Arguments:
@@ -223,7 +223,7 @@ _Generated using `spwn doc [file name]`_
 >| 1 | **`range`** | @range | |Range of values (for example 0..10) |
 >| 2 | **`code`** | @macro | |Macro of the code that gets looped, should take the iterator (a counter) as the first argument. |
 >| 3 | `delay` | @number or @epsilon | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
->| 4 | `reset` | @bool | `true` |Weather to reset the iterator after looping (only disable if the loop is only triggered once) |
+>| 4 | `reset` | @bool | `true` |Whether to reset the iterator after looping (only disable if the loop is only triggered once) |
 >| 5 | `reset_speed` | @number | `1` |Operation speed of the reset of the iterator, if enabled |
 >
 
@@ -359,7 +359,7 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 
-## **supress\_signal**:
+## **suppress\_signal**:
 
 > **Value:** 
 >```spwn
@@ -371,7 +371,7 @@ _Generated using `spwn doc [file name]`_
 >### Example: 
 >```spwn
 > f = !{
->	supress_signal(1)
+>	suppress_signal(1)
 >	10g.move(10, 0)
 >}
 >
@@ -387,10 +387,10 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`delay`** | @number | |Time to supress signal |
+>| 1 | **`delay`** | @number | |Time to suppress signal |
 >
 
-## **supress\_signal\_forever**:
+## **suppress\_signal\_forever**:
 
 > **Value:** 
 >```spwn
@@ -402,7 +402,7 @@ _Generated using `spwn doc [file name]`_
 >### Example: 
 >```spwn
 > f = !{
->	supress_signal_forever()
+>	suppress_signal_forever()
 >	10g.move(10, 0)
 >}
 >f! // moves
@@ -430,7 +430,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `on` | @bool | `false` |Weather to toggle bg effect on or off |
+>| 1 | `on` | @bool | `false` |Whether to toggle bg effect on or off |
 >
 
 ## **touch**:
