@@ -17,8 +17,13 @@ The data inside the `{}` curly braces represents properties of the object. Each 
 Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTATION` is the angle of the object in degrees, et cetera. One that might confuse though, is `OBJ_ID`. This actually decides what kind of object it is. To find out what `OBJ_ID` a specific object has, you can use this level by [Colon](https://www.youtube.com/c/GDColon): 58079690.
 <details>
   <summary>Here are some useful object ids</summary>  
-    https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png
-    https://user-images.githubusercontent.com/43052612/124507895-a2664e00-dd83-11eb-9b53-52e515cd0e8a.png
+    
+![useful object ids 1](https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png)
+    
+![useful object ids 2](https://user-images.githubusercontent.com/43052612/124507895-a2664e00-dd83-11eb-9b53-52e515cd0e8a.png)
+    
+![useful object ids 3](https://media.discordapp.net/attachments/857382000716939274/862530181604180018/IMG_20210708_100459.jpg)
+    
 </details>
 
 > **Note:** To avoid typing `obj_props.` all the time, you will usually start your file with `extract obj_props` when you will be working with objects and triggers.
