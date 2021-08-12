@@ -15,6 +15,7 @@ obj {
 The data inside the `{}` curly braces represents properties of the object. Each property has the syntax `key: value,`, where `key` is an **object_key** value, and the value can be a value of a specific datatype decided by the key. These object_keys come from the standard library, inside the `obj_props` dictionary.
 
 Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTATION` is the angle of the object in degrees, et cetera. One that might confuse though, is `OBJ_ID`. This actually decides what kind of object it is. To find out what `OBJ_ID` a specific object has, you can use this level by [Colon](https://www.youtube.com/c/GDColon): 58079690.
+
 <details>
   <summary>Here are some useful object ids</summary>  
     https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png
@@ -25,7 +26,7 @@ Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTA
 
 > **Note:** To find out what a specific key from `obj_props` does, you can use [this lookup table](object_keys.md)
 
-A `trigger` is very similar to an `obj`, but it has a slightly different usecase. You will learn more about this in a later chapter.
+A `trigger` is very similar to an `obj`, but it has a slightly different use case. You will learn more about this in a later chapter.
 
 # Changing Object Properties
 
@@ -39,4 +40,18 @@ let my_object = obj {
     SCALING: 1.5,
 }
 my_object.set(SCALING, 2)
+```
+
+You can also use the `with` method, which returns a new object with the property:
+
+```spwn
+let my_object = obj {
+    OBJ_ID: 54,
+    X: 300,
+    Y: 90,
+    SCALING: 1.5,
+}
+
+$.add(my_object.with(SCALING, 2))
+
 ```

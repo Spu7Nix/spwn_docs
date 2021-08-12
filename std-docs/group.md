@@ -67,6 +67,33 @@
 >| 4 | `duration` | @number | `999` |Duration of following |
 >
 
+## **follow\_lerp**:
+
+> **Value:** 
+>```spwn
+>(self, groupA: @group, groupB: @group, weight: @number = 0.5, duration: @number = 999) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Keeps an object's position proportionally between 2 others_
+>### Example: 
+>```spwn
+> // Since this function works using follow triggers, objects need to already be in the proper position,
+>    // otherwise they'll be offset.
+>    1g.follow_lerp(2g,3g,0.5) // Keeps group 1 in the middle of groups 2 and 3
+>    1g.follow_lerp(2g,3g,0.25) // Keeps group 1 25% of the way between groups 2 and 3
+>    1g.follow_lerp(2g,3g,-1) // Keeps group 1 as a reflection of group 3 by group 2
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`groupA`** | @group | |Group of object A to follow |
+>| 2 | **`groupB`** | @group | |Group of object B to follow |
+>| 3 | `weight` | @number | `0.5` |Group of object B to follow |
+>| 4 | `duration` | @number | `999` |Duration of following |
+>
+
 ## **follow\_player\_y**:
 
 > **Value:** 
@@ -162,6 +189,32 @@
 >| 6 | `easing_rate` | @number | `2` |Easing rate |
 >
 
+## **move\_to\_xy**:
+
+> **Value:** 
+>```spwn
+>(self, x: @number | @NULL = Null, y: @number | @NULL = Null, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Moves group to a specific coordinate_
+>### Example: 
+>```spwn
+> 10g.move_to_xy(300, 300)
+>10g.move_to_xy(x = 300) // does not move on the y axis
+>10g.move_to_xy(y = 300) // does not move on the x axis
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `x` | @number or @NULL | `Null` |X position to move to in units (1 grid square is 30 units) |
+>| 2 | `y` | @number or @NULL | `Null` |Y position to move to in units (1 grid square is 30 units) |
+>| 3 | `duration` | @number | `0` |Duration of movement |
+>| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 5 | `easing_rate` | @number | `2` |Easing rate |
+>
+
 ## **pulse**:
 
 > **Value:** 
@@ -185,7 +238,7 @@
 >| 4 | `fade_in` | @number | `0` |Fade-in duration |
 >| 5 | `hold` | @number | `0` |Duration to hold the color |
 >| 6 | `fade_out` | @number | `0` |Fade-out duration |
->| 7 | `exclusive` | @bool | `false` |Whether to prioritize this pulse over simultaneous pulses |
+>| 7 | `exclusive` | @bool | `false` |Weather to prioritize this pulse over simultaneous pulses |
 >| 8 | `hsv` | @bool | `false` |Toggle HSV mode |
 >| 9 | `s_checked` | @bool | `false` |HSV specific: saturation checked |
 >| 10 | `b_checked` | @bool | `false` |HSV specific: brightness checked |
