@@ -36,6 +36,8 @@ impl @group {
     publicfunc: (self, arg) {
         // can access member vars
         $.print(self.var)
+
+        self.var = 5 // will only work if the object is defined with let keyword
         
         // can access member funcs
         self.other_public_func()
