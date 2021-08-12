@@ -45,6 +45,33 @@ my_function = !{
 }
 ```
 
+To have default arguments, you can do 
+
+```spwn
+myfunc = (arg1, arg2 = 5) {/* code */}
+```
+
+`arg1` is positional and required, while `arg2` does not need to be specified since it has a defualt value.
+
+To modify variables passed in, you can do 
+
+```spwn
+myfunc = (arg1) {
+    let arg1 - arg1 // how the name arg1 is mutable, but remember this is still passed in by value
+}
+```
+
+## Recursion
+
+Macros support recursion. You do not need to forward-declare macros, so
+
+```spwn
+recur = () {
+    /* code */
+    recur()
+}
+```
+
 > **Note:** You can also define a macro like this
 >
 > `my_macro = (arguments) => expression`
