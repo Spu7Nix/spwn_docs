@@ -1,6 +1,6 @@
 # Control Flow
 
-In SPWN, there are currently four _control flow_ statements available: if statements, ternary expressions, switch statements, and for loops
+In SPWN, there are currently four _control flow_ statements available: if statements, ternary expressions, switch statements, for loops, and while loops
 
 ## If statement
 
@@ -86,6 +86,16 @@ This will loop through a list starting at zero, and ending at 9, looping a total
 
 ?> _**Note:** Instead of writing `0..10` you can also just write `..10`_
 
+## While loop
+
+SPWN syntax for while loop is nothing special:
+
+```spwn
+while condition {
+    // code
+}
+```
+
 ## Trigger loops
 
 While these loops are _compile-time loops_, there are also some runtime loops. The useful thing about these is that they only compile the code in the loop once, which means it will only use as many groups as is used in the loop (plus a few extra for the loop itself). The downside is that this changes the function context, which means you cannot change variables defined outside (except if you're using counters, which we'll get to in a few chapters).
@@ -105,7 +115,7 @@ for_loop(0..10, (i) {
 
 ?> _**Note:** If you plan on only using your for loop only once in your program, you can add `reset = false` somewhere in your arguments, so it doesn't use extra groups resetting the counter (you can read more about all the options for this macro in the documentation for the standard library)_
 
-I'm sure you're familiar with the concept of a _while loop_ from other programming languages. Even though there is no native while loop in SPWN (yet), there is a trigger loop for it: `while_loop`. This takes a _macro_ as its first argument, which is called on each loop, and should return a boolean. In this case, it's nice to use the shorter version of the macro syntax, which we looked at in the previous chapter.
+Just like for loop, while loop also has a trigger loop version: `while_loop`. This takes a _macro_ as its first argument, which is called on each loop, and should return a boolean. In this case, it's nice to use the shorter version of the macro syntax, which we looked at in the previous chapter.
 
 ```spwn
 // example of while_loop in action
