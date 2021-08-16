@@ -1,6 +1,6 @@
 # Object/Trigger Values
 
-To place an object programmatically, it's practical to have some datatype to represent the object itself. In SPWN, there are 2 datatypes that represent Geometry Dash objects: *object*s and *trigger*s. Both look pretty similar: either of the keywords `obj` and `trigger`, followed by a structure that looks pretty similar to the _dictionary_ type you might already know. Let's take a look at a typical _object_ value:
+To place an object programmatically, it's practical to have some datatype to represent the object itself. In SPWN, 2 datatypes represent Geometry Dash objects: *object*s and *trigger*s. Both look pretty similar: either of the keywords `obj` and `trigger`, followed by a structure that looks pretty similar to the _dictionary_ type you might already know. Let's take a look at a typical _object_ value:
 
 ```spwn
 obj {

@@ -2,18 +2,9 @@
 
 ## Set-Up
 
-As was mentioned in [this](/triggerlanguage/6libraries.md#installing-new-libraries) section, libraries are stored in the `libraries` folder. In your working directory, create a `libraries` folder and in it add a folder named your desired library name. 
+As was mentioned in [this](/triggerlanguage/6libraries.md#installing-new-libraries) section, libraries are stored in the `libraries` folder. In your working directory, create a `libraries` folder and in it add a folder named your desired library name.
 
-If I want to create a library named `mylib`, I would have this
-
-```
-working-directory/
- ├── main.spwn
- └── libraries/
-      └── mylib/
-```
-
-Then, add a `lib.spwn` file in your library folder, like this
+This is how your setup would look (if your library was named `mylib`):
 
 ```
 working-directory/
@@ -23,17 +14,18 @@ working-directory/
            └── lib.spwn
 ```
 
-`lib.spwn` is the file that gets run when you import its library, and it is what returns what you want your library to return. If our main file was called `main.spwn` like above, then to export a variable you can do as such
-
-`lib.spwn`
+`lib.spwn` is the entry point for all libraries. When you import a library, this is the file that runs.
+A library works exactly like a module. If your library looks like this:
 
 ```spwn
+// lib.spwn
+
 let num = 5
 
 return num
 ```
 
-`main.spwn`
+You can import the library into another file like this:
 
 ```spwn
 let n = import mylib
@@ -43,9 +35,10 @@ $.assert(n == 5)
 
 ## Building your library
 
-Odds are, you won't want to place all you code in a single file. This is where modules come in. Put your other spwn files that you need inside the `mylib` folder, and in `lib.spwn` you can import them so you can have full access to your library. Remember that your other source files are modules, which means you import them with quotes
+If you're building a library, you often want to use multiple files. To do this, you can create multiple [modules](/triggerlanguage/6libraries.md#modules)
 
-Let's say I placed a function in another file called `myfunc.spwn` and I want to export it. This would be the architecture
+Let's say I have a macro in another file called `myfunc.spwn` and I want to export it from the library.
+This is the folder structure:
 
 ```
 working-directory/
@@ -56,18 +49,14 @@ working-directory/
            └── myfunc.spwn
 ```
 
-Note: You can put folders and nest them in your `mylib`, just make sure to get the right path (remember that paths are relative to the file that's importing them) 
+?> _**Note:** You can put folders and nest them in your `mylib`, just make sure to get the right path (remember that paths are relative to the file that's importing them)_
 
-`lib.spwn`
+To export the macro from the entire library, you must first import it into `lib.spwn`:
 
 ```
+// lib.spwn
+
 let func = import "myfunc.spwn"
 
 return func
 ```
-
-## Exporting Libraries
-
-Take your library folder, in this case named `mylib`, and upload it. If you want to know how to import libraries, see [this](/triggerlanguage/6libraries.md)
-
-Note: When a working package manager gets created, this process will be smoother.

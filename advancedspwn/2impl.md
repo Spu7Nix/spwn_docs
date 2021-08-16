@@ -25,27 +25,27 @@ Every property defined in the dictionary literal will become a property of every
 
 The first argument of the `move` macro in the example above is `self`. This is a special argument that refers to the parent value, hence the `10g` in `10g.move( ... )`.
 
-## Public Methods
+## Methods
 
-Public functions are called by the object, and can use the internal state, or member variables and functions. They are defined when you pass in the `self` keyword, which is essentially a *reference* to the object. 
+A macro such as `group.move` is an example of what we call a _method_, which is a macro that uses the value it is called on to do something. In the case of `group.move` it is using the group it is called on to move said group, through the `self` argument.
 
-An example would be 
+Here is an example of what a _method_ can do:
 
 ```spwn
-impl @group {
+impl @my_type {
     publicfunc: (self, arg) {
-        // can access member vars
+        // methods can access member variables
         $.print(self.var)
 
-        self.var = 5 // will only work if the object is defined with let keyword
-        
-        // can access member funcs
+        self.var = 5 // methods can modify the value it's being called on (if that value is mutable)
+
+        // methods can call other methods implemented on the type
         self.other_public_func()
     }
 }
 ```
 
-Calling it uses the dot snytax, so
+To call a method, you use a single period:
 
 ```
 mygroup = 1g
@@ -54,9 +54,7 @@ mygroup.publicfunc(arg)
 
 ## Static Methods
 
-Contrasting to public methods, static methods are not accessed by the type instance, but rather by the type itself. To define a static method, you omit the `self` keyword. Note that static methods cannot access member vars and functions, unless the instance is passed in.
-
-An example would be 
+In contrast to methods, static methods are not accessed by an instance of the type, but rather by the type itself. This is for macros which are related to the type in some way, but do not use a specific value with that type. To define a static method, you omit the `self` keyword:
 
 ```spwn
 impl @group {
@@ -72,7 +70,7 @@ impl @group {
 }
 ```
 
-To use static members, you use the `::` syntax.
+To use static methods, you use a double colon (`::`):
 
 ```spwn
 @group::static_func()
@@ -81,71 +79,20 @@ $.print(@group::static_var)
 
 ## Constructors
 
-Constructors is how you instantiate a type. Unlike many other programming languages with a constructor naming rule, SPWN's constructors can be named anything, and types can have multiple constructors
+A common use case for static methods is making _constructors_. These are macros that make a new instance of your type.
 
-The first thing to note is that they are *static*, so you have to omit the `self` keyword and also can't access member vars and methods.
+The convention for constructors in SPWN is `new`.
 
-The convention for constructors in SPWN is `new`. It's return value will be a dictionary of vars you want to pass in. For more information about creating new types refer to [here](/advancedspwn/1types.md)
-
-An example would be
+Here is an example of a constructor:
 
 ```spwn
-type @mytype
-impl @mytype {
-    new: (arg1, arg2) {
-        return {
-            type: @mytype,
-            arg1: arg1,
-            arg2: arg2
+type @rectangle
+impl @rectangle {
+    new: (width: @number, height: @number) {
+        return @mytype::{
+            width,
+            height,
         }
     }
 }
 ```
-
-Note you must *always* have the `type` key unless it can't access members
-
-The instantiation would be
-
-```spwn
-instance = @mytype::new(arg1, arg2)
-```
-
-If you're building a module or library, you can export the constructor and all the other implemtations will still be defined.
-
-```spwn
-return {
-    mytype: mytype::new
-}
-```
-
-That way you can do constructors like this:
-
-```spwn
-mytype = import "mymodule.spwn"
-
-instance = mytype(arg1, arg2)
-```
-
-This is how `counter` is exported. In the `std`'s `lib.spwn`, it has
-
-```spwn
--> return {
-    ..constants.easing_types,
-    ..constants.comparisons,
-    ..constants.colors,
-    ..general,
-    ..events,
-    ..ctrl_flow,
-
-    counter: @counter::new, // they are exporting the constructor
-    on: @event::on,
-    obj_props: constants.obj_props,
-    obj_ids: constants.obj_ids,
-    open: @file::new,
-    obj_set: @obj_set::new,
-    regex: @regex::new,
-    heapq: @heapq::new
-}
-```
-
-Even if you export just the constructor, the type and all members wil still be accessible in your main file.
