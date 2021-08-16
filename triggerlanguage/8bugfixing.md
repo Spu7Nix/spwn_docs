@@ -6,7 +6,7 @@ Sometimes when building SPWN programs, problems can appear that are not yours no
 
 ## Loops
 
-GD does not like it when you activate a trigger with high frequency, and if it's triggered more than roughly 20 times per second, it will simply stop triggering. To prevent this, we have to add a little bit of delay between each time the trigger is activated. The `for_loop` and `while_loop` macros do this by default, but if you're making your own loop, something like this
+GD does not like it when you activate a trigger with high frequency, and if it's triggered more than roughly 20 times per second, it will simply stop triggering. To prevent this, we have to add a little bit of delay each time the trigger is activated. The `for_loop` and `while_loop` macros do this by default, but if you're making your own loop, something like this
 
 ```spwn
 loop = !{
@@ -15,6 +15,8 @@ loop = !{
     // start loop again
     loop!
 }
+// start the loop
+loop!
 ```
 
 you will have to add a bit of delay between each loop, like this:
@@ -28,6 +30,8 @@ loop = !{
     // start loop again
     loop!
 }
+// start the loop
+loop!
 ```
 
 ## Reading and writing to counters/items

@@ -101,8 +101,6 @@ block = ?b // some collision block-ID
 
 _You can think of this as being the same as pressing the "next free" button when adding a group to an object, except you won't know its value_
 
-?> _**Note:** When you define an item-ID this way, you can't interact with the value of the item-ID directly, since it only stores the item-ID and not the value itself. You will have to use ["counter"](triggerlanguage/5counter.md) that we mentioned earlier for that._
-
 These are all the value types you need to worry about for now.
 
 [**Next page**](triggerlanguage/2basic_triggers.md)

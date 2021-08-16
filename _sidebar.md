@@ -26,6 +26,7 @@
 - **Reference**
   - [Operators](operators.md)
   - [Built-in Functions](builtins.md)
+  - [Built-in Types](builtin-types.md)
   - [Object keys](object_keys.md)
   - [Standard Library](std-docs/std-docs.md)
     - [**@group**](std-docs/group.md)

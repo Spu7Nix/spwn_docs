@@ -1,12 +1,12 @@
 # The `counter` Type
 
-`counter` is a type from the _standard library_, and is a wrapper around the item ID system in Geometry Dash. In practice, it works as a replacement for numbers. Since mutable variables are very limited in SPWN, this proves quite useful when you need to keep track of numbers throughout your program.
+`counter` is a type from the _standard library_, and is a wrapper around the item ID system in Geometry Dash. In practice, it works as a replacement for numbers. Since mutable variables are very limited in SPWN, this proves quite useful when you need to keep track of numbers in your level's runtime.
 
 > **Note:** The `counter` type is written entirely in SPWN, with no cheaty help from the compiler whatsoever. If you want to look at the source code for the `counter` type, you can find it in the `counter.spwn` file in _standard library_.
 
 # Creating a `counter`
 
-The easiest way to create a counter is to use the `counter` macro. You can create it out of a number, a boolean or an item ID.
+The easiest way to create a counter is to use the `counter` macro. You can create it out of a number, a boolean, or an item ID.
 
 ```spwn
 counterFromNumber = counter(100)
@@ -22,7 +22,7 @@ counterFromBoolean = @counter::new(true)
 counterFromItemID = @counter::new(1i)
 ```
 
-> **Note:** Even though we didn't write "let" before the variable name here, the `counter` is still mutable. This is because the item-ID itself is mutable inside the game.
+> **Note:** Even though we didn't write "let" before the variable name here, the `counter` is still mutable. This is because the item-ID itself is mutable inside the game. Mutating a counter doesn't mutate the variable itself, it only mutates the item-ID it references.
 
 # Modifying a `counter`
 
@@ -38,7 +38,7 @@ score /= 3
 score = 0
 ```
 
-> **Note:** The multiply `*=`, divide `/=` and assign `=` operators are not in Geometry Dash by default, and are therefore quite group-expensive. You should prefer using add `+=` and subtract `-=` when possible.
+> **Note:** The multiply `*=`, divide `/=` and assign `=` operators are not in Geometry Dash by default, and are therefore quite group and time expensive. You should prefer using add `+=` and subtract `-=` when possible.
 
 > **Note:** You can add, multiply, divide and assign `counter`s to other `counter`s, however, this is even more group-expensive.
 

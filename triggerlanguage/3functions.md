@@ -3,7 +3,7 @@
 In SPWN, what is in most programming languages called a "function" is divided into two different things: Trigger functions, and macros (also referred to as just "functions"). In short, the difference is that calling a trigger function is a [_runtime action_, while calling a macro is a _compile-time action_](compiletime.md).
 In practice, this means that a macro has more features, like taking arguments and returning, while a trigger function is more _group efficient_ and _object efficient_.
 
-## Calling Functions and Macros
+## Calling Trigger Functions and Macros
 
 Let's say we have a _trigger function_ called `do_thing`. To call it, we can say:
 
@@ -45,7 +45,7 @@ my_function = !{
 }
 ```
 
-To have default arguments, you can do 
+If you want your macro to have an optional argument, you do so by providing a default value for that argument, like this:
 
 ```spwn
 myfunc = (arg1, arg2 = 5) {/* code */}
@@ -53,17 +53,17 @@ myfunc = (arg1, arg2 = 5) {/* code */}
 
 `arg1` is positional and required, while `arg2` does not need to be specified since it has a defualt value.
 
-To modify variables passed in, you can do 
+Arguments passed in to a macro are immutable by default. If you want to modify values from an argument inside your macro, you will have to redefine it as mutable:
 
 ```spwn
 myfunc = (arg1) {
-    let arg1 - arg1 // how the name arg1 is mutable, but remember this is still passed in by value
+    let arg1 = arg1
 }
 ```
 
 ## Recursion
 
-Macros support recursion. You do not need to forward-declare macros, so
+You can use recursion in macros, if you define them like this:
 
 ```spwn
 recur = () {

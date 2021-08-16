@@ -49,6 +49,43 @@ let example_list = switch example_val {
 }
 ```
 
+SPWN switch statements are not exactly like switch statements from other programming languages you may be familiar with. In SPWN, switch statements are always _expressions_ which means they can be used anywhere an ordinary value could be. This also means that the branches of a switch statement have to be expressions, not statements. Hence, you can not do this:
+
+```spwn
+// WRONG
+switch my_number {
+    case 1:
+        jump(1)
+        if a == b {
+            // ...
+        }
+    case 2:
+        //...
+    else:
+       // ...
+}
+```
+
+A workaround for this is to create a macro that you immediately call. This enables you to execute multiple statements in your switch branches:
+
+```spwn
+// CORRECT
+switch my_number {
+    case 1: () {
+        jump(1)
+        if a == b {
+            // ...
+        }
+    }(),
+    case 2: () {
+        // ...
+    } ()
+    else: () {
+       // ...
+    } ()
+}
+```
+
 ## Ternary expression
 
 For convenience, you can simplify an if-statement into an inline ternary expression:
@@ -56,6 +93,8 @@ For convenience, you can simplify an if-statement into an inline ternary express
 ```spwn
 let value = option_1 if condition else option_2
 ```
+
+Like the switch statement, this is an _expression_, not a statement. Therefore, both branches must also be expressions.
 
 ## For loop
 
@@ -95,6 +134,8 @@ while condition {
     // code
 }
 ```
+
+Note that this is a _compile-time_ while loop. If you want something to loop during your level's runtime, you probably want to use a _runtime_ while loop, which you will learn about below.
 
 ## Trigger loops
 

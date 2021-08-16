@@ -10,28 +10,30 @@ One of the most common solutions to this is making a _selector panel_, where you
 
 You could technically do this all in SPWN, but when making the graphical bits, it's often more useful to visually see what we're doing. Therefore, we will do some setup in the gd level editor before we apply a SPWN script on it.
 
-First off, we need to place where our buttons should be. To do this, we're going to place some objects (with one group each) in a pattern of our choosing. I chose a hexagon (because hexagons are the bestagons). Make sure to add group 1 to object 1, group 2 to object 2 and so on till you've used groups 1 - 6.
+First off, we need to decide where our buttons should be. To do this, we're going to place some objects (with one group each) in a pattern of our choosing. I chose a hexagon (because hexagons are the bestagons). Make sure to add group 1 to object 1, group 2 to object 2 and so on until you've used groups 1 - 6.
 
 ![Objects that choose the position of each button](../assets/anchors.PNG)
 
 Next up, we need some kind of graphical element to show which button is currently selected. To do this, I just used a circle, but you can get as creative as you like. Remember to add group 7 to the selector
 
-Here's my final setup:
+**Here's my final setup:**
 
 ![Final setup](../assets/setup.PNG)
+
+**For this to work, each component (buttons, selector) needs to contain _only 1 object_, and each group-ID must be used only once. Make 100% sure that this is true before continuing.**
 
 ## Writing the program
 
 Ok, let's write an actual SPWN program!
 
-First things first, let's take the groups we assigned to the objects we already placed in the level, and store them in variables. Let's start with the objects we placed first, which were the ones that decided the position of out buttons. I'm going to call them _anchors_ from now on. Let's also store them in an array, in case we want to add more buttons later.
+First things first, let's take the groups we assigned to the objects we already placed in the level, and store them in variables. Let's start with the objects we placed first, which were the ones that decided the position of our buttons. I'm going to call them _anchors_ from now on. Let's also store them in an array, in case we want to add more buttons later.
 
 ```spwn
 // Groups of the objects that decide the position of
 // our buttons
 anchors = [1g, 2g, 3g, 4g, 5g, 6g]
 
-// Group of the object(s) that indicate which
+// Group of the object that indicates which
 // button is currently selected
 selector = 7g
 ```
@@ -42,7 +44,7 @@ Next up, we need to get input from our user. As many who has tried making someth
 gs = import gamescene
 ```
 
-Now we can have some code run when we click one of the buttons. I'm going to choose the left button for switching, and the right side for activating. The left side is `button_a`:
+Now we can have some code run when we click one of the buttons. I'm going to choose the left button for switching, and the right side for activating. Since we will only be covering the switching of buttons in this mini-project, we will only use the left button, which is `button_a`:
 
 ```spwn
 gs.button_a().on_triggered(!{
@@ -61,7 +63,7 @@ gs.button_a().on_triggered(!{
 })
 ```
 
-> **Note:** It might feel more intuitive to make a mutable variable with `let`, instead of a counter. However this will not work, as you will see if you try it out...
+> **Note:** It might feel more intuitive to make a mutable variable with `let`, instead of a counter. However, this will not work, as you will see if you try it out...
 
 Ok, let's make the button switch inside the function we just created. Here's what it needs to do:
 
@@ -71,7 +73,7 @@ Ok, let's make the button switch inside the function we just created. Here's wha
 selected += 1
 ```
 
-- 2: Check if the `selected` variable value has reached the number of buttons, and if so, reset it to 0.
+- 2: Check if the `selected` variable value has reached the last button, and if so, reset it to 0.
 
 ```spwn
 if selected == anchors.length {
@@ -82,7 +84,7 @@ if selected == anchors.length {
 
 (I added a little delay after the operation to make it more reliable, more about this in the next chapter)
 
-> **Note:** We could say `selected = 0` instead, but `-=` is actually way cheaper and more reliable since it's in the game by default. If you really want to use `selected = 0`, go for it.
+> **Note:** We could say `selected = 0` instead, but `-=` is way cheaper and more reliable since it's in the game by default. If you want to use `selected = 0`, go for it.
 
 - 3: Move the selector to the right anchor
 
@@ -119,14 +121,19 @@ gs.button_a().on_triggered(!{
 })
 ```
 
-However, if we try to run this, it will return an error:
+However, if we try to run this, it will throw an error:
 
-```
-Error at d:\spwn\spwn-lang\test\test.spwn:21:22
-   |
-21 |     current_anchor = anchors[selected]
-   |                      ^^^^^^^^^^^^^^^^^
-expected @number in index, found @counter
+```error
+Error: Type mismatch
+    ╭─[test\test.spwn:21:22]
+    │
+ 12 │ selected = counter(0)
+    · ──────────┬──────────
+    ·           ╰──────────── 1: Value defined as counter here
+ 21 │     current_anchor = anchors[selected]
+    ·                      ────────┬────────
+    ·                              ╰────────── 2: Expected number, found counter
+────╯
 ```
 
 SPWN needs the index to be a normal number, not a counter! Luckily, since we know our `selected` counter will only be a value from 0 up to (and not including) the number of buttons, we can convert it to a normal number using the `.to_const` macro:

@@ -4,7 +4,7 @@
 
 One of the most essential aspects of writing code is shareability. If someone has written and shared the code you're trying to write, it's better to just use theirs than to try to write it yourself.
 
-In SPWN, a library is essentially a bunch of code that runs when the library is imported. This code can also return some values, for example macros and functions which you can use in your own code.
+In SPWN, a library is essentially a bunch of code that runs when the library is imported. This code can also return some values, like macros and trigger functions which you can use in your own code.
 
 To import a library, we use the `import` syntax:
 
@@ -25,7 +25,7 @@ mfl = import my_favorite_library
 mfl.jump()
 ```
 
-If you don't want to write `mfl.` all the time, you can use an `extract` statement to save all the members of the return dictionary as variables in your code:
+If you don't want to write `mfl.` all the time, you can use an `extract` statement to save all the members of the dictionary as variables in your own code:
 
 ```spwn
 extract import my_favorite_library
@@ -34,9 +34,9 @@ jump()
 
 ## Modules
 
-When your SPWN project starts to get big, you might want to start dividing your code into separate files. To do this, you can write a _module_. A module is basically the same thing as a library, except you import from a _path_, not from a library name.
+When your SPWN project starts to get big, you might want to start dividing your code into separate files. To do this, you can write a _module_. A module is the same thing as a library, except you import from a _path_, not from a library name.
 
-Lets say I have some code in a file called `setup.spwn` that looks like this:
+Let's say I have some code in a file called `setup.spwn` that looks like this:
 
 ```spwn
 // setup.spwn
@@ -55,7 +55,7 @@ import "setup.spwn"
 
 This will run the code in `setup.spwn`.
 
-Maybe I want to store the invisible group in a variable so that if I want to change it, I only have to change it at one place even though it's used a lot of places in my code. To do this, we can _return_ the group from `setup.spwn`.
+Maybe I want to store the invisible group in a variable so that if I want to change it, I only have to change it in one place even though it's used a lot of places in my code. To do this, we can _return_ the group from `setup.spwn`.
 
 ```spwn
 // setup.spwn
@@ -77,9 +77,9 @@ invis_group = import "setup.spwn"
 
 # Installing new libraries
 
-If you don't already, create a `libraries` folder in your main directory. Then drag the folder that contains the library into the `libraries` folder. Make sure to check that the library has a `lib.spwn` file in its root.
+All SPWN libraries are read from a folder named _libraries_. When loading a library, SPWN will look for the library in any folder named "libraries" in either the current working directory, or next to the executable. If you want to install a library, it's probably a good idea to create a local "libraries" folder in your project directory, so that you have don't have to navigate to the executable. When you have the folder with the library you want to install, you can drag that folder into the "libraries" folder you just created. (Make sure to check that the library has a `lib.spwn` file in its root.)
 
-Let's say I want to install a library named `mylib` and import it from my main file `main.spwn`, this is how the architecture would look like.
+Let's say I want to install a library named `mylib` and import it from my main file `main.spwn`. The folder structure may look something like this:
 
 ```
 working-directory/
@@ -89,12 +89,12 @@ working-directory/
 │  │  ├─ lib.spwn
 ```
 
-In `main.spwn`, import it like this without quotes
+In `main.spwn`, you can now import your library (without quotes):
 
 ```spwn
 import mylib
 ```
 
-Note: When a working package manager gets created, this process will be smoother
+?> _**Note:** SPWN Package managers are in the works, so this process may become a lot smoother in the future_
 
 [**Next page**](triggerlanguage/7selectorpanel.md)
