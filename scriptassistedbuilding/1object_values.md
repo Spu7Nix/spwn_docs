@@ -18,13 +18,9 @@ Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTA
 
 <details>
   <summary>Here are some useful object ids</summary>  
-    
-![useful object ids 1](https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png)
-    
-![useful object ids 2](https://user-images.githubusercontent.com/43052612/124507895-a2664e00-dd83-11eb-9b53-52e515cd0e8a.png)
-    
-![useful object ids 3](https://media.discordapp.net/attachments/857382000716939274/862530181604180018/IMG_20210708_100459.jpg)
-    
+	<p><img src="https://user-images.githubusercontent.com/43052612/124507879-9c706d00-dd83-11eb-81f4-2ba385cf3e75.png" alt="useful object ids 1"></p>
+	<p><img src="https://user-images.githubusercontent.com/43052612/124507895-a2664e00-dd83-11eb-9b53-52e515cd0e8a.png" alt="useful object ids 2"></p>
+	<p><img src="https://media.discordapp.net/attachments/857382000716939274/862530181604180018/IMG_20210708_100459.jpg" alt="useful object ids 3"></p>
 </details>
 
 > **Note:** To avoid typing `obj_props.` all the time, you will usually start your file with `extract obj_props` when you will be working with objects and triggers.
