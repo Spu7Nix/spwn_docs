@@ -453,3 +453,14 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`value`** |any | | |
 >
+
+
+## Other values:
+
+## **length**:
+
+> **Type:** `@number`
+> 
+> ## Description:
+>
+> _Returns the length of the array_
