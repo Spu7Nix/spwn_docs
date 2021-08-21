@@ -1,6 +1,8 @@
   
 # **@string**: 
  
+## Macros:
+
 ## **contains**:
 
 > **Value:** 
@@ -314,3 +316,14 @@
 >## Description: 
 > _Makes whole string uppercase._
 >
+
+
+## Other values:
+
+## **length**:
+
+> **Type:** `@number`
+> 
+> ## Description:
+>
+> _Returns the length of the array_
