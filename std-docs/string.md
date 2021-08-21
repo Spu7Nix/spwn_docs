@@ -326,4 +326,4 @@
 > 
 > ## Description:
 >
-> _Returns the length of the array_
+> _Returns the length of the string_
