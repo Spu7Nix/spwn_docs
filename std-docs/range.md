@@ -29,4 +29,4 @@ $.print(a.step_size)
 > 
 > ## Description:
 >
-> _Returns the end value of range
+> _Returns the end value of range_
