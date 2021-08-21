@@ -1,10 +1,5 @@
 # **@array**: 
 
-## Other values:
-
-$.print(a.start)
-$.print(a.end)
-$.print(a.step_size)
 ## **start**:
 
 > **Type:** `@number`
