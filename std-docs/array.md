@@ -454,9 +454,6 @@
 >| 1 | **`value`** |any | | |
 >
 
-
-## Other values:
-
 ## **length**:
 
 > **Type:** `@number`
