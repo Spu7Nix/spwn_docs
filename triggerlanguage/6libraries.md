@@ -75,6 +75,20 @@ Now, if I want to use it in my main file, I can write:
 invis_group = import "setup.spwn"
 ```
 
+If I want to import a file that is not in the current directory, you can use relative paths. So if you want to import a module that is in a subdirectory `foo`, then do
+
+```spwn
+invis_group = import "./foo/setup.spwn"
+```
+
+If it is in a parent or sibling directory, you can access with the conventional syntax of `..`
+
+```spwn
+invis_group = import "../in_parent.spwn"
+```
+
+Although this is not generally a best practice in most cases, unless possibly you're building a library with complex architecture.
+
 # Installing new libraries
 
 All SPWN libraries are read from a folder named _libraries_. When loading a library, SPWN will look for the library in any folder named "libraries" in either the current working directory, or next to the executable. If you want to install a library, it's probably a good idea to create a local "libraries" folder in your project directory, so that you have don't have to navigate to the executable. When you have the folder with the library you want to install, you can drag that folder into the "libraries" folder you just created. (Make sure to check that the library has a `lib.spwn` file in its root.)
