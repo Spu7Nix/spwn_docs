@@ -1,7 +1,5 @@
   
 # **@string**: 
- 
-## Macros:
 
 ## **contains**:
 
@@ -316,9 +314,6 @@
 >## Description: 
 > _Makes whole string uppercase._
 >
-
-
-## Other values:
 
 ## **length**:
 
