@@ -96,3 +96,5 @@ impl @rectangle {
     }
 }
 ```
+
+[**Next page**](3context-splitting.md)
