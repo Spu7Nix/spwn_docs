@@ -1,4 +1,4 @@
-# **@array**: 
+# **@range**: 
 
 ## **start**:
 
@@ -15,7 +15,7 @@
 > 
 > ## Description:
 >
-> _Returns the step sive of the range_
+> _Returns the step size of the range_
 
 
 ## **end**:
