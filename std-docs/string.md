@@ -41,7 +41,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Returns a formtted version of the string. Accepts either a single argument or an array_
+> _Returns a formatted version of the string. Accepts either a single argument or an array_
 >### Example: 
 >```spwn
 > name1 = 'bob'
@@ -149,7 +149,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Returns a left-trimmed verison of the string_
+> _Returns a left-trimmed version of the string_
 >### Example: 
 >```spwn
 > str1 = '      abcd g    '
@@ -237,7 +237,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Splits the string by the specified seperator._
+> _Splits the string by the specified separator._
 >## Arguments:
 >
 >| # | name | type | default value | description |
