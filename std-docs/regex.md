@@ -9,7 +9,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Regex find all matche indices of the string argument_
+> _Regex find all matches indices of the string argument_
 >## Arguments:
 >
 >| # | name | type | default value | description |
