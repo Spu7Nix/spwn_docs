@@ -10,6 +10,7 @@ print("hello".type)  // @string
 print(10g.type)      // @group
 print(10g.move.type) // @macro
 print(!{}.type)      // @trigger_function
+print([5, 6].type)   // @array
 ```
 
 The value of the `type` property is called a _type indicator_, and is a value in and of itself. A type indicator always starts with a `@`, followed by the type name.
@@ -65,7 +66,7 @@ add = (a: @number, b: @number) {
 }
 ```
 
-If your argument can accept multiple types, you can use a `|` symbol:
+If your argument can accept multiple types, you can use a `|` symbol to create a union:
 
 ```spwn
 combine = (a: @number | @string, b: @number | @string) {
@@ -90,6 +91,16 @@ You can also combine all these elements to your hearts desire:
 ```spwn
 my_crazy_macro = (arg: @number | [[@number] | @string]) {
     //...
+}
+```
+
+If a certain union or type has a semantic value, you can create your own types like
+
+```spwn
+iterable = @array | @string | @dictionary
+
+my_func = (to_iterate: iterable) {
+    // code
 }
 ```
 
