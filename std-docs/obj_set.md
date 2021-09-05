@@ -103,7 +103,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Rotates objects in a set around a centerpoint_
+> _Rotates objects in a set around a point_
 >## Arguments:
 >
 >| # | name | type | default value | description |

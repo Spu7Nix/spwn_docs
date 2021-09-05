@@ -32,7 +32,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Maps a number linearily from one interval to another_
+> _Maps a number linearly from one interval to another_
 >### Example: 
 >```spwn
 > $.assert(2.map(1, 4, 5, 11) == 7)

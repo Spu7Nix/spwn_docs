@@ -35,5 +35,5 @@ This is a list of operators in SPWN, what they do and how to use them, for refer
 | `has`    | Checks if one value contains another                           | `number_list has 4`   | `a has b`      | 2          | `_has_`                             |
 | `..`     | Creates a range between two values                             | `0..10`               | `a..b`         | 5          | `_range_`                           |
 | `/%`     | Calculates the integer quotient of two values                  | `100 /% 2`            | `a /% b`       | 7          | `_intdivide_`                       |
-| `/%=`    | Integer-divides a variable by a vaalue                         | `val /%= 3`           | `a /%= b`      | 0          | `_intdivided_by_`                   |
+| `/%=`    | Integer-divides a variable by a value                         | `val /%= 3`           | `a /%= b`      | 0          | `_intdivided_by_`                   |
 | `<=>`    | Swaps the values of two variables                              | `val1 <=> val2`       | `a <=> b`      | 0          | `_swap_`                            |

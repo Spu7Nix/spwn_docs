@@ -541,3 +541,11 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`value`** |any | | |
 >
+
+## **length**:
+
+> **Type:** `@number`
+> 
+> ## Description:
+>
+> _Returns the length of the array_

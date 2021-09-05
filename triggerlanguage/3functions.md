@@ -51,7 +51,7 @@ If you want your macro to have an optional argument, you do so by providing a de
 myfunc = (arg1, arg2 = 5) {/* code */}
 ```
 
-`arg1` is positional and required, while `arg2` does not need to be specified since it has a defualt value.
+`arg1` is positional and required, while `arg2` does not need to be specified since it has a default value.
 
 Arguments passed in to a macro are immutable by default. If you want to modify values from an argument inside your macro, you will have to redefine it as mutable:
 

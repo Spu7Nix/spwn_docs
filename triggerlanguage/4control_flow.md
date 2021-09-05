@@ -38,6 +38,8 @@ switch value {
 }
 ```
 
+To match the actual value, use the `case` keyword before the value. To match the type, exclude the `case` keyword as seen above.
+
 You can also assign a value to the result of a switch statement:
 
 ```spwn

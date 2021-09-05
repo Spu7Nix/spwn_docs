@@ -10,17 +10,14 @@
 | `@NULL`             |           |         | Type for `null`                           |
 | `@trigger_function` |           |         | Type for trigger functions                |
 | `@type_indicator`   |           |         | Is the type of a type. eg. `@number.type` |
-| `@group`            |           |         |                                           |
-| `@color`            |           |         |                                           |
-| `@block`            |           |         |                                           |
-| `@item`             |           |         |                                           |
-| `@number`           |           |         |                                           |
-| `@dictionary`       |           |         |                                           |
-| `@string`           |           |         |                                           |
-| `@array`            |           |         |                                           |
-| `@object`           |           |         |                                           |
-| `@event`            |           |         |                                           |
-| `@obj_set`          |           |         |                                           |
-| `@counter`          |           |         |                                           |
-| `@file`             |           |         |                                           |
-| `@regex`            |           |         |                                           |
+| `@group`            |           |         | Type for groups                           |
+| `@color`            |           |         | Type for colors                           |
+| `@block`            |           |         | Type for blocks                           |
+| `@item`             |           |         | Type for items                            |
+| `@dictionary`       |           |         | Type for dictionaries                     |
+| `@object`           |           |         | Type for objects                          |
+| `@event`            |           |         | Type for events                           |
+| `@obj_set`          |           |         | Type for object sets                      |
+| `@counter`          |           |         | Type for counters                         |
+| `@file`             |           |         | Type for files                            |
+| `@regex`            |           |         | Type for regular expression               |
