@@ -34,6 +34,8 @@ A `trigger` is very similar to an `obj`, but it has a slightly different use cas
 If you ever need to change an object's properties after creating it, you can do so by calling the `set` method:
 
 ```spwn
+extract obj_props
+
 let my_object = obj {
     OBJ_ID: 54,
     X: 300,
@@ -46,6 +48,8 @@ my_object.set(SCALING, 2)
 You can also use the `with` method, which returns a new object with the property:
 
 ```spwn
+extract obj_props
+
 let my_object = obj {
     OBJ_ID: 54,
     X: 300,
@@ -56,3 +60,5 @@ let my_object = obj {
 $.add(my_object.with(SCALING, 2))
 
 ```
+
+[**Next page**](scriptassistedbuilding/2builtin.md)

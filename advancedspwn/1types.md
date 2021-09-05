@@ -94,3 +94,5 @@ my_crazy_macro = (arg: @number | [[@number] | @string]) {
 ```
 
 ?> _**Note:** The expression that goes after the `argument: ` is called a **pattern**, and is also it's own type. You can check if a value matches a pattern with the builtin `$.matches(value, pattern)`_
+
+[**Next page**](advancedspwn/2impl.md)

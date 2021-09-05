@@ -1,6 +1,6 @@
   
 # **@string**: 
- 
+
 ## **contains**:
 
 > **Value:** 
@@ -314,3 +314,11 @@
 >## Description: 
 > _Makes whole string uppercase._
 >
+
+## **length**:
+
+> **Type:** `@number`
+> 
+> ## Description:
+>
+> _Returns the length of the string_

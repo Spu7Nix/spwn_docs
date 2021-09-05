@@ -37,6 +37,7 @@
     - [**@dictionary**](std-docs/dictionary.md)
     - [**@string**](std-docs/string.md)
     - [**@array**](std-docs/array.md)
+    - [**@range**](std-docs/range.md)
     - [**@object**](std-docs/object.md)
     - [**@event**](std-docs/event.md)
     - [**@obj_set**](std-docs/obj_set.md)
