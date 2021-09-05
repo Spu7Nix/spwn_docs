@@ -1,4 +1,5 @@
-- [Introduction](/)
+# [**Introduction**](/)
+
 - [**Trigger Language**](triggerlanguage/trigger_language.md)
 
   - [**1.1.** Variables and Values](triggerlanguage/1variables.md)
@@ -7,8 +8,7 @@
   - [**1.4.** Control Flow](triggerlanguage/4control_flow.md)
   - [**1.5.** Counters](triggerlanguage/5counter.md)
   - [**1.6.** Libraries](triggerlanguage/6libraries.md)
-  - [**1.7.** Project: Selector Panel](triggerlanguage/7selectorpanel.md)
-  - [**1.8.** Bugfixing](triggerlanguage/8bugfixing.md)
+  - [**1.7.** Bugfixing](triggerlanguage/7bugfixing.md)
 
 - [**Script Assisted Building**](scriptassistedbuilding/script_assisted_building.md)
 
@@ -21,6 +21,10 @@
   - [**3.2.** Type Implementation](advancedspwn/2impl.md)
   - [**3.3.** Context Splitting](advancedspwn/3context-splitting.md)
   - [**3.4.** Creating a SPWN Library](advancedspwn/4library-creation.md)
+
+- [**Example Projects**](projects/projects.md)
+
+  - [**Project: Selector Panel**](projects/selectorpanel.md)
 
 - [Compile-time/runtime actions](compiletime.md)
 - **Reference**

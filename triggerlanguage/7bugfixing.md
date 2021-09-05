@@ -64,3 +64,7 @@ if c == 10 {
 }
 
 ```
+
+### Going Forward
+
+It looks like you've read through the entire basic section of the docs! Good job! Why don't you try an [example project](projects/selectorpanel.md) or maybe you're ready to move on the the [advanced spwn](/advancedspwn)
