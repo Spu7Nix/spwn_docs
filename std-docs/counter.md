@@ -607,7 +607,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Devides the value of the counter by some divisor_
+> _Divides the value of the counter by some divisor_
 >### Example: 
 >```spwn
 > c = counter(7)
@@ -663,7 +663,7 @@
 >```spwn
 > @counter::new()     // creates a new counter with a starting value of 0
 >@counter::new(10)   // creates a new counter with a starting value of 10
->@counter::new(5i)   // creates a new counter thaat uses item ID 5
+>@counter::new(5i)   // creates a new counter that uses item ID 5
 >@counter::new(true)   // creates a new counter with a starting value of true (1)
 >```
 >## Arguments:
