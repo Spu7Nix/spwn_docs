@@ -1,6 +1,8 @@
   
 # **@dictionary**: 
  
+## Macros:
+
 ## **clear**:
 
 > **Value:** 

@@ -1,6 +1,31 @@
   
 # **@obj_set**: 
  
+## Constructors:
+
+## **new**:
+
+> **Value:** 
+>```spwn
+>(objects: [@object] = [], group: @group = ?g) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Creates a new object set_
+>### Example: 
+>```spwn
+> my_objects = @obj_set::new()
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `objects` | [@object] | `[]` | |
+>| 2 | `group` | @group | `?g` |The center group to use for rotation |
+>
+
+## Macros:
+
 ## **add**:
 
 > **Value:** 
@@ -36,27 +61,6 @@
 >```spwn
 > $.assert(@obj_set::new().is_empty())
 >```
->
-
-## **new**:
-
-> **Value:** 
->```spwn
->(objects: [@object] = [], group: @group = ?g) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Creates a new object set_
->### Example: 
->```spwn
-> my_objects = @obj_set::new()
->```
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | `objects` | [@object] | `[]` | |
->| 2 | `group` | @group | `?g` |The center group to use for rotation |
 >
 
 ## **push**:

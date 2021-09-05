@@ -1,6 +1,8 @@
   
 # **@array**: 
  
+## Macros:
+
 ## **\_partition**:
 
 > **Value:** 
@@ -103,6 +105,34 @@
 >| 1 | **`el`** |any | | |
 >
 
+## **enumerate**:
+
+> **Value:** 
+>```spwn
+>(self, dict: @bool = false) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns an array of index-element pairs_
+>### Example: 
+>```spwn
+> arr = ["a","b","c"]
+>    for i in arr.enumerate() {
+>        $.print(i[0], ": ", i[1])
+>    }
+>    /* output:
+>    0: 'a'
+>    1: 'b'
+>    2: 'c'
+>    */
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `dict` | @bool | `false` |Return the pair as a dictionary |
+>
+
 ## **filter**:
 
 > **Value:** 
@@ -144,7 +174,7 @@
 
 > **Value:** 
 >```spwn
->(self, el) { /* code omitted */ }
+>(self, el, from: @number = 0) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -160,6 +190,51 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`el`** |any | | |
+>| 2 | `from` | @number | `0` |Index to start the search from |
+>
+
+## **index\_all**:
+
+> **Value:** 
+>```spwn
+>(self, el) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns an array of all occurences of an element_
+>### Example: 
+>```spwn
+> arr = [1,-5,2,4,2,6]
+>$.assert(arr.index_all(2) == [2,4])
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`el`** |any | | |
+>
+
+## **index\_last**:
+
+> **Value:** 
+>```spwn
+>(self, el, until: @number = 0) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Gets the index of the last occurence of an element (if it doesn't exist, `null` is returned)_
+>### Example: 
+>```spwn
+> arr = [1,-5,2,4,2,6]
+>$.assert(arr.index_last(2) == 4)
+>$.assert(arr.index_last(-3) == null)
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`el`** |any | | |
+>| 2 | `until` | @number | `0` |Index to end the search at |
 >
 
 ## **is\_empty**:
@@ -253,17 +328,24 @@
 
 > **Value:** 
 >```spwn
->(self) { /* code omitted */ }
+>(self, index: @number = -1) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Removes the last value from the array and returns it._
+> _Removes a specific index from the array and returns it._
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3, 4]
 >arr.pop()
 >$.assert(arr == [1, 2, 3])
+>arr.pop(1)
+>$.assert(arr == [1, 3])
 >```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `index` | @number | `-1` | |
 >
 
 ## **push**:
@@ -318,12 +400,12 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Removes a specific index from the array and returns it._
+> _Returns array with all elements that match value removed_
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3, 4, 5]
 >arr.remove(3)
->$.assert(arr == [1, 2, 3, 5])
+>$.assert(arr == [1, 2, 4, 5])
 >```
 >## Arguments:
 >
@@ -344,8 +426,7 @@
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3]
->arr.reverse()
->$.assert(arr == [3, 2, 1])
+>$.assert(arr.reverse() == [3, 2, 1])
 >```
 >
 
@@ -386,7 +467,7 @@
 >$.assert(arr == [5, 1, 2, 3, 5])
 >
 >arr = [5, 1, 5, 3, 2]
->arr.sort(key = (a, b) => a > b)
+>arr.sort(comp = (a, b) => a > b)
 >$.assert(arr == [5, 5, 3, 2, 1])
 >```
 >## Arguments:
@@ -402,7 +483,7 @@
 
 > **Value:** 
 >```spwn
->(self) { /* code omitted */ }
+>(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -412,8 +493,15 @@
 > arr = [5, 1, 5, 3, 2]
 >$.assert(arr.sorted() == [1, 2, 3, 5, 5])
 >$.assert(arr.sorted(begin = 2, end = 4) == [5, 1, 2, 3, 5])
->$.assert(arr.sorted(key = (a, b) => a >= b) == [5, 5, 3, 2, 1])
+>$.assert(arr.sorted(comp = (a, b) => a >= b) == [5, 5, 3, 2, 1])
 >```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `begin` | @number | `0` | |
+>| 2 | `end` | @number | `-1` | |
+>| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
 >
 
 ## **sum**:

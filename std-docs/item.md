@@ -1,27 +1,7 @@
   
 # **@item**: 
  
-## **\_range\_**:
-
-> **Value:** 
->```spwn
->(self, other: @item) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the range operator (`..`) for item IDs_
->### Example: 
->```spwn
-> for item in 1i..10i {
->    item.add(10)
->}
->```
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @item | | |
->
+## Macros:
 
 ## **add**:
 
@@ -87,4 +67,28 @@
 >| 1 | **`comparison`** | @comparison | |Comparison mode |
 >| 2 | **`other`** | @number | |Number to compare with |
 >| 3 | **`function`** | @trigger_function | |Target function if comparison is 'true' |
+>
+
+## Operator Implementations:
+
+## **\_range\_**:
+
+> **Value:** 
+>```spwn
+>(self, other: @item) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the range operator (`..`) for item IDs_
+>### Example: 
+>```spwn
+> for item in 1i..10i {
+>    item.add(10)
+>}
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`other`** | @item | | |
 >

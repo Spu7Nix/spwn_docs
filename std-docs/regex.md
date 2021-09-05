@@ -1,6 +1,26 @@
   
 # **@regex**: 
  
+## Constructors:
+
+## **new**:
+
+> **Value:** 
+>```spwn
+>(re: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Create a new instance of regex_
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
+>
+
+## Macros:
+
 ## **findall**:
 
 > **Value:** 
@@ -31,22 +51,6 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`match`** | @string | | |
->
-
-## **new**:
-
-> **Value:** 
->```spwn
->(re: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Create a new instance of regex_
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`re`** | @string | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
 >
 
 ## **replace**:

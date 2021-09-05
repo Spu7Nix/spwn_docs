@@ -1,27 +1,7 @@
   
 # **@group**: 
  
-## **\_range\_**:
-
-> **Value:** 
->```spwn
->(self, other: @group) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the range operator (`..`) for groups_
->### Example: 
->```spwn
-> for group in 1g..10g {
->    -> group.move(10, 0, 0.5)
->}
->```
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @group | | |
->
+## Macros:
 
 ## **alpha**:
 
@@ -79,10 +59,10 @@
 >### Example: 
 >```spwn
 > // Since this function works using follow triggers, objects need to already be in the proper position,
->    // otherwise they'll be offset.
->    1g.follow_lerp(2g,3g,0.5) // Keeps group 1 in the middle of groups 2 and 3
->    1g.follow_lerp(2g,3g,0.25) // Keeps group 1 25% of the way between groups 2 and 3
->    1g.follow_lerp(2g,3g,-1) // Keeps group 1 as a reflection of group 3 by group 2
+>// otherwise they'll be offset.
+>1g.follow_lerp(2g,3g,0.5) // Keeps group 1 in the middle of groups 2 and 3
+>1g.follow_lerp(2g,3g,0.25) // Keeps group 1 25% of the way between groups 2 and 3
+>1g.follow_lerp(2g,3g,-1) // Keeps group 1 as a reflection of group 3 by group 2
 >```
 >## Arguments:
 >
@@ -157,8 +137,8 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`x`** | @number | |Units to move on the X axis |
->| 2 | **`y`** | @number | |Units to move on the Y axis |
+>| 1 | **`x`** | @number | |Units to move on the X axis (10 units per grid square) |
+>| 2 | **`y`** | @number | |Units to move on the Y axis (10 units per grid square) |
 >| 3 | `duration` | @number | `0` |Duration of movement |
 >| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` | |
 >| 5 | `easing_rate` | @number | `2` | |
@@ -213,6 +193,31 @@
 >| 3 | `duration` | @number | `0` |Duration of movement |
 >| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
 >| 5 | `easing_rate` | @number | `2` |Easing rate |
+>
+
+## **precise\_move**:
+
+> **Value:** 
+>```spwn
+>(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2, single: @bool = false) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Combines a move trigger with a follow trigger to allow for more precise decimal movement (up to 2 decimal places)_
+>### Example: 
+>```spwn
+> 10g.precise_move(50.45,-15.23,0.5, easing = EASE_IN_OUT)
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`x`** | @number | |Units to move on the X axis (10 units per grid square) |
+>| 2 | **`y`** | @number | |Units to move on the Y axis (10 units per grid square) |
+>| 3 | `duration` | @number | `0` |Duration of movement |
+>| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` | |
+>| 5 | `easing_rate` | @number | `2` | |
+>| 6 | `single` | @bool | `false` |Saves groups and objects if the group only contains one object |
 >
 
 ## **pulse**:
@@ -318,4 +323,28 @@
 >```spwn
 > 10g.toggle_on()
 >```
+>
+
+## Operator Implementations:
+
+## **\_range\_**:
+
+> **Value:** 
+>```spwn
+>(self, other: @group) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the range operator (`..`) for groups_
+>### Example: 
+>```spwn
+> for group in 1g..10g {
+>    -> group.move(10, 0, 0.5)
+>}
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`other`** | @group | | |
 >

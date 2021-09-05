@@ -1,6 +1,8 @@
   
 # **@file**: 
  
+## Constructors:
+
 ## **new**:
 
 > **Value:** 
@@ -18,8 +20,10 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`path`** | @string | | |
+>| 1 | **`path`** | @string | |Path to file (at the moment this is only stable with absolute paths) |
 >
+
+## Macros:
 
 ## **read**:
 

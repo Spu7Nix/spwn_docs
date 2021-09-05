@@ -1,6 +1,8 @@
   
 # **@event**: 
  
+## Macros:
+
 ## **on**:
 
 > **Value:** 
@@ -15,6 +17,11 @@
 > on(touch(), !{
 >    10g.move(10, 0)
 >})
+>
+>// you can also use it as a decorator
+>[[ on(touch()) ]] !{
+>    10g.move(10, 0)
+>}
 >```
 >## Arguments:
 >

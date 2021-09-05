@@ -1,6 +1,8 @@
   
 # **@string**: 
  
+## Macros:
+
 ## **contains**:
 
 > **Value:** 
@@ -31,6 +33,34 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`substr`** | @string | | |
+>
+
+## **find**:
+
+> **Value:** 
+>```spwn
+>(self, re: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
+>
+
+## **findall**:
+
+> **Value:** 
+>```spwn
+>(self, re: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
 >
 
 ## **fmt**:
@@ -83,6 +113,11 @@
 >**Type:** `@macro` 
 >## Description: 
 > _Returns true if the string has a length of 0, false otherwise_
+>### Example: 
+>```spwn
+> $.assert(''.is_empty())
+>$.assert(!('x'.is_empty()))
+>```
 >
 
 ## **is\_lower**:
@@ -107,6 +142,22 @@
 > _Checks if whole string is uppercase, ignores characters that is not in the alphabet._
 >
 
+## **isdigit**:
+
+> **Value:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns true if string is numeric, false otherwise_
+>### Example: 
+>```spwn
+> let num = "123"
+>num.isdigit() // true
+>```
+>
+
 ## **join**:
 
 > **Value:** 
@@ -116,6 +167,11 @@
 >**Type:** `@macro` 
 >## Description: 
 > _Joins a list using the string._
+>### Example: 
+>```spwn
+> $.assert(''.join(['a', 'b']) == 'ab')
+>$.assert('current'.join(['string', ' element', ' join']) == 'currentstring element join')
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -218,6 +274,21 @@
 >| 1 | `tokens` | @string or [@string] | `[' ','']` | |
 >
 
+## **replace**:
+
+> **Value:** 
+>```spwn
+>(self, re: @string, replacement: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
+>| 2 | **`replacement`** | @string | | |
+>
+
 ## **reverse**:
 
 > **Value:** 
@@ -238,6 +309,11 @@
 >**Type:** `@macro` 
 >## Description: 
 > _Splits the string by the specified seperator._
+>### Example: 
+>```spwn
+> $.assert('a b c'.split(' ') == ['a', 'b', 'c'])
+>$.assert('example'.split('') == ['e', 'x', 'a', 'm', 'p', 'l', 'e'])
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |

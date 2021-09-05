@@ -1,6 +1,29 @@
   
 # **@number**: 
  
+## Macros:
+
+## **constrain**:
+
+> **Value:** 
+>```spwn
+>(self, min: @number, max: @number) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Constrains a number between two numbers_
+>### Example: 
+>```spwn
+> $.assert(2.constrain(7,10) == 7)
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`min`** | @number | | |
+>| 2 | **`max`** | @number | | |
+>
+
 ## **map**:
 
 > **Value:** 

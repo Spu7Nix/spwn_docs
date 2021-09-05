@@ -1,27 +1,7 @@
   
 # **@color**: 
  
-## **\_range\_**:
-
-> **Value:** 
->```spwn
->(self, other: @color) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the range operator (`..`) for colors_
->### Example: 
->```spwn
-> for color in 1c..10c {
->    -> color.set(0,0,0, 0.5)
->}
->```
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @color | | |
->
+## Macros:
 
 ## **pulse**:
 
@@ -75,4 +55,28 @@
 >| 4 | `duration` | @number | `0` |Duration of color change |
 >| 5 | `opacity` | @number | `1` |Opacity of target color |
 >| 6 | `blending` | @bool | `false` |Toggle blending on target color |
+>
+
+## Operator Implementations:
+
+## **\_range\_**:
+
+> **Value:** 
+>```spwn
+>(self, other: @color) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the range operator (`..`) for colors_
+>### Example: 
+>```spwn
+> for color in 1c..10c {
+>    -> color.set(0,0,0, 0.5)
+>}
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`other`** | @color | | |
 >

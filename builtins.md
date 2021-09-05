@@ -1,76 +1,1352 @@
-# List of Built-in Functions
+# List of Built-in functions
 
-| name                | arguments                                                  | example                             | description                                                                                |
-| ------------------- | ---------------------------------------------------------- | ----------------------------------- | ------------------------------------------------------------------------------------------ |
-| print               | any number of values with types that can convert to string | `$.print("Hello world!")`           | Prints value(s) to the console                                                             |
-| sin                 | a number                                                   | `$.sin(3.14159)`                    | Calculates the _sin_ of an angle in radians                                                |
-| cos                 | a number                                                   | `$.cos(3.14159)`                    | Calculates the _cos_ of an angle in radians                                                |
-| tan                 | a number                                                   | `$.tan(3.14159)`                    | Calculates the _tan_ of an angle in radians                                                |
-| asin                | a number                                                   | `$.asin(3.14159)`                   | Calculates the _arcsin_ of a number                                                        |
-| acos                | a number                                                   | `$.acos(3.14159)`                   | Calculates the _arccos_ of a number                                                        |
-| atan                | a number                                                   | `$.atan(3.14159)`                   | Calculates the _arctan_ of a number                                                        |
-| floor               | a number                                                   | `$.floor(3.14159) == 3`             | Calculates the _floor_ of a number, AKA the number rounded **down** to the nearest integer |
-| ceil                | a number                                                   | `$.ceil(3.14159) == 4`              | Calculates the _ceil_ of a number, AKA the number rounded **up** to the nearest integer    |
-| abs                 | a number                                                   | `$.abs(-1) == 1`                    | Calculates the absolute value of a number                                                  |
-| acosh               | a number                                                   | `$.acosh(3.14159)`                  | Calculates the _arccosh_ of a number                                                       |
-| asinh               | a number                                                   | `$.asinh(3.14159)`                  | Calculates the _arcsinh_ of a number                                                       |
-| atan2               | a number                                                   | `$.atan2(3.14159)`                  | Calculates the _arctan<sup>2</sup>_ of a number                                            |
-| atanh               | a number                                                   | `$.atanh(3.14159)`                  | Calculates the _arctanh_ of a number                                                       |
-| cbrt                | a number                                                   | `$.cbrt(3.14159)`                   | Calculates the _cbrt_ of a number                                                          |
-| cosh                | a number                                                   | `$.cosh(3.14159)`                   | Calculates the _cosh_ of a number                                                          |
-| exp                 | a number                                                   | `$.exp(3.14159)`                    | Calculates the _e<sup>x</sup>_ of a number                                                 |
-| exp2                | a number                                                   | `$.exp2(3.14159)`                   | Calculates the _2<sup>x</sup>_ of a number                                                 |
-| fract               | a number                                                   | `$.fract(3.14159) == .14159`        | Gets the fractional of a number                                                            |
-| sqrt                | a number                                                   | `$.sqrt(3.14159)`                   | Calculates the _sqrt_ of a number                                                          |
-| sinh                | a number                                                   | `$.sinh(3.14159)`                   | Calculates the _sinh_ of a number                                                          |
-| tanh                | a number                                                   | `$.tanh(3.14159)`                   | Calculates the _tanh_ of a number                                                          |
-| ln                  | a number                                                   | `$.ln(3.14159)`                     | Calculates the _ln_ (natural log) of a number                                              |
-| log                 | a number                                                   | `$.log(3.14159, 2)`                 | Calculates the _log<sub>x</sub>_ of a number                                               |
-| min                 | a number                                                   | `$.min(3.14159, 1)`                 | Calculates the _min_ of two numbers                                                        |
-| max                 | a number                                                   | `$.max(3.14159, 1)`                 | Calculates the _max_ of two numbers                                                        |
-| round               | a number                                                   | `$.round(3.14159)`                  | Rounds a number                                                                            |
-| add                 | an `@object` or a `@trigger` value                         | `$.add(obj{ 1: 1 })`                | Adds a Geometry Dash object or trigger to the target level                                 |
-| append              | an array, and a value to append to the array               | `$.append(names, "joe")`            | Appends a value to the end of an array. You can also use `array.push(value)`               |
-| pop                 | an array                                                   | `$.pop(names)`                      | Removes a value from the end of an array. You can also use `array.pop()`                   |
-| assert              | a boolean value                                            | `$.assert(true)`                    | Throws an error if the argument is not `true`                                              |
-| time                | nothing                                                    | `now = $.time()`                    | Gets the current system time in seconds                                                    |
-| get_input           | nothing                                                    | `inp = $.get_input()`               | Gets some input from the user                                                              |
-| spwn_version        | nothing                                                    | `$.spwn_version()`                  | Gets the current version of spwn                                                           |
-| extend_trigger_func | trigger func / group to extend, macro to extend with       | `$.extend_trigger_func(10g, macro)` | Runs a macro in a specific trigger function context                                        |
-| regex               |                                                            |                                     |                                                                                            |
-| remove_index        | an array, and the index of a value to be removed           | `$.remove_index(names, 2)`          | Removes a specific value from an array. You can also use `array.remove(index)`             |
-| readfile            | a file path (string)                                       | `$.readfile("file.txt")`            | Opens a file and returns it as a string                                                    |
-| split_str           | a string to be split, and a string delimiter               | `$.split_str("1,2,3", ",")`         | Returns an array from the split string. You can also use `string.split(delimiter)`         |
-| substr              | a string to be sliced, a start index, and an end index     | `$.substr("hello there", 1, 5)`     | Returns a specified part of the input string                                               |
-| matches             | a value to be checked and a pattern                        | `$.matches([1, 2, 3], [@number])`   | Returns `true` if the value matches the pattern, otherwise it returns `false`              |
-| edit_obj            | an object, an object key, and a value                      | `$.edit_obj(object, ROTATION, 180)` | Changes the value of an object key. You can also use `object.set(key, value)`              |
-| b64encode           | a string to be encoded                                     | `$.b64encode("hello there")`        | Returns the input string encoded with base64 encoding (useful for text objects)            |
-| b64decode           | a string to be decoded                                     | `$.b64decode("aGVsbG8gdGhlcmU=")`   | Returns the input string decoded from base64 encoding (useful for text objects)            |
-| get_input           | any number of values with types that can convert to string | `$.get_input("Enter a number:")`    | Prompts the user for input and returns the result as a string                              |
-| mutability          | one value                                                  | `$.mutability(my_array)`            | Returns whether the given value is mutable or not.                                         |
-| \_or\_              | two booleans                                               | `$._or_(true, false)`               | Default implementation of the `\|\|` operator                                              |
-| \_and\_             | two booleans                                               | `$._and_(true, true)`               | Default implementation of the `&&` operator                                                |
-| \_more_than\_       | two booleans                                               | `$._more_than_(100, 50)`            | Default implementation of the `>` operator                                                 |
-| \_less_than\_       | two numbers                                                | `$._less_than_(50, 100)`            | Default implementation of the `<` operator                                                 |
-| \_more_or_equal\_   | two numbers                                                | `$._more_or_equal_(100, 100)`       | Default implementation of the `>=` operator                                                |
-| \_less_or_equal\_   | two numbers                                                | `$._less_or_equal_(100, 100)`       | Default implementation of the `<=` operator                                                |
-| \_divided_by\_      | two numbers                                                | `$._divided_by_(64, 8)`             | Default implementation of the `/` operator                                                 |
-| \_times\_           | two numbers                                                | `$._times_(8, 8)`                   | Default implementation of the `*` operator                                                 |
-| \_mod\_             | two numbers                                                | `$._mod_(70, 8)`                    | Default implementation of the `%` operator                                                 |
-| \_pow\_             | two numbers                                                | `$._pow_(8, 2)`                     | Default implementation of the `^`/`**` operator                                            |
-| \_plus\_            | two numbers                                                | `$._plus_(32, 32)`                  | Default implementation of the `+` operator                                                 |
-| \_minus\_           | two numbers                                                | `$._minus_(128, 64)`                | Default implementation of the `-` operator                                                 |
-| \_equal\_           | two values                                                 | `$._equal_("hello", "hello")`       | Default implementation of the `==` operator                                                |
-| \_not_equal\_       | two values                                                 | `$._not_equal_("hello", "bye")`     | Default implementation of the `!=` operator                                                |
-| \_assign\_          | a variable and a value                                     | `$._assign_(val, 64)`               | Default implementation of the `=` operator                                                 |
-| \_as\_              | a value and a type-indicator                               | `$._as_(1000, @string)`             | Default implementation of the `as` operator                                                |
-| \_swap\_            | two values                                                 | `$._swap_(a, b)`                    | Default implementation of the `<=>` operator                                               |
-| \_has\_             | two values                                                 | `$._has_([1,2,3], 2)`               | Default implementation of the `has` operator                                               |
-| \_add\_             | a variable and a number                                    | `$._add_(val, 10)`                  | Default implementation of the `+=` operator                                                |
-| \_subtract\_        | a variable and a number                                    | `$._subtract_(val, 10)`             | Default implementation of the `-=` operator                                                |
-| \_exponate\_        | a variable and a number                                    | `$._exponate_(val, 2)`              | Default implementation of the `^=` operator                                                |
-| \_modulate\_        | a variable and a number                                    | `$._modulate_(val, 2)`              | Default implementation of the `%=` operator                                                |
-| \_multiply\_        | a variable and a number                                    | `$._multiply_(val, 10)`             | Default implementation of the `*=` operator                                                |
-| \_divide\_          | a variable and a number                                    | `$._divide_(val, 3)`                | Default implementation of the `/=` operator                                                |
-| \_either\_          | two patterns                                               | `$._either_(@number, @counter)`     | Default implementation of the `\|` operator                                                |
-| \_range\_           | two numbers                                                | `$._range_(0, 10)`                  | Default implementation of the `..` operator                                                |
+## $.abs
+
+> ## Description:
+>
+> Calculates the absolute value of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.abs(-100) == 100)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.acos
+
+> ## Description:
+>
+> Calculates the arccos of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.acos(-1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.acosh
+
+> ## Description:
+>
+> Calculates the arccosh of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.acosh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.add
+
+> ## Description:
+>
+> Adds a Geometry Dash object or trigger to the target level <div>
+>
+> ## Example:
+>
+> ```spwn
+> extract obj_props
+> $.add(obj {
+>     OBJ_ID: 1,
+>     X: 45,
+>     Y: 45,
+> })
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **The object or trigger to add**
+
+## $.append
+
+> ## Description:
+>
+> Appends a value to the end of an array. You can also use `array.push(value)` <div>
+>
+> ## Example:
+>
+> ```spwn
+> let arr = []
+> $.append(arr, 1)
+> $.assert(arr = [1])
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**          |
+> | --- | -------- | ----------------- |
+> | 1   | `arr`    | _mutable_ _Array_ |
+> | 2   | `val`    |                   |
+
+## $.asin
+
+> ## Description:
+>
+> Calculates the arcsin of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.asin(1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.asinh
+
+> ## Description:
+>
+> Calculates the arcsinh of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.asinh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.assert
+
+> ## Description:
+>
+> Throws an error if the argument is not `true` <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert(true)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `b`      | _Bool_   |
+
+## $.atan
+
+> ## Description:
+>
+> Calculates the arctan of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.atan(1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.atan2
+
+> ## Description:
+>
+> Calculates the arctan^2 of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.atan2(a, b)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `x`      | _Number_ |
+> | 2   | `y`      | _Number_ |
+
+## $.atanh
+
+> ## Description:
+>
+> Calculates the arctanh of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.atanh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.b64decode
+
+> ## Description:
+>
+> Returns the input string decoded from base64 encoding (useful for text objects) <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.b64decode("aGVsbG8gdGhlcmU=")
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `s`      | _Str_    |
+
+## $.b64encode
+
+> ## Description:
+>
+> Returns the input string encoded with base64 encoding (useful for text objects) <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.b64encode("hello there")
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `s`      | _Str_    |
+
+## $.cbrt
+
+> ## Description:
+>
+> Calculates the cube root of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.cbrt(27) == 3)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.ceil
+
+> ## Description:
+>
+> Calculates the ceil of a number, AKA the number rounded up to the nearest integer <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.ceil(1.5) == 2)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.cos
+
+> ## Description:
+>
+> Calculates the cos of an angle in radians <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.cos(3.1415)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.cosh
+
+> ## Description:
+>
+> Calculates the cosh of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.cosh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.edit_obj
+
+> ## Description:
+>
+> Changes the value of an object key. You can also use `object.set(key, value)` <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.edit_obj(object, ROTATION, 180)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**        |
+> | --- | -------- | --------------- |
+> | 1   | `o, m`   | _mutable_ _Obj_ |
+> | 2   | `key`    |                 |
+> | 3   | `value`  |                 |
+
+## $.exp
+
+> ## Description:
+>
+> Calculates the e^x of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.exp(x)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.exp2
+
+> ## Description:
+>
+> Calculates the 2^x of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.exp2(10) == 1024)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.exp_m1
+
+> ## Description:
+>
+> Calculates e^x - 1 in a way that is accurate even if the number is close to zero <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.exp_m1(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.extend_trigger_func
+
+> ## Description:
+>
+> Executes a macro in a specific trigger function context <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.extend_trigger_func(10g, () {
+>     11g.move(10, 0, 0.5) // will add a move trigger in group 10
+> })
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `group`  |          |
+> | 2   | `mac`    | _Macro_  |
+
+## $.floor
+
+> ## Description:
+>
+> Calculates the floor of a number, AKA the number rounded down to the nearest integer <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.floor(1.5) == 1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.fract
+
+> ## Description:
+>
+> Gets the fractional part of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.fract(123.456) == 0.456)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.get_input
+
+> ## Description:
+>
+> Gets some input from the user <div>
+>
+> ## Example:
+>
+> ```spwn
+> inp = $.get_input()
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `prompt` | _Str_    |
+
+## $.http_request
+
+> ## Description:
+>
+> Sends a HTTP request <div> > **Allowed by default:** no
+>
+> ## Arguments:
+>
+> | #   | **Name**  | **Type** |
+> | --- | --------- | -------- |
+> | 1   | `method`  | _Str_    |
+> | 2   | `url`     | _Str_    |
+> | 3   | `headers` | _Dict_   |
+> | 4   | `body`    | _Str_    |
+
+## $.hypot
+
+> ## Description:
+>
+> Calculates the hypothenuse in a right triangle with sides a and b <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.hypot(3, 4) == 5) // because 3^2 + 4^2 = 5^2
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.ln
+
+> ## Description:
+>
+> Calculates the ln (natural log) of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.ln(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.log
+
+> ## Description:
+>
+> Calculates the log base x of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.log(num, base)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+> | 2   | `base`   | _Number_ |
+
+## $.matches
+
+> ## Description:
+>
+> Returns `true` if the value matches the pattern, otherwise it returns `false` <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.matches([1, 2, 3], [@number])
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name**  | **Type** |
+> | --- | --------- | -------- |
+> | 1   | `val`     |          |
+> | 2   | `pattern` |          |
+
+## $.max
+
+> ## Description:
+>
+> Calculates the max of two numbers <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.max(1, 2) == 2)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.min
+
+> ## Description:
+>
+> Calculates the min of two numbers <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.min(1, 2) == 1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.mutability
+
+> ## Description:
+>
+> Checks if a value reference is mutable <div>
+>
+> ## Example:
+>
+> ```spwn
+> const = 1
+> $.assert(!$.mutability(const))
+> let mut = 1
+> $.assert($.mutability(mut))
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `var`    |          |
+
+## $.pop
+
+> ## Description:
+>
+> Removes a value from the end of an array. You can also use `array.pop()` <div> > **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `arr`    | _mutable_ |
+
+## $.print
+
+> ## Description:
+>
+> Prints value(s) to the console <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.print("Hello world!")
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **any**
+
+## $.random
+
+> ## Description:
+>
+> Generates random numbers, or picks a random element of an array <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.random() // a completely random number
+> $.random([1, 2, 3, 6]) // returns either 1, 2, 3, or 6
+> $.random(1, 10) // returns a random integer between 1 and 10
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **see example**
+
+## $.readfile
+
+> **Allowed by default:** no
+
+## $.regex
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name**  | **Type** |
+> | --- | --------- | -------- |
+> | 1   | `regex`   | _Str_    |
+> | 2   | `s`       | _Str_    |
+> | 3   | `mode`    | _Str_    |
+> | 4   | `replace` |          |
+
+## $.remove_index
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `arr`    | _mutable_ |
+> | 2   | `index`  | _Number_  |
+
+## $.round
+
+> ## Description:
+>
+> Rounds a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.round(1.2) == 1)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.sin
+
+> ## Description:
+>
+> Calculates the sin of an angle in radians <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.sin(3.1415)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.sinh
+
+> ## Description:
+>
+> Calculates the hyperbolic sin of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.sinh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.split_str
+
+> ## Description:
+>
+> Returns an array from the split string. You can also use `string.split(delimiter)` <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.assert($.split_str("1,2,3", ",") == ["1", "2", "3"])
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `s`      | _Str_    |
+> | 2   | `substr` | _Str_    |
+
+## $.spwn_version
+
+> ## Description:
+>
+> Gets the current version of spwn <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.spwn_version()
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **none**
+
+## $.sqrt
+
+> ## Description:
+>
+> Calculates the square root of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.sqrt(2)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.substr
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name**      | **Type** |
+> | --- | ------------- | -------- |
+> | 1   | `val`         | _Str_    |
+> | 2   | `start_index` | _Number_ |
+> | 3   | `end_index`   | _Number_ |
+
+## $.tan
+
+> ## Description:
+>
+> Calculates the tan of an angle in radians <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.tan(3.1415)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.tanh
+
+> ## Description:
+>
+> Calculates the hyperbolic tan of a number <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.tanh(num)
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `n`      | _Number_ |
+
+## $.time
+
+> ## Description:
+>
+> Gets the current system time in seconds <div>
+>
+> ## Example:
+>
+> ```spwn
+> now = $.time()
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **none**
+
+## $.trigger_fn_context
+
+> ## Description:
+>
+> Returns the start group of the current trigger function context <div>
+>
+> ## Example:
+>
+> ```spwn
+> $.trigger_fn_context()
+> ```
+>
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> **none**
+
+## $.writefile
+
+> **Allowed by default:** no
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `path`   | _Str_    |
+> | 2   | `data`   | _Str_    |
+
+# Default Implementations for Operators
+
+## $.\_add\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `a`      | _mutable_ |
+> | 2   | `b`      |           |
+
+## $.\_and\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Bool_   |
+> | 2   | `b`      | _Bool_   |
+
+## $.\_as\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**        |
+> | --- | -------- | --------------- |
+> | 1   | `a`      |                 |
+> | 2   | `t`      | _TypeIndicator_ |
+
+## $.\_assign\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `a`      | _mutable_ |
+> | 2   | `b`      |           |
+
+## $.\_decrement\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+
+## $.\_divide\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+> | 2   | `b`      | _Number_           |
+
+## $.\_divided_by\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_either\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      |          |
+
+## $.\_equal\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      |          |
+
+## $.\_exponate\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+> | 2   | `b`      | _Number_           |
+
+## $.\_has\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      |          |
+
+## $.\_increment\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+
+## $.\_intdivide\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+> | 2   | `b`      | _Number_           |
+
+## $.\_intdivided_by\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_less_or_equal\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_less_than\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_minus\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_mod\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_modulate\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+> | 2   | `b`      | _Number_           |
+
+## $.\_more_or_equal\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_more_than\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_multiply\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `a`      | _mutable_ |
+> | 2   | `b`      | _Number_  |
+
+## $.\_negate\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+
+## $.\_not\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Bool_   |
+
+## $.\_not_equal\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      |          |
+
+## $.\_or\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Bool_   |
+> | 2   | `b`      | _Bool_   |
+
+## $.\_plus\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      |          |
+
+## $.\_pow\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
+> | 2   | `b`      | _Number_ |
+
+## $.\_pre_decrement\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+
+## $.\_pre_increment\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+
+## $.\_range\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `val_a`  |          |
+> | 2   | `b`      | _Number_ |
+
+## $.\_subtract\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**           |
+> | --- | -------- | ------------------ |
+> | 1   | `a`      | _mutable_ _Number_ |
+> | 2   | `b`      | _Number_           |
+
+## $.\_swap\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type**  |
+> | --- | -------- | --------- |
+> | 1   | `a`      | _mutable_ |
+> | 2   | `b`      | _mutable_ |
+
+## $.\_times\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      |          |
+> | 2   | `b`      | _Number_ |
+
+## $.\_unary_range\_
+
+> **Allowed by default:** yes
+>
+> ## Arguments:
+>
+> | #   | **Name** | **Type** |
+> | --- | -------- | -------- |
+> | 1   | `a`      | _Number_ |
