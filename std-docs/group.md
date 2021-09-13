@@ -5,7 +5,7 @@
 
 ## **alpha**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, opacity: @number = 1, duration: @number = 0) { /* code omitted */ }
 >``` 
@@ -26,7 +26,7 @@
 
 ## **follow**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @group, x_mod: @number = 1, y_mod: @number = 1, duration: @number = 999) { /* code omitted */ }
 >``` 
@@ -49,7 +49,7 @@
 
 ## **follow\_lerp**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, groupA: @group, groupB: @group, weight: @number = 0.5, duration: @number = 999) { /* code omitted */ }
 >``` 
@@ -76,7 +76,7 @@
 
 ## **follow\_player\_y**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, speed: @number = 1, delay: @number = 0, offset: @number = 0, max_speed: @number = 0, duration: @number = 999) { /* code omitted */ }
 >``` 
@@ -100,7 +100,7 @@
 
 ## **lock\_to\_player**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, lock_x: @bool = true, lock_y: @bool = true, duration: @number = 999) { /* code omitted */ }
 >``` 
@@ -122,9 +122,9 @@
 
 ## **move**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2) { /* code omitted */ }
+>(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = NONE, easing_rate: @number = 2) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -140,15 +140,15 @@
 >| 1 | **`x`** | @number | |Units to move on the X axis (10 units per grid square) |
 >| 2 | **`y`** | @number | |Units to move on the Y axis (10 units per grid square) |
 >| 3 | `duration` | @number | `0` |Duration of movement |
->| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` | |
+>| 4 | `easing` | @easing_type | `NONE` | |
 >| 5 | `easing_rate` | @number | `2` | |
 >
 
 ## **move\_to**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, target: @group, duration: @number = 0, x_only: @bool = false, y_only: @bool = false, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2) { /* code omitted */ }
+>(self, target: @group, duration: @number = 0, x_only: @bool = false, y_only: @bool = false, easing: @easing_type = NONE, easing_rate: @number = 2) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -165,15 +165,15 @@
 >| 2 | `duration` | @number | `0` |Duration of movement |
 >| 3 | `x_only` | @bool | `false` |Will move to the object only on the X-axis |
 >| 4 | `y_only` | @bool | `false` |Will move to the object only on the y-axis |
->| 5 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 5 | `easing` | @easing_type | `NONE` |Easing type |
 >| 6 | `easing_rate` | @number | `2` |Easing rate |
 >
 
 ## **move\_to\_xy**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, x: @number | @NULL = Null, y: @number | @NULL = Null, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2) { /* code omitted */ }
+>(self, x: @number | @NULL = Null, y: @number | @NULL = Null, duration: @number = 0, easing: @easing_type = NONE, easing_rate: @number = 2) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -191,15 +191,15 @@
 >| 1 | `x` | @number or @NULL | `Null` |X position to move to in units (1 grid square is 30 units) |
 >| 2 | `y` | @number or @NULL | `Null` |Y position to move to in units (1 grid square is 30 units) |
 >| 3 | `duration` | @number | `0` |Duration of movement |
->| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 4 | `easing` | @easing_type | `NONE` |Easing type |
 >| 5 | `easing_rate` | @number | `2` |Easing rate |
 >
 
 ## **precise\_move**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2, single: @bool = false) { /* code omitted */ }
+>(self, x: @number, y: @number, duration: @number = 0, easing: @easing_type = NONE, easing_rate: @number = 2, single: @bool = false) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -215,14 +215,14 @@
 >| 1 | **`x`** | @number | |Units to move on the X axis (10 units per grid square) |
 >| 2 | **`y`** | @number | |Units to move on the Y axis (10 units per grid square) |
 >| 3 | `duration` | @number | `0` |Duration of movement |
->| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` | |
+>| 4 | `easing` | @easing_type | `NONE` | |
 >| 5 | `easing_rate` | @number | `2` | |
 >| 6 | `single` | @bool | `false` |Saves groups and objects if the group only contains one object |
 >
 
 ## **pulse**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, r: @number, g: @number, b: @number, fade_in: @number = 0, hold: @number = 0, fade_out: @number = 0, exclusive: @bool = false, hsv: @bool = false, s_checked: @bool = false, b_checked: @bool = false) { /* code omitted */ }
 >``` 
@@ -243,7 +243,7 @@
 >| 4 | `fade_in` | @number | `0` |Fade-in duration |
 >| 5 | `hold` | @number | `0` |Duration to hold the color |
 >| 6 | `fade_out` | @number | `0` |Fade-out duration |
->| 7 | `exclusive` | @bool | `false` |Weather to prioritize this pulse over simultaneous pulses |
+>| 7 | `exclusive` | @bool | `false` |Whether to prioritize this pulse over simultaneous pulses |
 >| 8 | `hsv` | @bool | `false` |Toggle HSV mode |
 >| 9 | `s_checked` | @bool | `false` |HSV specific: saturation checked |
 >| 10 | `b_checked` | @bool | `false` |HSV specific: brightness checked |
@@ -251,9 +251,9 @@
 
 ## **rotate**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, center: @group, degrees: @number, duration: @number = 0, easing: @easing_type = @easing_type::{id: 0}, easing_rate: @number = 2, lock_object_rotation: @bool = false) { /* code omitted */ }
+>(self, center: @group, degrees: @number, duration: @number = 0, easing: @easing_type = NONE, easing_rate: @number = 2, lock_object_rotation: @bool = false) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -270,14 +270,14 @@
 >| 1 | **`center`** | @group | |Group of object to rotate around |
 >| 2 | **`degrees`** | @number | |Rotation in degrees |
 >| 3 | `duration` | @number | `0` |Duration of rotation |
->| 4 | `easing` | @easing_type | `@easing_type::{id: 0}` |Easing type |
+>| 4 | `easing` | @easing_type | `NONE` |Easing type |
 >| 5 | `easing_rate` | @number | `2` |Easing rate |
 >| 6 | `lock_object_rotation` | @bool | `false` |Only rotate positions of the objects, not the textures |
 >
 
 ## **stop**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -297,7 +297,7 @@
 
 ## **toggle\_off**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -312,7 +312,7 @@
 
 ## **toggle\_on**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -329,7 +329,7 @@
 
 ## **\_range\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @group) { /* code omitted */ }
 >``` 

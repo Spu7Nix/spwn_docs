@@ -5,7 +5,7 @@
 
 ## **\_partition**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, low: @number, high: @number, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -23,7 +23,7 @@
 
 ## **all**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -46,7 +46,7 @@
 
 ## **any**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -69,7 +69,7 @@
 
 ## **clear**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -86,7 +86,7 @@
 
 ## **contains**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, el) { /* code omitted */ }
 >``` 
@@ -107,7 +107,7 @@
 
 ## **enumerate**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, dict: @bool = false) { /* code omitted */ }
 >``` 
@@ -135,7 +135,7 @@
 
 ## **filter**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -156,7 +156,7 @@
 
 ## **flatten**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -172,7 +172,7 @@
 
 ## **index**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, el, from: @number = 0) { /* code omitted */ }
 >``` 
@@ -195,7 +195,7 @@
 
 ## **index\_all**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, el) { /* code omitted */ }
 >``` 
@@ -216,7 +216,7 @@
 
 ## **index\_last**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, el, until: @number = 0) { /* code omitted */ }
 >``` 
@@ -239,7 +239,7 @@
 
 ## **is\_empty**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -257,7 +257,7 @@
 
 ## **map**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -278,7 +278,7 @@
 
 ## **max**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -302,7 +302,7 @@
 
 ## **min**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -326,7 +326,7 @@
 
 ## **pop**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, index: @number = -1) { /* code omitted */ }
 >``` 
@@ -350,7 +350,7 @@
 
 ## **push**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value) { /* code omitted */ }
 >``` 
@@ -372,7 +372,7 @@
 
 ## **reduce**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -394,7 +394,7 @@
 
 ## **remove**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, index: @number) { /* code omitted */ }
 >``` 
@@ -416,7 +416,7 @@
 
 ## **reverse**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -432,7 +432,7 @@
 
 ## **shift**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -449,7 +449,7 @@
 
 ## **sort**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -481,7 +481,7 @@
 
 ## **sorted**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -506,7 +506,7 @@
 
 ## **sum**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -522,7 +522,7 @@
 
 ## **unshift**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value) { /* code omitted */ }
 >``` 
@@ -541,11 +541,3 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`value`** |any | | |
 >
-
-## **length**:
-
-> **Type:** `@number`
-> 
-> ## Description:
->
-> _Returns the length of the array_

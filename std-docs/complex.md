@@ -5,7 +5,7 @@
 
 ## **I**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(coef: @number = 1) { /* code omitted */ }
 >``` 
@@ -19,7 +19,7 @@
 
 ## **from\_polar**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(r, phi) { /* code omitted */ }
 >``` 
@@ -34,7 +34,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(re, im = 0) { /* code omitted */ }
 >``` 
@@ -49,7 +49,7 @@
 
 ## **zero**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >() { /* code omitted */ }
 >``` 
@@ -60,7 +60,7 @@
 
 ## **abs**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -69,7 +69,7 @@
 
 ## **abs\_sq**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -78,7 +78,7 @@
 
 ## **acos**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -87,7 +87,7 @@
 
 ## **acot**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -96,7 +96,7 @@
 
 ## **acsc**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -105,7 +105,7 @@
 
 ## **arg**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -114,7 +114,7 @@
 
 ## **asec**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -123,7 +123,7 @@
 
 ## **asin**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -132,7 +132,7 @@
 
 ## **atan**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -141,7 +141,7 @@
 
 ## **conj**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -150,7 +150,7 @@
 
 ## **cos**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -159,7 +159,7 @@
 
 ## **cosh**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -168,7 +168,7 @@
 
 ## **cot**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -177,7 +177,7 @@
 
 ## **coth**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -186,7 +186,7 @@
 
 ## **csc**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -195,7 +195,7 @@
 
 ## **csch**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -204,7 +204,7 @@
 
 ## **exp**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -213,7 +213,7 @@
 
 ## **invert**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -222,7 +222,7 @@
 
 ## **ln**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -231,7 +231,7 @@
 
 ## **log**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, base: @complex | @number) { /* code omitted */ }
 >``` 
@@ -245,7 +245,7 @@
 
 ## **phase**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -254,7 +254,7 @@
 
 ## **polar**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -263,7 +263,7 @@
 
 ## **print**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -272,7 +272,7 @@
 
 ## **sec**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -281,7 +281,7 @@
 
 ## **sech**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -290,7 +290,7 @@
 
 ## **sin**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -299,7 +299,7 @@
 
 ## **sinh**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -308,7 +308,7 @@
 
 ## **sqrt**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -317,7 +317,7 @@
 
 ## **tan**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -326,7 +326,7 @@
 
 ## **tanh**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -337,7 +337,7 @@
 
 ## **\_add\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -351,7 +351,7 @@
 
 ## **\_assign\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -363,9 +363,18 @@
 >| 1 | **`other`** | @number or @complex | | |
 >
 
+## **\_display\_**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>
+
 ## **\_divide\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -379,7 +388,7 @@
 
 ## **\_divided\_by\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -393,7 +402,7 @@
 
 ## **\_equal\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @complex | @number) { /* code omitted */ }
 >``` 
@@ -407,7 +416,7 @@
 
 ## **\_exponate\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @complex | @number) { /* code omitted */ }
 >``` 
@@ -421,7 +430,7 @@
 
 ## **\_minus\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -435,7 +444,7 @@
 
 ## **\_mod\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @complex | @number) { /* code omitted */ }
 >``` 
@@ -449,7 +458,7 @@
 
 ## **\_modulate\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @complex | @number) { /* code omitted */ }
 >``` 
@@ -463,7 +472,7 @@
 
 ## **\_multiply\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -477,7 +486,7 @@
 
 ## **\_plus\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -491,7 +500,7 @@
 
 ## **\_pow\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @complex | @number) { /* code omitted */ }
 >``` 
@@ -505,7 +514,7 @@
 
 ## **\_subtract\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 
@@ -519,7 +528,7 @@
 
 ## **\_times\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @complex) { /* code omitted */ }
 >``` 

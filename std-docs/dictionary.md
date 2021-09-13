@@ -5,7 +5,7 @@
 
 ## **clear**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -27,7 +27,7 @@
 
 ## **contains\_value**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value) { /* code omitted */ }
 >``` 
@@ -53,7 +53,7 @@
 
 ## **get**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @string, default = @dict_not_found::{}) { /* code omitted */ }
 >``` 
@@ -81,7 +81,7 @@
 
 ## **is\_empty**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -97,7 +97,7 @@
 
 ## **items**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -121,7 +121,7 @@
 
 ## **keys**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -141,7 +141,7 @@
 
 ## **set**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @string, val) { /* code omitted */ }
 >``` 
@@ -171,7 +171,7 @@
 
 ## **values**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 

@@ -5,7 +5,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(objects: [@object] = [], group: @group = ?g) { /* code omitted */ }
 >``` 
@@ -28,7 +28,7 @@
 
 ## **add**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -39,7 +39,7 @@
 
 ## **copy**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -50,7 +50,7 @@
 
 ## **is\_empty**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -65,7 +65,7 @@
 
 ## **push**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, object: @object) { /* code omitted */ }
 >``` 
@@ -81,7 +81,7 @@
 
 ## **rotate**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, deg: @number) { /* code omitted */ }
 >``` 
@@ -97,13 +97,13 @@
 
 ## **rotate\_relative**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, center_group: @group, deg: @number, duration: @number, easing: @easing_type, easing_rate: @number, lock_object_rotation: @bool) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Rotates objects in a set around a point_
+> _Rotates objects in a set around a centerpoint_
 >## Arguments:
 >
 >| # | name | type | default value | description |

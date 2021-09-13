@@ -5,7 +5,7 @@
 
 ## **create\_tracker\_item**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @block) { /* code omitted */ }
 >``` 
@@ -36,7 +36,7 @@
 
 ## **\_range\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @block) { /* code omitted */ }
 >``` 

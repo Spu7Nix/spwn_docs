@@ -5,7 +5,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(path: @string) { /* code omitted */ }
 >``` 
@@ -27,7 +27,7 @@
 
 ## **read**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, s = -1) { /* code omitted */ }
 >``` 
@@ -47,7 +47,7 @@
 
 ## **seek**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, s: @number) { /* code omitted */ }
 >``` 

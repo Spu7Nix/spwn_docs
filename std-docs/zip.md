@@ -5,7 +5,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(iter1: @array | @string | @dictionary, iter2: @array | @string | @dictionary) { /* code omitted */ }
 >``` 
@@ -24,7 +24,7 @@
 
 ## **\_as\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, _type: @type_indicator) { /* code omitted */ }
 >``` 

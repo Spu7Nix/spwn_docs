@@ -5,7 +5,7 @@
 
 ## **delete**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 
@@ -23,7 +23,7 @@
 
 ## **get**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 
@@ -41,7 +41,7 @@
 
 ## **head**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 
@@ -59,7 +59,7 @@
 
 ## **patch**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 
@@ -77,7 +77,7 @@
 
 ## **post**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 
@@ -95,7 +95,7 @@
 
 ## **put**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
 >``` 

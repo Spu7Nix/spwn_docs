@@ -5,7 +5,7 @@
 
 ## **pulse**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, r: @number, g: @number, b: @number, fade_in: @number = 0, hold: @number = 0, fade_out: @number = 0, exclusive: @bool = false, hsv: @bool = false, s_checked: @bool = false, b_checked: @bool = false) { /* code omitted */ }
 >``` 
@@ -26,7 +26,7 @@
 >| 4 | `fade_in` | @number | `0` |Fade-in duration |
 >| 5 | `hold` | @number | `0` |Duration to hold the color |
 >| 6 | `fade_out` | @number | `0` |Fade-out duration |
->| 7 | `exclusive` | @bool | `false` |Weather to prioritize this pulse over simultaneous pulses |
+>| 7 | `exclusive` | @bool | `false` |Whether to prioritize this pulse over simultaneous pulses |
 >| 8 | `hsv` | @bool | `false` |Toggle HSV mode |
 >| 9 | `s_checked` | @bool | `false` |HSV specific: saturation checked |
 >| 10 | `b_checked` | @bool | `false` |HSV specific: brightness checked |
@@ -34,7 +34,7 @@
 
 ## **set**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, r: @number, g: @number, b: @number, duration: @number = 0, opacity: @number = 1, blending: @bool = false) { /* code omitted */ }
 >``` 
@@ -61,7 +61,7 @@
 
 ## **\_range\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @color) { /* code omitted */ }
 >``` 

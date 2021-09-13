@@ -5,7 +5,7 @@
 
 ## **add**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, amount: @number) { /* code omitted */ }
 >``` 
@@ -25,7 +25,7 @@
 
 ## **count**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, number: @number = 0) { /* code omitted */ }
 >``` 
@@ -47,7 +47,7 @@
 
 ## **if\_is**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, comparison: @comparison, other: @number, function: @trigger_function) { /* code omitted */ }
 >``` 
@@ -73,7 +73,7 @@
 
 ## **\_range\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @item) { /* code omitted */ }
 >``` 

@@ -5,7 +5,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(source: @number | @item | @bool = 0, bits: @number = 16, reset: @bool = true) { /* code omitted */ }
 >``` 
@@ -32,7 +32,7 @@
 
 ## **add**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number) { /* code omitted */ }
 >``` 
@@ -54,7 +54,7 @@
 
 ## **add\_to**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, items: [@counter | @item] | @counter | @item, factor: @number = 1, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -80,7 +80,7 @@
 
 ## **add\_to\_multifactor**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, items: [[@counter | @number]]) { /* code omitted */ }
 >``` 
@@ -96,7 +96,7 @@
 
 ## **clone**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -113,7 +113,7 @@
 
 ## **compare**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @counter, factor: @number = 1) { /* code omitted */ }
 >``` 
@@ -138,7 +138,7 @@
 
 ## **copy\_to**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, items: [@counter | @item] | @counter | @item, factor: @number = 1) { /* code omitted */ }
 >``` 
@@ -163,7 +163,7 @@
 
 ## **display**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, x: @number, y: @number) { /* code omitted */ }
 >``` 
@@ -185,9 +185,9 @@
 
 ## **divide**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, divisor: @counter | @number, remainder: @counter | @item = @counter::{item: ?i,bits: 16}) { /* code omitted */ }
+>(self, divisor: @counter | @number, remainder: @counter | @item = counter(?i, bits = 16)) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -206,12 +206,12 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`divisor`** | @counter or @number | |Divisor to divide by, either another counter (very expensive) or a normal number |
->| 2 | `remainder` | @counter or @item | `@counter::{item: ?i,bits: 16}` |Counter or item to set to the remainder value |
+>| 2 | `remainder` | @counter or @item | `counter(?i, bits = 16)` |Counter or item to set to the remainder value |
 >
 
 ## **multiply**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, factor: @counter | @number) { /* code omitted */ }
 >``` 
@@ -234,7 +234,7 @@
 
 ## **reaches**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value: @number) { /* code omitted */ }
 >``` 
@@ -258,7 +258,7 @@
 
 ## **reset**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -281,7 +281,7 @@
 
 ## **reset\_negative**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -304,7 +304,7 @@
 
 ## **subtract\_from**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, items: [@counter | @item] | @counter | @item, factor: @number = 1, for_each: @macro = (n) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -330,7 +330,7 @@
 
 ## **to\_const**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, range: [@number] | @range) { /* code omitted */ }
 >``` 
@@ -353,7 +353,7 @@
 
 ## **to\_const\_enclosed**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, range: [@number] | @range, closure: @macro) { /* code omitted */ }
 >``` 
@@ -381,7 +381,7 @@
 
 ## **\_add\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -403,7 +403,7 @@
 
 ## **\_as\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, _type: @type_indicator) { /* code omitted */ }
 >``` 
@@ -425,9 +425,9 @@
 
 ## **\_assign\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, num: @number | @counter) { /* code omitted */ }
+>(self, num: @number | @counter | @bool) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -442,12 +442,12 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`num`** | @number or @counter | | |
+>| 1 | **`num`** | @number or @counter or @bool | | |
 >
 
 ## **\_decrement\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -462,9 +462,20 @@
 >```
 >
 
+## **\_display\_**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Formats the counter to a printable string_
+>
+
 ## **\_divide\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -486,7 +497,7 @@
 
 ## **\_divided\_by\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -508,7 +519,7 @@
 
 ## **\_equal\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -530,7 +541,7 @@
 
 ## **\_increment\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -547,7 +558,7 @@
 
 ## **\_less\_or\_equal\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -569,7 +580,7 @@
 
 ## **\_less\_than\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -591,7 +602,7 @@
 
 ## **\_minus\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -613,7 +624,7 @@
 
 ## **\_mod\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -635,7 +646,7 @@
 
 ## **\_modulate\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -657,7 +668,7 @@
 
 ## **\_more\_or\_equal\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -679,7 +690,7 @@
 
 ## **\_more\_than\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -701,7 +712,7 @@
 
 ## **\_multiply\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -723,7 +734,7 @@
 
 ## **\_not\_equal\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -745,7 +756,7 @@
 
 ## **\_plus\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 
@@ -767,7 +778,7 @@
 
 ## **\_subtract\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @number | @counter) { /* code omitted */ }
 >``` 
@@ -789,7 +800,7 @@
 
 ## **\_swap\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, num: @counter) { /* code omitted */ }
 >``` 
@@ -813,7 +824,7 @@
 
 ## **\_times\_**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @number | @counter) { /* code omitted */ }
 >``` 

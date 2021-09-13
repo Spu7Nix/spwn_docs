@@ -5,7 +5,7 @@
 
 ## **heapify**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, root: @number = -1) { /* code omitted */ }
 >``` 
@@ -19,7 +19,7 @@
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(arr: @array = [], comp: @macro = (a, b) { /* code omitted */ }, tiebreak: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -41,7 +41,7 @@
 
 ## **pop**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -50,7 +50,7 @@
 
 ## **push**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, val) { /* code omitted */ }
 >``` 
@@ -64,7 +64,7 @@
 
 ## **top**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 

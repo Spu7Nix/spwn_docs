@@ -5,7 +5,7 @@
 
 ## **on**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(event: @event, function: @trigger_function) { /* code omitted */ }
 >``` 
