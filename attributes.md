@@ -1,8 +1,8 @@
-# **Tags**
+# **Attributes**
 
-## Script tags
-Tag which will affect how the compiler behave while compiling said script
-| Tags              | Description                                        |
+## Script Attributes
+Attribute which will affect how the compiler behave while compiling said script
+| Attributes        | Description                                        |
 |-------------------|----------------------------------------------------|
 | #[no_std]         |                                                    |
 | #[cache_output]   | Prevent a module to executed more than once on one session |
@@ -10,8 +10,8 @@ Tag which will affect how the compiler behave while compiling said script
 | #[no_level]       | Only compiles the script, no level creation at all |
 
 ## Documentation tags
-Tag which are read by SPWN automatic docs generator to fill the documentation
-| Tags              | Argument  | Description                                               |
+Attribute which are read by SPWN automatic docs generator to fill the documentation
+| Attributes        | Argument  | Description                                               |
 |-------------------|:---------:|-----------------------------------------------------------|
 | #[constructor]    | none      | Used to mark a method as constructor                      |
 | #[desc()]         | string    | Used to add a description to a method and its argument    |
@@ -19,7 +19,7 @@ Tag which are read by SPWN automatic docs generator to fill the documentation
 
 # *Example*
 
-## Documentation tags
+## Documentation Attributes
 Here are an example taken from counter.spwn 
 ```spwn
 . . .
