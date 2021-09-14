@@ -1,21 +1,23 @@
 # **Attributes**
 
 ## Script Attributes
-Attribute which will affect how the compiler behave while compiling a script
+Attribute which will affect how the compiler behave while compiling said script  
+Script Attributes should be placed at the start of your script
 | Attributes        | Description                                        |
 |-------------------|----------------------------------------------------|
 | #[no_std]         |                                                    |
-| #[cache_output]   | Prevent a module to executed more than once on one session |
+| #[cache_output]   | Prevent a module to be executed more than once on one session |
 | #[console_output] | Makes the script print the created level into the console instead of writing it to your save file |
 | #[no_level]       | Only compiles the script, no level creation at all |
 
 ## Documentation Attributes
-Attribute which are read by SPWN automatic docs generator to fill the documentation
+Attribute which are read by SPWN automatic docs generator to fill the documentation  
+This Attributes should be placed before the parentheses for a macro and before each parameter name for argument
 | Attributes        | Argument  | Description                                               |
 |-------------------|:---------:|-----------------------------------------------------------|
 | #[constructor]    | none      | Used to mark a method as constructor                      |
-| #[desc()]         | string    | Used to add a description to a method and its argument    |
-| #[example()]      | string    | Used to add an example to a method                        |
+| #[desc()]         | string    | Used to add a description to a macro and its argument     |
+| #[example()]      | string    | Used to add an example to a macro                         |
 
 # *Example*
 
