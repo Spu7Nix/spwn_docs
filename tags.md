@@ -1,7 +1,7 @@
 # **Tags**
 
 ## Script tags
-Script tag is a tag which affect how the compiler behave while compiling said script
+Tag which will affect how the compiler behave while compiling said script
 | Tags              | Description                                        |
 |-------------------|----------------------------------------------------|
 | #[no_std]         |                                                    |
@@ -10,14 +10,14 @@ Script tag is a tag which affect how the compiler behave while compiling said sc
 | #[no_level]       | Only compiles the script, no level creation at all |
 
 ## Documentation tags
-Documentation tags are tag which are read by SPWN automatic docs generator to fill the documentation
+Tag which are read by SPWN automatic docs generator to fill the documentation
 | Tags              | Argument  | Description                                               |
-|-------------------|-----------|-----------------------------------------------------------|
+|-------------------|:---------:|-----------------------------------------------------------|
 | #[constructor]    | none      | Used to mark a method as constructor                      |
 | #[desc()]         | string    | Used to add a description to a method and its argument    |
 | #[example()]      | string    | Used to add an example to a method                        |
 
-## **Example**
+# *Example*
 
 ## Script tags
 Here are an example taken from counter.spwn 
@@ -39,7 +39,7 @@ impl @counter {
     ){
         . . .
 ```
-## **Output :** 
+# *Output :*
 
 ## Constructors:
 
