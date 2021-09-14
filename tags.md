@@ -19,7 +19,7 @@ Tag which are read by SPWN automatic docs generator to fill the documentation
 
 # *Example*
 
-## Script tags
+## Documentation tags
 Here are an example taken from counter.spwn 
 ```spwn
 . . .
