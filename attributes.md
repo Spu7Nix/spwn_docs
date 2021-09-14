@@ -1,7 +1,7 @@
 # **Attributes**
 
 ## Script Attributes
-Attribute which will affect how the compiler behave while compiling said script
+Attribute which will affect how the compiler behave while compiling a script
 | Attributes        | Description                                        |
 |-------------------|----------------------------------------------------|
 | #[no_std]         |                                                    |
@@ -9,7 +9,7 @@ Attribute which will affect how the compiler behave while compiling said script
 | #[console_output] | Makes the script print the created level into the console instead of writing it to your save file |
 | #[no_level]       | Only compiles the script, no level creation at all |
 
-## Documentation tags
+## Documentation Attributes
 Attribute which are read by SPWN automatic docs generator to fill the documentation
 | Attributes        | Argument  | Description                                               |
 |-------------------|:---------:|-----------------------------------------------------------|
