@@ -1,5 +1,7 @@
 # **Tags**
+
 ## Script tags
+Script tag is a tag which affect how the compiler behave while compiling said script
 | Tags              | Description                                        |
 |-------------------|----------------------------------------------------|
 | #[no_std]         |                                                    |
@@ -8,7 +10,7 @@
 | #[no_level]       | Only compiles the script, no level creation at all |
 
 ## Documentation tags
-These tags are read by SPWN automatic docs generator to fill the documentation
+Documentation tags are tag which are read by SPWN automatic docs generator to fill the documentation
 | Tags              | Argument  | Description                                               |
 |-------------------|-----------|-----------------------------------------------------------|
 | #[constructor]    | none      | Used to mark a method as constructor                      |
@@ -18,7 +20,7 @@ These tags are read by SPWN automatic docs generator to fill the documentation
 ## **Example**
 
 ## Script tags
-Here is an example taken from counter.spwn 
+Here are an example taken from counter.spwn 
 ```spwn
 . . .
 impl @counter {
