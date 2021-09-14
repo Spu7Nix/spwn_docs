@@ -27,7 +27,7 @@
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Checks does the string starts with a string._
+> _Checks if the string starts with another string_
 >## Arguments:
 >
 >| # | name | type | default value | description |
