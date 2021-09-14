@@ -141,7 +141,7 @@ Note that this is a _compile-time_ while loop. If you want something to loop dur
 
 ## Trigger loops
 
-While these loops are _compile-time loops_, there are also some runtime loops. The useful thing about these is that they only compile the code in the loop once, which means it will only use as many groups as is used in the loop (plus a few extra for the loop itself). The downside is that this changes the function context, which means you cannot change variables defined outside (except if you're using counters, which we'll get to in a few chapters).
+While the loops above are _compile-time loops_, there are also some runtime loops. The useful thing about these is that they only compile the code in the loop once, which means it will only use as many groups as is used in the loop (plus a few extra for the loop itself). The downside is that this changes the function context, which means you cannot change variables defined outside (except if you're using counters, which we'll get to in a few chapters).
 
 The `for_loop` macro is the alternative to the native for loop, just in trigger-loop form. One of the limitations compared to the native for loop is that you cannot loop through an array, you have to use a range. Another limitation is that the `i` variable will not be a normal number, but rather a `counter`, which you will learn more about later.
 
@@ -155,8 +155,6 @@ for_loop(0..10, (i) {
 
 // will move group 10 up and down 10 times
 ```
-
-?> _**Note:** If you plan on only using your for loop only once in your program, you can add `reset = false` somewhere in your arguments, so it doesn't use extra groups resetting the counter (you can read more about all the options for this macro in the documentation for the standard library)_
 
 Just like for loop, while loop also has a trigger loop version: `while_loop`. This takes a _macro_ as its first argument, which is called on each loop, and should return a boolean. In this case, it's nice to use the shorter version of the macro syntax, which we looked at in the previous chapter.
 
