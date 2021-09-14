@@ -24,8 +24,8 @@
 
 - [Compile-time/runtime actions](compiletime.md)
 - **Reference**
-  - [Tags](tags.md)
   - [Operators](operators.md)
+  - [Attributes](atttributes.md)
   - [Built-in Functions](builtins.md)
   - [Built-in Types](builtin-types.md)
   - [Object keys](object_keys.md)
