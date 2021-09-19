@@ -89,7 +89,7 @@ Here is an example of a constructor:
 type @rectangle
 impl @rectangle {
     new: (width: @number, height: @number) {
-        return @mytype::{
+        return @rectangle::{
             width,
             height,
         }
