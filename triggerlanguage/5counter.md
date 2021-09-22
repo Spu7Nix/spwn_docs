@@ -38,10 +38,6 @@ score /= 3
 score = 0
 ```
 
-> **Note:** The multiply `*=`, divide `/=` and assign `=` operators are not in Geometry Dash by default, and are therefore quite group and time expensive. You should prefer using add `+=` and subtract `-=` when possible.
-
-> **Note:** You can add, multiply, divide and assign `counter`s to other `counter`s, however, this is even more group-expensive.
-
 # Testing the Value of a `counter`
 
 Again, these operators are implemented on the `counter` type like any other number, which means you can use them as you would normally.
@@ -76,7 +72,7 @@ num = my_counter.to_const(0..10)
 10g.move(num, 0, 0.5)
 ```
 
-You can also use the `to_const_enclosed` macro if you only need to use the number for a short amount of time. This should decrease the amount of groups and triggers created if used right
+You can also use the `to_const_enclosed` macro if you only need to use the number for a short amount of time. This could decrease the amount of groups and triggers created in some cases
 
 ```spwn
 my_counter.to_const_enclosed(0..10,(num) {

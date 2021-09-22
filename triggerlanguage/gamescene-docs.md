@@ -9,9 +9,9 @@ _Generated using `spwn doc [file name]`_
 
 - Adds 13 objects
 # Exports:
- **Value:** 
+ **Printed:** 
 ```spwn
-{button_a: () { /* code omitted */ },hidden_group: ?g,button_b_end: () { /* code omitted */ },button_b: () { /* code omitted */ },button_a_end: () { /* code omitted */ }}
+{button_b: () { /* code omitted */ },button_a: () { /* code omitted */ },button_a_end: () { /* code omitted */ },button_b_end: () { /* code omitted */ },hidden_group: ?g}
 ``` 
 **Type:** `@dictionary` 
 
@@ -19,7 +19,7 @@ _Generated using `spwn doc [file name]`_
 
 ## **button\_a**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >() { /* code omitted */ }
 >``` 
@@ -30,7 +30,7 @@ _Generated using `spwn doc [file name]`_
 
 ## **button\_a\_end**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >() { /* code omitted */ }
 >``` 
@@ -41,7 +41,7 @@ _Generated using `spwn doc [file name]`_
 
 ## **button\_b**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >() { /* code omitted */ }
 >``` 
@@ -52,7 +52,7 @@ _Generated using `spwn doc [file name]`_
 
 ## **button\_b\_end**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >() { /* code omitted */ }
 >``` 
@@ -65,7 +65,7 @@ _Generated using `spwn doc [file name]`_
 
 ## **hidden\_group**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >?g
 >``` 

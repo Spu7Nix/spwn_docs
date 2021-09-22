@@ -8,7 +8,6 @@
   - [**1.5.** Counters](triggerlanguage/5counter.md)
   - [**1.6.** Libraries](triggerlanguage/6libraries.md)
   - [**1.7.** Project: Selector Panel](triggerlanguage/7selectorpanel.md)
-  - [**1.8.** Bugfixing](triggerlanguage/8bugfixing.md)
 
 - [**Script Assisted Building**](scriptassistedbuilding/script_assisted_building.md)
 
@@ -25,6 +24,7 @@
 - [Compile-time/runtime actions](compiletime.md)
 - **Reference**
   - [Operators](operators.md)
+  - [Attributes](attributes.md)
   - [Built-in Functions](builtins.md)
   - [Built-in Types](builtin-types.md)
   - [Object keys](object_keys.md)

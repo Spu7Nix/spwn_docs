@@ -1,31 +1,11 @@
   
 # **@item**: 
  
-## **\_range\_**:
-
-> **Value:** 
->```spwn
->(self, other: @item) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the range operator (`..`) for item IDs_
->### Example: 
->```spwn
-> for item in 1i..10i {
->    item.add(10)
->}
->```
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @item | | |
->
+## Macros:
 
 ## **add**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, amount: @number) { /* code omitted */ }
 >``` 
@@ -45,7 +25,7 @@
 
 ## **count**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, number: @number = 0) { /* code omitted */ }
 >``` 
@@ -67,7 +47,7 @@
 
 ## **if\_is**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, comparison: @comparison, other: @number, function: @trigger_function) { /* code omitted */ }
 >``` 
@@ -87,4 +67,28 @@
 >| 1 | **`comparison`** | @comparison | |Comparison mode |
 >| 2 | **`other`** | @number | |Number to compare with |
 >| 3 | **`function`** | @trigger_function | |Target function if comparison is 'true' |
+>
+
+## Operator Implementations:
+
+## **\_range\_**:
+
+> **Printed:** 
+>```spwn
+>(self, other: @item) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Implementation of the range operator (`..`) for item IDs_
+>### Example: 
+>```spwn
+> for item in 1i..10i {
+>    item.add(10)
+>}
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`other`** | @item | | |
 >

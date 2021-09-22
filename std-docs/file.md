@@ -1,9 +1,11 @@
   
 # **@file**: 
  
+## Constructors:
+
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(path: @string) { /* code omitted */ }
 >``` 
@@ -18,12 +20,14 @@
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`path`** | @string | | |
+>| 1 | **`path`** | @string | |Path to file (at the moment this is only stable with absolute paths) |
 >
+
+## Macros:
 
 ## **read**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, s = -1) { /* code omitted */ }
 >``` 
@@ -43,7 +47,7 @@
 
 ## **seek**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, s: @number) { /* code omitted */ }
 >``` 

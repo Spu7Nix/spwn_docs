@@ -1,9 +1,11 @@
   
 # **@string**: 
+ 
+## Macros:
 
 ## **contains**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, substr: @string) { /* code omitted */ }
 >``` 
@@ -19,13 +21,13 @@
 
 ## **ends\_with**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, substr: @string) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Checks does the string starts with a string._
+> _Checks if the string starts with another string_
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -33,15 +35,43 @@
 >| 1 | **`substr`** | @string | | |
 >
 
+## **find**:
+
+> **Printed:** 
+>```spwn
+>(self, re: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
+>
+
+## **findall**:
+
+> **Printed:** 
+>```spwn
+>(self, re: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
+>
+
 ## **fmt**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, subs) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Returns a formatted version of the string. Accepts either a single argument or an array_
+> _Returns a formtted version of the string. Accepts either a single argument or an array_
 >### Example: 
 >```spwn
 > name1 = 'bob'
@@ -60,7 +90,7 @@
 
 ## **index**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, substr: @string) { /* code omitted */ }
 >``` 
@@ -76,18 +106,23 @@
 
 ## **is\_empty**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
 > _Returns true if the string has a length of 0, false otherwise_
+>### Example: 
+>```spwn
+> $.assert(''.is_empty())
+>$.assert(!('x'.is_empty()))
+>```
 >
 
 ## **is\_lower**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -98,7 +133,7 @@
 
 ## **is\_upper**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -107,15 +142,36 @@
 > _Checks if whole string is uppercase, ignores characters that is not in the alphabet._
 >
 
+## **isdigit**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns true if string is numeric, false otherwise_
+>### Example: 
+>```spwn
+> let num = "123"
+>num.isdigit() // true
+>```
+>
+
 ## **join**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, list: @array) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
 > _Joins a list using the string._
+>### Example: 
+>```spwn
+> $.assert(''.join(['a', 'b']) == 'ab')
+>$.assert('current'.join(['string', ' element', ' join']) == 'currentstring element join')
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -125,7 +181,7 @@
 
 ## **l\_pad**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, times: @number, seq: @string = ' ') { /* code omitted */ }
 >``` 
@@ -142,14 +198,14 @@
 
 ## **l\_trim**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, tokens: @string | [@string] = [' ','
 >']) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Returns a left-trimmed version of the string_
+> _Returns a left-trimmed verison of the string_
 >### Example: 
 >```spwn
 > str1 = '      abcd g    '
@@ -166,7 +222,7 @@
 
 ## **lowercase**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -177,7 +233,7 @@
 
 ## **r\_pad**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, times: @number, seq: @string = ' ') { /* code omitted */ }
 >``` 
@@ -194,7 +250,7 @@
 
 ## **r\_trim**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, tokens: @string | [@string] = [' ','
 >']) { /* code omitted */ }
@@ -218,9 +274,24 @@
 >| 1 | `tokens` | @string or [@string] | `[' ','']` | |
 >
 
+## **replace**:
+
+> **Printed:** 
+>```spwn
+>(self, re: @string, replacement: @string) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`re`** | @string | | |
+>| 2 | **`replacement`** | @string | | |
+>
+
 ## **reverse**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -231,13 +302,18 @@
 
 ## **split**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, spstr: @string) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Splits the string by the specified separator._
+> _Splits the string by the specified seperator._
+>### Example: 
+>```spwn
+> $.assert('a b c'.split(' ') == ['a', 'b', 'c'])
+>$.assert('example'.split('') == ['e', 'x', 'a', 'm', 'p', 'l', 'e'])
+>```
 >## Arguments:
 >
 >| # | name | type | default value | description |
@@ -247,7 +323,7 @@
 
 ## **starts\_with**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, substr: @string) { /* code omitted */ }
 >``` 
@@ -263,7 +339,7 @@
 
 ## **substr**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, start: @number, end: @number) { /* code omitted */ }
 >``` 
@@ -278,9 +354,25 @@
 >| 2 | **`end`** | @number | | |
 >
 
+## **to\_obj**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns a text object with the string as text_
+>### Example: 
+>```spwn
+> extract obj_props
+>"hello".to_obj().with(X, 45).with(Y, 45).add()
+>```
+>
+
 ## **trim**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, tokens: @string | [@string] = [' ','
 >']) { /* code omitted */ }
@@ -306,7 +398,7 @@
 
 ## **uppercase**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -314,11 +406,3 @@
 >## Description: 
 > _Makes whole string uppercase._
 >
-
-## **length**:
-
-> **Type:** `@number`
-> 
-> ## Description:
->
-> _Returns the length of the string_

@@ -73,18 +73,13 @@ Ok, let's make the button switch inside the function we just created. Here's wha
 selected += 1
 ```
 
-- 2: Check if the `selected` variable value has reached the last button, and if so, reset it to 0.
+- 2: Check if the `selected` variable value has reached the last button, and if so, reset it back to 0.
 
 ```spwn
-if selected == anchors.length {
-    selected -= anchors.length
-    wait()
+if selected >= anchors.length {
+    selected = 0
 }
 ```
-
-(I added a little delay after the operation to make it more reliable, more about this in the next chapter)
-
-> **Note:** We could say `selected = 0` instead, but `-=` is way cheaper and more reliable since it's in the game by default. If you want to use `selected = 0`, go for it.
 
 - 3: Move the selector to the right anchor
 
@@ -112,9 +107,8 @@ selected = counter(0)
 gs.button_a().on_triggered(!{
     // switch
     selected += 1
-    if selected == anchors.length {
-        selected -= anchors.length
-        wait()
+    if selected >= anchors.length {
+        selected = 0
     }
     current_anchor = anchors[selected]
     selector.move_to(current_anchor)
@@ -163,9 +157,8 @@ selected = counter(0)
 gs.button_a().on_triggered(!{
     // switch
     selected += 1
-    if selected == anchors.length {
-        selected -= anchors.length
-        wait()
+    if selected >= anchors.length {
+        selected = 0
     }
     current_anchor = anchors[
         // convert selected to a normal number

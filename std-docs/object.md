@@ -1,9 +1,11 @@
   
 # **@object**: 
  
+## Macros:
+
 ## **add**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -12,7 +14,7 @@
 
 ## **add\_groups**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, groups: @group | [@group]) { /* code omitted */ }
 >``` 
@@ -26,7 +28,7 @@
 
 ## **set**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @object_key, value) { /* code omitted */ }
 >``` 
@@ -41,7 +43,7 @@
 
 ## **with**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @object_key, value) { /* code omitted */ }
 >``` 

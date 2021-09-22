@@ -1,9 +1,11 @@
   
 # **@event**: 
  
+## Macros:
+
 ## **on**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(event: @event, function: @trigger_function) { /* code omitted */ }
 >``` 
@@ -15,6 +17,11 @@
 > on(touch(), !{
 >    10g.move(10, 0)
 >})
+>
+>// you can also use it as a decorator
+>[[ on(touch()) ]] !{
+>    10g.move(10, 0)
+>}
 >```
 >## Arguments:
 >

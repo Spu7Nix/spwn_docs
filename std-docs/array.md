@@ -1,9 +1,11 @@
   
 # **@array**: 
  
+## Macros:
+
 ## **\_partition**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, low: @number, high: @number, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -21,7 +23,7 @@
 
 ## **all**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -44,7 +46,7 @@
 
 ## **any**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -67,7 +69,7 @@
 
 ## **clear**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -84,7 +86,7 @@
 
 ## **contains**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, el) { /* code omitted */ }
 >``` 
@@ -103,9 +105,37 @@
 >| 1 | **`el`** |any | | |
 >
 
+## **enumerate**:
+
+> **Printed:** 
+>```spwn
+>(self, dict: @bool = false) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns an array of index-element pairs_
+>### Example: 
+>```spwn
+> arr = ["a","b","c"]
+>    for i in arr.enumerate() {
+>        $.print(i[0], ": ", i[1])
+>    }
+>    /* output:
+>    0: 'a'
+>    1: 'b'
+>    2: 'c'
+>    */
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `dict` | @bool | `false` |Return the pair as a dictionary |
+>
+
 ## **filter**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -126,7 +156,7 @@
 
 ## **flatten**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -142,9 +172,9 @@
 
 ## **index**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self, el) { /* code omitted */ }
+>(self, el, from: @number = 0) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -160,11 +190,56 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`el`** |any | | |
+>| 2 | `from` | @number | `0` |Index to start the search from |
+>
+
+## **index\_all**:
+
+> **Printed:** 
+>```spwn
+>(self, el) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns an array of all occurences of an element_
+>### Example: 
+>```spwn
+> arr = [1,-5,2,4,2,6]
+>$.assert(arr.index_all(2) == [2,4])
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`el`** |any | | |
+>
+
+## **index\_last**:
+
+> **Printed:** 
+>```spwn
+>(self, el, until: @number = 0) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Gets the index of the last occurence of an element (if it doesn't exist, `null` is returned)_
+>### Example: 
+>```spwn
+> arr = [1,-5,2,4,2,6]
+>$.assert(arr.index_last(2) == 4)
+>$.assert(arr.index_last(-3) == null)
+>```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`el`** |any | | |
+>| 2 | `until` | @number | `0` |Index to end the search at |
 >
 
 ## **is\_empty**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -182,7 +257,7 @@
 
 ## **map**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -203,7 +278,7 @@
 
 ## **max**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -227,7 +302,7 @@
 
 ## **min**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -251,24 +326,31 @@
 
 ## **pop**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self) { /* code omitted */ }
+>(self, index: @number = -1) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Removes the last value from the array and returns it._
+> _Removes a specific index from the array and returns it._
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3, 4]
 >arr.pop()
 >$.assert(arr == [1, 2, 3])
+>arr.pop(1)
+>$.assert(arr == [1, 3])
 >```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `index` | @number | `-1` | |
 >
 
 ## **push**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value) { /* code omitted */ }
 >``` 
@@ -290,7 +372,7 @@
 
 ## **reduce**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, cb: @macro) { /* code omitted */ }
 >``` 
@@ -312,18 +394,18 @@
 
 ## **remove**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, index: @number) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Removes a specific index from the array and returns it._
+> _Returns array with all elements that match value removed_
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3, 4, 5]
 >arr.remove(3)
->$.assert(arr == [1, 2, 3, 5])
+>$.assert(arr == [1, 2, 4, 5])
 >```
 >## Arguments:
 >
@@ -334,7 +416,7 @@
 
 ## **reverse**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -344,14 +426,13 @@
 >### Example: 
 >```spwn
 > let arr = [1, 2, 3]
->arr.reverse()
->$.assert(arr == [3, 2, 1])
+>$.assert(arr.reverse() == [3, 2, 1])
 >```
 >
 
 ## **shift**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -368,7 +449,7 @@
 
 ## **sort**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
@@ -386,7 +467,7 @@
 >$.assert(arr == [5, 1, 2, 3, 5])
 >
 >arr = [5, 1, 5, 3, 2]
->arr.sort(key = (a, b) => a > b)
+>arr.sort(comp = (a, b) => a > b)
 >$.assert(arr == [5, 5, 3, 2, 1])
 >```
 >## Arguments:
@@ -400,9 +481,9 @@
 
 ## **sorted**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
->(self) { /* code omitted */ }
+>(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
@@ -412,13 +493,20 @@
 > arr = [5, 1, 5, 3, 2]
 >$.assert(arr.sorted() == [1, 2, 3, 5, 5])
 >$.assert(arr.sorted(begin = 2, end = 4) == [5, 1, 2, 3, 5])
->$.assert(arr.sorted(key = (a, b) => a >= b) == [5, 5, 3, 2, 1])
+>$.assert(arr.sorted(comp = (a, b) => a >= b) == [5, 5, 3, 2, 1])
 >```
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `begin` | @number | `0` | |
+>| 2 | `end` | @number | `-1` | |
+>| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
 >
 
 ## **sum**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self) { /* code omitted */ }
 >``` 
@@ -434,7 +522,7 @@
 
 ## **unshift**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, value) { /* code omitted */ }
 >``` 
@@ -453,11 +541,3 @@
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`value`** |any | | |
 >
-
-## **length**:
-
-> **Type:** `@number`
-> 
-> ## Description:
->
-> _Returns the length of the array_

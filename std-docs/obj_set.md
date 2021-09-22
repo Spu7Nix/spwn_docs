@@ -1,46 +1,11 @@
   
 # **@obj_set**: 
  
-## **add**:
-
-> **Value:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Add all the objects in the set to the game_
->
-
-## **copy**:
-
-> **Value:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Create a copy of all the objects in this set as a new set_
->
-
-## **is\_empty**:
-
-> **Value:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns true if this set contains no objects, false otherwise._
->### Example: 
->```spwn
-> $.assert(@obj_set::new().is_empty())
->```
->
+## Constructors:
 
 ## **new**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(objects: [@object] = [], group: @group = ?g) { /* code omitted */ }
 >``` 
@@ -59,9 +24,48 @@
 >| 2 | `group` | @group | `?g` |The center group to use for rotation |
 >
 
+## Macros:
+
+## **add**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Add all the objects in the set to the game_
+>
+
+## **copy**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Create a copy of all the objects in this set as a new set_
+>
+
+## **is\_empty**:
+
+> **Printed:** 
+>```spwn
+>(self) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Description: 
+> _Returns true if this set contains no objects, false otherwise._
+>### Example: 
+>```spwn
+> $.assert(@obj_set::new().is_empty())
+>```
+>
+
 ## **push**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, object: @object) { /* code omitted */ }
 >``` 
@@ -77,7 +81,7 @@
 
 ## **rotate**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, deg: @number) { /* code omitted */ }
 >``` 
@@ -93,13 +97,13 @@
 
 ## **rotate\_relative**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, center_group: @group, deg: @number, duration: @number, easing: @easing_type, easing_rate: @number, lock_object_rotation: @bool) { /* code omitted */ }
 >``` 
 >**Type:** `@macro` 
 >## Description: 
-> _Rotates objects in a set around a point_
+> _Rotates objects in a set around a centerpoint_
 >## Arguments:
 >
 >| # | name | type | default value | description |

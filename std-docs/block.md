@@ -1,23 +1,11 @@
   
 # **@block**: 
  
-## **\_range\_**:
-
-> **Value:** 
->```spwn
->(self, other: @block) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
->
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @block | | |
->
+## Macros:
 
 ## **create\_tracker\_item**:
 
-> **Value:** 
+> **Printed:** 
 >```spwn
 >(self, other: @block) { /* code omitted */ }
 >``` 
@@ -42,4 +30,20 @@
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | **`other`** | @block | |Block ID to check against |
+>
+
+## Operator Implementations:
+
+## **\_range\_**:
+
+> **Printed:** 
+>```spwn
+>(self, other: @block) { /* code omitted */ }
+>``` 
+>**Type:** `@macro` 
+>## Arguments:
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | **`other`** | @block | | |
 >
