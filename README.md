@@ -9,6 +9,8 @@ If you have not worked with a programming language before, this might be a bit d
 
 [First off, you can click here to download the latest release of SPWN.](https://github.com/Spu7Nix/SPWN-language/releases)
 
+[Or try SPWN in your browser](https://spu7nix.net/spwn/try/)
+
 ## Practical
 
 First off, let's get to know the basic workflow of using SPWN.
