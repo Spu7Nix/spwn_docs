@@ -168,4 +168,4 @@ gs.button_a().on_triggered(!{
 })
 ```
 
-[**Next page**](triggerlanguage/8bugfixing.md)
+[**Next Chapter**](scriptassistedbuilding/script_assisted_building.md)

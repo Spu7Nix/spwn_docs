@@ -15,7 +15,8 @@
 | `@block`            | Type for blocks                           |
 | `@item`             | Type for items                            |
 | `@dictionary`       | Type for dictionaries                     |
-| `@object`           | Type for objects                          |
+| `@object`           | Type for general objects                  |
+| `@trigger`          | Type for trigger objects                  |
 | `@event`            | Type for events                           |
 | `@obj_set`          | Type for object sets                      |
 | `@counter`          | Type for counters                         |
