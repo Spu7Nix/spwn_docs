@@ -23,6 +23,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@file`](std-docs/file)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -52,6 +55,9 @@
 >data = @file::new('data.txt').read()
 >```
 >
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >

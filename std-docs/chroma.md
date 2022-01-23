@@ -1,4 +1,5 @@
 # **@chroma**
+?> Represents a color value, used in for example color triggers and pulse triggers.
 
 ## Macros
 
@@ -11,6 +12,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -29,6 +33,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -45,6 +52,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -63,6 +73,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -79,6 +92,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -110,6 +126,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -137,6 +156,9 @@
 >blue = @chroma::from_hsv(2/3, 1, 1)
 >```
 >
+>
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
 >
 >**Arguments:**
 >
@@ -169,6 +191,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -199,6 +224,9 @@
 >orange = @chroma::from_rgb(1, 0.5, 0)
 >```
 >
+>
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
 >
 >**Arguments:**
 >
@@ -231,6 +259,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -251,6 +282,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -267,6 +301,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -298,6 +335,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -314,6 +354,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -336,6 +379,9 @@
 >
 >_Returns a string of the chroma's hex code_
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 
 ### hsv
 
@@ -351,6 +397,9 @@
 >
 >_Returns an array of the chroma's HSV values_
 >
+>**Returns:** 
+>[@number]
+>
 
 ### hsv2
 
@@ -361,6 +410,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[@number]
 >
 
 ### hsva
@@ -377,6 +429,9 @@
 >
 >_Returns an array of the chroma's HSVA values_
 >
+>**Returns:** 
+>[@number]
+>
 
 ### hsva2
 
@@ -387,6 +442,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[@number]
 >
 
 ### over
@@ -414,6 +472,9 @@
 >$.assert(c.rgb() == [0, 0.25, 1])
 >```
 >
+>
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
 >
 >**Arguments:**
 >
@@ -446,6 +507,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -476,6 +540,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -497,6 +564,9 @@
 >
 >_Returns an array of the chroma's RGB values_
 >
+>**Returns:** 
+>[@number]
+>
 
 ### rgb8
 
@@ -511,6 +581,9 @@
 >**Description:**
 >
 >_Returns an array of the chroma's 8-bit RGB values_
+>
+>**Returns:** 
+>[@number]
 >
 
 ### rgba
@@ -527,6 +600,9 @@
 >
 >_Returns an array of the chroma's RGBA values_
 >
+>**Returns:** 
+>[@number]
+>
 
 ### rgba8
 
@@ -542,6 +618,9 @@
 >
 >_Returns an array of the chroma's 8-bit RGBA values_
 >
+>**Returns:** 
+>[@number]
+>
 
 ### s
 
@@ -552,6 +631,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -569,6 +651,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -603,6 +688,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -621,6 +709,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -637,6 +728,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -656,4 +750,7 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >

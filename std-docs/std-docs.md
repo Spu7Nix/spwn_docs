@@ -13,7 +13,7 @@ _Generated using `spwn doc [file name]`_
 
 ## Exports
 
-**Type:** `@`@dictionary``
+**Type:** [`@dictionary`](std-docs/dictionary)
 
 ## Constructors
 
@@ -41,12 +41,15 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@counter`](std-docs/counter)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `source` | `@number` or `@item` or `@counter` or `@bool` | `0` |Source (can be a number, item ID or boolean) |
->| 2 | `bits` | `@number` | `16` |Defines the maximum stable size of the counter. If the counter goes outside of the range from 0 to 2^size, it's behavior will be undefined. Smaller sizes are more group effective. |
+>| 1 | `source` | [`@number`](std-docs/number) or [`@item`](std-docs/item) or [`@counter`](std-docs/counter) or `@bool` | `0` |Source (can be a number, item ID or boolean) |
+>| 2 | `bits` | [`@number`](std-docs/number) | `16` |Defines the maximum stable size of the counter. If the counter goes outside of the range from 0 to 2^size, it's behavior will be undefined. Smaller sizes are more group effective. |
 >| 3 | `reset` | `@bool` | `true` |Resets the counter in case the item has been used before. This only applies if the `source` argument is not an item. |
 >
 
@@ -71,11 +74,14 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@file`](std-docs/file)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `path` | `@string` | |Path to file (at the moment this is only stable with absolute paths) |
+>| 1 | `path` | [`@string`](std-docs/string) | |Path to file (at the moment this is only stable with absolute paths) |
 >
 
 ### regex
@@ -92,11 +98,14 @@ _Generated using `spwn doc [file name]`_
 >
 >_Create a new instance of regex_
 >
+>**Returns:** 
+>[`@regex`](std-docs/regex)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `re` | `@string` | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
+>| 1 | `re` | [`@string`](std-docs/string) | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
 >
 
 ## Macros
@@ -122,13 +131,16 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | | |
->| 2 | `opacity` | `@number` | `1` | |
->| 3 | `duration` | `@number` | `0` | |
+>| 1 | `group` | [`@group`](std-docs/group) | | |
+>| 2 | `opacity` | [`@number`](std-docs/number) | `1` | |
+>| 3 | `duration` | [`@number`](std-docs/number) | `0` | |
 >
 
 ### call\_on\_x\_position
@@ -159,8 +171,8 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `position` | `@number` | |X position |
->| 2 | `function` | `@trigger\_function` or `@group` | |Function to call after reaching x position |
+>| 1 | `position` | [`@number`](std-docs/number) | |X position |
+>| 2 | `function` | `@trigger\_function` or [`@group`](std-docs/group) | |Function to call after reaching x position |
 >
 
 ### call\_with\_delay
@@ -191,8 +203,8 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `time` | `@number` or `@epsilon` | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
->| 2 | `function` | `@trigger\_function` or `@group` | |Function to call after the delay |
+>| 1 | `time` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
+>| 2 | `function` | `@trigger\_function` or [`@group`](std-docs/group) | |Function to call after the delay |
 >
 
 ### collision
@@ -218,12 +230,15 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@event`](std-docs/event)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `a` | `@block` | |Block A ID |
->| 2 | `b` | `@block` | |Block B ID |
+>| 1 | `a` | [`@block`](std-docs/block) | |Block A ID |
+>| 2 | `b` | [`@block`](std-docs/block) | |Block B ID |
 >
 
 ### collision\_exit
@@ -249,12 +264,15 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@event`](std-docs/event)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `a` | `@block` | |Block A ID |
->| 2 | `b` | `@block` | |Block B ID |
+>| 1 | `a` | [`@block`](std-docs/block) | |Block A ID |
+>| 2 | `b` | [`@block`](std-docs/block) | |Block B ID |
 >
 
 ### color\_trigger
@@ -278,16 +296,19 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `channel` | `@color` | |Color channel to change |
->| 2 | `r` | `@number` | |Red value of the target color |
->| 3 | `g` | `@number` | |Green value of the target color |
->| 4 | `b` | `@number` | |Blue value of the target color |
->| 5 | `duration` | `@number` | `0` |Duration of color change |
->| 6 | `opacity` | `@number` | `1` |Opacity of target color |
+>| 1 | `channel` | [`@color`](std-docs/color) | |Color channel to change |
+>| 2 | `r` | [`@number`](std-docs/number) | |Red value of the target color |
+>| 3 | `g` | [`@number`](std-docs/number) | |Green value of the target color |
+>| 4 | `b` | [`@number`](std-docs/number) | |Blue value of the target color |
+>| 5 | `duration` | [`@number`](std-docs/number) | `0` |Duration of color change |
+>| 6 | `opacity` | [`@number`](std-docs/number) | `1` |Opacity of target color |
 >| 7 | `blending` | `@bool` | `false` |Toggle blending on target color |
 >
 
@@ -313,6 +334,9 @@ _Generated using `spwn doc [file name]`_
 >})
 >```
 >
+>
+>**Returns:** 
+>[`@event`](std-docs/event)
 >
 
 ### disable\_trail
@@ -370,7 +394,7 @@ _Generated using `spwn doc [file name]`_
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | `expr` | a `@macro` that returns `@bool` and takes  as arguments | |While loop condition, should -> return a boolean |
 >| 2 | `code` | a `@macro` that returns `@NULL` and takes  as arguments | |Macro of the code that gets looped |
->| 3 | `delay` | `@number` or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
+>| 3 | `delay` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
 >
 
 ### enable\_trail
@@ -416,16 +440,19 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group that will follow |
->| 2 | `speed` | `@number` | `1` |Interpolation factor (?) |
->| 3 | `delay` | `@number` | `0` |Delay of movement |
->| 4 | `offset` | `@number` | `0` |Offset on the Y-axis |
->| 5 | `max_speed` | `@number` | `0` |Maximum speed |
->| 6 | `duration` | `@number` | `999` |Duration of following |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group that will follow |
+>| 2 | `speed` | [`@number`](std-docs/number) | `1` |Interpolation factor (?) |
+>| 3 | `delay` | [`@number`](std-docs/number) | `0` |Delay of movement |
+>| 4 | `offset` | [`@number`](std-docs/number) | `0` |Offset on the Y-axis |
+>| 5 | `max_speed` | [`@number`](std-docs/number) | `0` |Maximum speed |
+>| 6 | `duration` | [`@number`](std-docs/number) | `999` |Duration of following |
 >
 
 ### follow\_trigger
@@ -449,15 +476,18 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group that will follow |
->| 2 | `other` | `@group` | |Group of object to follow |
->| 3 | `x_mod` | `@number` | `1` |Multiplier for the movement on the X-axis |
->| 4 | `y_mod` | `@number` | `1` |Multiplier for the movement on the Y-axis |
->| 5 | `duration` | `@number` | `999` |Duration of following |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group that will follow |
+>| 2 | `other` | [`@group`](std-docs/group) | |Group of object to follow |
+>| 3 | `x_mod` | [`@number`](std-docs/number) | `1` |Multiplier for the movement on the X-axis |
+>| 4 | `y_mod` | [`@number`](std-docs/number) | `1` |Multiplier for the movement on the Y-axis |
+>| 5 | `duration` | [`@number`](std-docs/number) | `999` |Duration of following |
 >
 
 ### for\_loop
@@ -491,9 +521,9 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `range` | `@range` | |Range of values (for example 0..10) |
+>| 1 | `range` | [`@range`](std-docs/range) | |Range of values (for example 0..10) |
 >| 2 | `code` | a `@macro` that returns `@NULL` and takes any as an argument | |Macro of the code that gets looped, should take the iterator (a counter) as the first argument. |
->| 3 | `delay` | `@number` or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
+>| 3 | `delay` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
 >| 4 | `reset` | `@bool` | `true` |Whether to reset the iterator after looping (only disable if the loop is only triggered once) |
 >
 
@@ -520,11 +550,14 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `s` | `@string` | | |
+>| 1 | `s` | [`@string`](std-docs/string) | | |
 >
 
 ### hide\_player
@@ -570,14 +603,17 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `h` | `@number` | | |
->| 2 | `s` | `@number` | | |
->| 3 | `v` | `@number` | | |
->| 4 | `a` | `@number` | `1` | |
+>| 1 | `h` | [`@number`](std-docs/number) | | |
+>| 2 | `s` | [`@number`](std-docs/number) | | |
+>| 3 | `v` | [`@number`](std-docs/number) | | |
+>| 4 | `a` | [`@number`](std-docs/number) | `1` | |
 >
 
 ### hsv2
@@ -601,14 +637,17 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `h` | `@number` | | |
->| 2 | `s` | `@number` | | |
->| 3 | `v` | `@number` | | |
->| 4 | `a` | `@number` | `100` | |
+>| 1 | `h` | [`@number`](std-docs/number) | | |
+>| 2 | `s` | [`@number`](std-docs/number) | | |
+>| 3 | `v` | [`@number`](std-docs/number) | | |
+>| 4 | `a` | [`@number`](std-docs/number) | `100` | |
 >
 
 ### lock\_to\_player\_trigger
@@ -632,14 +671,17 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to lock |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to lock |
 >| 2 | `lock_x` | `@bool` | `true` |Lock to player X |
 >| 3 | `lock_y` | `@bool` | `true` |Lock to player Y |
->| 4 | `duration` | `@number` | `999` |Duration of lock |
+>| 4 | `duration` | [`@number`](std-docs/number) | `999` |Duration of lock |
 >
 
 ### move\_to\_trigger
@@ -663,17 +705,20 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to move |
->| 2 | `target` | `@group` | |Group of the object to move to |
->| 3 | `duration` | `@number` | `0` |Duration of movement |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to move |
+>| 2 | `target` | [`@group`](std-docs/group) | |Group of the object to move to |
+>| 3 | `duration` | [`@number`](std-docs/number) | `0` |Duration of movement |
 >| 4 | `x_only` | `@bool` | `false` |Will move to the object only on the X-axis |
 >| 5 | `y_only` | `@bool` | `false` |Will move to the object only on the y-axis |
->| 6 | `easing` | `@easing_type` | `NONE` |Easing type |
->| 7 | `easing_rate` | `@number` | `2` |Easing rate |
+>| 6 | `easing` | [`@easing_type`](std-docs/easing_type) | `NONE` |Easing type |
+>| 7 | `easing_rate` | [`@number`](std-docs/number) | `2` |Easing rate |
 >
 
 ### move\_trigger
@@ -697,16 +742,19 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to move |
->| 2 | `x` | `@number` | |Units to move on the X axis |
->| 3 | `y` | `@number` | |Units to move on the Y axis |
->| 4 | `duration` | `@number` | `0` |Duration of movement |
->| 5 | `easing` | `@easing_type` | `NONE` | |
->| 6 | `easing_rate` | `@number` | `2` | |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to move |
+>| 2 | `x` | [`@number`](std-docs/number) | |Units to move on the X axis |
+>| 3 | `y` | [`@number`](std-docs/number) | |Units to move on the Y axis |
+>| 4 | `duration` | [`@number`](std-docs/number) | `0` |Duration of movement |
+>| 5 | `easing` | [`@easing_type`](std-docs/easing_type) | `NONE` | |
+>| 6 | `easing_rate` | [`@number`](std-docs/number) | `2` | |
 >
 
 ### on
@@ -723,7 +771,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `event` | `@event` | | |
+>| 1 | `event` | [`@event`](std-docs/event) | | |
 >| 2 | `function` |any | | |
 >| 3 | `suppress` |any | `true` | |
 >
@@ -749,12 +797,15 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `item_id` | `@item` | |Item ID to modify |
->| 2 | `amount` | `@number` | |Amount to add |
+>| 1 | `item_id` | [`@item`](std-docs/item) | |Item ID to modify |
+>| 2 | `amount` | [`@number`](std-docs/number) | |Amount to add |
 >
 
 ### pulse\_trigger
@@ -780,17 +831,20 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `target` | `@group` or `@color` | |Target to pulse (group or color) |
->| 2 | `r` | `@number` | |Red value of pulse color (or hue if HSV is enabled) |
->| 3 | `g` | `@number` | |Green value of pulse color (or saturation if HSV is enabled) |
->| 4 | `b` | `@number` | |Blue value of pulse color (or brightness/value if HSV is enabled) |
->| 5 | `fade_in` | `@number` | `0` |Fade-in duration |
->| 6 | `hold` | `@number` | `0` |Duration to hold the color |
->| 7 | `fade_out` | `@number` | `0` |Fade-out duration |
+>| 1 | `target` | [`@group`](std-docs/group) or [`@color`](std-docs/color) | |Target to pulse (group or color) |
+>| 2 | `r` | [`@number`](std-docs/number) | |Red value of pulse color (or hue if HSV is enabled) |
+>| 3 | `g` | [`@number`](std-docs/number) | |Green value of pulse color (or saturation if HSV is enabled) |
+>| 4 | `b` | [`@number`](std-docs/number) | |Blue value of pulse color (or brightness/value if HSV is enabled) |
+>| 5 | `fade_in` | [`@number`](std-docs/number) | `0` |Fade-in duration |
+>| 6 | `hold` | [`@number`](std-docs/number) | `0` |Duration to hold the color |
+>| 7 | `fade_out` | [`@number`](std-docs/number) | `0` |Fade-out duration |
 >| 8 | `exclusive` | `@bool` | `false` |Whether to prioritize this pulse over simultaneous pulses |
 >| 9 | `hsv` | `@bool` | `false` |Toggle HSV mode |
 >| 10 | `s_checked` | `@bool` | `false` |HSV specific: saturation checked |
@@ -818,14 +872,17 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `r` | `@number` | | |
->| 2 | `g` | `@number` | | |
->| 3 | `b` | `@number` | | |
->| 4 | `a` | `@number` | `1` | |
+>| 1 | `r` | [`@number`](std-docs/number) | | |
+>| 2 | `g` | [`@number`](std-docs/number) | | |
+>| 3 | `b` | [`@number`](std-docs/number) | | |
+>| 4 | `a` | [`@number`](std-docs/number) | `1` | |
 >
 
 ### rgb8
@@ -849,14 +906,17 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@chroma`](std-docs/chroma)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `r` | `@number` | | |
->| 2 | `g` | `@number` | | |
->| 3 | `b` | `@number` | | |
->| 4 | `a` | `@number` | `255` | |
+>| 1 | `r` | [`@number`](std-docs/number) | | |
+>| 2 | `g` | [`@number`](std-docs/number) | | |
+>| 3 | `b` | [`@number`](std-docs/number) | | |
+>| 4 | `a` | [`@number`](std-docs/number) | `255` | |
 >
 
 ### rotate\_trigger
@@ -880,16 +940,19 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to rotate |
->| 2 | `center` | `@group` | |Group of object to rotate around |
->| 3 | `degrees` | `@number` | |Rotation in degrees |
->| 4 | `duration` | `@number` | `0` |Duration of rotation |
->| 5 | `easing` | `@easing_type` | `NONE` |Easing type |
->| 6 | `easing_rate` | `@number` | `2` |Easing rate |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to rotate |
+>| 2 | `center` | [`@group`](std-docs/group) | |Group of object to rotate around |
+>| 3 | `degrees` | [`@number`](std-docs/number) | |Rotation in degrees |
+>| 4 | `duration` | [`@number`](std-docs/number) | `0` |Duration of rotation |
+>| 5 | `easing` | [`@easing_type`](std-docs/easing_type) | `NONE` |Easing type |
+>| 6 | `easing_rate` | [`@number`](std-docs/number) | `2` |Easing rate |
 >| 7 | `lock_object_rotation` | `@bool` | `false` |Only rotate positions of the objects, not the textures |
 >
 
@@ -918,9 +981,9 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `strength` | `@number` | `1` |Strength value |
->| 2 | `interval` | `@number` | `0` |Interval value |
->| 3 | `duration` | `@number` | `0.5` |Duration of shake |
+>| 1 | `strength` | [`@number`](std-docs/number) | `1` |Strength value |
+>| 2 | `interval` | [`@number`](std-docs/number) | `0` |Interval value |
+>| 3 | `duration` | [`@number`](std-docs/number) | `0.5` |Duration of shake |
 >
 
 ### show\_player
@@ -966,12 +1029,15 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` or `@trigger\_function` | |Group to spawn |
->| 2 | `time` | `@number` or `@epsilon` | `@epsilon::{}` |Delay |
+>| 1 | `group` | [`@group`](std-docs/group) or `@trigger\_function` | |Group to spawn |
+>| 2 | `time` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay |
 >
 
 ### stop\_trigger
@@ -995,11 +1061,14 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to stop |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to stop |
 >
 
 ### suppress\_signal
@@ -1038,7 +1107,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `delay` | `@number` | |Time to suppress signal |
+>| 1 | `delay` | [`@number`](std-docs/number) | |Time to suppress signal |
 >
 
 ### suppress\_signal\_forever
@@ -1104,7 +1173,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` or `@trigger\_function` | `null` |Group or trigger function to call to stop suppression (default: current context) |
+>| 1 | `group` | [`@group`](std-docs/group) or `@trigger\_function` | `null` |Group or trigger function to call to stop suppression (default: current context) |
 >
 
 ### toggle\_bg\_effect
@@ -1156,11 +1225,14 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to toggle |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to toggle |
 >
 
 ### toggle\_on\_trigger
@@ -1184,11 +1256,14 @@ _Generated using `spwn doc [file name]`_
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `group` | `@group` | |Group to toggle |
+>| 1 | `group` | [`@group`](std-docs/group) | |Group to toggle |
 >
 
 ### touch
@@ -1213,6 +1288,9 @@ _Generated using `spwn doc [file name]`_
 >})
 >```
 >
+>
+>**Returns:** 
+>[`@event`](std-docs/event)
 >
 >**Arguments:**
 >
@@ -1243,6 +1321,9 @@ _Generated using `spwn doc [file name]`_
 >})
 >```
 >
+>
+>**Returns:** 
+>[`@event`](std-docs/event)
 >
 >**Arguments:**
 >
@@ -1278,7 +1359,7 @@ _Generated using `spwn doc [file name]`_
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `time` | `@number` or `@epsilon` | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
+>| 1 | `time` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay time in seconds (leave empty for minimum delay) |
 >
 
 ### while\_loop
@@ -1314,7 +1395,7 @@ _Generated using `spwn doc [file name]`_
 >| - | ---- | ---- | ------------- | ----------- |
 >| 1 | `expr` | a `@macro` that returns `@bool` and takes  as arguments | |While loop condition, should return a boolean |
 >| 2 | `code` | a `@macro` that returns `@NULL` and takes  as arguments | |Macro of the code that gets looped |
->| 3 | `delay` | `@number` or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
+>| 3 | `delay` | [`@number`](std-docs/number) or `@epsilon` | `@epsilon::{}` |Delay between loops (less than 0.05 may be unstable) |
 >
 
 ## Values
@@ -1327,7 +1408,7 @@ _Generated using `spwn doc [file name]`_
 >BACK_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1339,7 +1420,7 @@ _Generated using `spwn doc [file name]`_
 >>17
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1362,7 +1443,7 @@ _Generated using `spwn doc [file name]`_
 >BACK_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1374,7 +1455,7 @@ _Generated using `spwn doc [file name]`_
 >>16
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1397,7 +1478,7 @@ _Generated using `spwn doc [file name]`_
 >BACK_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1409,7 +1490,7 @@ _Generated using `spwn doc [file name]`_
 >>18
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1432,7 +1513,7 @@ _Generated using `spwn doc [file name]`_
 >1000c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### BOUNCE\_IN
@@ -1443,7 +1524,7 @@ _Generated using `spwn doc [file name]`_
 >BOUNCE_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1455,7 +1536,7 @@ _Generated using `spwn doc [file name]`_
 >>8
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1478,7 +1559,7 @@ _Generated using `spwn doc [file name]`_
 >BOUNCE_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1490,7 +1571,7 @@ _Generated using `spwn doc [file name]`_
 >>7
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1513,7 +1594,7 @@ _Generated using `spwn doc [file name]`_
 >BOUNCE_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1525,7 +1606,7 @@ _Generated using `spwn doc [file name]`_
 >>9
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1548,7 +1629,7 @@ _Generated using `spwn doc [file name]`_
 >EASE_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1560,7 +1641,7 @@ _Generated using `spwn doc [file name]`_
 >>2
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1583,7 +1664,7 @@ _Generated using `spwn doc [file name]`_
 >EASE_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1595,7 +1676,7 @@ _Generated using `spwn doc [file name]`_
 >>1
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1618,7 +1699,7 @@ _Generated using `spwn doc [file name]`_
 >EASE_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1630,7 +1711,7 @@ _Generated using `spwn doc [file name]`_
 >>3
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1653,7 +1734,7 @@ _Generated using `spwn doc [file name]`_
 >ELASTIC_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1665,7 +1746,7 @@ _Generated using `spwn doc [file name]`_
 >>5
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1688,7 +1769,7 @@ _Generated using `spwn doc [file name]`_
 >ELASTIC_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1700,7 +1781,7 @@ _Generated using `spwn doc [file name]`_
 >>4
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1723,7 +1804,7 @@ _Generated using `spwn doc [file name]`_
 >ELASTIC_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1735,7 +1816,7 @@ _Generated using `spwn doc [file name]`_
 >>6
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1758,7 +1839,7 @@ _Generated using `spwn doc [file name]`_
 >EQUAL_TO
 >```
 >
->**Type:** `@comparison`
+>**Type:** [`@comparison`](std-docs/comparison)
 >
 >## Values
 >
@@ -1770,7 +1851,7 @@ _Generated using `spwn doc [file name]`_
 >>0
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1793,7 +1874,7 @@ _Generated using `spwn doc [file name]`_
 >2.718281828459045
 >```
 >
->**Type:** `@number`
+>**Type:** [`@number`](std-docs/number)
 >
 
 ### EXPONENTIAL\_IN
@@ -1804,7 +1885,7 @@ _Generated using `spwn doc [file name]`_
 >EXPONENTIAL_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1816,7 +1897,7 @@ _Generated using `spwn doc [file name]`_
 >>11
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1839,7 +1920,7 @@ _Generated using `spwn doc [file name]`_
 >EXPONENTIAL_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1851,7 +1932,7 @@ _Generated using `spwn doc [file name]`_
 >>10
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1874,7 +1955,7 @@ _Generated using `spwn doc [file name]`_
 >EXPONENTIAL_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1886,7 +1967,7 @@ _Generated using `spwn doc [file name]`_
 >>12
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1909,7 +1990,7 @@ _Generated using `spwn doc [file name]`_
 >1001c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### GROUND2
@@ -1920,7 +2001,7 @@ _Generated using `spwn doc [file name]`_
 >1009c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### LARGER\_THAN
@@ -1931,7 +2012,7 @@ _Generated using `spwn doc [file name]`_
 >LARGER_THAN
 >```
 >
->**Type:** `@comparison`
+>**Type:** [`@comparison`](std-docs/comparison)
 >
 >## Values
 >
@@ -1943,7 +2024,7 @@ _Generated using `spwn doc [file name]`_
 >>1
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -1966,7 +2047,7 @@ _Generated using `spwn doc [file name]`_
 >1002c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### NONE
@@ -1977,7 +2058,7 @@ _Generated using `spwn doc [file name]`_
 >NONE
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -1989,7 +2070,7 @@ _Generated using `spwn doc [file name]`_
 >>0
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -2012,7 +2093,7 @@ _Generated using `spwn doc [file name]`_
 >1004c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### PI
@@ -2023,7 +2104,7 @@ _Generated using `spwn doc [file name]`_
 >3.141592653589793
 >```
 >
->**Type:** `@number`
+>**Type:** [`@number`](std-docs/number)
 >
 
 ### SINE\_IN
@@ -2034,7 +2115,7 @@ _Generated using `spwn doc [file name]`_
 >SINE_IN
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -2046,7 +2127,7 @@ _Generated using `spwn doc [file name]`_
 >>14
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -2069,7 +2150,7 @@ _Generated using `spwn doc [file name]`_
 >SINE_IN_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -2081,7 +2162,7 @@ _Generated using `spwn doc [file name]`_
 >>13
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -2104,7 +2185,7 @@ _Generated using `spwn doc [file name]`_
 >SINE_OUT
 >```
 >
->**Type:** `@easing_type`
+>**Type:** [`@easing_type`](std-docs/easing_type)
 >
 >## Values
 >
@@ -2116,7 +2197,7 @@ _Generated using `spwn doc [file name]`_
 >>15
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -2139,7 +2220,7 @@ _Generated using `spwn doc [file name]`_
 >SMALLER_THAN
 >```
 >
->**Type:** `@comparison`
+>**Type:** [`@comparison`](std-docs/comparison)
 >
 >## Values
 >
@@ -2151,7 +2232,7 @@ _Generated using `spwn doc [file name]`_
 >>2
 >>```
 >>
->>**Type:** `@number`
+>>**Type:** [`@number`](std-docs/number)
 >>
 >
 >### type
@@ -2174,12 +2255,12 @@ _Generated using `spwn doc [file name]`_
 >1003c
 >```
 >
->**Type:** `@color`
+>**Type:** [`@color`](std-docs/color)
 >
 
 ### blend\_modes
 
->**Type:** `@`@dictionary``
+>**Type:** [`@dictionary`](std-docs/dictionary)
 >
 >## Values
 >
@@ -2717,10 +2798,10 @@ _Generated using `spwn doc [file name]`_
 >**Printed**
 >
 >```spwn
->{get_objects: (prop: @object_key, pat: (@pattern | (_) -> @bool)) { /* ... */ }, objects: [], get_marker: (text: @string) { /* ... */ }}
+>{objects: [], get_objects: (prop: @object_key, pat: (@pattern | (_) -> @bool)) { /* ... */ }, get_marker: (text: @string) { /* ... */ }}
 >```
 >
->**Type:** `@dictionary`
+>**Type:** [`@dictionary`](std-docs/dictionary)
 >
 >## Macros
 >
@@ -2748,11 +2829,14 @@ _Generated using `spwn doc [file name]`_
 >>```
 >>
 >>
+>>**Returns:** 
+>>[`@object`](std-docs/object) or `@NULL`
+>>
 >>**Arguments:**
 >>
 >>| # | name | type | default value | description |
 >>| - | ---- | ---- | ------------- | ----------- |
->>| 1 | `text` | `@string` | | |
+>>| 1 | `text` | [`@string`](std-docs/string) | | |
 >>
 >
 >### get\_objects
@@ -2777,11 +2861,14 @@ _Generated using `spwn doc [file name]`_
 >>```
 >>
 >>
+>>**Returns:** 
+>>[@object]
+>>
 >>**Arguments:**
 >>
 >>| # | name | type | default value | description |
 >>| - | ---- | ---- | ------------- | ----------- |
->>| 1 | `prop` | `@object_key` | | |
+>>| 1 | `prop` | [`@object_key`](std-docs/object_key) | | |
 >>| 2 | `pat` | `@pattern` or a `@macro` that returns `@bool` and takes any as an argument | | |
 >>
 >
@@ -2795,13 +2882,13 @@ _Generated using `spwn doc [file name]`_
 >>[]
 >>```
 >>
->>**Type:** `@array`
+>>**Type:** [`@array`](std-docs/array)
 >>
 >
 
 ### obj\_ids
 
->**Type:** `@`@dictionary``
+>**Type:** [`@dictionary`](std-docs/dictionary)
 >
 >## Values
 >
@@ -2810,10 +2897,10 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{GRAVITY_UP: 11, WAVE: 660, SIZE_NORMAL: 99, SIZE_MINI: 101, GRAVITY_DOWN: 10, SPIDER: 1331, DUAL_ON: 286, DUAL_OFF: 287, UFO: 111, SHIP: 13, BALL: 47, ... (9 more)}
+>>{SIZE_MINI: 101, WAVE: 660, SPIDER: 1331, SPEED_BLUE: 201, DUAL_ON: 286, SPEED_GREEN: 202, CUBE: 12, SPEED_PINK: 203, DUAL_OFF: 287, TELEPORT: 747, ROBOT: 745, ... (9 more)}
 >>```
 >>
->>**Type:** `@dictionary`
+>>**Type:** [`@dictionary`](std-docs/dictionary)
 >>
 >>## Values
 >>
@@ -2825,7 +2912,7 @@ _Generated using `spwn doc [file name]`_
 >>>47
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### CUBE
@@ -2836,7 +2923,7 @@ _Generated using `spwn doc [file name]`_
 >>>12
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### DUAL\_OFF
@@ -2847,7 +2934,7 @@ _Generated using `spwn doc [file name]`_
 >>>287
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### DUAL\_ON
@@ -2858,7 +2945,7 @@ _Generated using `spwn doc [file name]`_
 >>>286
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### GRAVITY\_DOWN
@@ -2869,7 +2956,7 @@ _Generated using `spwn doc [file name]`_
 >>>10
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### GRAVITY\_UP
@@ -2880,7 +2967,7 @@ _Generated using `spwn doc [file name]`_
 >>>11
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### MIRROR\_OFF
@@ -2891,7 +2978,7 @@ _Generated using `spwn doc [file name]`_
 >>>46
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### MIRROR\_ON
@@ -2902,7 +2989,7 @@ _Generated using `spwn doc [file name]`_
 >>>45
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ROBOT
@@ -2913,7 +3000,7 @@ _Generated using `spwn doc [file name]`_
 >>>745
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SHIP
@@ -2924,7 +3011,7 @@ _Generated using `spwn doc [file name]`_
 >>>13
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SIZE\_MINI
@@ -2935,7 +3022,7 @@ _Generated using `spwn doc [file name]`_
 >>>101
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SIZE\_NORMAL
@@ -2946,7 +3033,7 @@ _Generated using `spwn doc [file name]`_
 >>>99
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPEED\_BLUE
@@ -2957,7 +3044,7 @@ _Generated using `spwn doc [file name]`_
 >>>201
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPEED\_GREEN
@@ -2968,7 +3055,7 @@ _Generated using `spwn doc [file name]`_
 >>>202
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPEED\_PINK
@@ -2979,7 +3066,7 @@ _Generated using `spwn doc [file name]`_
 >>>203
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPEED\_RED
@@ -2990,7 +3077,7 @@ _Generated using `spwn doc [file name]`_
 >>>1334
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPEED\_YELLOW
@@ -3001,7 +3088,7 @@ _Generated using `spwn doc [file name]`_
 >>>200
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPIDER
@@ -3012,7 +3099,7 @@ _Generated using `spwn doc [file name]`_
 >>>1331
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### TELEPORT
@@ -3023,7 +3110,7 @@ _Generated using `spwn doc [file name]`_
 >>>747
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### UFO
@@ -3034,7 +3121,7 @@ _Generated using `spwn doc [file name]`_
 >>>111
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### WAVE
@@ -3045,7 +3132,7 @@ _Generated using `spwn doc [file name]`_
 >>>660
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >
@@ -3054,10 +3141,10 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{COLLISION_BLOCK: 1816, S_BLOCK: 1829, USER_COIN: 1329, ITEM_DISPLAY: 1615, J_BLOCK: 1813, H_BLOCK: 1859, D_BLOCK: 1755, TEXT: 914}
+>>{H_BLOCK: 1859, D_BLOCK: 1755, S_BLOCK: 1829, ITEM_DISPLAY: 1615, TEXT: 914, COLLISION_BLOCK: 1816, J_BLOCK: 1813, USER_COIN: 1329}
 >>```
 >>
->>**Type:** `@dictionary`
+>>**Type:** [`@dictionary`](std-docs/dictionary)
 >>
 >>## Values
 >>
@@ -3069,7 +3156,7 @@ _Generated using `spwn doc [file name]`_
 >>>1816
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### D\_BLOCK
@@ -3080,7 +3167,7 @@ _Generated using `spwn doc [file name]`_
 >>>1755
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### H\_BLOCK
@@ -3091,7 +3178,7 @@ _Generated using `spwn doc [file name]`_
 >>>1859
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ITEM\_DISPLAY
@@ -3102,7 +3189,7 @@ _Generated using `spwn doc [file name]`_
 >>>1615
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### J\_BLOCK
@@ -3113,7 +3200,7 @@ _Generated using `spwn doc [file name]`_
 >>>1813
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### S\_BLOCK
@@ -3124,7 +3211,7 @@ _Generated using `spwn doc [file name]`_
 >>>1829
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### TEXT
@@ -3135,7 +3222,7 @@ _Generated using `spwn doc [file name]`_
 >>>914
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### USER\_COIN
@@ -3146,7 +3233,7 @@ _Generated using `spwn doc [file name]`_
 >>>1329
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >
@@ -3155,10 +3242,10 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{STOP: 1616, TOGGLE: 1049, FOLLOW: 1347, SPAWN: 1268, INSTANT_COUNT: 1811, COLLISION: 1815, SHOW: 1613, BG_EFFECT_OFF: 1819, SHAKE: 1520, BG_EFFECT_ON: 1818, DISABLE_TRAIL: 33, ... (12 more)}
+>>{PULSE: 1006, ALPHA: 1007, SPAWN: 1268, STOP: 1616, COLLISION: 1815, ROTATE: 1346, COUNT: 1611, ANIMATE: 1585, TOGGLE: 1049, MOVE: 901, SHAKE: 1520, ... (12 more)}
 >>```
 >>
->>**Type:** `@dictionary`
+>>**Type:** [`@dictionary`](std-docs/dictionary)
 >>
 >>## Values
 >>
@@ -3170,7 +3257,7 @@ _Generated using `spwn doc [file name]`_
 >>>1007
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ANIMATE
@@ -3181,7 +3268,7 @@ _Generated using `spwn doc [file name]`_
 >>>1585
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### BG\_EFFECT\_OFF
@@ -3192,7 +3279,7 @@ _Generated using `spwn doc [file name]`_
 >>>1819
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### BG\_EFFECT\_ON
@@ -3203,7 +3290,7 @@ _Generated using `spwn doc [file name]`_
 >>>1818
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### COLLISION
@@ -3214,7 +3301,7 @@ _Generated using `spwn doc [file name]`_
 >>>1815
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### COLOR
@@ -3225,7 +3312,7 @@ _Generated using `spwn doc [file name]`_
 >>>899
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### COUNT
@@ -3236,7 +3323,7 @@ _Generated using `spwn doc [file name]`_
 >>>1611
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### DISABLE\_TRAIL
@@ -3247,7 +3334,7 @@ _Generated using `spwn doc [file name]`_
 >>>33
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ENABLE\_TRAIL
@@ -3258,7 +3345,7 @@ _Generated using `spwn doc [file name]`_
 >>>32
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### FOLLOW
@@ -3269,7 +3356,7 @@ _Generated using `spwn doc [file name]`_
 >>>1347
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### FOLLOW\_PLAYER\_Y
@@ -3280,7 +3367,7 @@ _Generated using `spwn doc [file name]`_
 >>>1814
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### HIDE
@@ -3291,7 +3378,7 @@ _Generated using `spwn doc [file name]`_
 >>>1612
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### INSTANT\_COUNT
@@ -3302,7 +3389,7 @@ _Generated using `spwn doc [file name]`_
 >>>1811
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### MOVE
@@ -3313,7 +3400,7 @@ _Generated using `spwn doc [file name]`_
 >>>901
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ON\_DEATH
@@ -3324,7 +3411,7 @@ _Generated using `spwn doc [file name]`_
 >>>1812
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### PICKUP
@@ -3335,7 +3422,7 @@ _Generated using `spwn doc [file name]`_
 >>>1817
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### PULSE
@@ -3346,7 +3433,7 @@ _Generated using `spwn doc [file name]`_
 >>>1006
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### ROTATE
@@ -3357,7 +3444,7 @@ _Generated using `spwn doc [file name]`_
 >>>1346
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SHAKE
@@ -3368,7 +3455,7 @@ _Generated using `spwn doc [file name]`_
 >>>1520
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SHOW
@@ -3379,7 +3466,7 @@ _Generated using `spwn doc [file name]`_
 >>>1613
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### SPAWN
@@ -3390,7 +3477,7 @@ _Generated using `spwn doc [file name]`_
 >>>1268
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### STOP
@@ -3401,7 +3488,7 @@ _Generated using `spwn doc [file name]`_
 >>>1616
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### TOGGLE
@@ -3412,7 +3499,7 @@ _Generated using `spwn doc [file name]`_
 >>>1049
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### TOUCH
@@ -3423,7 +3510,7 @@ _Generated using `spwn doc [file name]`_
 >>>1595
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >
@@ -3433,10 +3520,10 @@ _Generated using `spwn doc [file name]`_
 >**Printed**
 >
 >```spwn
->{EASING_RATE: EASING_RATE, FOLLOW: FOLLOW, X_MOD: X_MOD, MOVE_X: MOVE_X, DUAL_MODE: DUAL_MODE, TRIGGER_RED: TRIGGER_RED, MAIN_ONLY: MAIN_ONLY, BLOCK_A: BLOCK_A, LOCK_OBJECT_ROTATION: LOCK_OBJECT_ROTATION, EDITOR_LAYER_1: EDITOR_LAYER_1, SCALING: SCALING, ... (83 more)}
+>{OPACITY: OPACITY, Y_MOD: Y_MOD, ANIMATION_SPEED: ANIMATION_SPEED, SPAWN_DURATION: SPAWN_DURATION, DONT_ENTER: DONT_ENTER, VERTICAL_FLIP: VERTICAL_FLIP, HORIZONTAL_FLIP: HORIZONTAL_FLIP, HOLD: HOLD, Z_ORDER: Z_ORDER, TARGET_TYPE: TARGET_TYPE, MOVE_X: MOVE_X, ... (83 more)}
 >```
 >
->**Type:** `@dictionary`
+>**Type:** [`@dictionary`](std-docs/dictionary)
 >
 >## Values
 >
@@ -3448,7 +3535,7 @@ _Generated using `spwn doc [file name]`_
 >>ACTIVATE_GROUP
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3460,7 +3547,7 @@ _Generated using `spwn doc [file name]`_
 >>>56
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3471,7 +3558,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ACTIVATE_GROUP'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3505,7 +3592,7 @@ _Generated using `spwn doc [file name]`_
 >>ACTIVATE_ON_EXIT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3517,7 +3604,7 @@ _Generated using `spwn doc [file name]`_
 >>>93
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3528,7 +3615,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ACTIVATE_ON_EXIT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3562,7 +3649,7 @@ _Generated using `spwn doc [file name]`_
 >>ACTIVE_TRIGGER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3574,7 +3661,7 @@ _Generated using `spwn doc [file name]`_
 >>>36
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3585,7 +3672,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ACTIVE_TRIGGER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3619,7 +3706,7 @@ _Generated using `spwn doc [file name]`_
 >>ANIMATION_ID
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3631,7 +3718,7 @@ _Generated using `spwn doc [file name]`_
 >>>76
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3642,7 +3729,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ANIMATION_ID'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3676,7 +3763,7 @@ _Generated using `spwn doc [file name]`_
 >>ANIMATION_SPEED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3688,7 +3775,7 @@ _Generated using `spwn doc [file name]`_
 >>>107
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3699,7 +3786,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ANIMATION_SPEED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3733,7 +3820,7 @@ _Generated using `spwn doc [file name]`_
 >>BLENDING
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3745,7 +3832,7 @@ _Generated using `spwn doc [file name]`_
 >>>17
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3756,7 +3843,7 @@ _Generated using `spwn doc [file name]`_
 >>>'BLENDING'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3790,7 +3877,7 @@ _Generated using `spwn doc [file name]`_
 >>BLOCK_A
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3802,7 +3889,7 @@ _Generated using `spwn doc [file name]`_
 >>>80
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3813,7 +3900,7 @@ _Generated using `spwn doc [file name]`_
 >>>'BLOCK_A'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3847,7 +3934,7 @@ _Generated using `spwn doc [file name]`_
 >>BLOCK_B
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3859,7 +3946,7 @@ _Generated using `spwn doc [file name]`_
 >>>95
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3870,7 +3957,7 @@ _Generated using `spwn doc [file name]`_
 >>>'BLOCK_B'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3904,7 +3991,7 @@ _Generated using `spwn doc [file name]`_
 >>CENTER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3916,7 +4003,7 @@ _Generated using `spwn doc [file name]`_
 >>>71
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3927,7 +4014,7 @@ _Generated using `spwn doc [file name]`_
 >>>'CENTER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -3961,7 +4048,7 @@ _Generated using `spwn doc [file name]`_
 >>COLOR
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -3973,7 +4060,7 @@ _Generated using `spwn doc [file name]`_
 >>>21
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -3984,7 +4071,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COLOR'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4018,7 +4105,7 @@ _Generated using `spwn doc [file name]`_
 >>COLOR_2
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4030,7 +4117,7 @@ _Generated using `spwn doc [file name]`_
 >>>22
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4041,7 +4128,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COLOR_2'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4075,7 +4162,7 @@ _Generated using `spwn doc [file name]`_
 >>COLOR_2_HVS
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4087,7 +4174,7 @@ _Generated using `spwn doc [file name]`_
 >>>44
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4098,7 +4185,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COLOR_2_HVS'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4132,7 +4219,7 @@ _Generated using `spwn doc [file name]`_
 >>COLOR_2_HVS_ENABLED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4144,7 +4231,7 @@ _Generated using `spwn doc [file name]`_
 >>>42
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4155,7 +4242,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COLOR_2_HVS_ENABLED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4189,7 +4276,7 @@ _Generated using `spwn doc [file name]`_
 >>COMPARISON
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4201,7 +4288,7 @@ _Generated using `spwn doc [file name]`_
 >>>88
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4212,7 +4299,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COMPARISON'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4246,7 +4333,7 @@ _Generated using `spwn doc [file name]`_
 >>COPIED_COLOR_HVS
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4258,7 +4345,7 @@ _Generated using `spwn doc [file name]`_
 >>>49
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4269,7 +4356,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COPIED_COLOR_HVS'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4303,7 +4390,7 @@ _Generated using `spwn doc [file name]`_
 >>COPIED_COLOR_ID
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4315,7 +4402,7 @@ _Generated using `spwn doc [file name]`_
 >>>50
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4326,7 +4413,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COPIED_COLOR_ID'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4360,7 +4447,7 @@ _Generated using `spwn doc [file name]`_
 >>COPY_OPACITY
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4372,7 +4459,7 @@ _Generated using `spwn doc [file name]`_
 >>>60
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4383,7 +4470,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COPY_OPACITY'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4417,7 +4504,7 @@ _Generated using `spwn doc [file name]`_
 >>COUNT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4429,7 +4516,7 @@ _Generated using `spwn doc [file name]`_
 >>>77
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4440,7 +4527,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COUNT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4474,7 +4561,7 @@ _Generated using `spwn doc [file name]`_
 >>COUNT_MULTI_ACTIVATE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4486,7 +4573,7 @@ _Generated using `spwn doc [file name]`_
 >>>104
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4497,7 +4584,7 @@ _Generated using `spwn doc [file name]`_
 >>>'COUNT_MULTI_ACTIVATE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4531,7 +4618,7 @@ _Generated using `spwn doc [file name]`_
 >>DELAY
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4543,7 +4630,7 @@ _Generated using `spwn doc [file name]`_
 >>>91
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4554,7 +4641,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DELAY'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4588,7 +4675,7 @@ _Generated using `spwn doc [file name]`_
 >>DETAIL_ONLY
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4600,7 +4687,7 @@ _Generated using `spwn doc [file name]`_
 >>>66
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4611,7 +4698,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DETAIL_ONLY'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4645,7 +4732,7 @@ _Generated using `spwn doc [file name]`_
 >>DISABLE_ROTATION
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4657,7 +4744,7 @@ _Generated using `spwn doc [file name]`_
 >>>98
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4668,7 +4755,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DISABLE_ROTATION'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4702,7 +4789,7 @@ _Generated using `spwn doc [file name]`_
 >>DONT_ENTER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4714,7 +4801,7 @@ _Generated using `spwn doc [file name]`_
 >>>67
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4725,7 +4812,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DONT_ENTER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4759,7 +4846,7 @@ _Generated using `spwn doc [file name]`_
 >>DONT_FADE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4771,7 +4858,7 @@ _Generated using `spwn doc [file name]`_
 >>>64
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4782,7 +4869,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DONT_FADE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4816,7 +4903,7 @@ _Generated using `spwn doc [file name]`_
 >>DUAL_MODE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4828,7 +4915,7 @@ _Generated using `spwn doc [file name]`_
 >>>89
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4839,7 +4926,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DUAL_MODE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4873,7 +4960,7 @@ _Generated using `spwn doc [file name]`_
 >>DURATION
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4885,7 +4972,7 @@ _Generated using `spwn doc [file name]`_
 >>>10
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4896,7 +4983,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DURATION'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4930,7 +5017,7 @@ _Generated using `spwn doc [file name]`_
 >>DYNAMIC_BLOCK
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4942,7 +5029,7 @@ _Generated using `spwn doc [file name]`_
 >>>94
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -4953,7 +5040,7 @@ _Generated using `spwn doc [file name]`_
 >>>'DYNAMIC_BLOCK'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -4987,7 +5074,7 @@ _Generated using `spwn doc [file name]`_
 >>EASING
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -4999,7 +5086,7 @@ _Generated using `spwn doc [file name]`_
 >>>30
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5010,7 +5097,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EASING'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5044,7 +5131,7 @@ _Generated using `spwn doc [file name]`_
 >>EASING_RATE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5056,7 +5143,7 @@ _Generated using `spwn doc [file name]`_
 >>>85
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5067,7 +5154,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EASING_RATE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5101,7 +5188,7 @@ _Generated using `spwn doc [file name]`_
 >>EDITOR_DISABLE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5113,7 +5200,7 @@ _Generated using `spwn doc [file name]`_
 >>>102
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5124,7 +5211,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EDITOR_DISABLE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5158,7 +5245,7 @@ _Generated using `spwn doc [file name]`_
 >>EDITOR_LAYER_1
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5170,7 +5257,7 @@ _Generated using `spwn doc [file name]`_
 >>>20
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5181,7 +5268,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EDITOR_LAYER_1'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5215,7 +5302,7 @@ _Generated using `spwn doc [file name]`_
 >>EDITOR_LAYER_2
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5227,7 +5314,7 @@ _Generated using `spwn doc [file name]`_
 >>>61
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5238,7 +5325,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EDITOR_LAYER_2'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5272,7 +5359,7 @@ _Generated using `spwn doc [file name]`_
 >>EXCLUSIVE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5284,7 +5371,7 @@ _Generated using `spwn doc [file name]`_
 >>>86
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5295,7 +5382,7 @@ _Generated using `spwn doc [file name]`_
 >>>'EXCLUSIVE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5329,7 +5416,7 @@ _Generated using `spwn doc [file name]`_
 >>FADE_IN
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5341,7 +5428,7 @@ _Generated using `spwn doc [file name]`_
 >>>45
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5352,7 +5439,7 @@ _Generated using `spwn doc [file name]`_
 >>>'FADE_IN'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5386,7 +5473,7 @@ _Generated using `spwn doc [file name]`_
 >>FADE_OUT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5398,7 +5485,7 @@ _Generated using `spwn doc [file name]`_
 >>>47
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5409,7 +5496,7 @@ _Generated using `spwn doc [file name]`_
 >>>'FADE_OUT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5443,7 +5530,7 @@ _Generated using `spwn doc [file name]`_
 >>FOLLOW
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5455,7 +5542,7 @@ _Generated using `spwn doc [file name]`_
 >>>71
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5466,7 +5553,7 @@ _Generated using `spwn doc [file name]`_
 >>>'FOLLOW'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5500,7 +5587,7 @@ _Generated using `spwn doc [file name]`_
 >>GLOW_DISABLED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5512,7 +5599,7 @@ _Generated using `spwn doc [file name]`_
 >>>96
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5523,7 +5610,7 @@ _Generated using `spwn doc [file name]`_
 >>>'GLOW_DISABLED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5557,7 +5644,7 @@ _Generated using `spwn doc [file name]`_
 >>GROUPS
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5569,7 +5656,7 @@ _Generated using `spwn doc [file name]`_
 >>>57
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5580,7 +5667,7 @@ _Generated using `spwn doc [file name]`_
 >>>'GROUPS'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5614,7 +5701,7 @@ _Generated using `spwn doc [file name]`_
 >>GROUP_PARENT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5626,7 +5713,7 @@ _Generated using `spwn doc [file name]`_
 >>>34
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5637,7 +5724,7 @@ _Generated using `spwn doc [file name]`_
 >>>'GROUP_PARENT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5671,7 +5758,7 @@ _Generated using `spwn doc [file name]`_
 >>HIGH_DETAIL
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5683,7 +5770,7 @@ _Generated using `spwn doc [file name]`_
 >>>103
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5694,7 +5781,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HIGH_DETAIL'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5728,7 +5815,7 @@ _Generated using `spwn doc [file name]`_
 >>HOLD
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5740,7 +5827,7 @@ _Generated using `spwn doc [file name]`_
 >>>46
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5751,7 +5838,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HOLD'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5785,7 +5872,7 @@ _Generated using `spwn doc [file name]`_
 >>HOLD_MODE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5797,7 +5884,7 @@ _Generated using `spwn doc [file name]`_
 >>>81
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5808,7 +5895,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HOLD_MODE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5842,7 +5929,7 @@ _Generated using `spwn doc [file name]`_
 >>HORIZONTAL_FLIP
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5854,7 +5941,7 @@ _Generated using `spwn doc [file name]`_
 >>>4
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5865,7 +5952,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HORIZONTAL_FLIP'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5899,7 +5986,7 @@ _Generated using `spwn doc [file name]`_
 >>HVS
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5911,7 +5998,7 @@ _Generated using `spwn doc [file name]`_
 >>>43
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5922,7 +6009,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HVS'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -5956,7 +6043,7 @@ _Generated using `spwn doc [file name]`_
 >>HVS_ENABLED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -5968,7 +6055,7 @@ _Generated using `spwn doc [file name]`_
 >>>41
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -5979,7 +6066,7 @@ _Generated using `spwn doc [file name]`_
 >>>'HVS_ENABLED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6013,7 +6100,7 @@ _Generated using `spwn doc [file name]`_
 >>INTERVAL
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6025,7 +6112,7 @@ _Generated using `spwn doc [file name]`_
 >>>84
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6036,7 +6123,7 @@ _Generated using `spwn doc [file name]`_
 >>>'INTERVAL'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6070,7 +6157,7 @@ _Generated using `spwn doc [file name]`_
 >>ITEM
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6082,7 +6169,7 @@ _Generated using `spwn doc [file name]`_
 >>>80
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6093,7 +6180,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ITEM'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6127,7 +6214,7 @@ _Generated using `spwn doc [file name]`_
 >>LINKED_GROUP
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6139,7 +6226,7 @@ _Generated using `spwn doc [file name]`_
 >>>108
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6150,7 +6237,7 @@ _Generated using `spwn doc [file name]`_
 >>>'LINKED_GROUP'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6184,7 +6271,7 @@ _Generated using `spwn doc [file name]`_
 >>LOCK_OBJECT_ROTATION
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6196,7 +6283,7 @@ _Generated using `spwn doc [file name]`_
 >>>70
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6207,7 +6294,7 @@ _Generated using `spwn doc [file name]`_
 >>>'LOCK_OBJECT_ROTATION'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6241,7 +6328,7 @@ _Generated using `spwn doc [file name]`_
 >>LOCK_TO_PLAYER_X
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6253,7 +6340,7 @@ _Generated using `spwn doc [file name]`_
 >>>58
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6264,7 +6351,7 @@ _Generated using `spwn doc [file name]`_
 >>>'LOCK_TO_PLAYER_X'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6298,7 +6385,7 @@ _Generated using `spwn doc [file name]`_
 >>LOCK_TO_PLAYER_Y
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6310,7 +6397,7 @@ _Generated using `spwn doc [file name]`_
 >>>59
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6321,7 +6408,7 @@ _Generated using `spwn doc [file name]`_
 >>>'LOCK_TO_PLAYER_Y'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6355,7 +6442,7 @@ _Generated using `spwn doc [file name]`_
 >>MAIN_ONLY
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6367,7 +6454,7 @@ _Generated using `spwn doc [file name]`_
 >>>65
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6378,7 +6465,7 @@ _Generated using `spwn doc [file name]`_
 >>>'MAIN_ONLY'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6412,7 +6499,7 @@ _Generated using `spwn doc [file name]`_
 >>MAX_SPEED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6424,7 +6511,7 @@ _Generated using `spwn doc [file name]`_
 >>>105
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6435,7 +6522,7 @@ _Generated using `spwn doc [file name]`_
 >>>'MAX_SPEED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6469,7 +6556,7 @@ _Generated using `spwn doc [file name]`_
 >>MOVE_X
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6481,7 +6568,7 @@ _Generated using `spwn doc [file name]`_
 >>>28
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6492,7 +6579,7 @@ _Generated using `spwn doc [file name]`_
 >>>'MOVE_X'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6526,7 +6613,7 @@ _Generated using `spwn doc [file name]`_
 >>MOVE_Y
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6538,7 +6625,7 @@ _Generated using `spwn doc [file name]`_
 >>>29
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6549,7 +6636,7 @@ _Generated using `spwn doc [file name]`_
 >>>'MOVE_Y'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6583,7 +6670,7 @@ _Generated using `spwn doc [file name]`_
 >>MULTI_TRIGGER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6595,7 +6682,7 @@ _Generated using `spwn doc [file name]`_
 >>>87
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6606,7 +6693,7 @@ _Generated using `spwn doc [file name]`_
 >>>'MULTI_TRIGGER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6640,7 +6727,7 @@ _Generated using `spwn doc [file name]`_
 >>OBJ_ID
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6652,7 +6739,7 @@ _Generated using `spwn doc [file name]`_
 >>>1
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6663,7 +6750,7 @@ _Generated using `spwn doc [file name]`_
 >>>'OBJ_ID'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6697,7 +6784,7 @@ _Generated using `spwn doc [file name]`_
 >>OPACITY
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6709,7 +6796,7 @@ _Generated using `spwn doc [file name]`_
 >>>35
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6720,7 +6807,7 @@ _Generated using `spwn doc [file name]`_
 >>>'OPACITY'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6754,7 +6841,7 @@ _Generated using `spwn doc [file name]`_
 >>PICKUP_MODE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6766,7 +6853,7 @@ _Generated using `spwn doc [file name]`_
 >>>79
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6777,7 +6864,7 @@ _Generated using `spwn doc [file name]`_
 >>>'PICKUP_MODE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6811,7 +6898,7 @@ _Generated using `spwn doc [file name]`_
 >>PLAYER_COLOR_1
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6823,7 +6910,7 @@ _Generated using `spwn doc [file name]`_
 >>>15
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6834,7 +6921,7 @@ _Generated using `spwn doc [file name]`_
 >>>'PLAYER_COLOR_1'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6868,7 +6955,7 @@ _Generated using `spwn doc [file name]`_
 >>PLAYER_COLOR_2
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6880,7 +6967,7 @@ _Generated using `spwn doc [file name]`_
 >>>16
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6891,7 +6978,7 @@ _Generated using `spwn doc [file name]`_
 >>>'PLAYER_COLOR_2'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6925,7 +7012,7 @@ _Generated using `spwn doc [file name]`_
 >>PORTAL_CHECKED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6937,7 +7024,7 @@ _Generated using `spwn doc [file name]`_
 >>>13
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -6948,7 +7035,7 @@ _Generated using `spwn doc [file name]`_
 >>>'PORTAL_CHECKED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -6982,7 +7069,7 @@ _Generated using `spwn doc [file name]`_
 >>PULSE_HSV
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -6994,7 +7081,7 @@ _Generated using `spwn doc [file name]`_
 >>>48
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7005,7 +7092,7 @@ _Generated using `spwn doc [file name]`_
 >>>'PULSE_HSV'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7039,7 +7126,7 @@ _Generated using `spwn doc [file name]`_
 >>RANDOMIZE_START
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7051,7 +7138,7 @@ _Generated using `spwn doc [file name]`_
 >>>106
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7062,7 +7149,7 @@ _Generated using `spwn doc [file name]`_
 >>>'RANDOMIZE_START'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7096,7 +7183,7 @@ _Generated using `spwn doc [file name]`_
 >>ROTATE_DEGREES
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7108,7 +7195,7 @@ _Generated using `spwn doc [file name]`_
 >>>68
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7119,7 +7206,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ROTATE_DEGREES'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7153,7 +7240,7 @@ _Generated using `spwn doc [file name]`_
 >>ROTATION
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7165,7 +7252,7 @@ _Generated using `spwn doc [file name]`_
 >>>6
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7176,7 +7263,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ROTATION'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7210,7 +7297,7 @@ _Generated using `spwn doc [file name]`_
 >>ROTATION_SPEED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7222,7 +7309,7 @@ _Generated using `spwn doc [file name]`_
 >>>97
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7233,7 +7320,7 @@ _Generated using `spwn doc [file name]`_
 >>>'ROTATION_SPEED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7267,7 +7354,7 @@ _Generated using `spwn doc [file name]`_
 >>SCALING
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7279,7 +7366,7 @@ _Generated using `spwn doc [file name]`_
 >>>32
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7290,7 +7377,7 @@ _Generated using `spwn doc [file name]`_
 >>>'SCALING'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7324,7 +7411,7 @@ _Generated using `spwn doc [file name]`_
 >>SPAWN_DURATION
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7336,7 +7423,7 @@ _Generated using `spwn doc [file name]`_
 >>>63
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7347,7 +7434,7 @@ _Generated using `spwn doc [file name]`_
 >>>'SPAWN_DURATION'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7381,7 +7468,7 @@ _Generated using `spwn doc [file name]`_
 >>SPAWN_TRIGGERED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7393,7 +7480,7 @@ _Generated using `spwn doc [file name]`_
 >>>62
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7404,7 +7491,7 @@ _Generated using `spwn doc [file name]`_
 >>>'SPAWN_TRIGGERED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7438,7 +7525,7 @@ _Generated using `spwn doc [file name]`_
 >>SPEED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7450,7 +7537,7 @@ _Generated using `spwn doc [file name]`_
 >>>90
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7461,7 +7548,7 @@ _Generated using `spwn doc [file name]`_
 >>>'SPEED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7495,7 +7582,7 @@ _Generated using `spwn doc [file name]`_
 >>STRENGTH
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7507,7 +7594,7 @@ _Generated using `spwn doc [file name]`_
 >>>75
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7518,7 +7605,7 @@ _Generated using `spwn doc [file name]`_
 >>>'STRENGTH'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7552,7 +7639,7 @@ _Generated using `spwn doc [file name]`_
 >>SUBTRACT_COUNT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7564,7 +7651,7 @@ _Generated using `spwn doc [file name]`_
 >>>78
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7575,7 +7662,7 @@ _Generated using `spwn doc [file name]`_
 >>>'SUBTRACT_COUNT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7609,7 +7696,7 @@ _Generated using `spwn doc [file name]`_
 >>TARGET
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7621,7 +7708,7 @@ _Generated using `spwn doc [file name]`_
 >>>51
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7632,7 +7719,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TARGET'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7666,7 +7753,7 @@ _Generated using `spwn doc [file name]`_
 >>TARGET_COLOR
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7678,7 +7765,7 @@ _Generated using `spwn doc [file name]`_
 >>>23
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7689,7 +7776,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TARGET_COLOR'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7723,7 +7810,7 @@ _Generated using `spwn doc [file name]`_
 >>TARGET_POS
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7735,7 +7822,7 @@ _Generated using `spwn doc [file name]`_
 >>>71
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7746,7 +7833,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TARGET_POS'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7780,7 +7867,7 @@ _Generated using `spwn doc [file name]`_
 >>TARGET_POS_AXES
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7792,7 +7879,7 @@ _Generated using `spwn doc [file name]`_
 >>>101
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7803,7 +7890,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TARGET_POS_AXES'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7837,7 +7924,7 @@ _Generated using `spwn doc [file name]`_
 >>TARGET_TYPE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7849,7 +7936,7 @@ _Generated using `spwn doc [file name]`_
 >>>52
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7860,7 +7947,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TARGET_TYPE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7894,7 +7981,7 @@ _Generated using `spwn doc [file name]`_
 >>TEXT
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7906,7 +7993,7 @@ _Generated using `spwn doc [file name]`_
 >>>31
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7917,7 +8004,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TEXT'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -7951,7 +8038,7 @@ _Generated using `spwn doc [file name]`_
 >>TIMES_360
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -7963,7 +8050,7 @@ _Generated using `spwn doc [file name]`_
 >>>69
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -7974,7 +8061,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TIMES_360'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8008,7 +8095,7 @@ _Generated using `spwn doc [file name]`_
 >>TOGGLE_MODE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8020,7 +8107,7 @@ _Generated using `spwn doc [file name]`_
 >>>82
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8031,7 +8118,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TOGGLE_MODE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8065,7 +8152,7 @@ _Generated using `spwn doc [file name]`_
 >>TOUCH_TRIGGERED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8077,7 +8164,7 @@ _Generated using `spwn doc [file name]`_
 >>>11
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8088,7 +8175,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TOUCH_TRIGGERED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8122,7 +8209,7 @@ _Generated using `spwn doc [file name]`_
 >>TRIGGER_BLUE
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8134,7 +8221,7 @@ _Generated using `spwn doc [file name]`_
 >>>9
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8145,7 +8232,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TRIGGER_BLUE'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8179,7 +8266,7 @@ _Generated using `spwn doc [file name]`_
 >>TRIGGER_GREEN
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8191,7 +8278,7 @@ _Generated using `spwn doc [file name]`_
 >>>8
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8202,7 +8289,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TRIGGER_GREEN'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8236,7 +8323,7 @@ _Generated using `spwn doc [file name]`_
 >>TRIGGER_RED
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8248,7 +8335,7 @@ _Generated using `spwn doc [file name]`_
 >>>7
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8259,7 +8346,7 @@ _Generated using `spwn doc [file name]`_
 >>>'TRIGGER_RED'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8293,7 +8380,7 @@ _Generated using `spwn doc [file name]`_
 >>USE_TARGET
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8305,7 +8392,7 @@ _Generated using `spwn doc [file name]`_
 >>>100
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8316,7 +8403,7 @@ _Generated using `spwn doc [file name]`_
 >>>'USE_TARGET'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8350,7 +8437,7 @@ _Generated using `spwn doc [file name]`_
 >>VERTICAL_FLIP
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8362,7 +8449,7 @@ _Generated using `spwn doc [file name]`_
 >>>5
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8373,7 +8460,7 @@ _Generated using `spwn doc [file name]`_
 >>>'VERTICAL_FLIP'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8407,7 +8494,7 @@ _Generated using `spwn doc [file name]`_
 >>X
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8419,7 +8506,7 @@ _Generated using `spwn doc [file name]`_
 >>>2
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8430,7 +8517,7 @@ _Generated using `spwn doc [file name]`_
 >>>'X'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8464,7 +8551,7 @@ _Generated using `spwn doc [file name]`_
 >>X_MOD
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8476,7 +8563,7 @@ _Generated using `spwn doc [file name]`_
 >>>72
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8487,7 +8574,7 @@ _Generated using `spwn doc [file name]`_
 >>>'X_MOD'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8521,7 +8608,7 @@ _Generated using `spwn doc [file name]`_
 >>Y
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8533,7 +8620,7 @@ _Generated using `spwn doc [file name]`_
 >>>3
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8544,7 +8631,7 @@ _Generated using `spwn doc [file name]`_
 >>>'Y'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8578,7 +8665,7 @@ _Generated using `spwn doc [file name]`_
 >>YELLOW_TELEPORTATION_PORTAL_DISTANC
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8590,7 +8677,7 @@ _Generated using `spwn doc [file name]`_
 >>>54
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8601,7 +8688,7 @@ _Generated using `spwn doc [file name]`_
 >>>'YELLOW_TELEPORTATION_PORTAL_DISTANC'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8635,7 +8722,7 @@ _Generated using `spwn doc [file name]`_
 >>Y_MOD
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8647,7 +8734,7 @@ _Generated using `spwn doc [file name]`_
 >>>73
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8658,7 +8745,7 @@ _Generated using `spwn doc [file name]`_
 >>>'Y_MOD'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8692,7 +8779,7 @@ _Generated using `spwn doc [file name]`_
 >>Y_OFFSET
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8704,7 +8791,7 @@ _Generated using `spwn doc [file name]`_
 >>>92
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8715,7 +8802,7 @@ _Generated using `spwn doc [file name]`_
 >>>'Y_OFFSET'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8749,7 +8836,7 @@ _Generated using `spwn doc [file name]`_
 >>Z_LAYER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8761,7 +8848,7 @@ _Generated using `spwn doc [file name]`_
 >>>24
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8772,7 +8859,7 @@ _Generated using `spwn doc [file name]`_
 >>>'Z_LAYER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern
@@ -8806,7 +8893,7 @@ _Generated using `spwn doc [file name]`_
 >>Z_ORDER
 >>```
 >>
->>**Type:** `@object_key`
+>>**Type:** [`@object_key`](std-docs/object_key)
 >>
 >>## Values
 >>
@@ -8818,7 +8905,7 @@ _Generated using `spwn doc [file name]`_
 >>>25
 >>>```
 >>>
->>>**Type:** `@number`
+>>>**Type:** [`@number`](std-docs/number)
 >>>
 >>
 >>### name
@@ -8829,7 +8916,7 @@ _Generated using `spwn doc [file name]`_
 >>>'Z_ORDER'
 >>>```
 >>>
->>>**Type:** `@string`
+>>>**Type:** [`@string`](std-docs/string)
 >>>
 >>
 >>### pattern

@@ -33,6 +33,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@item`](std-docs/item)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |

@@ -40,6 +40,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -74,6 +77,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@object`](std-docs/object)
 >
 >**Arguments:**
 >

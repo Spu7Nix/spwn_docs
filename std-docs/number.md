@@ -23,6 +23,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 
 ### ceil
 
@@ -45,6 +48,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 
 ### clamp
 
@@ -66,6 +72,9 @@
 >$.assert(2.clamp(7,10) == 7)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -96,6 +105,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 
 ### lerp
 
@@ -117,6 +129,9 @@
 >$.assert((0.7).lerp(0,2) == 1.4)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -147,6 +162,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -174,6 +192,9 @@
 >$.assert(2.map(1, 4, 5, 11) == 7)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >
@@ -206,6 +227,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 
 ### round
 
@@ -227,6 +251,9 @@
 >$.assert((1.5).round() == 2)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 
 ### sqrt
@@ -250,6 +277,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 
 ### to\_fixed
 
@@ -271,6 +301,9 @@
 >$.assert(1.to_fixed(2) == '1.00')
 >```
 >
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -300,6 +333,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -327,6 +363,9 @@
 >$.assert(8.clamp(7,10) == 8 && 11.clamp(7,10) == 10)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number)
 >
 >**Arguments:**
 >

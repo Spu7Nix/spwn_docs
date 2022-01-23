@@ -24,3 +24,6 @@
 >```
 >
 >
+>**Returns:** 
+>[`@range`](std-docs/range)
+>

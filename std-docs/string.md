@@ -16,6 +16,9 @@
 >
 >_Checks if the string contains a string._
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -37,6 +40,9 @@
 >
 >_Checks if the string starts with a string._
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -54,6 +60,9 @@
 >
 >**Type:** `@macro`
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -70,6 +79,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[[@number]]
 >
 >**Arguments:**
 >
@@ -104,6 +116,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -124,6 +139,9 @@
 >**Description:**
 >
 >_Gets the index of a string, if it doesn't exists returns null._
+>
+>**Returns:** 
+>[`@number`](std-docs/number) or `@NULL`
 >
 >**Arguments:**
 >
@@ -154,6 +172,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 
 ### is\_empty
 
@@ -177,6 +198,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 
 ### is\_lower
 
@@ -192,6 +216,9 @@
 >
 >_Checks if whole string is lowercase, ignores characters that is not in the alphabet._
 >
+>**Returns:** 
+>`@bool`
+>
 
 ### is\_upper
 
@@ -206,6 +233,9 @@
 >**Description:**
 >
 >_Checks if whole string is uppercase, ignores characters that is not in the alphabet._
+>
+>**Returns:** 
+>`@bool`
 >
 
 ### join
@@ -230,6 +260,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -250,6 +283,9 @@
 >**Description:**
 >
 >_Returns a left-padded version of the string_
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -284,6 +320,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -304,6 +343,9 @@
 >**Description:**
 >
 >_Makes whole string lowercase._
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 
 ### overwrite
@@ -327,6 +369,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -349,6 +394,9 @@
 >**Description:**
 >
 >_Returns a right-padded version of the string_
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -385,6 +433,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -401,6 +452,9 @@
 >```
 >
 >**Type:** `@macro`
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -423,6 +477,9 @@
 >**Description:**
 >
 >_Reverses the string._
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 
 ### split
@@ -447,6 +504,9 @@
 >```
 >
 >
+>**Returns:** 
+>[@string]
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -468,6 +528,9 @@
 >
 >_Checks if the string starts with a string._
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -488,6 +551,9 @@
 >**Description:**
 >
 >_Gets a substring beginning at the specified start and ending at the specified end._
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -519,6 +585,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 
 ### trim
 
@@ -547,6 +616,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -567,4 +639,7 @@
 >**Description:**
 >
 >_Makes whole string uppercase._
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >

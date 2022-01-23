@@ -23,6 +23,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@set`](std-docs/set)
+>
 
 ## Macros
 
@@ -47,6 +50,9 @@
 >//`@set::from(my_objects, 5, 10)` is also valid
 >```
 >
+>
+>**Returns:** 
+>[`@set`](std-docs/set)
 >
 >**Arguments:**
 >
@@ -92,6 +98,9 @@
 >let shifted_objects = objects.map(o => o[obj_props.X] + 30)
 >```
 >
+>
+>**Returns:** 
+>[`@set`](std-docs/set)
 >
 >**Arguments:**
 >
@@ -164,6 +173,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@set`](std-docs/set)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -187,6 +199,9 @@
 >**Description:**
 >
 >_Replaces a given group with another given group, returning a new set with the modified objects_
+>
+>**Returns:** 
+>[`@set`](std-docs/set)
 >
 >**Arguments:**
 >
@@ -217,6 +232,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@set`](std-docs/set)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -240,6 +258,9 @@
 >**Description:**
 >
 >_Adds or modifies the given prop and value pair for every object in the set, returning a new set with the modified objects_
+>
+>**Returns:** 
+>[`@set`](std-docs/set)
 >
 >**Arguments:**
 >

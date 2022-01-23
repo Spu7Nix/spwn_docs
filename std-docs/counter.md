@@ -28,6 +28,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@counter`](std-docs/counter)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -147,6 +150,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@counter`](std-docs/counter)
+>
 
 ### compare
 
@@ -172,6 +178,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// c1 is now -5, c2 is now 0
 >```
 >
+>
+>**Returns:** 
+>in [-1, 0, 1]
 >
 >**Arguments:**
 >
@@ -334,6 +343,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@event`](std-docs/event)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -461,6 +473,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -524,6 +539,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@object`](std-docs/object)
+>
 
 ## Operator Implementations
 
@@ -579,6 +597,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// b is now true
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >
@@ -655,6 +676,9 @@ The difference between numbers and counters, is that counters can be modified in
 >
 >_Formats the counter to a printable string_
 >
+>**Returns:** 
+>[`@string`](std-docs/string)
+>
 
 ### \_divide\_
 
@@ -709,6 +733,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@counter`](std-docs/counter)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -738,6 +765,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// eq is now true
 >```
 >
+>
+>**Returns:** 
+>`@bool`
 >
 >**Arguments:**
 >
@@ -793,6 +823,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -822,6 +855,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// less is now false
 >```
 >
+>
+>**Returns:** 
+>`@bool`
 >
 >**Arguments:**
 >
@@ -853,6 +889,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>[`@counter`](std-docs/counter)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -882,6 +921,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// c2 is 2
 >```
 >
+>
+>**Returns:** 
+>[`@counter`](std-docs/counter)
 >
 >**Arguments:**
 >
@@ -943,6 +985,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -972,6 +1017,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// more is now true
 >```
 >
+>
+>**Returns:** 
+>`@bool`
 >
 >**Arguments:**
 >
@@ -1033,6 +1081,9 @@ The difference between numbers and counters, is that counters can be modified in
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -1062,6 +1113,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// c2 is 20
 >```
 >
+>
+>**Returns:** 
+>[`@counter`](std-docs/counter)
 >
 >**Arguments:**
 >
@@ -1154,6 +1208,9 @@ The difference between numbers and counters, is that counters can be modified in
 >// c2 is 100
 >```
 >
+>
+>**Returns:** 
+>[`@counter`](std-docs/counter)
 >
 >**Arguments:**
 >

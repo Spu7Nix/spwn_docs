@@ -53,6 +53,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@event`](std-docs/event)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |

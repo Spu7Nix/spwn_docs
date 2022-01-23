@@ -58,6 +58,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -93,6 +96,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -123,6 +129,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 
 ### items
 
@@ -149,6 +158,9 @@
 >$.assert(['apple', 10] in wares.items())
 >```
 >
+>
+>**Returns:** 
+>[@array]
 >
 
 ### keys
@@ -177,6 +189,9 @@
 >```
 >
 >
+>**Returns:** 
+>[@string]
+>
 
 ### map
 
@@ -199,6 +214,9 @@
 >$.assert('k' in dict.map((k, v) => k[v]))
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array)
 >
 >**Arguments:**
 >
@@ -266,4 +284,7 @@
 >$.assert(wares.values().sort() == [5, 10, 1000])
 >```
 >
+>
+>**Returns:** 
+>[_]
 >

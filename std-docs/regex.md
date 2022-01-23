@@ -16,6 +16,9 @@
 >
 >_Create a new instance of regex_
 >
+>**Returns:** 
+>[`@regex`](std-docs/regex)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -39,6 +42,9 @@
 >
 >_Regex find all matching indices of the string argument_
 >
+>**Returns:** 
+>[[@number]]
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -59,6 +65,9 @@
 >**Description:**
 >
 >_Regex find all groups of the string argument, their range, text, and name_
+>
+>**Returns:** 
+>[@dictionary]
 >
 >**Arguments:**
 >
@@ -81,6 +90,9 @@
 >
 >_Checks if the regex matches a string argument_
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -101,6 +113,9 @@
 >**Description:**
 >
 >_Regex replace the contents of a string_
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >

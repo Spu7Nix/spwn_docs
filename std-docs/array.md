@@ -26,6 +26,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -57,6 +60,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -86,6 +92,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@number`](std-docs/number)
+>
 
 ### center
 
@@ -113,6 +122,9 @@
 >$.assert(arr.center(true) == 5)
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >
@@ -167,6 +179,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -203,6 +218,9 @@
 >```
 >
 >
+>**Returns:** 
+>[(@dictionary \| @array)]
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -231,6 +249,9 @@
 >$.assert(arr.filter(el => el > 3) == [4, 5])
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array) or `@NULL`
 >
 >**Arguments:**
 >
@@ -262,6 +283,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@array`](std-docs/array)
+>
 
 ### index
 
@@ -285,6 +309,9 @@
 >$.assert(fruit.index('carrot') == null)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number) or `@NULL`
 >
 >**Arguments:**
 >
@@ -316,6 +343,9 @@
 >```
 >
 >
+>**Returns:** 
+>[@number]
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -345,6 +375,9 @@
 >$.assert(arr.index_last(-3) == null)
 >```
 >
+>
+>**Returns:** 
+>[`@number`](std-docs/number) or `@NULL`
 >
 >**Arguments:**
 >
@@ -376,6 +409,9 @@
 >$.assert(arr == [1, 5, 7, 3, 2])
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >
@@ -409,6 +445,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 
 ### join
 
@@ -431,6 +470,9 @@
 >$.assert(fruit.join(' ') == 'apple banana mango')
 >```
 >
+>
+>**Returns:** 
+>[`@string`](std-docs/string)
 >
 >**Arguments:**
 >
@@ -466,6 +508,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -494,6 +539,9 @@
 >$.assert(arr.map(el => el * 2) == [2, 4, 6, 8, 10])
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array) or `@NULL`
 >
 >**Arguments:**
 >
@@ -524,6 +572,9 @@
 >$.assert(arr.map_index((el, i) => el + i) == [1, 3, 5, 7, 9])
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array) or `@NULL`
 >
 >**Arguments:**
 >
@@ -558,6 +609,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -590,6 +644,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -618,6 +675,9 @@
 >$.assert(arr.most() == 5)
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >
@@ -649,6 +709,9 @@
 >$.assert(smaller == [1, 3, 2])
 >```
 >
+>
+>**Returns:** 
+>[@array]
 >
 >**Arguments:**
 >
@@ -704,6 +767,9 @@
 >$.assert(arr == [1, 3])
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >
@@ -769,6 +835,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -803,6 +872,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -833,6 +905,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@array`](std-docs/array)
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -862,6 +937,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@array`](std-docs/array)
+>
 
 ### scan
 
@@ -888,6 +966,9 @@
 >$.assert(x_1 == [-10, -20, -60])
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array)
 >
 >**Arguments:**
 >
@@ -920,6 +1001,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 
 ### shuffle
 
@@ -942,6 +1026,9 @@
 >$.print(arr.shuffle())
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array)
 >
 
 ### sort
@@ -968,6 +1055,9 @@
 >$.assert(arr.sort(comp = (a, b) => a >= b) == [5, 5, 3, 2, 1])
 >```
 >
+>
+>**Returns:** 
+>[`@array`](std-docs/array)
 >
 >**Arguments:**
 >
@@ -999,6 +1089,9 @@
 >```
 >
 >
+>**Returns:** 
+>`@bool`
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -1028,6 +1121,9 @@
 >$.assert(x.split([5, 7]) == [[0,1,2,3,4],[5,6],[7,8,9]])
 >```
 >
+>
+>**Returns:** 
+>[@array]
 >
 >**Arguments:**
 >
@@ -1060,6 +1156,9 @@
 >```
 >
 >
+>**Returns:** 
+>any
+>
 >**Arguments:**
 >
 >| # | name | type | default value | description |
@@ -1089,6 +1188,9 @@
 >```
 >
 >
+>**Returns:** 
+>[`@array`](std-docs/array)
+>
 
 ### unshift
 
@@ -1112,6 +1214,9 @@
 >$.assert(arr == [5, 1, 5, 3, 2])
 >```
 >
+>
+>**Returns:** 
+>any
 >
 >**Arguments:**
 >

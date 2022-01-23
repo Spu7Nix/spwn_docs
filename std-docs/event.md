@@ -1,4 +1,5 @@
 # **@event**
+?> An api for runtime events, like player input, collisions, etc.
 
 ## Constructors
 
