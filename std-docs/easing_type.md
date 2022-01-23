@@ -1,13 +1,14 @@
-  
-# **@easing_type**: 
- 
-## Operator Implementations:
+# **@easing_type**
 
-## **\_display\_**:
+## Operator Implementations
 
-> **Printed:** 
+### \_display\_
+
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
 >

@@ -1,27 +1,26 @@
-# **@range**: 
+# **@range**
 
-## **start**:
+## Macros
 
-> **Type:** `@number`
-> 
-> ## Description:
+### reverse
+
+>**Printed**
 >
-> _Returns the starting value of the range_
-
-
-## **step_size**:
-
-> **Type:** `@number`
-> 
-> ## Description:
+>```spwn
+>(self) { /* ... */ }
+>```
 >
-> _Returns the step size of the range_
-
-
-## **end**:
-
-> **Type:** `@number`
-> 
-> ## Description:
+>**Type:** `@macro`
 >
-> _Returns the end value of range_
+>**Description:**
+>
+>_Reverses the range._
+>
+>**Example:**
+>
+>```spwn
+>let range = 10..5..50
+>$.assert(range.reverse() == 50..5..10)
+>```
+>
+>

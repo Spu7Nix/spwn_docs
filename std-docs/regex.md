@@ -1,71 +1,111 @@
-  
-# **@regex**: 
- 
-## Constructors:
+# **@regex**
 
-## **new**:
+## Constructors
 
-> **Printed:** 
+### new
+
+>**Printed**
+>
 >```spwn
->(re: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Create a new instance of regex_
->## Arguments:
+>(re: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Create a new instance of regex_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`re`** | @string | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
+>| 1 | `re` | [`@string`](std-docs/string) | |A regex string. Make sure to use two backslashes to escape selectors instead of one or it will error |
 >
 
-## Macros:
+## Macros
 
-## **findall**:
+### find\_all
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, match: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Regex find all matche indices of the string argument_
->## Arguments:
+>(self, m: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Regex find all matching indices of the string argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`match`** | @string | | |
+>| 1 | `m` | [`@string`](std-docs/string) | | |
 >
 
-## **match**:
+### find\_groups
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, match: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if the regex matches a string argument_
->## Arguments:
+>(self, m: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Regex find all groups of the string argument, their range, text, and name_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`match`** | @string | | |
+>| 1 | `m` | [`@string`](std-docs/string) | | |
 >
 
-## **replace**:
+### matches
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, to_replace: @string, replacer: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Regex replace the contents of a string_
->## Arguments:
+>(self, m: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if the regex matches a string argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`to_replace`** | @string | | |
->| 2 | **`replacer`** | @string | | |
+>| 1 | `m` | [`@string`](std-docs/string) | | |
+>
+
+### replace
+
+>**Printed**
+>
+>```spwn
+>(self, to_replace: @string, replacer: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Regex replace the contents of a string_
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `to_replace` | [`@string`](std-docs/string) | | |
+>| 2 | `replacer` | [`@string`](std-docs/string) | | |
 >

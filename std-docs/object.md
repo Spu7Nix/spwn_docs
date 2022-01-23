@@ -1,57 +1,84 @@
-  
-# **@object**: 
- 
-## Macros:
+# **@object**
 
-## **add**:
+## Macros
 
-> **Printed:** 
+### add
+
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
 >
 
-## **add\_groups**:
+### add\_groups
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, groups: @group | [@group]) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, groups: (@group | [@group])) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`groups`** | @group or [@group] | | |
+>| 1 | `groups` | [`@group`](std-docs/group) or an [`@array`](std-docs/array) of [`@group`](std-docs/group) elements | | |
 >
 
-## **set**:
+### has\_key
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, key: @object_key, value) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, key: @object_key) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @object_key | | |
->| 2 | **`value`** |any | | |
+>| 1 | `key` | [`@object_key`](std-docs/object_key) | | |
 >
 
-## **with**:
+### set
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, key: @object_key, value) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, key: @object_key, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @object_key | | |
->| 2 | **`value`** |any | | |
+>| 1 | `key` | [`@object_key`](std-docs/object_key) | | |
+>| 2 | `value` |any | | |
+>
+
+### with
+
+>**Printed**
+>
+>```spwn
+>(self, key: @object_key, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `key` | [`@object_key`](std-docs/object_key) | | |
+>| 2 | `value` |any | | |
 >

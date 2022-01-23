@@ -1,112 +1,141 @@
-  
-# **@http**: 
- 
-## Macros:
+# **@http**
 
-## **delete**:
+## Macros
 
-> **Printed:** 
+### delete
+
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a put request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a put request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >
 
-## **get**:
+### get
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a get request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a get request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >
 
-## **head**:
+### head
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a head request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a head request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >
 
-## **patch**:
+### patch
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a patch request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a patch request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >
 
-## **post**:
+### post
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a post request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a post request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >
 
-## **put**:
+### put
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(url: @string, headers: @dictionary = {}, body = '') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes a put request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
->## Arguments:
+>(url: @string, headers: @dictionary = {}, body = '') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes a put request to the provided URL. A dictionary of headers can optionally be passed in as a second argument_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`url`** | @string | | |
->| 2 | `headers` | @dictionary | `{}` | |
+>| 1 | `url` | [`@string`](std-docs/string) | | |
+>| 2 | `headers` | [`@dictionary`](std-docs/dictionary) | `{}` | |
 >| 3 | `body` |any | `''` | |
 >

@@ -1,48 +1,337 @@
-  
-# **@number**: 
- 
-## Macros:
+# **@number**
 
-## **constrain**:
+## Macros
 
-> **Printed:** 
+### abs
+
+>**Printed**
+>
 >```spwn
->(self, min: @number, max: @number) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Constrains a number between two numbers_
->### Example: 
->```spwn
-> $.assert(2.constrain(7,10) == 7)
+>(self) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the absolute value of the number_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((-1).abs() == 1)
+>```
+>
+>
+
+### ceil
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the smallest integer greater than or equal to the number_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((1.5).ceil() == 2)
+>```
+>
+>
+
+### clamp
+
+>**Printed**
+>
+>```spwn
+>(self, min: @number, max: @number) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Constrains a number between two numbers_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(2.clamp(7,10) == 7)
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`min`** | @number | | |
->| 2 | **`max`** | @number | | |
+>| 1 | `min` | [`@number`](std-docs/number) | | |
+>| 2 | `max` | [`@number`](std-docs/number) | | |
 >
 
-## **map**:
+### floor
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, istart: @number, istop: @number, ostart: @number, ostop: @number) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Maps a number linearily from one interval to another_
->### Example: 
->```spwn
-> $.assert(2.map(1, 4, 5, 11) == 7)
+>(self) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the largest integer less than or equal to the number_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((1.5).floor() == 1)
+>```
+>
+>
+
+### lerp
+
+>**Printed**
+>
+>```spwn
+>(self, lower, higher) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the linear interpolation between the two numbers_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((0.7).lerp(0,2) == 1.4)
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`istart`** | @number | | |
->| 2 | **`istop`** | @number | | |
->| 3 | **`ostart`** | @number | | |
->| 4 | **`ostop`** | @number | | |
+>| 1 | `lower` |any | | |
+>| 2 | `higher` |any | | |
+>
+
+### log
+
+>**Printed**
+>
+>```spwn
+>(self, base = 2.718281828459045) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the logarithm of the number (default: natural logarithm)_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(2.log() == 0.6931471805599453)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `base` |any | `2.718281828459045` | |
+>
+
+### map
+
+>**Printed**
+>
+>```spwn
+>(self, istart: @number, istop: @number, ostart: @number, ostop: @number) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Maps a number linearily from one interval to another_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(2.map(1, 4, 5, 11) == 7)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `istart` | [`@number`](std-docs/number) | | |
+>| 2 | `istop` | [`@number`](std-docs/number) | | |
+>| 3 | `ostart` | [`@number`](std-docs/number) | | |
+>| 4 | `ostop` | [`@number`](std-docs/number) | | |
+>
+
+### ordinal
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the number in ordinal form_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(1.ordinal() == '1st')
+>```
+>
+>
+
+### round
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the nearest integer to the number_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((1.5).round() == 2)
+>```
+>
+>
+
+### sqrt
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the square root of the number_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(4.sqrt() == 2)
+>```
+>
+>
+
+### to\_fixed
+
+>**Printed**
+>
+>```spwn
+>(self, precision: @number = 0) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Turns the number into a string with the given precision_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(1.to_fixed(2) == '1.00')
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `precision` | [`@number`](std-docs/number) | `0` | |
+>
+
+### to\_precision
+
+>**Printed**
+>
+>```spwn
+>(self, precision: @number = 0) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Turns the number to a specific precision_
+>
+>**Example:**
+>
+>```spwn
+>$.assert((0.12345).to_precision(3) == 0.123)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `precision` | [`@number`](std-docs/number) | `0` | |
+>
+
+### wrap
+
+>**Printed**
+>
+>```spwn
+>(self, min: @number, max: @number) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Wraps a number between two numbers_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(8.clamp(7,10) == 8 && 11.clamp(7,10) == 10)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `min` | [`@number`](std-docs/number) | | |
+>| 2 | `max` | [`@number`](std-docs/number) | | |
 >

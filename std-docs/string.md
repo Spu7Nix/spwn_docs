@@ -1,408 +1,570 @@
-  
-# **@string**: 
- 
-## Macros:
+# **@string**
 
-## **contains**:
+## Macros
 
-> **Printed:** 
+### contains
+
+>**Printed**
+>
 >```spwn
->(self, substr: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if the string contains a string._
->## Arguments:
+>(self, substr: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if the string contains a string._
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`substr`** | @string | | |
+>| 1 | `substr` | [`@string`](std-docs/string) | | |
 >
 
-## **ends\_with**:
+### ends\_with
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, substr: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if the string starts with another string_
->## Arguments:
+>(self, substr: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if the string starts with a string._
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`substr`** | @string | | |
+>| 1 | `substr` | [`@string`](std-docs/string) | | |
 >
 
-## **find**:
+### find
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, re: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, re: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`re`** | @string | | |
+>| 1 | `re` | [`@string`](std-docs/string) | | |
 >
 
-## **findall**:
+### find\_all
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, re: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, re: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`re`** | @string | | |
+>| 1 | `re` | [`@string`](std-docs/string) | | |
 >
 
-## **fmt**:
+### fmt
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, subs) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a formtted version of the string. Accepts either a single argument or an array_
->### Example: 
+>(self, subs) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a formtted version of the string. Accepts either a single argument or an array_
+>
+>**Example:**
+>
 >```spwn
-> name1 = 'bob'
+>name1 = 'bob'
 >name2 = 'alice'
 >$.assert('hi {}'.fmt(name1) == 'hi bob')
 >$.assert('hi {} and {}'.fmt([name1, name2]) == 'hi bob and alice')
 >$.assert('hi {1} and {0}'.fmt([name1, name2]) == 'hi alice and bob')
 >$.assert('{} has {} apples'.fmt([name1, 5]) == 'bob has 5 apples')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`subs`** |any | | |
+>| 1 | `subs` |any | | |
 >
 
-## **index**:
+### index
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, substr: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the index of a string, if it doesn't exists returns null._
->## Arguments:
+>(self, substr: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the index of a string, if it doesn't exists returns null._
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`substr`** | @string | | |
+>| 1 | `substr` | [`@string`](std-docs/string) | | |
 >
 
-## **is\_empty**:
+### is\_digit
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns true if the string has a length of 0, false otherwise_
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns true if string is numeric, false otherwise_
+>
+>**Example:**
+>
 >```spwn
-> $.assert(''.is_empty())
+>let num = "123"
+>num.is_digit() // true
+>```
+>
+>
+
+### is\_empty
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns true if the string has a length of 0, false otherwise_
+>
+>**Example:**
+>
+>```spwn
+>$.assert(''.is_empty())
 >$.assert(!('x'.is_empty()))
 >```
 >
-
-## **is\_lower**:
-
-> **Printed:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if whole string is lowercase, ignores characters that is not in the alphabet._
 >
 
-## **is\_upper**:
+### is\_lower
 
-> **Printed:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if whole string is uppercase, ignores characters that is not in the alphabet._
+>**Printed**
 >
-
-## **isdigit**:
-
-> **Printed:** 
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns true if string is numeric, false otherwise_
->### Example: 
->```spwn
-> let num = "123"
->num.isdigit() // true
+>(self) { /* ... */ }
 >```
 >
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if whole string is lowercase, ignores characters that is not in the alphabet._
+>
 
-## **join**:
+### is\_upper
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, list: @array) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Joins a list using the string._
->### Example: 
->```spwn
-> $.assert(''.join(['a', 'b']) == 'ab')
->$.assert('current'.join(['string', ' element', ' join']) == 'currentstring element join')
+>(self) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if whole string is uppercase, ignores characters that is not in the alphabet._
+>
+
+### join
+
+>**Printed**
+>
+>```spwn
+>(self, list: @array) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Joins a list using the string._
+>
+>**Example:**
+>
+>```spwn
+>$.assert(''.join(['a', 'b']) == 'ab')
+>$.assert(', '.join(['string', 'element', 'join']) == 'string, element, join')
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`list`** | @array | | |
+>| 1 | `list` | [`@array`](std-docs/array) | | |
 >
 
-## **l\_pad**:
+### l\_pad
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, times: @number, seq: @string = ' ') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a left-padded version of the string_
->## Arguments:
+>(self, times: @number, seq: @string = ' ') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a left-padded version of the string_
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`times`** | @number | | |
->| 2 | `seq` | @string | `' '` | |
+>| 1 | `times` | [`@number`](std-docs/number) | | |
+>| 2 | `seq` | [`@string`](std-docs/string) | `' '` | |
 >
 
-## **l\_trim**:
+### l\_trim
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, tokens: @string | [@string] = [' ','
->']) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a left-trimmed verison of the string_
->### Example: 
+>(self, tokens: (@string | [@string]) = [' ', '
+>', '	', '']) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a left-trimmed verison of the string_
+>
+>**Example:**
+>
 >```spwn
-> str1 = '      abcd g    '
+>str1 = '      abcd g    '
 >str2 = '   pog  __'
 >$.assert(str1.l_trim() == 'abcd g    ')
 >$.assert(str2.l_trim() == 'pog  __')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `tokens` | @string or [@string] | `[' ','']` | |
+>| 1 | `tokens` | [`@string`](std-docs/string) or an [`@array`](std-docs/array) of [`@string`](std-docs/string) elements | `[' ', '', '	', '']` | |
 >
 
-## **lowercase**:
+### lowercase
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes whole string lowercase._
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes whole string lowercase._
 >
 
-## **r\_pad**:
+### overwrite
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, times: @number, seq: @string = ' ') { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a right-padded version of the string_
->## Arguments:
+>(self, start: @number, end: @number, str: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Overwrites a portion of a string with another string._
+>
+>**Example:**
+>
+>```spwn
+>$.assert("abcdefghij".overwrite(2,5,"thingy") == "abthingyfghij")
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`times`** | @number | | |
->| 2 | `seq` | @string | `' '` | |
+>| 1 | `start` | [`@number`](std-docs/number) | | |
+>| 2 | `end` | [`@number`](std-docs/number) | | |
+>| 3 | `str` | [`@string`](std-docs/string) | | |
 >
 
-## **r\_trim**:
+### r\_pad
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, tokens: @string | [@string] = [' ','
->']) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a right-trimmed version of the string_
->### Example: 
+>(self, times: @number, seq: @string = ' ') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a right-padded version of the string_
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `times` | [`@number`](std-docs/number) | | |
+>| 2 | `seq` | [`@string`](std-docs/string) | `' '` | |
+>
+
+### r\_trim
+
+>**Printed**
+>
 >```spwn
-> str = 'abcd      '
+>(self, tokens: (@string | [@string]) = [' ', '
+>', '	', '']) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a right-trimmed version of the string_
+>
+>**Example:**
+>
+>```spwn
+>str = 'abcd      '
 >str2 = '      abcd g    '
 >str3 = '   pog  __'
 >$.assert(str.r_trim() == 'abcd')
 >$.assert(str2.r_trim() == '      abcd g')
 >$.assert(str3.r_trim(tokens = [' ', '_']) == '   pog')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `tokens` | @string or [@string] | `[' ','']` | |
+>| 1 | `tokens` | [`@string`](std-docs/string) or an [`@array`](std-docs/array) of [`@string`](std-docs/string) elements | `[' ', '', '	', '']` | |
 >
 
-## **replace**:
+### replace
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, re: @string, replacement: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, re: @string, replacement: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`re`** | @string | | |
->| 2 | **`replacement`** | @string | | |
+>| 1 | `re` | [`@string`](std-docs/string) | | |
+>| 2 | `replacement` | [`@string`](std-docs/string) | | |
 >
 
-## **reverse**:
+### reverse
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Reverses the string._
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Reverses the string._
 >
 
-## **split**:
+### split
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, spstr: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Splits the string by the specified seperator._
->### Example: 
+>(self, spstr: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Splits the string by the specified seperator._
+>
+>**Example:**
+>
 >```spwn
-> $.assert('a b c'.split(' ') == ['a', 'b', 'c'])
+>$.assert('a b c'.split(' ') == ['a', 'b', 'c'])
 >$.assert('example'.split('') == ['e', 'x', 'a', 'm', 'p', 'l', 'e'])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`spstr`** | @string | | |
+>| 1 | `spstr` | [`@string`](std-docs/string) | | |
 >
 
-## **starts\_with**:
+### starts\_with
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, substr: @string) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks does the string starts with a string._
->## Arguments:
+>(self, substr: @string) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if the string starts with a string._
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`substr`** | @string | | |
+>| 1 | `substr` | [`@string`](std-docs/string) | | |
 >
 
-## **substr**:
+### substr
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, start: @number, end: @number) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets a substring beginning at the specified start and ending at the specified end._
->## Arguments:
+>(self, start: @number, end: @number) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets a substring beginning at the specified start and ending at the specified end._
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`start`** | @number | | |
->| 2 | **`end`** | @number | | |
+>| 1 | `start` | [`@number`](std-docs/number) | | |
+>| 2 | `end` | [`@number`](std-docs/number) | | |
 >
 
-## **to\_obj**:
+### to\_obj
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a text object with the string as text_
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a text object with the string as text_
+>
+>**Example:**
+>
 >```spwn
-> extract obj_props
+>extract obj_props
 >"hello".to_obj().with(X, 45).with(Y, 45).add()
 >```
 >
+>
 
-## **trim**:
+### trim
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, tokens: @string | [@string] = [' ','
->']) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a trimmed version of the string_
->### Example: 
+>(self, tokens: (@string | [@string]) = [' ', '
+>', '	', '']) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a trimmed version of the string_
+>
+>**Example:**
+>
 >```spwn
-> str = 'abcd      '
+>str = 'abcd      '
 >str2 = '      abcd g    '
 >str3 = '   pog  __'
 >$.assert(str.trim() == 'abcd')
 >$.assert(str2.trim() == 'abcd g')
->$.assert(str3.trim(tokens = [' ', '_']))
+>$.assert(str3.trim(tokens = [' ', '_']) == 'pog')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `tokens` | @string or [@string] | `[' ','']` | |
+>| 1 | `tokens` | [`@string`](std-docs/string) or an [`@array`](std-docs/array) of [`@string`](std-docs/string) elements | `[' ', '', '	', '']` | |
 >
 
-## **uppercase**:
+### uppercase
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Makes whole string uppercase._
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Makes whole string uppercase._
 >

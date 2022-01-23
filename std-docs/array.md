@@ -1,543 +1,1121 @@
-  
-# **@array**: 
- 
-## Macros:
+# **@array**
 
-## **\_partition**:
+## Macros
 
-> **Printed:** 
->```spwn
->(self, low: @number, high: @number, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Private function needed for .sort()_
->## Arguments:
+### all
+
+>**Printed**
 >
->| # | name | type | default value | description |
->| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`low`** | @number | | |
->| 2 | **`high`** | @number | | |
->| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
+>```spwn
+>(self, map: ((_) -> @bool | @pattern) = (a) { /* ... */ }) { /* ... */ }
+>```
 >
-
-## **all**:
-
-> **Printed:** 
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Determines whether all the members of an array satisfy the specified callback._
+>
+>**Example:**
+>
 >```spwn
->(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Determines whether all the members of an array satisfy the specified callback._
->### Example: 
->```spwn
-> arr = [true, true, true]
+>arr = [true, true, true]
 >$.assert(arr.all())
 >arr2 = [1, 2, 3, 1, 4, 7]
 >$.assert(arr2.all(el => el > 0)) // checks if the array contains only positive elements
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `map` | @macro | `(a) { /* code omitted */ }` | |
+>| 1 | `map` | a `@macro` that returns `@bool` and takes any as an argument or `@pattern` | `(a) { /* ... */ }` | |
 >
 
-## **any**:
+### any
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, map: @macro = (a) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Determines whether the specified callback function returns true for any element of an array._
->### Example: 
+>(self, map: ((_) -> @bool | @pattern) = (a) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Determines whether the specified callback function returns true for any element of an array._
+>
+>**Example:**
+>
 >```spwn
-> arr = [false, false, true, false]
+>arr = [false, false, true, false]
 >$.assert(arr.any())
 >arr2 = [1, 2, 3, 1, 4, -1, 7]
 >$.assert(arr2.any(el => el < 0)) // checks if the array contains any negative elements
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `map` | @macro | `(a) { /* code omitted */ }` | |
+>| 1 | `map` | a `@macro` that returns `@bool` and takes any as an argument or `@pattern` | `(a) { /* ... */ }` | |
 >
 
-## **clear**:
+### average
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Clears the array._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the average of the numbers in the array._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [1, 2, 3]
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.average() == 3.2)
+>```
+>
+>
+
+### center
+
+>**Printed**
+>
+>```spwn
+>(self, ceil: @bool = false) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the item in the center of the array._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.center() == 5)
+>$.assert(arr.center(true) == 5)
+>
+>let arr = [5, 1, 5, 3]
+>$.assert(arr.center() == 1)
+>$.assert(arr.center(true) == 5)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `ceil` | `@bool` | `false` | |
+>
+
+### clear
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Clears the array._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [1, 2, 3]
 >arr.clear()
 >$.assert(arr.is_empty())
 >```
 >
+>
 
-## **contains**:
+### contains
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, el) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _See if array contains an element._
->### Example: 
->```spwn
-> fruit = ['apple', 'banana', 'mango']
->$.assert(arr.contains('banana'))
+>(self, el) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_See if array contains an element._
+>
+>**Example:**
+>
+>```spwn
+>fruit = ['apple', 'banana', 'mango']
+>$.assert(fruit.contains('banana'))
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`el`** |any | | |
+>| 1 | `el` |any | | |
 >
 
-## **enumerate**:
+### enumerate
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, dict: @bool = false) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns an array of index-element pairs_
->### Example: 
->```spwn
-> arr = ["a","b","c"]
->    for i in arr.enumerate() {
->        $.print(i[0], ": ", i[1])
->    }
->    /* output:
->    0: 'a'
->    1: 'b'
->    2: 'c'
->    */
+>(self, dict: @bool = false) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns an array of index-element pairs_
+>
+>**Example:**
+>
+>```spwn
+>arr = ['a','b','c']
+>for i in arr.enumerate() {
+>    $.print(i[0], ': ', i[1])
+>}
+>/* output:
+>0: a
+>1: b
+>2: c
+>*/
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `dict` | @bool | `false` |Return the pair as a dictionary |
+>| 1 | `dict` | `@bool` | `false` |Return the pair as a dictionary |
 >
 
-## **filter**:
+### filter
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, cb: @macro) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns the elements of an array that meet the condition specified in the callback function._
->### Example: 
+>(self, cb: ((_) -> @bool | @pattern), in_place: @bool = false) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the elements of an array that meet the condition specified in the callback function._
+>
+>**Example:**
+>
 >```spwn
-> arr = [1, 2, 3, 4, 5]
+>arr = [1, 2, 3, 4, 5]
 >$.assert(arr.filter(el => el > 3) == [4, 5])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`cb`** | @macro | | |
+>| 1 | `cb` | a `@macro` that returns `@bool` and takes any as an argument or `@pattern` | | |
+>| 2 | `in_place` | `@bool` | `false` | |
 >
 
-## **flatten**:
+### flatten
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Flattens any sub-arrays into one big array._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Flattens any sub-arrays into one big array._
+>
+>**Example:**
+>
 >```spwn
-> arr = [1, 2, [3, 4], 5, [6, 7, [8]]]
+>arr = [1, 2, [3, 4], 5, [6, 7, [8]]]
 >$.assert(arr.flatten() == [1, 2, 3, 4, 5, 6, 7, 8])
 >```
 >
+>
 
-## **index**:
+### index
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, el, from: @number = 0) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the index of an element (if it doesn't exist, `null` is returned)_
->### Example: 
+>(self, el, from: @number = 0) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the index of an element (if it doesn't exist, `null` is returned)_
+>
+>**Example:**
+>
 >```spwn
-> fruit = ['apple', 'banana', 'mango']
+>fruit = ['apple', 'banana', 'mango']
 >$.assert(fruit.index('apple') == 0)
 >$.assert(fruit.index('carrot') == null)
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`el`** |any | | |
->| 2 | `from` | @number | `0` |Index to start the search from |
+>| 1 | `el` |any | | |
+>| 2 | `from` | [`@number`](std-docs/number) | `0` |Index to start the search from |
 >
 
-## **index\_all**:
+### index\_all
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, el) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns an array of all occurences of an element_
->### Example: 
+>(self, el) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns an array of all occurences of an element_
+>
+>**Example:**
+>
 >```spwn
-> arr = [1,-5,2,4,2,6]
+>arr = [1,-5,2,4,2,6]
 >$.assert(arr.index_all(2) == [2,4])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`el`** |any | | |
+>| 1 | `el` |any | | |
 >
 
-## **index\_last**:
+### index\_last
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, el, until: @number = 0) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the index of the last occurence of an element (if it doesn't exist, `null` is returned)_
->### Example: 
+>(self, el, until: @number = 0) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the index of the last occurence of an element (if it doesn't exist, `null` is returned)_
+>
+>**Example:**
+>
 >```spwn
-> arr = [1,-5,2,4,2,6]
+>arr = [1,-5,2,4,2,6]
 >$.assert(arr.index_last(2) == 4)
 >$.assert(arr.index_last(-3) == null)
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`el`** |any | | |
->| 2 | `until` | @number | `0` |Index to end the search at |
+>| 1 | `el` |any | | |
+>| 2 | `until` | [`@number`](std-docs/number) | `0` |Index to end the search at |
 >
 
-## **is\_empty**:
+### insert
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns true if the array has a length of 0, false otherwise._
->### Example: 
+>(self, index: @number, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Pushes a value at a certain index of the array and returns it._
+>
+>**Example:**
+>
 >```spwn
-> arr = []
+>let arr = [1, 5, 3, 2]
+>$.assert(arr.insert(2, 7) == 7)
+>$.assert(arr == [1, 5, 7, 3, 2])
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `index` | [`@number`](std-docs/number) | | |
+>| 2 | `value` |any | | |
+>
+
+### is\_empty
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns true if the array has a length of 0, false otherwise._
+>
+>**Example:**
+>
+>```spwn
+>arr = []
 >arr2 = [1, 2, 3]
 >$.assert(arr.is_empty())
 >$.assert(!arr2.is_empty())
 >```
 >
+>
 
-## **map**:
+### join
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, cb: @macro) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Calls a defined callback function on each element of an array, and returns an array that contains the results._
->### Example: 
+>(self, joiner: @string = ' ') { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Joins the array using the string._
+>
+>**Example:**
+>
 >```spwn
-> arr = [1, 2, 3, 4, 5]
+>fruit = ['apple', 'banana', 'mango']
+>$.assert(fruit.join(' ') == 'apple banana mango')
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `joiner` | [`@string`](std-docs/string) | `' '` | |
+>
+
+### l\_fold
+
+>**Printed**
+>
+>```spwn
+>(self, cb: ((_, _) -> _ | @builtin)) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls the specified callback function for all the elements in an array from left to right. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function._
+>
+>**Example:**
+>
+>```spwn
+>arr = [1, 2, 3, 4, 5]
+>sum = arr.l_fold($._plus_)
+>$.assert(sum == 15)
+>
+>arr2 = [2, 1, 5]
+>result = arr2.l_fold($._divided_by_)
+>$.assert(result == 0.4)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `cb` | a `@macro` that returns any and takes any, any as arguments or `@builtin` | | |
+>
+
+### map
+
+>**Printed**
+>
+>```spwn
+>(self, cb: (_) -> _, in_place: @bool = false) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls a defined callback function on each element of an array, and returns an array that contains the results, or modifies in place if specified._
+>
+>**Example:**
+>
+>```spwn
+>arr = [1, 2, 3, 4, 5]
 >$.assert(arr.map(el => el * 2) == [2, 4, 6, 8, 10])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`cb`** | @macro | | |
+>| 1 | `cb` | a `@macro` that returns any and takes any as an argument | | |
+>| 2 | `in_place` | `@bool` | `false` | |
 >
 
-## **max**:
+### map\_index
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the highest number in the array._
->### Example: 
+>(self, cb: (_, @number) -> _, in_place: @bool = false) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls a defined callback function on each element of an array along with its index, and returns an array that contains the results, or modifies in place if specified._
+>
+>**Example:**
+>
 >```spwn
-> arr = [3, 1, 4, 1]
+>arr = [1, 2, 3, 4, 5]
+>$.assert(arr.map_index((el, i) => el + i) == [1, 3, 5, 7, 9])
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `cb` | a `@macro` that returns any and takes any, [`@number`](std-docs/number) as arguments | | |
+>| 2 | `in_place` | `@bool` | `false` | |
+>
+
+### max
+
+>**Printed**
+>
+>```spwn
+>(self, key: (_) -> _ = (el) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the highest number in the array._
+>
+>**Example:**
+>
+>```spwn
+>arr = [3, 1, 4, 1]
 >$.assert(arr.max() == 4)
 >
->arr = ['abc', 'b', 'abdc']
->$.assert(arr.max(key = (el: @string) => el.length) == 'abdc')
+>arr2 = ['abc', 'b', 'abdc']
+>$.assert(arr2.max(key = (el: @string) => el.length) == 'abdc')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `key` | @macro | `(el) { /* code omitted */ }` | |
+>| 1 | `key` | a `@macro` that returns any and takes any as an argument | `(el) { /* ... */ }` | |
 >
 
-## **min**:
+### min
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, key: @macro = (el) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the lowest number in the array._
->### Example: 
+>(self, key: (_) -> _ = (el) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the lowest number in the array._
+>
+>**Example:**
+>
 >```spwn
-> arr = [3, 1, 4, 1]
+>arr = [3, 1, 4, 1]
 >$.assert(arr.min() == 1)
 >
->arr = ['abc', 'b', 'abdc']
->$.assert(arr.max(key = (el: @string) => el.length) == 'b')
+>arr2 = ['abc', 'b', 'abdc']
+>$.assert(arr2.min(key = (el: @string) => el.length) == 'b')
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `key` | @macro | `(el) { /* code omitted */ }` | |
+>| 1 | `key` | a `@macro` that returns any and takes any as an argument | `(el) { /* ... */ }` | |
 >
 
-## **pop**:
+### most
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, index: @number = -1) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Removes a specific index from the array and returns it._
->### Example: 
+>(self, last: @bool = false) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the item that appears most times._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [1, 2, 3, 4]
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.most() == 5)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `last` | `@bool` | `false` | |
+>
+
+### partition
+
+>**Printed**
+>
+>```spwn
+>(self, cb: @macro = (item) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Partitions the array into two arrays where the first array resulted into true and the second array resulted into false._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
+>let [bigger, smaller] = arr.partition(v => v > 4)
+>$.assert(bigger == [5, 5])
+>$.assert(smaller == [1, 3, 2])
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `cb` | `@macro` | `(item) { /* ... */ }` | |
+>
+
+### pick
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns an item from the array by random._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
+>$.print(arr.pick())
+>```
+>
+>
+
+### pop
+
+>**Printed**
+>
+>```spwn
+>(self, index: @number = -1) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Removes a specific index from the array and returns it._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [1, 2, 3, 4]
 >arr.pop()
 >$.assert(arr == [1, 2, 3])
 >arr.pop(1)
 >$.assert(arr == [1, 3])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `index` | @number | `-1` | |
+>| 1 | `index` | [`@number`](std-docs/number) | `-1` | |
 >
 
-## **push**:
+### push
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, value) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Pushes a value to the end of the array._
->### Example: 
+>(self, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Pushes a value to the end of the array._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [1, 2, 3]
+>let arr = [1, 2, 3]
 >arr.push(4)
 >$.assert(arr == [1, 2, 3, 4])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`value`** |any | | |
+>| 1 | `value` |any | | |
 >
 
-## **reduce**:
+### r\_fold
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, cb: @macro) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Calls the specified callback function for all the elements in an array. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function._
->### Example: 
+>(self, cb: ((_, _) -> _ | @builtin)) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls the specified callback function for all the elements in an array from right to left. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function._
+>
+>**Example:**
+>
 >```spwn
-> arr = [1, 2, 3, 4, 5]
+>arr = [1, 2, 3, 4, 5]
+>sum = arr.r_fold($._plus_)
+>$.assert(sum == 15)
+>
+>arr2 = [2, 1, 5]
+>result = arr2.r_fold($._divided_by_)
+>$.assert(result == 10)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `cb` | a `@macro` that returns any and takes any, any as arguments or `@builtin` | | |
+>
+
+### reduce
+
+>**Printed**
+>
+>```spwn
+>(self, cb: ((_, _) -> _ | @builtin), default = 0) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls the specified callback function for all the elements in an array with a default value. The return value of the callback function is the accumulated result, and is provided as an argument in the next call to the callback function._
+>
+>**Example:**
+>
+>```spwn
+>arr = [1, 2, 3, 4, 5]
 >sum = arr.reduce((acum, el) => acum + el)
 >$.assert(sum == 15)
+>
+>arr2 = [5, 1, 5, 3, 2]
+>product = arr2.reduce((acum, el) => acum * el, 1)
+>$.assert(product == 150)
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`cb`** | @macro | | |
+>| 1 | `cb` | a `@macro` that returns any and takes any, any as arguments or `@builtin` | | |
+>| 2 | `default` |any | `0` | |
 >
 
-## **remove**:
+### remove
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, index: @number) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns array with all elements that match value removed_
->### Example: 
->```spwn
-> let arr = [1, 2, 3, 4, 5]
->arr.remove(3)
->$.assert(arr == [1, 2, 4, 5])
+>(self, index: @number) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns array with all elements that match value removed_
+>
+>**Example:**
+>
+>```spwn
+>let arr = [1, 2, 3, 4, 5]
+>$.assert(arr.remove(3) == [1, 2, 4, 5])
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`index`** | @number | | |
+>| 1 | `index` | [`@number`](std-docs/number) | | |
 >
 
-## **reverse**:
+### reverse
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Reverses the array._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Reverses the array._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [1, 2, 3]
+>let arr = [1, 2, 3]
 >$.assert(arr.reverse() == [3, 2, 1])
 >```
 >
+>
 
-## **shift**:
+### scan
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Removes the first index from the array and returns it._
->### Example: 
+>(self, state, closure: (_, _) -> _) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Takes in an initial value and a macro which acts on a reference of that value and each array value._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [5, 1, 5, 3, 2]
+>x = [1,2,3]
+>x_1 = x.scan(10, (&state, x){
+>    state *= x
+>    return -state
+>})
+>$.assert(x_1 == [-10, -20, -60])
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `state` |any | | |
+>| 2 | `closure` | a `@macro` that returns any and takes any, any as arguments | | |
+>
+
+### shift
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Removes the first index from the array and returns it._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
 >$.assert(arr.shift() == 5)
 >$.assert(arr == [1, 5, 3, 2])
 >```
 >
-
-## **sort**:
-
-> **Printed:** 
->```spwn
->(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Sorts array in-place_
->### Example: 
->```spwn
-> arr = [5, 1, 5, 3, 2]
->arr.sort()
->$.assert(arr == [1, 2, 3, 5, 5])
 >
->arr = [5, 1, 5, 3, 2]
->arr.sort(begin = 2, end = 4)
->$.assert(arr == [5, 1, 2, 3, 5])
+
+### shuffle
+
+>**Printed**
 >
->arr = [5, 1, 5, 3, 2]
->arr.sort(comp = (a, b) => a > b)
->$.assert(arr == [5, 5, 3, 2, 1])
+>```spwn
+>(self) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the array in random order._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
+>$.print(arr.shuffle())
+>```
+>
+>
+
+### sort
+
+>**Printed**
+>
+>```spwn
+>(self, comp: (_, _) -> (@bool | @number) = (a, b) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns a sorted verison of the array_
+>
+>**Example:**
+>
+>```spwn
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.sort() == [1, 2, 3, 5, 5])
+>
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.sort(comp = (a, b) => a >= b) == [5, 5, 3, 2, 1])
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `begin` | @number | `0` | |
->| 2 | `end` | @number | `-1` | |
->| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
+>| 1 | `comp` | a `@macro` that returns `@bool` or [`@number`](std-docs/number) and takes any, any as arguments | `(a, b) { /* ... */ }` | |
 >
 
-## **sorted**:
+### sorted
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, begin: @number = 0, end: @number = -1, comp: @macro = (a, b) { /* code omitted */ }) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns a sorted verison of the array_
->### Example: 
->```spwn
-> arr = [5, 1, 5, 3, 2]
->$.assert(arr.sorted() == [1, 2, 3, 5, 5])
->$.assert(arr.sorted(begin = 2, end = 4) == [5, 1, 2, 3, 5])
->$.assert(arr.sorted(comp = (a, b) => a >= b) == [5, 5, 3, 2, 1])
+>(self, comp: (_, _) -> @bool = (a, b) { /* ... */ }) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns true if the array is sorted._
+>
+>**Example:**
+>
+>```spwn
+>$.assert([5, 1, 5, 3, 2].sorted() == false)
+>$.assert([1, 2, 3, 5, 5].sorted() == true)
+>$.assert([5, 5, 3, 2, 1].sorted(comp = (a, b) => a >= b) == true)
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `begin` | @number | `0` | |
->| 2 | `end` | @number | `-1` | |
->| 3 | `comp` | @macro | `(a, b) { /* code omitted */ }` | |
+>| 1 | `comp` | a `@macro` that returns `@bool` and takes any, any as arguments | `(a, b) { /* ... */ }` | |
 >
 
-## **sum**:
+### split
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the sum of the value in the array._
->### Example: 
+>(self, indicies: [@number]) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Splits the array on the indicies_
+>
+>**Example:**
+>
 >```spwn
-> arr = [1, 2, 3, 4, 5]
+>x = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+>$.assert(x.split([5]) == [[0,1,2,3,4],[5,6,7,8,9]])
+>$.assert(x.split([5, 7]) == [[0,1,2,3,4],[5,6],[7,8,9]])
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `indicies` | `[@number]` | | |
+>
+
+### sum
+
+>**Printed**
+>
+>```spwn
+>(self, cb: (_) -> _ = (a) { /* ... */ }) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the sum of the values in the array._
+>
+>**Example:**
+>
+>```spwn
+>arr = [1, 2, 3, 4, 5]
 >$.assert(arr.sum() == 15)
+>arr2 = ['abc', 'ab', 'abcd']
+>$.assert(arr2.sum(a => a.length) == 9)
 >```
 >
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `cb` | a `@macro` that returns any and takes any as an argument | `(a) { /* ... */ }` | |
+>
 
-## **unshift**:
+### unique
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, value) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Pushes a value to the start of the array and returns it._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns the array only with items that didn't appear before._
+>
+>**Example:**
+>
 >```spwn
-> let arr = [1, 5, 3, 2]
+>let arr = [5, 1, 5, 3, 2]
+>$.assert(arr.unique() == [5, 1, 3, 2])
+>```
+>
+>
+
+### unshift
+
+>**Printed**
+>
+>```spwn
+>(self, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Pushes a value to the start of the array and returns it._
+>
+>**Example:**
+>
+>```spwn
+>let arr = [1, 5, 3, 2]
 >$.assert(arr.unshift(5) == 5)
 >$.assert(arr == [5, 1, 5, 3, 2])
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`value`** |any | | |
+>| 1 | `value` |any | | |
 >

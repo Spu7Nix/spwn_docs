@@ -1,190 +1,269 @@
-  
-# **@dictionary**: 
- 
-## Macros:
+# **@dictionary**
 
-## **clear**:
+## Macros
 
-> **Printed:** 
+### clear
+
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Clears the dictionary._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Clears the dictionary._
+>
+>**Example:**
+>
 >```spwn
-> let wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
+>let wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
 >}
 >wares.clear()
 >
 >$.assert(wares.is_empty())
 >```
 >
+>
 
-## **contains\_value**:
+### contains\_value
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, value) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Checks if the dictionary contains a value._
->### Example: 
+>(self, value) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Checks if the dictionary contains a value._
+>
+>**Example:**
+>
 >```spwn
-> let wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
+>let wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
 >}
 >
->$.assert(wares.contains(5))
+>$.assert(wares.contains_value(5))
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`value`** |any | | |
+>| 1 | `value` |any | | |
 >
 
-## **get**:
+### get
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, key: @string, default = @dict_not_found::{}) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets an item from the dictionary._
->### Example: 
+>(self, key: @string, default = @dict_not_found::{}) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets an item from the dictionary._
+>
+>**Example:**
+>
 >```spwn
-> let wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
+>let wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
 >}
 >
 >$.assert(wares.get('peanuts') == 5)
 >$.assert(wares.get('silver', default = 42) == 42)
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @string | | |
+>| 1 | `key` | [`@string`](std-docs/string) | | |
 >| 2 | `default` |any | `@dict_not_found::{}` | |
 >
 
-## **is\_empty**:
+### is\_empty
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns true if there are no entries in the dictionary, false otherwise._
->### Example: 
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns true if there are no entries in the dictionary, false otherwise._
+>
+>**Example:**
+>
 >```spwn
-> dict = {}
+>dict = {}
 >$.assert(dict.is_empty())
 >```
 >
-
-## **items**:
-
-> **Printed:** 
->```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the dictionary's items._
->### Example: 
->```spwn
-> wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
->}
->$.assert(wares.items() == [
->	['apple', 10],
->	['gold', 1000],
->	['peanuts', 5],
->])
->```
 >
 
-## **keys**:
+### items
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the dictionary's keys._
->### Example: 
->```spwn
-> wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
->}
->$.assert(wares.keys() == ['apple', 'gold', 'peanuts'])
+>(self) { /* ... */ }
 >```
 >
-
-## **set**:
-
-> **Printed:** 
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the dictionary's items._
+>
+>**Example:**
+>
 >```spwn
->(self, key: @string, val) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Sets an item in the dictionary._
->### Example: 
->```spwn
-> let wares = {
->	apple: 10,
->	gold: 1000,
+>wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
 >}
->wares.set('peanuts', 5)
->$.assert(wares == {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
->})
+>$.assert(['apple', 10] in wares.items())
 >```
->## Arguments:
+>
+>
+
+### keys
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the dictionary's keys._
+>
+>**Example:**
+>
+>```spwn
+>wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
+>}
+>$.assert('apple' in wares.keys())
+>```
+>
+>
+
+### map
+
+>**Printed**
+>
+>```spwn
+>(self, cb: (_, _) -> _) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Calls a defined callback function on each key-value pair of a dictionary, and returns an array that contains the results._
+>
+>**Example:**
+>
+>```spwn
+>dict = {key1: 0, key2: 1, key3: 2}
+>$.assert('k' in dict.map((k, v) => k[v]))
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`key`** | @string | | |
->| 2 | **`val`** |any | | |
+>| 1 | `cb` | a `@macro` that returns any and takes any, any as arguments | | |
 >
 
-## **values**:
+### set
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Gets the dictionary's values._
->### Example: 
->```spwn
-> wares = {
->	apple: 10,
->	gold: 1000,
->	peanuts: 5,
->}
->$.assert(wares.values() == [10, 1000, 5])
+>(self, key: @string, val) { /* ... */ }
 >```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Sets an item in the dictionary._
+>
+>**Example:**
+>
+>```spwn
+>let wares = {
+>    apple: 10,
+>    gold: 1000,
+>}
+>wares.set('peanuts', 5)
+>$.assert(wares.peanuts == 5)
+>```
+>
+>
+>**Arguments:**
+>
+>| # | name | type | default value | description |
+>| - | ---- | ---- | ------------- | ----------- |
+>| 1 | `key` | [`@string`](std-docs/string) | | |
+>| 2 | `val` |any | | |
+>
+
+### values
+
+>**Printed**
+>
+>```spwn
+>(self) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Gets the dictionary's values._
+>
+>**Example:**
+>
+>```spwn
+>wares = {
+>    apple: 10,
+>    gold: 1000,
+>    peanuts: 5,
+>}
+>$.assert(wares.values().sort() == [5, 10, 1000])
+>```
+>
 >

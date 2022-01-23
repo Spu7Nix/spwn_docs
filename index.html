@@ -19,7 +19,7 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="https://unpkg.com/docsify-themeable@0.8.4/dist/css/theme-simple-dark.css">
-
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/sidebar.min.css" />
 
 
 
@@ -36,9 +36,25 @@
       --code-theme-function: #aa8bff;
       --code-theme-tag: #ff7c7c;
       --code-theme-operator: #bdbdbd;
-      --sidebar-background: #1c1f27;
+      --sidebar-background: #13151b;
       --base-background-color: #21242e;
       --blockquote-background: #05070c30;
+      --sidebar-nav-link-color: rgba(255, 255, 255, 0.445);
+      --sidebar-nav-strong-font-size: 1rem;
+      --sidebar-nav-link-text-decoration-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .folder {
+      transition: 0.3s;
+    }
+
+    .sidebar-nav code {
+      color: #ffe7e73b;
+    }
+
+    .collapse {
+      --sidebar-nav-strong-color: rgba(255, 255, 255, 0.459);
+      /* --sidebar-nav-strong-font-size: 0.7rem; */
     }
 
     .token.tag {
@@ -71,10 +87,9 @@
         paths: 'auto',
         placeholder: 'Search'
       },
-      logo: "assets/spwn_logo_name_large.png"
-
-
-
+      logo: "assets/spwn_logo_name_large.png",
+      subMaxLevel: 1,
+      sidebarDisplayLevel: 10, // set sidebar display level
     }
 
 
@@ -83,6 +98,7 @@
   </script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
 
   <script src="./prism-spwn.js"></script>
 

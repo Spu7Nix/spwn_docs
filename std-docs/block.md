@@ -1,21 +1,27 @@
-  
-# **@block**: 
- 
-## Macros:
+# **@block**
 
-## **create\_tracker\_item**:
+## Macros
 
-> **Printed:** 
+### create\_tracker\_item
+
+>**Printed**
+>
 >```spwn
->(self, other: @block) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Returns an item ID that is 1 when the blocks are colliding and 0 when they are not_
->### Example: 
+>(self, other: @block) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Returns an item ID that is 1 when the blocks are colliding and 0 when they are not_
+>
+>**Example:**
+>
 >```spwn
-> // in some minigame
->player = @player::{ block: 1b, group: 1g}
+>// in some minigame
+>type @player
+>player = @player::{ block: 1b, group: 1g, jump: () {}}
 >ground = 2b
 >on_ground = counter(player.block.create_tracker_item(ground))
 >on(touch(), !{
@@ -25,25 +31,30 @@
 >    }
 >})
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @block | |Block ID to check against |
+>| 1 | `other` | [`@block`](std-docs/block) | |Block ID to check against |
 >
 
-## Operator Implementations:
+## Operator Implementations
 
-## **\_range\_**:
+### \_range\_
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, other: @block) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Arguments:
+>(self, other: @block) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @block | | |
+>| 1 | `other` | [`@block`](std-docs/block) | | |
 >

@@ -1,94 +1,126 @@
-  
-# **@item**: 
- 
-## Macros:
+# **@item**
 
-## **add**:
+## Macros
 
-> **Printed:** 
+### add
+
+>**Printed**
+>
 >```spwn
->(self, amount: @number) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the pickup trigger_
->### Example: 
->```spwn
-> 10i.add(5)
+>(self, amount: @number) { /* ... */ }
 >```
->## Arguments:
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Implementation of the pickup trigger_
+>
+>**Example:**
+>
+>```spwn
+>10i.add(5)
+>```
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`amount`** | @number | |Amount to add |
+>| 1 | `amount` | [`@number`](std-docs/number) | |Amount to add |
 >
 
-## **count**:
+### count
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, number: @number = 0) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the count trigger (-> returns an event for when an item reaches a certain value)_
->### Example: 
+>(self, hits: @number, multi: @bool = true) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Implementation of a count trigger (returns an event)_
+>
+>**Example:**
+>
 >```spwn
-> on(10i.count(100), !{
->    BG.pulse(0, 255, 0, fade_out = 0.5) // will pulse each time item ID 10 becomes 100
+>on(4i.count(3), !{
+>    BG.set(rgb(0, 0, 0))
 >})
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | `number` | @number | `0` |Number to check against |
+>| 1 | `hits` | [`@number`](std-docs/number) | | |
+>| 2 | `multi` | `@bool` | `true` | |
 >
 
-## **if\_is**:
+### if\_is
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, comparison: @comparison, other: @number, function: @trigger_function) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the instant count trigger_
->### Example: 
+>(self, comparison: @comparison, other: @number, function: @trigger_function) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Implementation of the instant count trigger_
+>
+>**Example:**
+>
 >```spwn
-> 10i.if_is(EQUAL_TO, 5, !{
->    BG.pulse(255, 0, 0, fade_out = 0.5)
+>10i.if_is(EQUAL_TO, 5, !{
+>    BG.pulse(rgb8(255, 0, 0), fade_out = 0.5)
 >})
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`comparison`** | @comparison | |Comparison mode |
->| 2 | **`other`** | @number | |Number to compare with |
->| 3 | **`function`** | @trigger_function | |Target function if comparison is 'true' |
+>| 1 | `comparison` | [`@comparison`](std-docs/comparison) | |Comparison mode |
+>| 2 | `other` | [`@number`](std-docs/number) | |Number to compare with |
+>| 3 | `function` | `@trigger_function` | |Target function if comparison is 'true' |
 >
 
-## Operator Implementations:
+## Operator Implementations
 
-## **\_range\_**:
+### \_range\_
 
-> **Printed:** 
+>**Printed**
+>
 >```spwn
->(self, other: @item) { /* code omitted */ }
->``` 
->**Type:** `@macro` 
->## Description: 
-> _Implementation of the range operator (`..`) for item IDs_
->### Example: 
+>(self, other: @item) { /* ... */ }
+>```
+>
+>**Type:** `@macro`
+>
+>**Description:**
+>
+>_Implementation of the range operator (`..`) for item IDs_
+>
+>**Example:**
+>
 >```spwn
-> for item in 1i..10i {
+>for item in 1i..10i {
 >    item.add(10)
 >}
 >```
->## Arguments:
+>
+>
+>**Arguments:**
 >
 >| # | name | type | default value | description |
 >| - | ---- | ---- | ------------- | ----------- |
->| 1 | **`other`** | @item | | |
+>| 1 | `other` | [`@item`](std-docs/item) | | |
 >
