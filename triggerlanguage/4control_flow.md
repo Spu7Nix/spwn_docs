@@ -1,6 +1,6 @@
 # Control Flow
 
-In SPWN, there are currently four _control flow_ statements available: if statements, ternary expressions, switch statements, for loops, and while loops
+In SPWN, there are currently four _control flow_ statements available: if statements, ternary expressions, match statements, for loops, and while loops
 
 ## If statement
 
@@ -26,24 +26,24 @@ if condition {
 }
 ```
 
-## Switch statement
+## match statement
 
-SPWN also supports switch statements for both pattern matching and value checking:
+SPWN also supports match statements for pattern matching:
 
 ```spwn
-switch value {
+match value {
     @number | @group: /* code */,
-    case "my_value": /* code */,
+    =="my_value": /* code */,
     else: /* code */
 }
 ```
 
-To match the actual value, use the `case` keyword before the value. To match the type, exclude the `case` keyword as seen above.
+To match the actual value, you can use a `==` pattern, which is made by putting a `==` before the value you match against.
 
-You can also assign a value to the result of a switch statement:
+You can also assign a value to the result of a match statement:
 
 ```spwn
-let example_list = switch example_val {
+let example_list = match example_val {
     @number: [example_val],
     @string: [example_val as @number],
     [@number]: example_val,
@@ -51,35 +51,35 @@ let example_list = switch example_val {
 }
 ```
 
-SPWN switch statements are not exactly like switch statements from other programming languages you may be familiar with. In SPWN, switch statements are always _expressions_ which means they can be used anywhere an ordinary value could be. This also means that the branches of a switch statement have to be expressions, not statements. Hence, you can not do this:
+SPWN match statements are not exactly like match statements from other programming languages you may be familiar with. In SPWN, match statements are always _expressions_ which means they can be used anywhere an ordinary value could be. This also means that the branches of a match statement have to be expressions, not statements. Hence, you can not do this:
 
 ```spwn
 // WRONG
-switch my_number {
-    case 1:
+match my_number {
+    ==1:
         jump(1)
         if a == b {
             // ...
         }
-    case 2:
+    ==2:
         //...
     else:
        // ...
 }
 ```
 
-A workaround for this is to create a macro that you immediately call. This enables you to execute multiple statements in your switch branches:
+A workaround for this is to create a macro that you immediately call. This enables you to execute multiple statements in your match branches:
 
 ```spwn
 // CORRECT
-switch my_number {
-    case 1: () {
+match my_number {
+    ==1: () {
         jump(1)
         if a == b {
             // ...
         }
     }(),
-    case 2: () {
+    ==2: () {
         // ...
     } ()
     else: () {
@@ -96,7 +96,7 @@ For convenience, you can simplify an if-statement into an inline ternary express
 let value = option_1 if condition else option_2
 ```
 
-Like the switch statement, this is an _expression_, not a statement. Therefore, both branches must also be expressions.
+Like the match statement, this is an _expression_, not a statement. Therefore, both branches must also be expressions.
 
 ## For loop
 

@@ -1,4 +1,5 @@
 # **@string**
+?> Strings are used to store text at compile time.
 
 ## Macros
 

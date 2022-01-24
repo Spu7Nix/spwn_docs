@@ -1,4 +1,5 @@
 # **@number**
+?> Numbers are used to store numbers at compile time (if you want to have numbers at runtime, see [`@counter`](std-docs/counter) or [@item](std-docs/item))
 
 ## Macros
 

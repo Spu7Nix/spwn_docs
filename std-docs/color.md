@@ -1,4 +1,5 @@
 # **@color**
+?> Colors are references to color channels in a Geometry Dash level.
 
 ## Macros
 

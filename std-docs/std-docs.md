@@ -2798,7 +2798,7 @@ _Generated using `spwn doc [file name]`_
 >**Printed**
 >
 >```spwn
->{objects: [], get_objects: (prop: @object_key, pat: (@pattern | (_) -> @bool)) { /* ... */ }, get_marker: (text: @string) { /* ... */ }}
+>{get_objects: (prop: @object_key, pat: (@pattern | (_) -> @bool)) { /* ... */ }, get_marker: (text: @string) { /* ... */ }, objects: []}
 >```
 >
 >**Type:** [`@dictionary`](std-docs/dictionary)
@@ -2897,7 +2897,7 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{SIZE_MINI: 101, WAVE: 660, SPIDER: 1331, SPEED_BLUE: 201, DUAL_ON: 286, SPEED_GREEN: 202, CUBE: 12, SPEED_PINK: 203, DUAL_OFF: 287, TELEPORT: 747, ROBOT: 745, ... (9 more)}
+>>{TELEPORT: 747, SIZE_NORMAL: 99, DUAL_OFF: 287, MIRROR_OFF: 46, SHIP: 13, GRAVITY_UP: 11, DUAL_ON: 286, BALL: 47, UFO: 111, SPIDER: 1331, GRAVITY_DOWN: 10, ... (9 more)}
 >>```
 >>
 >>**Type:** [`@dictionary`](std-docs/dictionary)
@@ -3141,7 +3141,7 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{H_BLOCK: 1859, D_BLOCK: 1755, S_BLOCK: 1829, ITEM_DISPLAY: 1615, TEXT: 914, COLLISION_BLOCK: 1816, J_BLOCK: 1813, USER_COIN: 1329}
+>>{ITEM_DISPLAY: 1615, D_BLOCK: 1755, S_BLOCK: 1829, USER_COIN: 1329, COLLISION_BLOCK: 1816, TEXT: 914, J_BLOCK: 1813, H_BLOCK: 1859}
 >>```
 >>
 >>**Type:** [`@dictionary`](std-docs/dictionary)
@@ -3242,7 +3242,7 @@ _Generated using `spwn doc [file name]`_
 >>**Printed**
 >>
 >>```spwn
->>{PULSE: 1006, ALPHA: 1007, SPAWN: 1268, STOP: 1616, COLLISION: 1815, ROTATE: 1346, COUNT: 1611, ANIMATE: 1585, TOGGLE: 1049, MOVE: 901, SHAKE: 1520, ... (12 more)}
+>>{ON_DEATH: 1812, COUNT: 1611, ALPHA: 1007, FOLLOW: 1347, SPAWN: 1268, PULSE: 1006, INSTANT_COUNT: 1811, ENABLE_TRAIL: 32, TOUCH: 1595, BG_EFFECT_OFF: 1819, COLOR: 899, ... (12 more)}
 >>```
 >>
 >>**Type:** [`@dictionary`](std-docs/dictionary)
@@ -3520,7 +3520,7 @@ _Generated using `spwn doc [file name]`_
 >**Printed**
 >
 >```spwn
->{OPACITY: OPACITY, Y_MOD: Y_MOD, ANIMATION_SPEED: ANIMATION_SPEED, SPAWN_DURATION: SPAWN_DURATION, DONT_ENTER: DONT_ENTER, VERTICAL_FLIP: VERTICAL_FLIP, HORIZONTAL_FLIP: HORIZONTAL_FLIP, HOLD: HOLD, Z_ORDER: Z_ORDER, TARGET_TYPE: TARGET_TYPE, MOVE_X: MOVE_X, ... (83 more)}
+>{EASING: EASING, TARGET_POS_AXES: TARGET_POS_AXES, SUBTRACT_COUNT: SUBTRACT_COUNT, OPACITY: OPACITY, STRENGTH: STRENGTH, COMPARISON: COMPARISON, FOLLOW: FOLLOW, COUNT: COUNT, Z_ORDER: Z_ORDER, LOCK_TO_PLAYER_X: LOCK_TO_PLAYER_X, TRIGGER_BLUE: TRIGGER_BLUE, ... (83 more)}
 >```
 >
 >**Type:** [`@dictionary`](std-docs/dictionary)

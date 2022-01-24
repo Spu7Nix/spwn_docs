@@ -1,4 +1,5 @@
 # **@array**
+?> Arrays are used to store lists of values at compile time.
 
 ## Macros
 

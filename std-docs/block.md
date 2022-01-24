@@ -1,4 +1,5 @@
 # **@block**
+?> Collision Block IDs are references to one or more collision blocks, and are useful for tracking collisions between these.
 
 ## Macros
 

@@ -1,4 +1,5 @@
 # **@dictionary**
+?> Dictionaries are used to store key-value pairs at compile time.
 
 ## Macros
 

@@ -1,6 +1,6 @@
 Prism.languages.spwn = Prism.languages.extend("clike", {
   keyword:
-    /\b(?:else|for|if|return|error|extract|in|let|type|import|impl|break|\=>|\->|continue|switch|case|null|sync|throw|while)\b/,
+    /\b(?:else|for|if|return|error|extract|in|let|type|import|impl|break|\=>|\->|continue|match|case|null|sync|throw|while)\b/,
   builtin: /\b(?:null|trigger|obj|\$|self)\b/,
   boolean: /\b(?:true|false)\b/,
   operator:

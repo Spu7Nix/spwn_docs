@@ -1,4 +1,6 @@
 # **@item**
+?> Item IDs are references to numbers that exist during the runtime of a Geometry Dash level. 
+Items are used to store information that is changed during the level's runtime in an unpredictable way, like information about user input.
 
 ## Macros
 

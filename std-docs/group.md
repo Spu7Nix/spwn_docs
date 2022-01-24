@@ -1,4 +1,7 @@
 # **@group**
+?> Groups are references to one or more Geometry Dash objects, and are used to make these objects do things like moving, rotating and pulsing.
+They can also be used to mark a specific object, as for example a rotation center or a target position to move to.
+Groups are also used to send signals between **triggers**, and are therefore quite closely related to trigger functions.
 
 ## Macros
 
