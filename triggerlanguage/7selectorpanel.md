@@ -47,7 +47,7 @@ gs = import gamescene
 Now we can have some code run when we click one of the buttons. I'm going to choose the left button for switching, and the right side for activating. Since we will only be covering the switching of buttons in this mini-project, we will only use the left button, which is `button_a`:
 
 ```spwn
-gs.button_a().on_triggered(!{
+on(gs.button_a(), !{
     // switch
 })
 ```
@@ -58,7 +58,7 @@ Let's add a variable to keep track of what button is currently selected. For thi
 // starts at first button (index 0)
 selected = counter(0)
 
-gs.button_a().on_triggered(!{
+on(gs.button_a(), !{
     // switch
 })
 ```
@@ -104,7 +104,7 @@ gs = import gamescene
 // starts at first button (index 0)
 selected = counter(0)
 
-gs.button_a().on_triggered(!{
+on(gs.button_a(), !{
     // switch
     selected += 1
     if selected >= anchors.length {
@@ -154,7 +154,7 @@ gs = import gamescene
 // starts at first button (index 0)
 selected = counter(0)
 
-gs.button_a().on_triggered(!{
+on(gs.button_a(), !{
     // switch
     selected += 1
     if selected >= anchors.length {
