@@ -17,9 +17,10 @@
 - [**Advanced SPWN**](advancedspwn/advanced_spwn.md)
 
   - [**3.1.** Datatypes](advancedspwn/1types.md)
-  - [**3.2.** Type Implementation](advancedspwn/2impl.md)
-  - [**3.3.** Context Splitting](advancedspwn/3context-splitting.md)
-  - [**3.4.** Creating a SPWN Library](advancedspwn/4library-creation.md)
+  - [**3.2.** Patterns](advancedspwn/2patterns.md)
+  - [**3.3.** Type Implementation](advancedspwn/3impl.md)
+  - [**3.4.** Context Splitting](advancedspwn/4context-splitting.md)
+  - [**3.5.** Creating a SPWN Library](advancedspwn/5library-creation.md)
 
 - [Compile-time/runtime actions](compiletime.md)
 - **Reference**

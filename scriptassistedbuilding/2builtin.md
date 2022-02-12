@@ -2,7 +2,13 @@
 
 Since we don't have to deal with the limits of Geometry Dash as much at compile-time, some useful new features of SPWN are now available to us. Many of these features can be found in the _Built-in functions_.
 
-A built-in function, or a _builtin_, is a function that is written into the code of the SPWN compiler itself. That means that builtins are the gateway from SPWN to the rest of your system. All builtins in SPWN can be accessed using `$`. You can think of `$` as being a library containing all the builtins. For example, if I want to use the `print` builtin, I call it like this: `$.print("hello")`.
+A built-in function, or a _builtin_, is a function that is written into the code of the SPWN compiler itself. That means that builtins are the gateway from SPWN to the rest of your system. All builtins in SPWN can be accessed using `$`. You can think of `$` as being a library containing all the builtins. For example, if I want to use the `print` builtin, I call it like this:
+
+```spwn
+$.print("hello")
+```
+
+_(click the "run" button in the top right corner of the code box to see the output)_
 
 > **Note:** If you are planning on using a lot of builtins in your script, you should have a `extract $` near the top of your file. This makes it so that builtins can be accessed without using `$.` (so instead of `$.print("hello")`, you just do `print("hello")`)
 
@@ -28,6 +34,7 @@ This is SPWN yelling at you that placing an object in that place in the code doe
 Anyways, you already know how to create objects from the previous chapter. To add them to your level, you can use the `add` builtin like this:
 
 ```spwn
+extract obj_props
 
 $.add(obj {
     OBJ_ID: 54,
