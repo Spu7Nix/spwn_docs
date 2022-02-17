@@ -64,46 +64,20 @@ When making macros, you often want to limit what kind of values the arguments ca
 add = (a: @number, b: @number) {
     return a + b
 }
+
+$.print(add(2, 2)) // 4
+$.print(add("hello ", "world")) // error
 ```
 
-If your argument can accept multiple types, you can use a `|` symbol to create a union:
+If your argument can accept multiple types, you can use a `|` symbol:
 
 ```spwn
 combine = (a: @number | @string, b: @number | @string) {
     return a + b
 }
+
+$.print(combine(2, 2)) // 4
+$.print(combine("hello ", "world")) // "hello world"
 ```
 
-If you want the argument to be an array containing a specific type, you can do so with square brackets:
-
-```spwn
-sum = (numbers: [@number]) {
-    let out = 0
-    for n in numbers {
-        out += n
-    }
-    return out
-}
-```
-
-You can also combine all these elements to your hearts desire:
-
-```spwn
-my_crazy_macro = (arg: @number | [[@number] | @string]) {
-    //...
-}
-```
-
-If a certain union or type has a semantic value, you can create your own types like
-
-```spwn
-iterable = @array | @string | @dictionary
-
-my_func = (to_iterate: iterable) {
-    // code
-}
-```
-
-?> _**Note:** The expression that goes after the `argument: ` is called a **pattern**, and is also it's own type. You can check if a value matches a pattern with the builtin `$.matches(value, pattern)`_
-
-[**Next page**](advancedspwn/2impl.md)
+[**Next page**](advancedspwn/2patterns.md)
