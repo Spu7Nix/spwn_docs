@@ -125,8 +125,6 @@ This will loop through a list starting at zero, and ending at 9, looping a total
 
 ?> _**Note:** If you want a range with a different stepsize, for example 2, you can define it like this `0..2..10`. This will produce the values 0, 2, 4, 6 and 8_
 
-?> _**Note:** Instead of writing `0..10` you can also just write `..10`_
-
 ## While loop
 
 SPWN syntax for while loop is nothing special:
