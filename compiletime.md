@@ -10,7 +10,7 @@ For example, in most languages _loops_ are a runtime action, or in other words, 
 In practice, this means that this:
 
 ```spwn
-for i in ..5 {
+for i in 0..5 {
     10g.move(10, 10, 0.5)
 }
 ```
