@@ -35,7 +35,7 @@ $.assert(n == 5)
 
 ## Building your library
 
-If you're building a library, you often want to use multiple files. To do this, you can create multiple [modules](/triggerlanguage/6libraries.md#modules)
+If you're building a library, you often want to use multiple files. To do this, you can create multiple [modules](../triggerlanguage/6libraries.md#modules)
 
 Let's say I have a macro in another file called `myfunc.spwn` and I want to export it from the library.
 This is the folder structure:
