@@ -174,4 +174,4 @@ while_loop(() => num > 50, (){
 // num now equals 32
 ```
 
-[**Next page**](triggerlanguage/5counter.md)
+[**Next page**](./5counter.md)
