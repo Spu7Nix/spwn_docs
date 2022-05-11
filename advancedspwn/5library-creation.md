@@ -2,7 +2,7 @@
 
 ## Set-Up
 
-As was mentioned in [this](/triggerlanguage/6libraries.md#installing-new-libraries) section, libraries are stored in the `libraries` folder. In your working directory, create a `libraries` folder and in it add a folder named your desired library name.
+As was mentioned in [this](../triggerlanguage/6libraries.md#installing-new-libraries) section, libraries are stored in the `libraries` folder. In your working directory, create a `libraries` folder and in it add a folder named your desired library name.
 
 This is how your setup would look (if your library was named `mylib`):
 
