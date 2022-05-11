@@ -61,4 +61,4 @@ let array = [1, 2, 3]
 $.print(array is [>0]) // true
 ```
 
-[**Next page**](advancedspwn/3impl.md)
+[**Next page**](./3impl.md)
