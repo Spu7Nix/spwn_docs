@@ -80,4 +80,4 @@ my_counter.to_const_enclosed(0..10,(num) {
 })
 ```
 
-[**Next page**](triggerlanguage/6libraries.md)
+[**Next page**](./6libraries.md)
