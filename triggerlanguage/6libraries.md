@@ -111,4 +111,4 @@ import mylib
 
 ?> _**Note:** SPWN Package managers are in the works, so this process may become a lot smoother in the future_
 
-[**Next page**](triggerlanguage/7selectorpanel.md)
+[**Next page**](./7selectorpanel.md)
