@@ -24,7 +24,7 @@ c = a + b
 
 ?> _**Note:** There is no case when using SPWN where you **have** to use constant variables, but it is seen as good programming etiquette to only let your variables be mutable when needed._
 
-?> _**Note:** When you need a mutable variable, you will most likely be using a ["counter"](triggerlanguage/5counter.md) from the standard library, which is a wrapper around the item ID system in Geometry Dash. There will be more on this in a couple of pages._
+?> _**Note:** When you need a mutable variable, you will most likely be using a ["counter"](./5counter.md) from the standard library, which is a wrapper around the item ID system in Geometry Dash. There will be more on this in a couple of pages._
 
 # SPWN Values
 
@@ -77,7 +77,7 @@ let dict.e = 5 //inserts a new key "e" with a mutable value of 5 into dict
 let dict['f'] = 6 // indexing is also supported for adding to dictionaries
 ```
 
-?> _**Note:** To see a list of all the operators in SPWN, go [here](operators.md)_
+?> _**Note:** To see a list of all the operators in SPWN, go [here](../operators.md)_
 
 ## IDs
 
