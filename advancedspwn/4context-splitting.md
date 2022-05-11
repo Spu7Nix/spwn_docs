@@ -1,3 +1,3 @@
 comig soom
 
-[**Next pgae**](advancedspwn/5library-creation.md)
+[**Next pgae**](./5library-creation.md)
