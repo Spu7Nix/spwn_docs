@@ -168,4 +168,4 @@ on(gs.button_a(), !{
 })
 ```
 
-[**Next Chapter**](scriptassistedbuilding/script_assisted_building.md)
+[**Next Chapter**](../scriptassistedbuilding/script_assisted_building.md)
