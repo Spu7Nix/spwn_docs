@@ -80,4 +80,4 @@ $.print(combine(2, 2)) // 4
 $.print(combine("hello ", "world")) // "hello world"
 ```
 
-[**Next page**](advancedspwn/2patterns.md)
+[**Next page**](./2patterns.md)
