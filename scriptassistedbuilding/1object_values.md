@@ -25,7 +25,7 @@ Most of these are pretty easy to understand. `X` and `Y` are the position, `ROTA
 
 > **Note:** To avoid typing `obj_props.` all the time, you will usually start your file with `extract obj_props` when you will be working with objects and triggers.
 
-> **Note:** To find out what a specific key from `obj_props` does, you can use [this lookup table](object_keys.md)
+> **Note:** To find out what a specific key from `obj_props` does, you can use [this lookup table](../object_keys.md)
 
 A `trigger` is very similar to an `obj`, but it has a slightly different use case. You will learn more about this in a later chapter.
 
