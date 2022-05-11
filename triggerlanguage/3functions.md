@@ -1,6 +1,6 @@
 # Functions
 
-In SPWN, what is in most programming languages called a "function" is divided into two different things: Trigger functions, and macros (also referred to as just "functions"). In short, the difference is that calling a trigger function is a [_runtime action_, while calling a macro is a _compile-time action_](compiletime.md).
+In SPWN, what is in most programming languages called a "function" is divided into two different things: Trigger functions, and macros (also referred to as just "functions"). In short, the difference is that calling a trigger function is a [_runtime action_, while calling a macro is a _compile-time action_](../compiletime.md).
 In practice, this means that a macro has more features, like taking arguments and returning, while a trigger function is more _group efficient_ and _object efficient_.
 
 ## Calling Trigger Functions and Macros
