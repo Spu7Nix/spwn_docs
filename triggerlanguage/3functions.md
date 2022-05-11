@@ -84,4 +84,4 @@ recur = () {
 >
 > `my_macro = (arguments) {return expression}`
 
-[**Next page**](triggerlanguage/4control_flow.md)
+[**Next page**](./4control_flow.md)
