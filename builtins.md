@@ -457,7 +457,7 @@
 > ```spwn
 > $.random() // a completely random number
 > $.random([1, 2, 3, 6]) // returns either 1, 2, 3, or 6
-> $.random(1, 10) // returns a random integer between 1 and 10
+> $.random(1..10) // returns a random integer between 1 and 10
 > ```
 > **Allowed by default:** yes
 > ## Arguments: 
