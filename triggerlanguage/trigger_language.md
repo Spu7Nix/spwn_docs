@@ -14,4 +14,4 @@ If you don't understand this yet, don't worry. We will get on to examples of SPW
 
 _**Note:** This introduction assumes you have some understanding of basic programming concepts, and basic understanding of Geometry Dash triggers_
 
-[**Next page**](triggerlanguage/1variables.md)
+[**Next page**](1variables.md)
