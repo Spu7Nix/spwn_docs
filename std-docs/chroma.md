@@ -115,7 +115,7 @@
 >
 >**Description:**
 >
->_Creatss a new chroma from a hex string_
+>_Creates a new chroma from a hex string_
 >
 >**Example:**
 >
@@ -148,7 +148,7 @@
 >
 >**Description:**
 >
->_Creatss a new chroma from hsv values (0-1)_
+>_Creates a new chroma from hsv values (0-1)_
 >
 >**Example:**
 >
@@ -182,7 +182,7 @@
 >
 >**Description:**
 >
->_Creatss a new chroma from hsv values (0-360, 0-100, 0-100)_
+>_Creates a new chroma from hsv values (0-360, 0-100, 0-100)_
 >
 >**Example:**
 >
@@ -216,7 +216,7 @@
 >
 >**Description:**
 >
->_Creatss a new chroma from rgb values (0-1)_
+>_Creates a new chroma from rgb values (0-1)_
 >
 >**Example:**
 >
@@ -250,7 +250,7 @@
 >
 >**Description:**
 >
->_Creatss a new chroma from 8-bit rgb values (0-255)_
+>_Creates a new chroma from 8-bit rgb values (0-255)_
 >
 >**Example:**
 >
